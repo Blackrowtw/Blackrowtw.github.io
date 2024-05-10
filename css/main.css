@@ -1592,7 +1592,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #ff7aff;
+    background: #9eff57;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3290,11 +3290,11 @@ header.header {
   font-size: 24px;
 }
 /* 全站，超連結 顏色 底線 */
-a:not(.btn) {
+a:not(.btn):not(.bmc-btn) {
   border-bottom: 1px none #999;
   text-shadow: #050505 0.1em 0.1em 0.1em;
 }
-a:not(.btn):hover {
+a:not(.btn):not(.bmc-btn):hover {
   color: #6190e8;
 }
 /* 選單按鈕，懸浮時變色 */
@@ -3347,14 +3347,12 @@ a:not(.btn):hover {
 .post-body .note:not(.default):not(.primary):not(.info):not(.success):not(.warning):not(.danger) {
   color: #777;
 }
-/* 文章內文，切換標籤(Tab) 樣式 */
-.post-body .tabs ul.nav-tabs,
-.tabs-comment ul.nav-tabs {
+.post-body .post-body .tabs ul.nav-tabs,
+.post-body .tabs-comment ul.nav-tabs {
   background: none;
 }
-/* 文章內文，切換標籤(Tab) 樣式 啟動時 小螢幕*/
-.post-body .tabs ul.nav-tabs li.tab.active,
-.tabs-comment ul.nav-tabs li.tab.active {
+.post-body .post-body .tabs ul.nav-tabs li.tab.active,
+.post-body .tabs-comment ul.nav-tabs li.tab.active {
   border-top-color: #6190e8;
   border-top-width: 0.5em;
   border-right-color: #ddd;
@@ -3362,10 +3360,9 @@ a:not(.btn):hover {
   border-right-color: #ddd;
   border-right-width: 1px;
 }
-/* 文章內文，切換標籤(Tab) 樣式 啟動時 大螢幕*/
 @media (max-width: 413px) {
-  .post-body .tabs ul.nav-tabs li.tab.active,
-  .tabs-comment ul.nav-tabs li.tab.active {
+  .post-body .post-body .tabs ul.nav-tabs li.tab.active,
+  .post-body .tabs-comment ul.nav-tabs li.tab.active {
     border-top-color: #ddd;
     border-left-color: #6190e8;
     border-left-width: 0.5em;
@@ -3374,99 +3371,89 @@ a:not(.btn):hover {
     border-top-width: 1px;
   }
 }
-/* 文章內文，切換標籤(Tab) 樣式 非啟動 小螢幕*/
-.post-body .tabs ul.nav-tabs li.tab:not(.active),
-.tabs-comment ul.nav-tabs li.tab:not(.active) {
+.post-body .post-body .tabs ul.nav-tabs li.tab:not(.active),
+.post-body .tabs-comment ul.nav-tabs li.tab:not(.active) {
   background: rgba(61,62,62,0.85);
 }
-.post-body .tabs ul.nav-tabs li.tab:not(.active) a,
-.tabs-comment ul.nav-tabs li.tab:not(.active) a {
+.post-body .post-body .tabs ul.nav-tabs li.tab:not(.active) a,
+.post-body .tabs-comment ul.nav-tabs li.tab:not(.active) a {
   color: #999;
 }
-/* 文章內文，切換標籤(Tab) 樣式 非啟動 大螢幕*/
 @media (max-width: 413px) {
-  .post-body .tabs ul.nav-tabs li.tab:not(.active),
-  .tabs-comment ul.nav-tabs li.tab:not(.active) {
+  .post-body .post-body .tabs ul.nav-tabs li.tab:not(.active),
+  .post-body .tabs-comment ul.nav-tabs li.tab:not(.active) {
     background: rgba(61,62,62,0.85);
   }
-  .post-body .tabs ul.nav-tabs li.tab:not(.active) a,
-  .tabs-comment ul.nav-tabs li.tab:not(.active) a {
+  .post-body .post-body .tabs ul.nav-tabs li.tab:not(.active) a,
+  .post-body .tabs-comment ul.nav-tabs li.tab:not(.active) a {
     color: #999;
   }
 }
-/* 文章內文，標題底線顏色 */
-.post-body h1,
-.post-body h2 {
+.post-body .post-body h1,
+.post-body .post-body h2 {
   border-bottom: 1px solid #777;
 }
-/* 文章內文，次標題底線顏色 */
-.post-body h3 {
+.post-body .post-body h3 {
   border-bottom: 1px dotted #777;
 }
-/* 文章內文，標題前方塊 */
-.post-body h2::before {
+.post-body .post-body h2::before {
   content: "▋ ";
 }
-/* 文章內文，段落間距 */
-.post-body p {
+.post-body .post-body p {
   margin: 0 0 0.5rem;
 }
-/* 文章內文，引文部分 間距減掉線寬*/
-.post-body blockquote:not(.blockquote-center) {
+.post-body .post-body blockquote:not(.blockquote-center) {
   border-left: 4px solid #555;
   padding: 0 calc(1rem - 4px);
 }
-/* 內文 TOC (內容導航目錄) */
-.post-toc .nav .active > a {
+.post-body .post-toc .nav .active > a {
   border-bottom-color: #6190e8;
   color: #6190e8;
 }
-.post-toc .nav .active-current > a {
+.post-body .post-toc .nav .active-current > a {
   color: #6190e8;
 }
-.post-toc .nav .active-current > a:hover {
+.post-body .post-toc .nav .active-current > a:hover {
   color: #6190e8;
 }
-.sidebar-nav li:hover {
+.post-body .sidebar-nav li:hover {
   color: #6190e8;
 }
-.sidebar-toc-active .sidebar-nav-toc,
-.sidebar-overview-active .sidebar-nav-overview {
+.post-body .sidebar-toc-active .sidebar-nav-toc,
+.post-body .sidebar-overview-active .sidebar-nav-overview {
   border-bottom-color: #6190e8;
   color: #6190e8;
 }
-.sidebar-toc-active .sidebar-nav-toc:hover,
-.sidebar-overview-active .sidebar-nav-overview:hover {
+.post-body .sidebar-toc-active .sidebar-nav-toc:hover,
+.post-body .sidebar-overview-active .sidebar-nav-overview:hover {
   color: #6190e8;
 }
-/* 側邊欄 大螢幕時 */
 @media (min-width: 992px) {
-  .sidebar-inner {
+  .post-body .sidebar-inner {
     box-shadow: inset 0em 0em 0.5em #080808;
     border-radius: 0.75rem;
     background: #151515;
   }
 }
-/* 側邊欄 小螢幕時 */
 @media (max-width: 991px) {
-  .sidebar {
+  .post-body .sidebar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: linear-gradient(0deg, #151515 10%, #222 40%, #222 60%, #151515 90%);
   }
-  .sidebar .sidebar-inner {
+  .post-body .sidebar .sidebar-inner {
     box-shadow: inset 0em 0em 0em #080808;
     border-radius: 0rem;
   }
-  .links-of-author a {
+  .post-body .links-of-author a {
 /* 底下的線段顏色 */
     border-bottom-color: transparent;
 /* 奇怪的邊界 */
     margin-bottom: 0px;
     margin-right: 0px;
   }
-  .links-of-author a::before {
+  .post-body .links-of-author a::before {
     background: none;
     display: inline-block;
     margin-right: 0px;
@@ -3476,24 +3463,22 @@ a:not(.btn):hover {
     height: 0px;
     width: 0px;
   }
-  .links-of-author span {
+  .post-body .links-of-author span {
     height: 40px;
     vertical-align: bottom;
   }
-  .links-of-author a {
+  .post-body .links-of-author a {
     font-size: 1.25em;
     padding-right: 2px;
     padding-left: 2px;
     vertical-align: bottom;
   }
 }
-/* 文章下標籤(Tags) 容器樣式 */
-.post-tags {
+.post-body .post-tags {
   list-style: none;
   overflow: hidden;
 }
-/* 文章下標籤(Tags) 樣式, 底色 */
-.post-tags a {
+.post-body .post-tags a {
   background: #151515;
   border-radius: 3px 0 0 3px;
   color: #999;
@@ -3506,8 +3491,7 @@ a:not(.btn):hover {
   text-decoration: none;
   -webkit-transition: color 0.2s;
 }
-/* 文章下標籤(Tags) 後箭頭 */
-.post-tags a::after {
+.post-body .post-tags a::after {
   content: "";
   background: transparent;
   border-bottom: 1em solid transparent;
@@ -3518,89 +3502,71 @@ a:not(.btn):hover {
   bottom: 0px;
   right: calc(-1em - 1px);
 }
-/* 文章下標籤(Tags) 懸浮色 */
-.post-tags a:hover {
+.post-body .post-tags a:hover {
   background-color: #6190e8;
   color: #fff;
 }
-/* 文章下標籤(Tags) 後箭頭 懸浮色 */
-.post-tags a:hover::after {
+.post-body .post-tags a:hover::after {
   border-left-color: #6190e8;
 }
-/* 文章底部評論區 */
-.comments {
+.post-body .comments {
   background: #404040 !important;
   border-radius: 0.75rem !important;
 }
-/* 頁腳(footer) 容器 網格模式 */
-.footer-inner {
-  display: grid;
-  grid-template-columns: calc(50% + 1em) 1fr;
-  grid-auto-rows: auto;
-  flex-direction: unset;
+.post-body .footer-inner {
+  justify-content: stretch;
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding-top: 0.5rem;
 }
-/* 頁腳(footer) copy right 版權資訊-作者 */
-.footer-inner .copyright {
+.post-body .footer-inner .copyright {
   line-height: 1.5em;
-  grid-column: span 2/span 2;
+  width: calc(100% - 0rem);
 }
-.author::after {
+.post-body.author::after {
   content: "Reprinted please specify the source";
   display: inline-block;
   padding-left: 0.5em;
 }
-/* 頁腳(footer) 全站字數 */
-.footer-inner .wordcount {
-  display: inline-block;
-  grid-column: span 1/span 1;
-  place-self: end;
+.post-body .footer-inner .wordcount {
   margin-right: 0.25rem;
   line-height: 2em;
 }
-/* 頁腳(footer) 全站字數 圖案 */
-.footer-inner .wordcount .post-meta-item .post-meta-item-icon i:before {
+.post-body .footer-inner .wordcount .post-meta-item .post-meta-item-icon i:before {
   content: "\f1c2";
 }
-/* 頁腳(footer) 全站瀏覽數 */
-.footer-inner .busuanzi-count {
-  display: inline-block;
-  grid-column: span 1/span 1;
-  place-self: start;
+.post-body .footer-inner .busuanzi-count {
   margin-left: 0.25rem;
   line-height: 2em;
 }
-/* 頁腳(footer) Hexo Hexo-NexT資訊 */
-.footer-inner .powered-by {
+.post-body .footer-inner .powered-by {
   color: #555;
   line-height: 1.5em;
-  grid-column: span 2/span 2;
+  width: calc(100% - 0rem);
 }
-/* 頁腳(footer) Hexo Hexo-NexT資訊 */
 @media (max-width: 991px) {
-  .footer-inner .powered-by {
+  .post-body .footer-inner .powered-by {
     font-size: 0.7em;
     line-height: 1.5em;
     color: #555;
-    grid-column: span 2/span 2;
+    width: calc(100% - 0rem);
   }
 }
-/* 檔案頁面(Archive) 關閉 Keep on posting */
-.archive .collection-title {
+.post-body .archive .collection-title {
   display: none !important;
 }
-/* 標籤頁面(page-Tags)，取消超連結 的上級偽類內容 */
-.tag-cloud-tags a::after {
+.post-body .tag-cloud-tags a::after {
   content: "" !important;
 }
-/* 標籤頁面(page-Tags) 容器樣式 */
-.tag-cloud-tags {
+.post-body .tag-cloud-tags {
   list-style: none;
   overflow: hidden;
   padding: 2rem 1rem 1rem 1rem;
 }
-/* 標籤頁面(page-Tags) 樣式, 底色 */
-.tag-cloud-tags a {
+.post-body .tag-cloud-tags a {
   background: #151515;
   border-radius: 3px 0 0 3px;
   color: #999;
@@ -3613,8 +3579,7 @@ a:not(.btn):hover {
   text-decoration: none;
   -webkit-transition: color 0.2s;
 }
-/* 標籤頁面(page-Tags) 前(#)號 */
-.tag-cloud-tags a::before {
+.post-body .tag-cloud-tags a::before {
   font-family: FontAwesome;
   content: "\23";
   display: inline-block;
@@ -3623,8 +3588,7 @@ a:not(.btn):hover {
   color: #777;
   font-size: 0.75em;
 }
-/* 標籤頁面(page-Tags) 後箭頭 */
-.tag-cloud-tags a::after {
+.post-body .tag-cloud-tags a::after {
   background: transparent;
   border-bottom: 1.3em solid #151515;
   border-right: calc(1em - 2px) solid transparent;
@@ -3634,21 +3598,17 @@ a:not(.btn):hover {
   bottom: 0px;
   right: calc(-1em + 2px);
 }
-/* 標籤頁面(page-Tags) 懸浮色 */
-.tag-cloud-tags a:hover {
+.post-body .tag-cloud-tags a:hover {
   background-color: #6190e8;
   color: #fff;
 }
-/* 標籤頁面(page-Tags) 後箭頭 懸浮色 */
-.tag-cloud-tags a:hover::after {
+.post-body .tag-cloud-tags a:hover::after {
   border-bottom-color: #6190e8;
   border-top-color: #6190e8;
 }
-/* 標籤頁面(page-Tags) 後箭頭 懸浮色 */
-.tag-cloud-tags a:hover::before {
+.post-body .tag-cloud-tags a:hover::before {
   color: #ddd;
 }
-/* 分類頁面(page-Category)，取消超連結 的上級偽類內容 */
-.category-list-link::after {
+.post-body .category-list-link::after {
   content: "" !important;
 }

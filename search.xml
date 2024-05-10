@@ -1,6 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo 架設筆記</title>
+    <url>/zh-tw/5d25/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+<p>自用筆記備忘錄，記錄在學習中所使用的語法</p>
+
+</blockquote>
+
+<span id="more"></span>
+
+<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>Hexo : 快速、簡單且強大的網誌框架</p>
+<p>原先使用的Jekyll已經忘得差不多了，所以改用Hexo從頭架設一次</p>
+<p>一樣選擇放在gitHub的個人網頁，作為靜態網站的站點再合適不過</p>
+<h2 id="2-環境搭建"><a href="#2-環境搭建" class="headerlink" title="2. 環境搭建"></a>2. 環境搭建</h2><blockquote>
+<p>建置時使用的版本：</p>
+<blockquote>
+<p><code>git version 2.38.1.windows.1</code><br><code>Node.js npm-10.2.4</code></p>
+</blockquote>
+<blockquote>
+<p><code>hexo: 7.1.1</code><br><code>hexo-theme-next@8.19.1</code></p>
+</blockquote>
+</blockquote>
+<h3 id="2-1-選擇當前資料夾並進入終端-cmd"><a href="#2-1-選擇當前資料夾並進入終端-cmd" class="headerlink" title="2.1. 選擇當前資料夾並進入終端(cmd)"></a>2.1. 選擇當前資料夾並進入終端(cmd)</h3><ol>
+<li>利用 npm 在資料夾裡安裝 hexo <code>npm install hexo-cli -g</code><blockquote>
+<p>npm： <a href="https://nodejs.org/en">Node.js</a> package manager | 套件管理工具</p>
+</blockquote>
+</li>
+<li>git 初始化：<code>git init</code><blockquote>
+<p><a href="https://git-scm.com/">git</a>: 使用命令行的版本控制軟體</p>
+</blockquote>
+</li>
+<li>npm 初始化：<code>npm install</code></li>
+<li>hexo 初始化：<code>hexo init</code></li>
+<li>安裝hexo的next主題：<code>npm install hexo-theme-next</code><blockquote>
+<p><a href="https://theme-next.js.org/">🎉 Elegant and powerful theme for Hexo.</a></p>
+</blockquote>
+</li>
+</ol>
+<h3 id="2-2-撰寫-config-yml-config-next-yml-文件"><a href="#2-2-撰寫-config-yml-config-next-yml-文件" class="headerlink" title="2.2. 撰寫 _config.yml,_config.next.yml 文件"></a>2.2. 撰寫 _config.yml,_config.next.yml 文件</h3><ol>
+<li><a href="https://hexo.io/zh-tw/docs/configuration">Hexo</a> 的配置</li>
+<li><a href="https://theme-next.js.org/docs/">NexT</a> 的配置</li>
+</ol>
+<h3 id="2-3-安裝功能插件"><a href="#2-3-安裝功能插件" class="headerlink" title="2.3. 安裝功能插件"></a>2.3. 安裝功能插件</h3><ol>
+<li>安裝部屬用插件：<code>npm install hexo-deployer-git --save</code><blockquote>
+<p>– save: 儲存變更到 pack 管理文件之中<br>blog 部屬用的靜態文件將存放於 public</p>
+</blockquote>
+</li>
+<li>安裝hexo的字數統計插件：<code>npm install hexo-word-counter --save</code></li>
+<li>安裝 abbrlink 插件：<code>npm install hexo-abbrlink --save</code><blockquote>
+<p>讓發表的文章擁有永久網址，與 google 優化 SEO 有關</p>
+</blockquote>
+</li>
+<li>安裝本地搜尋：<code>npm install hexo-generator-searchdb --save</code></li>
+<li>安裝 <a href="https://github.com/gitalk/gitalk">gitalk</a> 留言板：<br> 需要建立 <a href="https://github.com/">GitHub</a> OAuth APP<br> ^[<a href="https://israynotarray.com/hexo/20191206/2397475810/">十分鐘超詳細替 Hexo NexT 開啟 Gitalk 留言版</a>]<br> ^[<a href="https://theme-next.js.org/docs/third-party-services/comments#Gitalk">NexT Comment Systems</a>]<br> ^[<a href="https://theme-next.js.org/docs/third-party-services/comments#How-to-Disable-Comments-on-Page">如何取消頁面的留言板</a>]</li>
+</ol>
+<h3 id="2-4-Google-搜尋引擎最佳化-SEO「Search-Engine-Optimization」"><a href="#2-4-Google-搜尋引擎最佳化-SEO「Search-Engine-Optimization」" class="headerlink" title="2.4. Google 搜尋引擎最佳化 (SEO「Search Engine Optimization」)"></a>2.4. Google 搜尋引擎最佳化 (SEO「Search Engine Optimization」)</h3><ol>
+<li>安裝 Sitemap 插件：<code>npm install hexo-generator-sitemap</code><blockquote>
+<p>Sitemap 用來記錄該網站中所有 url 路徑，以及每一個路徑最後修改的時間戳。</p>
+</blockquote>
+</li>
+<li>設定 <a href="https://analytics.google.com/analytics/web/">Google Analytics</a><blockquote>
+<p>網頁來訪狀況分析服務</p>
+</blockquote>
+</li>
+<li>在 <a href="https://search.google.com/search-console/about?hl=zh-tw">Google Search Console</a> 設定加入網站連結<blockquote>
+<p>認證網站所有權，以及上傳 SiteMap 文件</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="3-開始使用-Hexo-撰寫-Blog"><a href="#3-開始使用-Hexo-撰寫-Blog" class="headerlink" title="3. 開始使用 Hexo 撰寫 Blog"></a>3. 開始使用 Hexo 撰寫 Blog</h2><ul>
+<li>new 新增文章 <code>hexo n &quot;&quot;</code><blockquote>
+<p>預設模板為 post.md</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;<span class="built_in">title</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>clean 清除靜態檔案與快取 <code>hexo cl</code><blockquote>
+<p>修改檔案後建議執行一次，清除已經部屬過的 public 資料夾</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>generate 產生靜態檔案 <code>hexo g</code> <code>hexo g -d</code><blockquote>
+<p>用 source 裡的資料生成靜態的網頁架構</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>server 啟動伺服器 <code>hexo s</code><blockquote>
+<p>在<a href="http://localhost:4000/">本地端</a>啟動 Hexo 伺服器</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>將檔案部屬到 GitHub <code>hexo d</code><blockquote>
+<p>需要安裝並設定 <a href="#%E5%AE%89%E8%A3%9D%E5%8A%9F%E8%83%BD%E6%8F%92%E4%BB%B6">hexo-deployer</a></p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>渲染時顯示草稿 <code>hexo s --draft</code></li>
+<li>新建一篇草稿 <code>hexo new draft &quot;&quot;</code></li>
+<li>將草稿發表 <code>hexo publish &quot;&lt;filename&gt;&quot;</code></li>
+</ul>
+<h2 id="4-版本更新"><a href="#4-版本更新" class="headerlink" title="4. 版本更新"></a>4. 版本更新</h2><ol>
+<li>檢查目前所安裝的版本是否過期 <code>npm outdated</code></li>
+<li>安裝最新的版本 <code>npm install hexo-theme-next@latest</code></li>
+<li>安裝特定版本 <code>npm install hexo-theme-next@8.0.0</code></li>
+</ol>
+<h2 id="5-個人客製化的學習歷程"><a href="#5-個人客製化的學習歷程" class="headerlink" title="5. 個人客製化的學習歷程"></a>5. 個人客製化的學習歷程</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> 從原先的 Jekyll 專案裡搬來模板並改造</li>
+<li><input checked="" disabled="" type="checkbox"> 引入 <a href="https://tailwindcss.com/">Tailwind css</a> ^[<a href="https://tailwindcss.com/docs/installation">Tailwind 指令集</a>]</li>
+<li><input checked="" disabled="" type="checkbox"> 從各處搜刮不同的模板並改造 ^[<a href="https://flowbite.com/">Flowbite</a>]</li>
+<li><input checked="" disabled="" type="checkbox"> 學習 html 與 css 的語法並改造為 Tailwind ^[<a href="https://www.w3schools.com/howto/default.asp">W3Schools</a>]<br>^[<a href="https://fontawesome.com/">Font Awesome</a>]<br>^[<a href="https://webcode.tools/">Webcode Tools</a>]<br>^[<a href="https://css-loaders.com/">CSS Loaders 動畫效果 600+</a>]</li>
+<li><input disabled="" type="checkbox"> 學習 Hexo Tag Plugins 寫法，並試著開始撰寫文章</li>
+<li><input disabled="" type="checkbox"> 學習 Reject 把寫好的代碼模組化提高複用性</li>
+</ul>
+<h2 id="6-refernce"><a href="#6-refernce" class="headerlink" title="6. ::: refernce :::"></a>6. ::: refernce :::</h2><ol>
+<li><a href="https://hexo.io/zh-tw/">Hexo 官方網站</a></li>
+<li><a href="https://theme-next.js.org/">Hexo NexT 主題</a></li>
+<li><a href="https://israynotarray.com/hexo/20200914/3741834499/">試著學 Hexo - 序章</a></li>
+<li><a href="https://zenreal.github.io/posts/30115/">Github + Hexo 新手搭建手冊(含各種TIPS與問題解決) [2019]</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Coding</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Hexo-NexT</tag>
+        <tag>Nodejs</tag>
+        <tag>Tailwind css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>gitHub 學習筆記</title>
+    <url>/zh-tw/8455/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+<p>自用筆記備忘錄，記錄在學習中所使用的語法</p>
+
+</blockquote>
+
+<span id="more"></span>
+
+<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>自用筆記備忘錄，記錄在學習中所使用的語法</p>
+<h2 id="2-配置本地-git-倉庫"><a href="#2-配置本地-git-倉庫" class="headerlink" title="2. 配置本地 git 倉庫"></a>2. 配置本地 git 倉庫</h2><p>以我自己的 Minecraft 翻譯項目為例：</p>
+<blockquote>
+<p><a href="https://github.com/Blackrowtw/Translation-zh_tw-of-masa-series-mods">繁中 masa 系模組翻譯_by.BK</a></p>
+</blockquote>
+<h3 id="2-1-初始化"><a href="#2-1-初始化" class="headerlink" title="2.1. 初始化"></a>2.1. 初始化</h3><ol>
+<li>移動至需要版本控制的資料夾</li>
+<li>進入終端 ; cmd</li>
+<li>初始化：<code>git init</code></li>
+<li>加入全部檔案：<code>git add .</code></li>
+<li>撰寫第一次 commit 描述：<code>git commit -m &quot;第一次&quot;</code></li>
+</ol>
+<h3 id="2-2-連接遠端倉庫"><a href="#2-2-連接遠端倉庫" class="headerlink" title="2.2. 連接遠端倉庫"></a>2.2. 連接遠端倉庫</h3><ol>
+<li>查詢所記錄的遠程倉庫網址：<code>git remote</code></li>
+<li>增加遠程倉庫的網址與別名 origin：<br><code>git remote add origin https://github.com/Blackrowtw/Translation-zh_tw-of-masa-series-mods</code></li>
+<li>查詢遠程倉庫地址並列出詳細網址：<code>git remote -v</code></li>
+<li>重新設定遠端網址 <code>git remote set-url origin https://github.com/xxxx</code></li>
+<li>刪除遠端 <code>git remote remove &lt;name&gt;</code></li>
+</ol>
+<h3 id="2-3-管理分支"><a href="#2-3-管理分支" class="headerlink" title="2.3. 管理分支"></a>2.3. 管理分支</h3><ol>
+<li>查詢所有 git 分支：<code>git branch</code></li>
+<li>修改當前的分支名稱為 main：<code>git branch -m main</code><blockquote>
+<p>如果 github 的分支預設為 main 非 master 的狀況</p>
+</blockquote>
+</li>
+<li>強制執行改名：<code>git branch -M main</code></li>
+<li>從遠程倉庫 origin 拉取分支 master ：<code>git pull origin master</code></li>
+</ol>
+<h3 id="2-4-管理-commit"><a href="#2-4-管理-commit" class="headerlink" title="2.4. 管理 commit"></a>2.4. 管理 commit</h3><ol>
+<li>列出 commit 的修改記錄：<code>git log --oneline</code><blockquote>
+<p>–oneline: 一行表示</p>
+</blockquote>
+</li>
+<li>解決 commit 衝突<code>git pull --rebase origin master</code><blockquote>
+<p>–rebase：重整，將遠程 commit 同步到本地後再創建新的 commit</p>
+</blockquote>
+</li>
+<li>將本地的倉庫推送到遠程：<code>git push origin master</code></li>
+</ol>
+<h2 id="3-分支操作"><a href="#3-分支操作" class="headerlink" title="3. 分支操作"></a>3. 分支操作</h2><ol>
+<li>創建新分支並移動到該分支：<code>git switch -c v1.20.1</code></li>
+<li>將該分支同步到遠程：<code>git push origin v1.20.1</code></li>
+<li>查詢所在分支：<code>git branch</code></li>
+<li>移動回 master 分支：<code>git switch master</code></li>
+<li>刪除 v1.20.1 的分支：<code>git branch -d v1.20.1</code></li>
+<li>github 合併 Pull Request 後，記得同步本地的 commit：<code>git pull</code></li>
+<li>切換到 master：<code>git checkout master</code></li>
+<li>將分支 v1.20.1 合併到當前分支：<code>git merge</code></li>
+</ol>
+<h2 id="4-Tags-和-Releases"><a href="#4-Tags-和-Releases" class="headerlink" title="4. Tags 和 Releases"></a>4. Tags 和 Releases</h2><ol>
+<li>查詢現有 tag：<code>git tag</code></li>
+<li>創建名為 v1.20.1 的 tag，並加上注釋：<code>git tag -a v1.20.1 -m &quot;版本 v1.20.1，2023-07-10 製作&quot;</code><blockquote>
+<p>-a：annotation，註解</p>
+</blockquote>
+</li>
+<li>將標籤 v1.20.1 推送到遠程倉庫：<code>git push origin v1.20.1</code></li>
+<li>刪除標籤 v1.20.1：<code>git tag -d v1.20.1</code></li>
+</ol>
+<h2 id="5-refernce"><a href="#5-refernce" class="headerlink" title="5. ::: refernce :::"></a>5. ::: refernce :::</h2><p><a href="https://www.bilibili.com/video/BV1RC411W7UE/">给学完 Git，还不会用 GitHub 的朋友们【bilibili】</a></p>
+]]></content>
+      <categories>
+        <category>Coding</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo 標籤外掛（Tag Plugins）集合</title>
     <url>/zh-tw/7e4/</url>
     <content><![CDATA[<h2 id="1-Hexo-NexT"><a href="#1-Hexo-NexT" class="headerlink" title="1. Hexo NexT"></a>1. Hexo NexT</h2><h3 id="1-1-Centered-Quote-引用"><a href="#1-1-Centered-Quote-引用" class="headerlink" title="1.1. Centered Quote 引用"></a>1.1. <a href="https://theme-next.js.org/docs/tag-plugins/#Centered-Quote">Centered Quote 引用</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;居中的引言&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
@@ -246,9 +468,7 @@
 <img alt="【Arknights】Good Night, Ptilopsis" data-src="https://pixiv.cat/84431948.jpg">
 <a class="btn" href="https://www.pixiv.net/artworks/84431948"><i class="fab fa-pixiv fa-3x"></i>&nbsp;&nbsp;id=2407057</a>
 
-<h3 id="3-2-Buy-me-a-coffee"><a href="#3-2-Buy-me-a-coffee" class="headerlink" title="3.2. Buy me a coffee"></a>3.2. <a href="https://buymeacoffee.com/blackrow">Buy me a coffee</a></h3><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="blackrow" data-color="#212121" data-emoji="🍎"  data-font="Lato" data-text="Buy me an Apple" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
-
-<h2 id="4-refernce"><a href="#4-refernce" class="headerlink" title="4. ::: refernce :::"></a>4. ::: refernce :::</h2><ol>
+<h3 id="3-2-Buy-me-a-coffee"><a href="#3-2-Buy-me-a-coffee" class="headerlink" title="3.2. Buy me a coffee"></a>3.2. <a href="https://buymeacoffee.com/blackrow">Buy me a coffee</a></h3><h2 id="4-refernce"><a href="#4-refernce" class="headerlink" title="4. ::: refernce :::"></a>4. ::: refernce :::</h2><ol>
 <li><a href="https://hexo.io/docs/tag-plugins">Hexo - tag-plugins</a></li>
 <li><a href="https://theme-next.js.org/docs/tag-plugins/">theme-Next - tag-plugins</a></li>
 <li><a href="https://fontawesome.com/search?o=r&m=free">Font Awesome - Search</a></li>
@@ -260,228 +480,6 @@
       <tags>
         <tag>Hexo</tag>
         <tag>Hexo-NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>gitHub 學習筆記</title>
-    <url>/zh-tw/8455/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">
-<p>自用筆記備忘錄，記錄在學習中所使用的語法</p>
-
-</blockquote>
-
-<span id="more"></span>
-
-<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>自用筆記備忘錄，記錄在學習中所使用的語法</p>
-<h2 id="2-配置本地-git-倉庫"><a href="#2-配置本地-git-倉庫" class="headerlink" title="2. 配置本地 git 倉庫"></a>2. 配置本地 git 倉庫</h2><p>以我自己的 Minecraft 翻譯項目為例：</p>
-<blockquote>
-<p><a href="https://github.com/Blackrowtw/Translation-zh_tw-of-masa-series-mods">繁中 masa 系模組翻譯_by.BK</a></p>
-</blockquote>
-<h3 id="2-1-初始化"><a href="#2-1-初始化" class="headerlink" title="2.1. 初始化"></a>2.1. 初始化</h3><ol>
-<li>移動至需要版本控制的資料夾</li>
-<li>進入終端 ; cmd</li>
-<li>初始化：<code>git init</code></li>
-<li>加入全部檔案：<code>git add .</code></li>
-<li>撰寫第一次 commit 描述：<code>git commit -m &quot;第一次&quot;</code></li>
-</ol>
-<h3 id="2-2-連接遠端倉庫"><a href="#2-2-連接遠端倉庫" class="headerlink" title="2.2. 連接遠端倉庫"></a>2.2. 連接遠端倉庫</h3><ol>
-<li>查詢所記錄的遠程倉庫網址：<code>git remote</code></li>
-<li>增加遠程倉庫的網址與別名 origin：<br><code>git remote add origin https://github.com/Blackrowtw/Translation-zh_tw-of-masa-series-mods</code></li>
-<li>查詢遠程倉庫地址並列出詳細網址：<code>git remote -v</code></li>
-<li>重新設定遠端網址 <code>git remote set-url origin https://github.com/xxxx</code></li>
-<li>刪除遠端 <code>git remote remove &lt;name&gt;</code></li>
-</ol>
-<h3 id="2-3-管理分支"><a href="#2-3-管理分支" class="headerlink" title="2.3. 管理分支"></a>2.3. 管理分支</h3><ol>
-<li>查詢所有 git 分支：<code>git branch</code></li>
-<li>修改當前的分支名稱為 main：<code>git branch -m main</code><blockquote>
-<p>如果 github 的分支預設為 main 非 master 的狀況</p>
-</blockquote>
-</li>
-<li>強制執行改名：<code>git branch -M main</code></li>
-<li>從遠程倉庫 origin 拉取分支 master ：<code>git pull origin master</code></li>
-</ol>
-<h3 id="2-4-管理-commit"><a href="#2-4-管理-commit" class="headerlink" title="2.4. 管理 commit"></a>2.4. 管理 commit</h3><ol>
-<li>列出 commit 的修改記錄：<code>git log --oneline</code><blockquote>
-<p>–oneline: 一行表示</p>
-</blockquote>
-</li>
-<li>解決 commit 衝突<code>git pull --rebase origin master</code><blockquote>
-<p>–rebase：重整，將遠程 commit 同步到本地後再創建新的 commit</p>
-</blockquote>
-</li>
-<li>將本地的倉庫推送到遠程：<code>git push origin master</code></li>
-</ol>
-<h2 id="3-分支操作"><a href="#3-分支操作" class="headerlink" title="3. 分支操作"></a>3. 分支操作</h2><ol>
-<li>創建新分支並移動到該分支：<code>git switch -c v1.20.1</code></li>
-<li>將該分支同步到遠程：<code>git push origin v1.20.1</code></li>
-<li>查詢所在分支：<code>git branch</code></li>
-<li>移動回 master 分支：<code>git switch master</code></li>
-<li>刪除 v1.20.1 的分支：<code>git branch -d v1.20.1</code></li>
-<li>github 合併 Pull Request 後，記得同步本地的 commit：<code>git pull</code></li>
-<li>切換到 master：<code>git checkout master</code></li>
-<li>將分支 v1.20.1 合併到當前分支：<code>git merge</code></li>
-</ol>
-<h2 id="4-Tags-和-Releases"><a href="#4-Tags-和-Releases" class="headerlink" title="4. Tags 和 Releases"></a>4. Tags 和 Releases</h2><ol>
-<li>查詢現有 tag：<code>git tag</code></li>
-<li>創建名為 v1.20.1 的 tag，並加上注釋：<code>git tag -a v1.20.1 -m &quot;版本 v1.20.1，2023-07-10 製作&quot;</code><blockquote>
-<p>-a：annotation，註解</p>
-</blockquote>
-</li>
-<li>將標籤 v1.20.1 推送到遠程倉庫：<code>git push origin v1.20.1</code></li>
-<li>刪除標籤 v1.20.1：<code>git tag -d v1.20.1</code></li>
-</ol>
-<h2 id="5-refernce"><a href="#5-refernce" class="headerlink" title="5. ::: refernce :::"></a>5. ::: refernce :::</h2><p><a href="https://www.bilibili.com/video/BV1RC411W7UE/">给学完 Git，还不会用 GitHub 的朋友们【bilibili】</a></p>
-]]></content>
-      <categories>
-        <category>Coding</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo 架設筆記</title>
-    <url>/zh-tw/5d25/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">
-<p>自用筆記備忘錄，記錄在學習中所使用的語法</p>
-
-</blockquote>
-
-<span id="more"></span>
-
-<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>Hexo : 快速、簡單且強大的網誌框架</p>
-<p>原先使用的Jekyll已經忘得差不多了，所以改用Hexo從頭架設一次</p>
-<p>一樣選擇放在gitHub的個人網頁，作為靜態網站的站點再合適不過</p>
-<h2 id="2-環境搭建"><a href="#2-環境搭建" class="headerlink" title="2. 環境搭建"></a>2. 環境搭建</h2><blockquote>
-<p>建置時使用的版本：</p>
-<blockquote>
-<p><code>git version 2.38.1.windows.1</code><br><code>Node.js npm-10.2.4</code></p>
-</blockquote>
-<blockquote>
-<p><code>hexo: 7.1.1</code><br><code>hexo-theme-next@8.19.1</code></p>
-</blockquote>
-</blockquote>
-<h3 id="2-1-選擇當前資料夾並進入終端-cmd"><a href="#2-1-選擇當前資料夾並進入終端-cmd" class="headerlink" title="2.1. 選擇當前資料夾並進入終端(cmd)"></a>2.1. 選擇當前資料夾並進入終端(cmd)</h3><ol>
-<li>利用 npm 在資料夾裡安裝 hexo <code>npm install hexo-cli -g</code><blockquote>
-<p>npm： <a href="https://nodejs.org/en">Node.js</a> package manager | 套件管理工具</p>
-</blockquote>
-</li>
-<li>git 初始化：<code>git init</code><blockquote>
-<p><a href="https://git-scm.com/">git</a>: 使用命令行的版本控制軟體</p>
-</blockquote>
-</li>
-<li>npm 初始化：<code>npm install</code></li>
-<li>hexo 初始化：<code>hexo init</code></li>
-<li>安裝hexo的next主題：<code>npm install hexo-theme-next</code><blockquote>
-<p><a href="https://theme-next.js.org/">🎉 Elegant and powerful theme for Hexo.</a></p>
-</blockquote>
-</li>
-</ol>
-<h3 id="2-2-撰寫-config-yml-config-next-yml-文件"><a href="#2-2-撰寫-config-yml-config-next-yml-文件" class="headerlink" title="2.2. 撰寫 _config.yml,_config.next.yml 文件"></a>2.2. 撰寫 _config.yml,_config.next.yml 文件</h3><ol>
-<li><a href="https://hexo.io/zh-tw/docs/configuration">Hexo</a> 的配置</li>
-<li><a href="https://theme-next.js.org/docs/">NexT</a> 的配置</li>
-</ol>
-<h3 id="2-3-安裝功能插件"><a href="#2-3-安裝功能插件" class="headerlink" title="2.3. 安裝功能插件"></a>2.3. 安裝功能插件</h3><ol>
-<li>安裝部屬用插件：<code>npm install hexo-deployer-git --save</code><blockquote>
-<p>– save: 儲存變更到 pack 管理文件之中<br>blog 部屬用的靜態文件將存放於 public</p>
-</blockquote>
-</li>
-<li>安裝hexo的字數統計插件：<code>npm install hexo-word-counter --save</code></li>
-<li>安裝 abbrlink 插件：<code>npm install hexo-abbrlink --save</code><blockquote>
-<p>讓發表的文章擁有永久網址，與 google 優化 SEO 有關</p>
-</blockquote>
-</li>
-<li>安裝本地搜尋：<code>npm install hexo-generator-searchdb --save</code></li>
-<li>安裝 <a href="https://github.com/gitalk/gitalk">gitalk</a> 留言板：<br> 需要建立 <a href="https://github.com/">GitHub</a> OAuth APP<br> ^[<a href="https://israynotarray.com/hexo/20191206/2397475810/">十分鐘超詳細替 Hexo NexT 開啟 Gitalk 留言版</a>]<br> ^[<a href="https://theme-next.js.org/docs/third-party-services/comments#Gitalk">NexT Comment Systems</a>]<br> ^[<a href="https://theme-next.js.org/docs/third-party-services/comments#How-to-Disable-Comments-on-Page">如何取消頁面的留言板</a>]</li>
-</ol>
-<h3 id="2-4-Google-搜尋引擎最佳化-SEO「Search-Engine-Optimization」"><a href="#2-4-Google-搜尋引擎最佳化-SEO「Search-Engine-Optimization」" class="headerlink" title="2.4. Google 搜尋引擎最佳化 (SEO「Search Engine Optimization」)"></a>2.4. Google 搜尋引擎最佳化 (SEO「Search Engine Optimization」)</h3><ol>
-<li>安裝 Sitemap 插件：<code>npm install hexo-generator-sitemap</code><blockquote>
-<p>Sitemap 用來記錄該網站中所有 url 路徑，以及每一個路徑最後修改的時間戳。</p>
-</blockquote>
-</li>
-<li>設定 <a href="https://analytics.google.com/analytics/web/">Google Analytics</a><blockquote>
-<p>網頁來訪狀況分析服務</p>
-</blockquote>
-</li>
-<li>在 <a href="https://search.google.com/search-console/about?hl=zh-tw">Google Search Console</a> 設定加入網站連結<blockquote>
-<p>認證網站所有權，以及上傳 SiteMap 文件</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="3-開始使用-Hexo-撰寫-Blog"><a href="#3-開始使用-Hexo-撰寫-Blog" class="headerlink" title="3. 開始使用 Hexo 撰寫 Blog"></a>3. 開始使用 Hexo 撰寫 Blog</h2><ul>
-<li>new 新增文章 <code>hexo n &quot;&quot;</code><blockquote>
-<p>預設模板為 post.md</p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;<span class="built_in">title</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>clean 清除靜態檔案與快取 <code>hexo cl</code><blockquote>
-<p>修改檔案後建議執行一次，清除已經部屬過的 public 資料夾</p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>generate 產生靜態檔案 <code>hexo g</code> <code>hexo g -d</code><blockquote>
-<p>用 source 裡的資料生成靜態的網頁架構</p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>server 啟動伺服器 <code>hexo s</code><blockquote>
-<p>在<a href="http://localhost:4000/">本地端</a>啟動 Hexo 伺服器</p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>將檔案部屬到 GitHub <code>hexo d</code><blockquote>
-<p>需要安裝並設定 <a href="#%E5%AE%89%E8%A3%9D%E5%8A%9F%E8%83%BD%E6%8F%92%E4%BB%B6">hexo-deployer</a></p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>渲染時顯示草稿 <code>hexo s --draft</code></li>
-<li>新建一篇草稿 <code>hexo new draft &quot;&quot;</code></li>
-<li>將草稿發表 <code>hexo publish &quot;&lt;filename&gt;&quot;</code></li>
-</ul>
-<h2 id="4-版本更新"><a href="#4-版本更新" class="headerlink" title="4. 版本更新"></a>4. 版本更新</h2><ol>
-<li>檢查目前所安裝的版本是否過期 <code>npm outdated</code></li>
-<li>安裝最新的版本 <code>npm install hexo-theme-next@latest</code></li>
-<li>安裝特定版本 <code>npm install hexo-theme-next@8.0.0</code></li>
-</ol>
-<h2 id="5-個人客製化的學習歷程"><a href="#5-個人客製化的學習歷程" class="headerlink" title="5. 個人客製化的學習歷程"></a>5. 個人客製化的學習歷程</h2><ul>
-<li><input checked="" disabled="" type="checkbox"> 從原先的 Jekyll 專案裡搬來模板並改造</li>
-<li><input checked="" disabled="" type="checkbox"> 引入 <a href="https://tailwindcss.com/">Tailwind css</a> ^[<a href="https://tailwindcss.com/docs/installation">Tailwind 指令集</a>]</li>
-<li><input checked="" disabled="" type="checkbox"> 從各處搜刮不同的模板並改造 ^[<a href="https://flowbite.com/">Flowbite</a>]</li>
-<li><input checked="" disabled="" type="checkbox"> 學習 html 與 css 的語法並改造為 Tailwind ^[<a href="https://www.w3schools.com/howto/default.asp">W3Schools</a>]<br>^[<a href="https://fontawesome.com/">Font Awesome</a>]<br>^[<a href="https://webcode.tools/">Webcode Tools</a>]<br>^[<a href="https://css-loaders.com/">CSS Loaders 動畫效果 600+</a>]</li>
-<li><input disabled="" type="checkbox"> 學習 Hexo Tag Plugins 寫法，並試著開始撰寫文章</li>
-<li><input disabled="" type="checkbox"> 學習 Reject 把寫好的代碼模組化提高複用性</li>
-</ul>
-<h2 id="6-refernce"><a href="#6-refernce" class="headerlink" title="6. ::: refernce :::"></a>6. ::: refernce :::</h2><ol>
-<li><a href="https://hexo.io/zh-tw/">Hexo 官方網站</a></li>
-<li><a href="https://theme-next.js.org/">Hexo NexT 主題</a></li>
-<li><a href="https://israynotarray.com/hexo/20200914/3741834499/">試著學 Hexo - 序章</a></li>
-<li><a href="https://zenreal.github.io/posts/30115/">Github + Hexo 新手搭建手冊(含各種TIPS與問題解決) [2019]</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Coding</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Hexo-NexT</tag>
-        <tag>Nodejs</tag>
-        <tag>Tailwind css</tag>
       </tags>
   </entry>
 </search>
