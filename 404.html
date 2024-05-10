@@ -1,0 +1,167 @@
+
+<!-- gitHUB 的 404 頁面設定 -->
+<!-- https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 避免被 404 被 GOOGLE 納入搜尋結果 -->
+    <meta name="robots" content="noindex" />
+
+    <!-- 網頁縮圖 -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/+images/favicon/apple-touch-icon-180x180-BK.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/+images/favicon/favicon-32x32-BK.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/+images/favicon/favicon-16x16-BK.png"
+    />
+    <link
+      rel="mask-icon"
+      href="/+images/favicon/android-chrome-256x256-BK.svg"
+      color="#222"
+    />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font-awesome-animation CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- 加載自訂CSS -->
+    <link rel="stylesheet" href="+css/index-hero-site.css" />
+    <!-- 瀏覽器頁面標題 -->
+    <title>BK's Dreg Heap 404</title>
+  </head>
+
+  <!-- +*+*+*+* 網頁內容 +*+*+*+* -->
+  <body class="text-gray-200 font-Segoe UI bg-[#00adef]">
+    <div class="px-[10dvw] grid grid-row-2 place-items-start" id="container">
+      <div class="h-[60lvh] max-w-3xl flex flex-col justify-end" id="top-info">
+        <h1 class="text-5xl md:text-9xl my-4 md:my-12">:(</h1>
+        <!-- <h2 class="text-4xl my-4">
+          Your PC ran into a problem and needs to restart. We're just collecting
+          some error info, and then we'll restart for you.
+        </h2> -->
+        <h2 class="text-2xl md:text-4xl">
+          您的瀏覽器發生問題，因此必須重新啟動。<br />我們剛剛正在收集某些錯誤資訊，接著我們會為您重新啟動。
+        </h2>
+        <div class="inline-block flex">
+          <h2 class="text-nowrap text-2xl mdtext-4xl my-2">
+            <!-- 轉圈圈動畫 -->
+            <div class="inline-block" id="loader"></div>
+            <style>
+              #loader {
+                width: 50px;
+                padding: 8px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                background: #73caed;
+                --_m: conic-gradient(#0000 10%, #000),
+                  linear-gradient(#000 0 0) content-box;
+                -webkit-mask: var(--_m);
+                mask: var(--_m);
+                -webkit-mask-composite: source-out;
+                mask-composite: subtract;
+                animation: l3 1s infinite linear;
+              }
+              @keyframes l3 {
+                to {
+                  transform: rotate(1turn);
+                }
+              }
+            </style>
+            <span>已完成 </span><span id="percentage">0</span> %
+          </h2>
+        </div>
+
+        <!-- <h2 class="text-4xl my-4"><span id="percentage">0</span>% complete</h2> -->
+      </div>
+
+      <div class="h-[40lvh]" id="details">
+        <div class="flex">
+          <div
+            class="flex-none size-32 bg-cover"
+            id="QR Code"
+            style="background-image: url('/+images/Rickrolling_QR_code.png')"
+          ></div>
+          <div
+            class="pl-2 flex flex-col justify-end text-sm md:text-xl space-y-2"
+            id="stopcode"
+          >
+            <!-- <h4>
+            For more information about this issue and possible fixes, visit
+            <br />http://xontab.com/stopcode
+          </h4> -->
+            <h4 class="">
+              如需此問題與可能修正的詳細資訊，請瀏覽
+              <a class="hover:underline" href="https://blackrowtw.github.io/"
+                >https://blackrowtw.github.io/</a
+              >
+            </h4>
+            <!-- <h5>
+            If you call a support person, give them this info: <br />Stop Code:
+            404 PAGE NOT FOUND
+          </h5> -->
+            <h5 class="">
+              致電支援人員時，請提供此資訊： <br />
+              <span class="text-xs md:text-sm"> Stop Code:</span>
+              <span class="text-xs md:text-sm">404_PAGE_NOT_FOUND</span>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- refrence: -->
+    <!-- https://codepen.io/xontab/pen/JrVaYR -->
+    <script>
+      let percentageElement = document.getElementById("percentage");
+      let percentage = 0;
+
+      function process01() {
+        percentage += parseInt(Math.random() * 10);
+        if (percentage > 98) {
+          percentage = 99;
+        }
+        percentageElement.innerText = percentage;
+        processInterval();
+      }
+
+      function process02() {
+        percentage = percentage / 10 + 90;
+        if (percentage > 99.999999999999) {
+          // 超過12個9之後回上一頁
+          history.back();
+        }
+        percentageElement.innerText = percentage;
+        processInterval();
+      }
+
+      function processInterval() {
+        if (percentage < 99) {
+          setTimeout(process01, Math.random() * 500 + 500);
+        } else {
+          // 超過99之後，每一秒多一個9
+          setTimeout(process02, 1000);
+        }
+      }
+      processInterval();
+    </script>
+  </body>
+</html>

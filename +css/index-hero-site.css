@@ -1,0 +1,327 @@
+/* https://fonts.google.com/specimen/Kanit */
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* 隱藏滾動條 */
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+/* 首頁hreo輪播圖 */
+
+#hero-bg-wrapper > div {
+  animation: hero-bg-wrapper-animate 25s infinite;
+  opacity: 0;
+  transform-style: preserve-3d;
+}
+#hero-bg-wrapper > div:nth-child(2) {
+  animation-delay: 5s;
+}
+#hero-bg-wrapper > div:nth-child(3) {
+  animation-delay: 10s;
+}
+#hero-bg-wrapper > div:nth-child(4) {
+  animation-delay: 15s;
+}
+#hero-bg-wrapper > div:nth-child(5) {
+  animation-delay: 20s;
+}
+
+@keyframes hero-bg-wrapper-animate {
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.05);
+  }
+}
+
+/* 側邊滾動欄監聽測試用元件 */
+#scroll-watcher {
+  scale: 1 1;
+  transform-origin: right;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+  0% {
+    scale: 1 1;
+  }
+  100% {
+    scale: 0 1;
+  }
+}
+
+/* 網頁視差特效 */
+/* Hero頁面 */
+#hero-bg-scroll {
+  animation: hero-bg-scroll-animate linear;
+  animation-timeline: scroll();
+}
+
+#hero-site-title {
+  animation: hero-fade-title cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  animation-timeline: scroll();
+}
+#hero-site-sub-title {
+  animation: hero-fade-sub-title cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  animation-timeline: scroll();
+}
+#hero-divider-line-btm {
+  animation: hero-fade-d-line-btm cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  animation-timeline: scroll();
+}
+
+@keyframes hero-bg-scroll-animate {
+  100% {
+    transform: scale(1.25);
+  }
+}
+
+@keyframes hero-fade-title {
+  10% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-20rem);
+  }
+}
+
+@keyframes hero-fade-sub-title {
+  10% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+}
+
+@keyframes hero-fade-d-line-btm {
+  10% {
+    opacity: 0.2;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-15rem);
+  }
+}
+
+/* info頁面 */
+#info-site-title-01 {
+  animation: info-fade-title-01 ease-in-out;
+  animation-timeline: scroll();
+}
+#info-site-title-02 {
+  animation: info-fade-title-02 ease-in-out;
+  animation-timeline: scroll();
+}
+#info-site-title-03 {
+  animation: info-fade-title-03 ease-in-out;
+  animation-timeline: scroll();
+}
+#info-site-sub-title {
+  animation: info-fade-sub-title cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  animation-timeline: scroll();
+}
+#info-divider-line-btm {
+  animation: info-fade-d-line-btm cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  animation-timeline: scroll();
+}
+#info-divider-line-top {
+  animation: info-fade-d-line-top cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  animation-timeline: scroll();
+}
+#info-block-btn-01 {
+  animation: info-fade-block-btn-01 cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  animation-timeline: scroll();
+}
+
+@keyframes info-fade-title-01 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-20rem);
+  }
+  80% {
+    opacity: 0.6;
+  }
+  95% {
+    opacity: 1;
+  }
+}
+@keyframes info-fade-title-02 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-21rem);
+  }
+  80% {
+    opacity: 0.6;
+  }
+  95% {
+    opacity: 1;
+  }
+}
+@keyframes info-fade-title-03 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-22rem);
+  }
+  80% {
+    opacity: 0.6;
+  }
+  95% {
+    opacity: 1;
+  }
+}
+
+@keyframes info-fade-sub-title {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  90% {
+    opacity: 0.1;
+  }
+  95% {
+    opacity: 1;
+  }
+}
+
+@keyframes info-fade-d-line-btm {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-15rem);
+  }
+  80% {
+    opacity: 0.2;
+  }
+  95% {
+    opacity: 1;
+  }
+}
+
+@keyframes info-fade-d-line-top {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(15rem);
+  }
+  80% {
+    opacity: 0.2;
+  }
+  95% {
+    opacity: 1;
+  }
+}
+
+@keyframes info-fade-block-btn-01 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-20rem);
+  }
+  80% {
+    opacity: 0.1;
+  }
+  95% {
+    opacity: 0.4;
+  }
+}
+
+#Down-facing-arrows {
+  animation: loop-arrows-down 1s ease-in-out infinite;
+}
+
+#Up-facing-arrows {
+  animation: loop-arrows-up 1s ease-in-out infinite;
+}
+
+@keyframes loop-arrows-down {
+  20% {
+    transform: translateY(0.5rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes loop-arrows-up {
+  20% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+/* #card-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* #card-container {
+  height: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+} */
+
+/* #card {
+  width: 80px;
+  border-radius: 0.75rem;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.card > .row {
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+  background: #223;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+} */

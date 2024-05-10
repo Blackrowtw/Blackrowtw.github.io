@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 網頁縮圖 -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/+images/favicon/apple-touch-icon-180x180-BK.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/+images/favicon/favicon-32x32-BK.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/+images/favicon/favicon-16x16-BK.png"
+    />
+    <link
+      rel="mask-icon"
+      href="/+images/favicon/android-chrome-256x256-BK.svg"
+      color="#222"
+    />
+    <!-- 基本資訊 -->
+    <meta name="description" content="About me and my works." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="BK's Dreg Heap" />
+    <meta property="og:site_name" content="BK's Dreg Heap" />
+    <meta property="og:description" content="About me and my works." />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="article:author" content="BlacKrow" />
+    <meta property="article:tag" content="BlacKrow" />
+    <meta property="article:tag" content="BlacKrowtw" />
+    <meta property="article:tag" content="BlacKrowtwo" />
+    <meta property="article:tag" content="spice and wolf" />
+    <meta property="article:tag" content="狼與辛香料" />
+    <meta property="article:tag" content="狼と香辛料" />
+
+    <!-- Google Search Console SEO 驗證用 HTML 標記 -->
+    <meta
+      name="google-site-verification"
+      content="8FDuyR_knaLSUi7iNQmuOiM8W4mCg4KNGhW1d7RojJE"
+    />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font-awesome-animation CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- 加載自訂CSS -->
+    <link rel="stylesheet" href="+css/index-hero-site.css" />
+    <!-- 瀏覽器頁面標題 -->
+    <title>BK's Dreg Heap</title>
+  </head>
+
+  <!-- +*+*+*+* 網頁內容 +*+*+*+* -->
+  <body class="p-0 m-0 overflow-x-hidden text-gray-300 font-sans bg-black">
+    <!-- Navbar 導航欄
+          參考來源：https://www.youtube.com/watch?v=JEBgqbZWYIQ&-->
+    <nav
+      class="fixed flex top-0 xl:px-20 sm:px-10 px-5 py-4 w-lvw box-border justify-between items-top"
+      style="transition: 0.5s"
+      id="Navbar"
+    >
+      <!-- 網頁頭像與標題 -->
+      <div class="flex overflow-hidden">
+        <a
+          class="mx-2 my-1 h-6 w-6 bg-cover bg-center rounded-full ring-2 ring-gray-300 dark:ring-gray-500 hidden sm:inline-block"
+          style="background-image: url('/+images/favicon/favicon-32x32-BK.png')"
+        ></a>
+        <a
+          class="font-[Kanit] pr-4 font-semibold text-2xl duration-700 hover:translate-x-1 decoration-dotted underline-offset-4 hover:underline active:blur-sm active:scale-110"
+          href="https://blackrowtw.github.io/"
+          id="brand"
+          >BlacKrow</a
+        >
+      </div>
+      <!-- 書籤連結 -->
+      <ul class="flex p-0 m-0 flex-row">
+        <!-- 聯繫我 標籤 -->
+        <li class="list-none flex">
+          <div class="text-base pl-5 py-1">
+            <a href="#Contact" class="fa-solid fa-paper-plane"></a>
+          </div>
+          <a
+            class="px-1 py-1 text-base font-medium duration-700 hover:translate-x-1 decoration-dotted underline-offset-4 hover:underline active:blur-sm active:scale-125"
+            href="#Contact"
+            >Contact</a
+          >
+        </li>
+        <!-- Blog 標籤 -->
+        <li class="list-none flex">
+          <div class="text-base pl-5 py-1">
+            <a href="./blog" class="fa-solid fa-book-bookmark"></a>
+            <!-- <i class="fa-brands fa-blogger-b"></i> -->
+          </div>
+          <a
+            class="px-1 py-1 text-base font-medium duration-700 hover:translate-x-1 decoration-dotted underline-offset-4 hover:underline active:blur-sm active:scale-125"
+            href="https://blackrowtw.github.io/blog/"
+            >Blog</a
+          >
+        </li>
+
+        <!-- <li class="list-none flex">
+          <div class="text-base pl-5 py-1">
+            <i class="fa-solid fa-house"></i>
+          </div>
+          <a class="px-1 py-1 text-base font-medium hover:underline" href="#"
+            >Home</a
+          >
+        </li> -->
+
+        <!-- <li class="list-none flex">
+          <div class="text-base pl-5 py-1">
+            <i class="fa-solid fa-address-book"></i>
+          </div>
+          <a class="px-1 py-1 text-base font-medium hover:underline" href="#"
+            >About</a
+          >
+        </li> -->
+      </ul>
+    </nav>
+
+    <!-- Hero 頁面 -->
+    <section class="h-lvh w-lvw" id="site-arae-01">
+      <!-- Hero BG 背景圖片輪換-->
+      <div class="fixed h-lvh w-lvw overflow-hidden -z-10" id="hero-bg-scroll">
+        <div class="relative h-lvh w-lvw opacity-50" id="hero-bg-wrapper">
+          <div
+            class="absolute h-lvh w-lvw bg-orange-300 bg-cover bg-center blur-sm"
+            style="background-image: url('/+images/hero-backgrond/01.jpg')"
+            id="hero-bg-01"
+          ></div>
+          <div
+            class="absolute h-lvh w-lvw bg-orange-400 bg-cover bg-center blur-sm"
+            style="background-image: url('/+images/hero-backgrond/02.jpg')"
+            id="hero-bg-02"
+          ></div>
+          <div
+            class="absolute h-lvh w-lvw bg-orange-500 bg-cover bg-center blur-sm"
+            style="background-image: url('/+images/hero-backgrond/03.jpg')"
+            id="hero-bg-03"
+          ></div>
+          <div
+            class="absolute h-lvh w-lvw bg-orange-600 bg-cover bg-center blur-sm"
+            style="background-image: url('/+images/hero-backgrond/04.jpg')"
+            id="hero-bg-04"
+          ></div>
+          <div
+            class="absolute h-lvh w-lvw bg-orange-700 bg-cover bg-center blur-sm"
+            style="background-image: url('/+images/hero-backgrond/05.jpg')"
+            id="hero-bg-05"
+          ></div>
+        </div>
+      </div>
+      <!-- Hero 文字內容 面板+視差效果 -->
+      <div class="xl:px-20 sm:px-10 px-5 min-h-lvh min-w-lvw flex flex-col">
+        <!-- 空白排版用 -->
+        <div class="h-[75lvh]"></div>
+        <!-- 頁面標題與副標 -->
+        <div class="h-[15lvh] flex flex-col justify-end">
+          <div
+            class="text-right text-4xl mb-2 font-extralight font-serif sm:text-5xl"
+            id="hero-site-title"
+          >
+            <a class="-mr-4">BK's Dreg Heap</a>
+            <a class="m-3 text-3xl text-center sm:text-4xl">
+              <i class="fa-solid fa-square-full"></i>
+            </a>
+          </div>
+          <div
+            class="text-right text-xl font-extralight font-sans tracking-wider hidden sm:block"
+            id="hero-site-sub-title"
+          >
+            <a class="text-nowrap mr-2">
+              I've asked all over the world, but there's no answer.</a
+            >
+          </div>
+        </div>
+        <!-- 頁面下方分隔條 + 視差效果 -->
+        <div
+          class="h-[10lvh] flex flex-col items-center border-t-[1px]"
+          id="hero-divider-line-btm"
+        >
+          <a href="#Contact" id="Down-facing-arrows">
+            <svg
+              class="w-[48px] h-[48px] text-gray-800 dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0.5"
+                d="m19 9-7 7-7-7"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 介紹頁面 -->
+    <section class="bg-neutral-900 min-h-lvh w-lvw" id="Contact">
+      <!-- 聯繫資訊 面板 -->
+      <div
+        class="xl:px-20 sm:px-10 px-5 min-h-lvh min-w-lvw flex flex-col bg-no-repeat bg-center bg-auto"
+        style="
+          background-image: url('/+images/hero-backgrond/Rhino_GH_life-game_BV1fp421D7na.jpg');
+        "
+      >
+        <!-- 頁面上方分隔條 + 視差效果 -->
+        <div
+          class="h-[5lvh] grid grid-cols-2 border-b-[1px]"
+          style="visibility: visible"
+          id="info-divider-line-top"
+        >
+          <div class="flex font-extralight font-serif space-x-2">
+            <div
+              class="place-self-end translate-y-4 inline-block bg-gray-200 size-3 ml-0.5"
+            ></div>
+            <div
+              class="place-self-end translate-y-4 inline-block bg-gray-400 size-3"
+            ></div>
+            <div
+              class="place-self-end translate-y-4 inline-block bg-gray-800 size-3"
+            ></div>
+
+            <!-- <span class="place-self-end translate-y-6 ml-1">2024/05/01</span>
+            <span class="place-self-end translate-y-5 text-xs ml-1"
+              >UTC+08:00</span
+            > -->
+          </div>
+          <div class="flex"></div>
+        </div>
+        <div class="h-[80lvh]">
+          <!-- 卡片 切換效果
+          https://github.com/webtutorialsw/css_sliding_cards/tree/master -->
+          <div
+            class="size-full flex justify-center items-center mt-[5lvh]"
+            id="card-wrapper"
+          >
+            <div
+              class="h-[75lvh] flex flex-nowrap justify-start"
+              id="card-container"
+            >
+              <input
+                id="card-01"
+                class="peer/card-01 hidden"
+                type="radio"
+                name="cards"
+                checked
+              />
+              <label
+                for="card-01"
+                class="w-[6lvw] -mx-[1px] flex justify-center items-center bg-cover bg-left border-x-2 cursor-pointer overflow-hidden transition-all duration-700 ease-in-out peer-checked/card-01:lg:w-[40lvw] peer-checked/card-01:sm:w-[60lvw] peer-checked/card-01:w-[80lvw] *:opacity-30 peer-checked/card-01:*:opacity-100 *:scale-75 peer-checked/card-01:*:scale-100"
+              >
+                <div
+                  class="flex flex-nowrap transition-all duration-700 ease-in-out"
+                  id="card-row"
+                >
+                  <!-- 卡片01 內容區 -->
+                  <div
+                    class="flex flex-wrap overflow-hidden justify-center place-items-center"
+                    id="card-description"
+                  >
+                    <!-- icon漸變區 -->
+                    <div
+                      class="relative size-[35lvh] md:size-[50lvh]"
+                      id="logo-container"
+                    >
+                      <div
+                        class="absolute size-full bg-contain bg-no-repeat bg-bottom animate-[pulse_4s_ease-in-out_infinite]"
+                        style="
+                          background-image: url('/+images/logo/noise-01_512x512.png');
+                        "
+                      ></div>
+                      <div
+                        class="absolute size-full bg-contain bg-no-repeat bg-bottom animate-[pulse_1s_ease-in-out_infinite]"
+                        style="
+                          background-image: url('/+images/logo/noise-02_512x512.png');
+                        "
+                      ></div>
+                      <div
+                        class="absolute size-full bg-contain bg-no-repeat bg-bottom animate-[pulse_2s_ease-in-out_infinite]"
+                        style="
+                          background-image: url('/+images/logo/noise-03_512x512.png');
+                        "
+                      ></div>
+                      <div
+                        class="absolute size-full bg-contain bg-no-repeat bg-bottom animate-[pulse_3s_ease-in-out_infinite]"
+                        style="
+                          background-image: url('/+images/logo/noise-04_512x512.png');
+                        "
+                      ></div>
+                      <div
+                        class="absolute size-full bg-contain bg-no-repeat bg-bottom"
+                        style="
+                          background-image: url('/+images/logo/white_512x512.png');
+                        "
+                      ></div>
+                      <div
+                        class="absolute size-full bg-contain bg-no-repeat bg-bottom"
+                        style="
+                          background-image: url('/+images/logo/black_512x512.png');
+                        "
+                      ></div>
+                    </div>
+                    <!-- 標題和按鈕 -->
+                    <div class="mx-8">
+                      <p
+                        class="text-3xl text-center font-[Kanit] font-semibold my-0 md:text-5xl md:my-2"
+                      >
+                        BlacKrow
+                      </p>
+                      <p
+                        class="text-sm text-center text-nowrap overflow-hidden md:text-xl"
+                      >
+                        Thinking, creating, expressing.
+                      </p>
+
+                      <div
+                        class="flex justify-center text-xs my-4 md:text-lg md:my-8"
+                        id="button-group"
+                      >
+                        <a href="#Contact"
+                          ><button
+                            class="flex items-center duration-700 bg-gray-300 rounded-lg shadow-md shadow-blue-300/50 px-6 py-2 text-gray-800 hover:bg-blue-300 hover:shadow-sky-800 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 active:blur-sm"
+                          >
+                            <span class="">
+                              <i class="fa-solid fa-stopwatch"></i>
+                              Comming Soon...
+                            </span>
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+              <input
+                id="card-02"
+                class="peer/card-02 hidden"
+                type="radio"
+                name="cards"
+              />
+              <label
+                for="card-02"
+                style="
+                  background-image: url('/+images/card-background/who.png');
+                "
+                class="w-[6lvw] -mx-[1px] flex justify-center items-center bg-cover bg-left border-x-2 cursor-pointer overflow-hidden transition-all duration-700 ease-in-out peer-checked/card-02:lg:w-[50lvw] peer-checked/card-02:sm:w-[60lvw] peer-checked/card-02:w-[80lvw] *:opacity-0 peer-checked/card-02:*:opacity-100 *:scale-0 peer-checked/card-02:*:scale-100 *:-translate-y-full peer-checked/card-02:*:translate-y-0"
+              >
+                <div
+                  class="flex flex-nowrap transition-all duration-700 ease-in-out"
+                  id="card-row"
+                >
+                  <!-- 卡片02 內容區 -->
+                  <div
+                    class="h-[70lvh] flex flex-col justify-center overflow-hidden m-8"
+                    id="card-description"
+                  >
+                    <div
+                      class="relative grid grid-cols-6 gap-2 min-[800px]:max-w-[400px]"
+                    >
+                      <!-- 語言切換按鈕 -->
+                      <input
+                        type="radio"
+                        id="who-lang-switcher-en"
+                        class="peer/who-lang-switcher-en place-self-end z-10 size-6 appearance-none rounded-full border-2 border-gray-200 ring-inset ring-offset-1 ring-offset-gray-950 duration-700 hover:text-sky-400 hover:scale-125 focus:ring-4 focus:ring-sky-500 checked:ring-4 checked:ring-sky-300/80 active:blur-sm"
+                        name="who-lang-switcher"
+                        checked
+                      />
+                      <label
+                        for="who-lang-switcher-en"
+                        class="font-[Kanit] font-semibold"
+                        >EN</label
+                      >
+                      <input
+                        type="radio"
+                        id="who-lang-switcher-cn"
+                        class="peer/who-lang-switcher-cn place-self-end size-6 appearance-none rounded-full border-2 border-gray-200 ring-inset ring-offset-1 ring-offset-gray-950 duration-700 hover:text-sky-400 hover:scale-125 focus:ring-4 focus:ring-sky-500 checked:ring-4 checked:ring-sky-300/80 active:blur-sm"
+                        name="who-lang-switcher"
+                      />
+                      <label
+                        for="who-lang-switcher-cn"
+                        class="font-[Kanit] font-semibold"
+                        >CN</label
+                      >
+                      <!-- EN 英文內容區 -->
+                      <div
+                        class="col-span-6 order-first hidden peer-checked/who-lang-switcher-en:block mb-6"
+                        id="who-en"
+                      >
+                        <p
+                          class="font-[Kanit] font-semibold text-2xl md:text-4xl mb-2"
+                        >
+                          Who am I?
+                        </p>
+                        <p class="text-sm md:text-xl">
+                          I'm still not sure what I'm going to write here, but
+                          I'm going to put in some stuff to show how the layout
+                          works. The templates come from flowbite, a library of
+                          web components written in Tailwind CSS, and can be
+                          used directly after introduction.
+                        </p>
+                      </div>
+                      <!-- CN 中文內容區 -->
+                      <div
+                        class="col-span-6 order-first hidden peer-checked/who-lang-switcher-cn:block mb-6"
+                        id="who-cn"
+                      >
+                        <p
+                          class="font-[Kanit] font-semibold text-2xl md:text-4xl mb-2"
+                        >
+                          我是誰？
+                        </p>
+                        <p class="text-sm md:text-xl">
+                          我還不知道我在要在這寫什麼，為了排版方便所以在這暫時放了一些東西。本頁面利用
+                          Tailwind CSS
+                          以CDN倉庫的方式寫成，作為練習前端設計所用，部分直接模板取自
+                          flowbite，並加以改造而成。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+              <input
+                id="card-03"
+                class="peer/card-03 hidden"
+                type="radio"
+                name="cards"
+              />
+              <label
+                for="card-03"
+                style="
+                  background-image: url('/+images/card-background/where.png');
+                "
+                class="w-[6lvw] -mx-[1px] flex justify-center items-center bg-cover bg-left border-x-2 cursor-pointer overflow-hidden transition-all duration-700 ease-in-out peer-checked/card-03:lg:w-[50lvw] peer-checked/card-03:sm:w-[60lvw] peer-checked/card-03:w-[80lvw] *:opacity-0 peer-checked/card-03:*:opacity-100 *:scale-0 peer-checked/card-03:*:scale-100 *:-translate-y-full peer-checked/card-03:*:translate-y-0"
+              >
+                <div
+                  class="flex flex-nowrap transition-all duration-700 ease-in-out"
+                  id="card-row"
+                >
+                  <!-- 卡片03 內容區 -->
+                  <div
+                    class="h-[70lvh] flex flex-col justify-center overflow-hidden m-8"
+                    id="card-description"
+                  >
+                    <div
+                      class="relative grid grid-cols-6 gap-2 min-[800px]:max-w-[400px]"
+                    >
+                      <!-- 語言切換按鈕 -->
+                      <input
+                        type="radio"
+                        id="where-lang-switcher-en"
+                        class="peer/where-lang-switcher-en place-self-end z-10 size-6 appearance-none rounded-full border-2 border-gray-200 ring-inset ring-offset-1 ring-offset-gray-950 duration-700 hover:text-sky-400 hover:scale-125 focus:ring-4 focus:ring-sky-500 checked:ring-4 checked:ring-sky-300/80 active:blur-sm"
+                        name="where-lang-switcher"
+                        checked
+                      />
+                      <label
+                        for="where-lang-switcher-en"
+                        class="font-[Kanit] font-semibold"
+                        >EN</label
+                      >
+                      <input
+                        type="radio"
+                        id="where-lang-switcher-cn"
+                        class="peer/where-lang-switcher-cn place-self-end size-6 appearance-none rounded-full border-2 border-gray-200 ring-inset ring-offset-1 ring-offset-gray-950 duration-700 hover:text-sky-400 hover:scale-125 focus:ring-4 focus:ring-sky-500 checked:ring-4 checked:ring-sky-300/80 active:blur-sm"
+                        name="where-lang-switcher"
+                      />
+                      <label
+                        for="where-lang-switcher-cn"
+                        class="font-[Kanit] font-semibold"
+                        >CN</label
+                      >
+                      <!-- EN 英文內容區 -->
+                      <div
+                        class="col-span-6 order-first hidden peer-checked/where-lang-switcher-en:block mb-6"
+                        id="who-en"
+                      >
+                        <p
+                          class="font-[Kanit] font-semibold text-2xl md:text-4xl mb-2"
+                        >
+                          Where is it?
+                        </p>
+                        <p class="text-sm md:text-xl">
+                          I'm still not sure what I'm going to write here, but
+                          I'm going to put in some stuff to show how the layout
+                          works. The templates come from flowbite, a library of
+                          web components written in Tailwind CSS, and can be
+                          used directly after introduction.
+                        </p>
+                      </div>
+                      <!-- CN 中文內容區 -->
+                      <div
+                        class="col-span-6 order-first hidden peer-checked/where-lang-switcher-cn:block mb-6"
+                        id="who-cn"
+                      >
+                        <p
+                          class="font-[Kanit] font-semibold text-2xl md:text-4xl mb-2"
+                        >
+                          這是哪？
+                        </p>
+                        <p class="text-sm md:text-xl">
+                          我還不知道我在要在這寫什麼，為了排版方便所以在這暫時放了一些東西。本頁面利用
+                          Tailwind CSS
+                          以CDN倉庫的方式寫成，作為練習前端設計所用，部分直接模板取自
+                          flowbite，並加以改造而成。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+              <input
+                id="card-04"
+                class="peer/card-04 hidden"
+                type="radio"
+                name="cards"
+              />
+              <label
+                for="card-04"
+                style="
+                  background-image: url('/+images/card-background/what.png');
+                "
+                class="w-[6lvw] -mx-[1px] flex justify-center items-center bg-cover bg-left border-x-2 cursor-pointer overflow-hidden transition-all duration-700 ease-in-out peer-checked/card-04:lg:w-[50lvw] peer-checked/card-04:sm:w-[60lvw] peer-checked/card-04:w-[80lvw] *:opacity-0 peer-checked/card-04:*:opacity-100 *:scale-0 peer-checked/card-04:*:scale-100 *:-translate-y-full peer-checked/card-04:*:translate-y-1"
+              >
+                <div
+                  class="flex flex-nowrap transition-all duration-700 ease-in-out"
+                  id="card-row"
+                >
+                  <!-- 卡片04 內容區 -->
+                  <div
+                    class="h-[70lvh] flex flex-col justify-center overflow-hidden m-8"
+                    id="card-description"
+                  >
+                    <div
+                      class="relative grid grid-cols-6 gap-2 min-[800px]:max-w-[400px]"
+                    >
+                      <!-- 語言切換按鈕 -->
+                      <input
+                        type="radio"
+                        id="what-lang-switcher-en"
+                        class="peer/what-lang-switcher-en place-self-end z-10 size-6 appearance-none rounded-full border-2 border-gray-200 ring-inset ring-offset-1 ring-offset-gray-950 duration-700 hover:text-sky-400 hover:scale-125 focus:ring-4 focus:ring-sky-500 checked:ring-4 checked:ring-sky-300/80 active:blur-sm"
+                        name="what-lang-switcher"
+                        checked
+                      />
+                      <label
+                        for="what-lang-switcher-en"
+                        class="font-[Kanit] font-semibold"
+                        >EN</label
+                      >
+                      <input
+                        type="radio"
+                        id="what-lang-switcher-cn"
+                        class="peer/what-lang-switcher-cn place-self-end size-6 appearance-none rounded-full border-2 border-gray-200 ring-inset ring-offset-1 ring-offset-gray-950 duration-700 hover:text-sky-400 hover:scale-125 focus:ring-4 focus:ring-sky-500 checked:ring-4 checked:ring-sky-300/80 active:blur-sm"
+                        name="what-lang-switcher"
+                      />
+                      <label
+                        for="what-lang-switcher-cn"
+                        class="font-[Kanit] font-semibold"
+                        >CN</label
+                      >
+                      <!-- EN 英文內容區 -->
+                      <div
+                        class="col-span-6 order-first hidden peer-checked/what-lang-switcher-en:block mb-6"
+                        id="who-en"
+                      >
+                        <p
+                          class="font-[Kanit] font-semibold text-2xl md:text-4xl mb-2"
+                        >
+                          What would I do?
+                        </p>
+                        <p class="text-sm md:text-xl">
+                          I'm still not sure what I'm going to write here, but
+                          I'm going to put in some stuff to show how the layout
+                          works. The templates come from flowbite, a library of
+                          web components written in Tailwind CSS, and can be
+                          used directly after introduction.
+                        </p>
+                      </div>
+                      <!-- CN 中文內容區 -->
+                      <div
+                        class="col-span-6 order-first hidden peer-checked/what-lang-switcher-cn:block mb-6"
+                        id="who-cn"
+                      >
+                        <p
+                          class="font-[Kanit] font-semibold text-2xl md:text-4xl mb-2"
+                        >
+                          我欲何往？
+                        </p>
+                        <p class="text-sm md:text-xl">
+                          我還不知道我在要在這寫什麼，為了排版方便所以在這暫時放了一些東西。本頁面利用
+                          Tailwind CSS
+                          以CDN倉庫的方式寫成，作為練習前端設計所用，部分直接模板取自
+                          flowbite，並加以改造而成。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 頁面下方分隔條 + 視差效果 -->
+        <div class="h-[10lvh] flex justify-center md:justify-end">
+          <!-- 連結ICON -->
+          <div
+            class="flex place-items-end space-x-2 text-4xl mb-1 mx-3 font-extralight font-serif"
+          >
+            <!-- TWITTER -->
+            <div
+              class="inline-block duration-700 hover:[text-shadow:_0px_0px_5px_rgb(56_189_248_/_100%)] hover:text-sky-400 hover:scale-110 active:blur-sm"
+              id="info-site-title-01"
+            >
+              <a
+                href="https://twitter.com/Blackrow_tw"
+                class="text-4xl text-center"
+              >
+                <i class="fa-brands fa-square-x-twitter fa-lg"></i>
+              </a>
+            </div>
+            <!-- PIXIV -->
+            <div
+              class="inline-block duration-700 hover:[text-shadow:_0px_0px_20px_rgb(59_130_246_/_100%)] hover:text-blue-500 hover:scale-110 active:blur-sm"
+              id="info-site-title-02"
+            >
+              <a
+                href="https://www.pixiv.net/users/2407057"
+                class="text-4xl text-center"
+              >
+                <i class="fa-brands fa-pixiv fa-lg"></i>
+              </a>
+            </div>
+            <!-- YOUTUBE -->
+            <div
+              class="inline-block duration-700 hover:[text-shadow:_0px_0px_5px_rgb(239_68_68_/_100%)] hover:text-red-500 hover:scale-110 active:blur-sm"
+              id="info-site-title-03"
+            >
+              <a
+                href="https://www.youtube.com/@blackrowtw"
+                class="text-4xl text-center"
+              >
+                <i class="fa-brands fa-youtube fa-lg"></i>
+              </a>
+            </div>
+            <!-- <div
+              class="inline-block duration-700 hover:text-violet-500 hover:scale-110 active:blur-sm"
+            >
+              <a href="#" class="text-4xl text-center">
+                <i class="fa-brands fa-twitch"></i>
+              </a>
+            </div> -->
+            <!-- <div
+              class="inline-block duration-700 hover:text-indigo-500 hover:scale-110 active:blur-sm"
+            >
+              <a href="#" class="text-4xl text-center">
+                <i class="fa-brands fa-discord"></i>
+              </a>
+            </div> -->
+            <!-- <div
+              class="inline-block duration-700 hover:text-gray-600 hover:scale-110 active:blur-sm"
+            >
+              <a href="#" class="text-4xl text-center">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div> -->
+          </div>
+        </div>
+        <!-- 頁面最底部箭頭 & 裝飾 -->
+        <div class="h-[5lvh] grid grid-cols-3">
+          <div
+            class="border-t-[1px] col-span-3"
+            id="info-divider-line-btm"
+          ></div>
+          <!-- 漸變方快 -->
+          <div class="flex">
+            <div
+              class="inline-block mt-1 bg-blend-multiply bg-gradient-to-r from-slate-200 opacity-40 from-20% h-4 w-96"
+              id="info-block-btn-01"
+            ></div>
+          </div>
+          <!-- 向上箭頭 -->
+          <div class="flex justify-self-center overflow-hidden">
+            <a href="#" id="Up-facing-arrows">
+              <svg
+                class="w-[48px] h-[48px] text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="0.5"
+                  d="m5 15 7-7 7 7"
+                />
+              </svg>
+            </a>
+          </div>
+          <!-- 右側副標 -->
+          <div
+            class="justify-self-end overflow-hidden text-right text-m font-extralight font-sans tracking-wider hidden min-[400px]:block"
+            id="info-site-sub-title"
+          >
+            <a class="text-nowrap mr-2"> You can also find me here.</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Navbar Script 導航欄伸縮腳本 -->
+    <script type="text/javascript">
+      let lastScrollTop = 0;
+      navbar = document.getElementById("Navbar");
+      InfoTopLine = document.getElementById("info-divider-line-top");
+      window.addEventListener("scroll", function () {
+        let scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+          navbar.style.top = "-64px";
+          navbar.style.opacity = 0;
+          InfoTopLine.style.visibility = "visible";
+        } else {
+          navbar.style.top = "0";
+          navbar.style.opacity = 1;
+          InfoTopLine.style.visibility = "hidden";
+        }
+        lastScrollTop = scrollTop;
+      });
+    </script>
+    <!-- 監視用 滾動進度條 -->
+    <!-- <footer class="-z-9" id="footer">
+      <div
+        class="fixed h-3 w-lvw bottom-0 bg-green-500"
+        id="scroll-watcher"
+      ></div>
+    </footer> -->
+
+    <!-- 圖片流 -->
+    <!-- 來源：https://flowbite.com/docs/components/gallery/ -->
+    <!-- <div class="z-20 bg-black min-h-screen">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div class="grid gap-4">
+                <div>
+                  <img
+                    class="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    class="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    class="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="grid gap-4">
+                <div>
+                  <img
+                    class="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    class="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    class="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="grid gap-4">
+                <div>
+                  <img
+                    class="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    class="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    class="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="grid gap-4">
+                <div>
+                  <img
+                    class="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    class="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    class="h-auto max-w-full rounded-lg"
+                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div> -->
+  </body>
+</html>
