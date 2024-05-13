@@ -24,23 +24,23 @@
 </blockquote>
 <h3 id="2-1-選擇當前資料夾並進入終端-cmd"><a href="#2-1-選擇當前資料夾並進入終端-cmd" class="headerlink" title="2.1. 選擇當前資料夾並進入終端(cmd)"></a>2.1. 選擇當前資料夾並進入終端(cmd)</h3><ol>
 <li>利用 npm 在資料夾裡安裝 hexo <code>npm install hexo-cli -g</code><blockquote>
-<p>npm： <a href="https://nodejs.org/en">Node.js</a> package manager | 套件管理工具</p>
+<p>npm： <a href="https://nodejs.org/en" target="_blank" rel="noopener">Node.js</a> package manager | 套件管理工具</p>
 </blockquote>
 </li>
 <li>git 初始化：<code>git init</code><blockquote>
-<p><a href="https://git-scm.com/">git</a>: 使用命令行的版本控制軟體</p>
+<p><a href="https://git-scm.com/" target="_blank" rel="noopener">git</a>: 使用命令行的版本控制軟體</p>
 </blockquote>
 </li>
 <li>npm 初始化：<code>npm install</code></li>
 <li>hexo 初始化：<code>hexo init</code></li>
 <li>安裝hexo的next主題：<code>npm install hexo-theme-next</code><blockquote>
-<p><a href="https://theme-next.js.org/">🎉 Elegant and powerful theme for Hexo.</a></p>
+<p><a href="https://theme-next.js.org/" target="_blank" rel="noopener">🎉 Elegant and powerful theme for Hexo.</a></p>
 </blockquote>
 </li>
 </ol>
 <h3 id="2-2-撰寫-config-yml-config-next-yml-文件"><a href="#2-2-撰寫-config-yml-config-next-yml-文件" class="headerlink" title="2.2. 撰寫 _config.yml,_config.next.yml 文件"></a>2.2. 撰寫 _config.yml,_config.next.yml 文件</h3><ol>
-<li><a href="https://hexo.io/zh-tw/docs/configuration">Hexo</a> 的配置</li>
-<li><a href="https://theme-next.js.org/docs/">NexT</a> 的配置</li>
+<li><a href="https://hexo.io/zh-tw/docs/configuration" target="_blank" rel="noopener">Hexo</a> 的配置</li>
+<li><a href="https://theme-next.js.org/docs/" target="_blank" rel="noopener">NexT</a> 的配置</li>
 </ol>
 <h3 id="2-3-安裝功能插件"><a href="#2-3-安裝功能插件" class="headerlink" title="2.3. 安裝功能插件"></a>2.3. 安裝功能插件</h3><ol>
 <li>安裝部屬用插件：<code>npm install hexo-deployer-git --save</code><blockquote>
@@ -53,18 +53,18 @@
 </blockquote>
 </li>
 <li>安裝本地搜尋：<code>npm install hexo-generator-searchdb --save</code></li>
-<li>安裝 <a href="https://github.com/gitalk/gitalk">gitalk</a> 留言板：<br> 需要建立 <a href="https://github.com/">GitHub</a> OAuth APP<br> ^[<a href="https://israynotarray.com/hexo/20191206/2397475810/">十分鐘超詳細替 Hexo NexT 開啟 Gitalk 留言版</a>]<br> ^[<a href="https://theme-next.js.org/docs/third-party-services/comments#Gitalk">NexT Comment Systems</a>]<br> ^[<a href="https://theme-next.js.org/docs/third-party-services/comments#How-to-Disable-Comments-on-Page">如何取消頁面的留言板</a>]</li>
+<li>安裝 <a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener">gitalk</a> 留言板：<br> 需要建立 <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> OAuth APP<br> ^[<a href="https://israynotarray.com/hexo/20191206/2397475810/" target="_blank" rel="noopener">十分鐘超詳細替 Hexo NexT 開啟 Gitalk 留言版</a>]<br> ^[<a href="https://theme-next.js.org/docs/third-party-services/comments#Gitalk" target="_blank" rel="noopener">NexT Comment Systems</a>]<br> ^[<a href="https://theme-next.js.org/docs/third-party-services/comments#How-to-Disable-Comments-on-Page" target="_blank" rel="noopener">如何取消頁面的留言板</a>]</li>
 </ol>
 <h3 id="2-4-Google-搜尋引擎最佳化-SEO「Search-Engine-Optimization」"><a href="#2-4-Google-搜尋引擎最佳化-SEO「Search-Engine-Optimization」" class="headerlink" title="2.4. Google 搜尋引擎最佳化 (SEO「Search Engine Optimization」)"></a>2.4. Google 搜尋引擎最佳化 (SEO「Search Engine Optimization」)</h3><ol>
 <li>安裝 Sitemap 插件：<code>npm install hexo-generator-sitemap</code><blockquote>
 <p>Sitemap 用來記錄該網站中所有 url 路徑，以及每一個路徑最後修改的時間戳。</p>
 </blockquote>
 </li>
-<li>設定 <a href="https://analytics.google.com/analytics/web/">Google Analytics</a><blockquote>
+<li>設定 <a href="https://analytics.google.com/analytics/web/" target="_blank" rel="noopener">Google Analytics</a><blockquote>
 <p>網頁來訪狀況分析服務</p>
 </blockquote>
 </li>
-<li>在 <a href="https://search.google.com/search-console/about?hl=zh-tw">Google Search Console</a> 設定加入網站連結<blockquote>
+<li>在 <a href="https://search.google.com/search-console/about?hl=zh-tw" target="_blank" rel="noopener">Google Search Console</a> 設定加入網站連結<blockquote>
 <p>認證網站所有權，以及上傳 SiteMap 文件</p>
 </blockquote>
 </li>
@@ -95,7 +95,7 @@
 
 <ul>
 <li>server 啟動伺服器 <code>hexo s</code><blockquote>
-<p>在<a href="http://localhost:4000/">本地端</a>啟動 Hexo 伺服器</p>
+<p>在<a href="http://localhost:4000/" target="_blank" rel="noopener">本地端</a>啟動 Hexo 伺服器</p>
 </blockquote>
 </li>
 </ul>
@@ -121,21 +121,22 @@
 </ol>
 <h2 id="5-個人客製化的學習歷程"><a href="#5-個人客製化的學習歷程" class="headerlink" title="5. 個人客製化的學習歷程"></a>5. 個人客製化的學習歷程</h2><ul>
 <li><input checked="" disabled="" type="checkbox"> 從原先的 Jekyll 專案裡搬來模板並改造</li>
-<li><input checked="" disabled="" type="checkbox"> 引入 <a href="https://tailwindcss.com/">Tailwind css</a> ^[<a href="https://tailwindcss.com/docs/installation">Tailwind 指令集</a>]</li>
-<li><input checked="" disabled="" type="checkbox"> 從各處搜刮不同的模板並改造 ^[<a href="https://flowbite.com/">Flowbite</a>]</li>
-<li><input checked="" disabled="" type="checkbox"> 學習 html 與 css 的語法並改造為 Tailwind ^[<a href="https://www.w3schools.com/howto/default.asp">W3Schools</a>]<br>^[<a href="https://fontawesome.com/">Font Awesome</a>]<br>^[<a href="https://webcode.tools/">Webcode Tools</a>]<br>^[<a href="https://css-loaders.com/">CSS Loaders 動畫效果 600+</a>]</li>
+<li><input checked="" disabled="" type="checkbox"> 引入 <a href="https://tailwindcss.com/" target="_blank" rel="noopener">Tailwind css</a> ^[<a href="https://tailwindcss.com/docs/installation" target="_blank" rel="noopener">Tailwind 指令集</a>]</li>
+<li><input checked="" disabled="" type="checkbox"> 從各處搜刮不同的模板並改造 ^[<a href="https://flowbite.com/" target="_blank" rel="noopener">Flowbite</a>]</li>
+<li><input checked="" disabled="" type="checkbox"> 學習 html 與 css 的語法並改造為 Tailwind ^[<a href="https://www.w3schools.com/howto/default.asp" target="_blank" rel="noopener">W3Schools</a>]<br>^[<a href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome</a>]<br>^[<a href="https://webcode.tools/" target="_blank" rel="noopener">Webcode Tools</a>]<br>^[<a href="https://css-loaders.com/" target="_blank" rel="noopener">CSS Loaders 動畫效果 600+</a>]</li>
 <li><input disabled="" type="checkbox"> 學習 Hexo Tag Plugins 寫法，並試著開始撰寫文章</li>
 <li><input disabled="" type="checkbox"> 學習 Reject 把寫好的代碼模組化提高複用性</li>
 </ul>
 <h2 id="6-refernce"><a href="#6-refernce" class="headerlink" title="6. ::: refernce :::"></a>6. ::: refernce :::</h2><ol>
-<li><a href="https://hexo.io/zh-tw/">Hexo 官方網站</a></li>
-<li><a href="https://theme-next.js.org/">Hexo NexT 主題</a></li>
-<li><a href="https://israynotarray.com/hexo/20200914/3741834499/">試著學 Hexo - 序章</a></li>
-<li><a href="https://zenreal.github.io/posts/30115/">Github + Hexo 新手搭建手冊(含各種TIPS與問題解決) [2019]</a></li>
+<li><a href="https://hexo.io/zh-tw/" target="_blank" rel="noopener">Hexo 官方網站</a></li>
+<li><a href="https://theme-next.js.org/" target="_blank" rel="noopener">Hexo NexT 主題</a></li>
+<li><a href="https://israynotarray.com/hexo/20200914/3741834499/" target="_blank" rel="noopener">試著學 Hexo - 序章</a></li>
+<li><a href="https://zenreal.github.io/posts/30115/" target="_blank" rel="noopener">Github + Hexo 新手搭建手冊(含各種TIPS與問題解決) [2019]</a></li>
 </ol>
 ]]></content>
       <categories>
         <category>Coding</category>
+        <category>Hexo</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
@@ -157,7 +158,7 @@
 <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>自用筆記備忘錄，記錄在學習中所使用的語法</p>
 <h2 id="2-配置本地-git-倉庫"><a href="#2-配置本地-git-倉庫" class="headerlink" title="2. 配置本地 git 倉庫"></a>2. 配置本地 git 倉庫</h2><p>以我自己的 Minecraft 翻譯項目為例：</p>
 <blockquote>
-<p><a href="https://github.com/Blackrowtw/Translation-zh_tw-of-masa-series-mods">繁中 masa 系模組翻譯_by.BK</a></p>
+<p><a href="https://github.com/Blackrowtw/Translation-zh_tw-of-masa-series-mods" target="_blank" rel="noopener">繁中 masa 系模組翻譯_by.BK</a></p>
 </blockquote>
 <h3 id="2-1-初始化"><a href="#2-1-初始化" class="headerlink" title="2.1. 初始化"></a>2.1. 初始化</h3><ol>
 <li>移動至需要版本控制的資料夾</li>
@@ -212,10 +213,11 @@
 <li>將標籤 v1.20.1 推送到遠程倉庫：<code>git push origin v1.20.1</code></li>
 <li>刪除標籤 v1.20.1：<code>git tag -d v1.20.1</code></li>
 </ol>
-<h2 id="5-refernce"><a href="#5-refernce" class="headerlink" title="5. ::: refernce :::"></a>5. ::: refernce :::</h2><p><a href="https://www.bilibili.com/video/BV1RC411W7UE/">给学完 Git，还不会用 GitHub 的朋友们【bilibili】</a></p>
+<h2 id="5-refernce"><a href="#5-refernce" class="headerlink" title="5. ::: refernce :::"></a>5. ::: refernce :::</h2><p><a href="https://www.bilibili.com/video/BV1RC411W7UE/" target="_blank" rel="noopener">给学完 Git，还不会用 GitHub 的朋友们【bilibili】</a></p>
 ]]></content>
       <categories>
         <category>Coding</category>
+        <category>git</category>
       </categories>
       <tags>
         <tag>git</tag>
@@ -225,7 +227,7 @@
   <entry>
     <title>Hexo 標籤外掛（Tag Plugins）集合</title>
     <url>/zh-tw/7e4/</url>
-    <content><![CDATA[<h2 id="1-Hexo-NexT"><a href="#1-Hexo-NexT" class="headerlink" title="1. Hexo NexT"></a>1. Hexo NexT</h2><h3 id="1-1-Centered-Quote-引用"><a href="#1-1-Centered-Quote-引用" class="headerlink" title="1.1. Centered Quote 引用"></a>1.1. <a href="https://theme-next.js.org/docs/tag-plugins/#Centered-Quote">Centered Quote 引用</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;居中的引言&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h2 id="1-Hexo-NexT"><a href="#1-Hexo-NexT" class="headerlink" title="1. Hexo NexT"></a>1. Hexo NexT</h2><h3 id="1-1-Centered-Quote-引用"><a href="#1-1-Centered-Quote-引用" class="headerlink" title="1.1. Centered Quote 引用"></a>1.1. <a href="https://theme-next.js.org/docs/tag-plugins/#Centered-Quote" target="_blank" rel="noopener">Centered Quote 引用</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;居中的引言&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote class="blockquote-center">
 <p>Hexo 功能測試場</p>
@@ -234,7 +236,7 @@
 
 <span id="more"></span>
 
-<h3 id="1-2-Button-按鈕"><a href="#1-2-Button-按鈕" class="headerlink" title="1.2. Button 按鈕"></a>1.2. <a href="https://theme-next.js.org/docs/tag-plugins/">Button 按鈕</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% btn #, Text %&#125;</span><br><span class="line">&#123;% btn #, Text &amp; Title,, Title %&#125;</span><br><span class="line">&#123;% btn #,, home fa-5x %&#125;</span><br><span class="line">&#123;% btn #,, home fa-3x %&#125;</span><br><span class="line">&#123;% btn #,, home fa-lg %&#125;</span><br><span class="line">&#123;% btn #,, home %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-Button-按鈕"><a href="#1-2-Button-按鈕" class="headerlink" title="1.2. Button 按鈕"></a>1.2. <a href="https://theme-next.js.org/docs/tag-plugins/" target="_blank" rel="noopener">Button 按鈕</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% btn #, Text %&#125;</span><br><span class="line">&#123;% btn #, Text &amp; Title,, Title %&#125;</span><br><span class="line">&#123;% btn #,, home fa-5x %&#125;</span><br><span class="line">&#123;% btn #,, home fa-3x %&#125;</span><br><span class="line">&#123;% btn #,, home fa-lg %&#125;</span><br><span class="line">&#123;% btn #,, home %&#125;</span><br></pre></td></tr></table></figure>
 
 <a class="btn" href="#">Text</a>
 <a class="btn" href="#" title="Title">Text & Title</a>
@@ -258,7 +260,7 @@
 
 <div class="text-center"><a class="btn" href="https://github.com" title="GitHub"><i class="fab fa-github fa-fw fa-lg"></i>GitHub</a></div>
 
-<h3 id="1-3-Link-Grid-連結群組"><a href="#1-3-Link-Grid-連結群組" class="headerlink" title="1.3. Link Grid 連結群組"></a>1.3. <a href="https://theme-next.js.org/docs/tag-plugins/link-grid">Link Grid 連結群組</a></h3><details class="note danger"><summary><p>點我展開</p>
+<h3 id="1-3-Link-Grid-連結群組"><a href="#1-3-Link-Grid-連結群組" class="headerlink" title="1.3. Link Grid 連結群組"></a>1.3. <a href="https://theme-next.js.org/docs/tag-plugins/link-grid" target="_blank" rel="noopener">Link Grid 連結群組</a></h3><details class="note danger"><summary><p>點我展開</p>
 </summary>
 <h4 id="1-3-1-不要用這種樣式"><a href="#1-3-1-不要用這種樣式" class="headerlink" title="1.3.1. 不要用這種樣式"></a>1.3.1. 不要用這種樣式</h4><blockquote>
 <p>會導致標題導航渲染錯誤，<br>懷疑是 <code>|</code> 所導致。</p>
@@ -283,39 +285,39 @@
 <a href="https://theme-next.js.org/"></a>
 </div></div>
 
-<h3 id="1-4-Note-筆記"><a href="#1-4-Note-筆記" class="headerlink" title="1.4. Note 筆記"></a>1.4. <a href="https://theme-next.js.org/docs/tag-plugins/note">Note 筆記</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note %&#125;</span><br><span class="line">#### Header</span><br><span class="line">(without define class style)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-4-Note-筆記"><a href="#1-4-Note-筆記" class="headerlink" title="1.4. Note 筆記"></a>1.4. <a href="https://theme-next.js.org/docs/tag-plugins/note" target="_blank" rel="noopener">Note 筆記</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note %&#125;</span><br><span class="line">#### Header</span><br><span class="line">(without define class style)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
 
 <div class="note "><h4 id="1-4-1-“”-無樣式"><a href="#1-4-1-“”-無樣式" class="headerlink" title="1.4.1. “” 無樣式"></a>1.4.1. “” 無樣式</h4><p>(without define class style)</p>
 </div>
 
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note default %&#125;</span><br><span class="line">#### Default Header</span><br><span class="line">Welcome to [Hexo!](https://hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
 
-<div class="note default"><h4 id="1-4-2-default-默認"><a href="#1-4-2-default-默認" class="headerlink" title="1.4.2. default 默認"></a>1.4.2. default 默認</h4><p>Welcome to <a href="https://hexo.io/">Hexo!</a></p>
+<div class="note default"><h4 id="1-4-2-default-默認"><a href="#1-4-2-default-默認" class="headerlink" title="1.4.2. default 默認"></a>1.4.2. default 默認</h4><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo!</a></p>
 </div>
 
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note primary %&#125;</span><br><span class="line">#### Primary Header</span><br><span class="line">**Welcome** to [Hexo!](https://hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<div class="note primary"><h4 id="1-4-3-primary-首要"><a href="#1-4-3-primary-首要" class="headerlink" title="1.4.3. primary 首要"></a>1.4.3. primary 首要</h4><p><strong>Welcome</strong> to <a href="https://hexo.io/">Hexo!</a></p>
+<div class="note primary"><h4 id="1-4-3-primary-首要"><a href="#1-4-3-primary-首要" class="headerlink" title="1.4.3. primary 首要"></a>1.4.3. primary 首要</h4><p><strong>Welcome</strong> to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo!</a></p>
 </div>
 
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note info %&#125;</span><br><span class="line">#### Info Header</span><br><span class="line">**Welcome** to [Hexo!](https://hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
 
-<div class="note info"><h4 id="1-4-4-info-資訊"><a href="#1-4-4-info-資訊" class="headerlink" title="1.4.4. info 資訊"></a>1.4.4. info 資訊</h4><p><strong>Welcome</strong> to <a href="https://hexo.io/">Hexo!</a></p>
+<div class="note info"><h4 id="1-4-4-info-資訊"><a href="#1-4-4-info-資訊" class="headerlink" title="1.4.4. info 資訊"></a>1.4.4. info 資訊</h4><p><strong>Welcome</strong> to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo!</a></p>
 </div>
 
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note success %&#125;</span><br><span class="line">#### Success Header</span><br><span class="line">**Welcome** to [Hexo!](https://hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
 
-<div class="note success"><h4 id="1-4-5-success-成功"><a href="#1-4-5-success-成功" class="headerlink" title="1.4.5. success 成功"></a>1.4.5. success 成功</h4><p><strong>Welcome</strong> to <a href="https://hexo.io/">Hexo!</a></p>
+<div class="note success"><h4 id="1-4-5-success-成功"><a href="#1-4-5-success-成功" class="headerlink" title="1.4.5. success 成功"></a>1.4.5. success 成功</h4><p><strong>Welcome</strong> to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo!</a></p>
 </div>
 
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">#### Warning Header</span><br><span class="line">**Welcome** to [Hexo!](https://hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<div class="note warning"><h4 id="1-4-6-warning-警告"><a href="#1-4-6-warning-警告" class="headerlink" title="1.4.6. warning 警告"></a>1.4.6. warning 警告</h4><p><strong>Welcome</strong> to <a href="https://hexo.io/">Hexo!</a></p>
+<div class="note warning"><h4 id="1-4-6-warning-警告"><a href="#1-4-6-warning-警告" class="headerlink" title="1.4.6. warning 警告"></a>1.4.6. warning 警告</h4><p><strong>Welcome</strong> to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo!</a></p>
 </div>
 
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note danger %&#125;</span><br><span class="line">#### Danger Header</span><br><span class="line">**Welcome** to [Hexo!](https://hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
 
-<div class="note danger"><h4 id="1-4-7-danger-危險"><a href="#1-4-7-danger-危險" class="headerlink" title="1.4.7. danger 危險"></a>1.4.7. danger 危險</h4><p><strong>Welcome</strong> to <a href="https://hexo.io/">Hexo!</a></p>
+<div class="note danger"><h4 id="1-4-7-danger-危險"><a href="#1-4-7-danger-危險" class="headerlink" title="1.4.7. danger 危險"></a>1.4.7. danger 危險</h4><p><strong>Welcome</strong> to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo!</a></p>
 </div>
 
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% note default no-icon %&#125;</span><br><span class="line">#### No icon note</span><br><span class="line">Note **without** icon: `note info no-icon`</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
@@ -358,17 +360,17 @@
 
 </details>
 
-<h3 id="1-5-Tabs-切換標籤"><a href="#1-5-Tabs-切換標籤" class="headerlink" title="1.5. Tabs 切換標籤"></a>1.5. <a href="https://theme-next.js.org/docs/tag-plugins/tabs">Tabs 切換標籤</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% tabs 預設的名稱 %&#125;</span><br><span class="line"><span class="comment">&lt;!-- tab --&gt;</span></span><br><span class="line">**This is Tab 1.**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- tab 自訂的名稱 --&gt;</span></span><br><span class="line">**This is Tab 2.**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- tab @font --&gt;</span></span><br><span class="line">**This is Tab 3.**</span><br><span class="line"></span><br><span class="line">&#123;% tabs 第二層 %&#125;</span><br><span class="line"><span class="comment">&lt;!-- tab 加上文字 @dog --&gt;</span></span><br><span class="line">**This is Tab 1.**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- tab 加上文字 @cat --&gt;</span></span><br><span class="line">**This is Tab 2.**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- tab 加上文字 @crow --&gt;</span></span><br><span class="line">**This is Tab 3.**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line">&#123;% endtabs %&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-5-Tabs-切換標籤"><a href="#1-5-Tabs-切換標籤" class="headerlink" title="1.5. Tabs 切換標籤"></a>1.5. <a href="https://theme-next.js.org/docs/tag-plugins/tabs" target="_blank" rel="noopener">Tabs 切換標籤</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% tabs 預設的名稱 %&#125;</span><br><span class="line"><span class="comment">&lt;!-- tab --&gt;</span></span><br><span class="line">**This is Tab 1.**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- tab 自訂的名稱 --&gt;</span></span><br><span class="line">**This is Tab 2.**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- tab @font --&gt;</span></span><br><span class="line">**This is Tab 3.**</span><br><span class="line"></span><br><span class="line">&#123;% tabs 第二層 %&#125;</span><br><span class="line"><span class="comment">&lt;!-- tab 加上文字 @dog --&gt;</span></span><br><span class="line">**This is Tab 1.**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- tab 加上文字 @cat --&gt;</span></span><br><span class="line">**This is Tab 2.**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- tab 加上文字 @crow --&gt;</span></span><br><span class="line">**This is Tab 3.**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line">&#123;% endtabs %&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
 
 <div class="tabs" id="預設的名稱"><ul class="nav-tabs"><li class="tab active"><a href="#預設的名稱-1">預設的名稱 1</a></li><li class="tab"><a href="#預設的名稱-2">自訂的名稱</a></li><li class="tab"><a href="#預設的名稱-3"><i class="fa fa-font"></i></a></li></ul><div class="tab-content"><div class="tab-pane active" id="預設的名稱-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="預設的名稱-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="預設的名稱-3"><p><strong>This is Tab 3.</strong></p>
 <div class="tabs" id="第二層"><ul class="nav-tabs"><li class="tab active"><a href="#第二層-1"><i class="fa fa-dog"></i>加上文字</a></li><li class="tab"><a href="#第二層-2"><i class="fa fa-cat"></i>加上文字</a></li><li class="tab"><a href="#第二層-3"><i class="fa fa-crow"></i>加上文字</a></li></ul><div class="tab-content"><div class="tab-pane active" id="第二層-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="第二層-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="第二層-3"><p><strong>This is Tab 3.</strong></p></div></div></div></div></div></div>
 
 
-<h3 id="1-6-Group-Pictures-照片群組"><a href="#1-6-Group-Pictures-照片群組" class="headerlink" title="1.6. Group Pictures 照片群組"></a>1.6. <a href="https://theme-next.js.org/docs/tag-plugins/group-pictures">Group Pictures 照片群組</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% gp 5-2 %&#125;</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">&#123;% endgp %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-6-Group-Pictures-照片群組"><a href="#1-6-Group-Pictures-照片群組" class="headerlink" title="1.6. Group Pictures 照片群組"></a>1.6. <a href="https://theme-next.js.org/docs/tag-plugins/group-pictures" target="_blank" rel="noopener">Group Pictures 照片群組</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% gp 5-2 %&#125;</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">&#123;% endgp %&#125;</span><br></pre></td></tr></table></figure>
 
 <div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/+images/hero-backgrond/02.jpg"></div><div class="group-picture-column"><img data-src="/+images/hero-backgrond/03.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/+images/hero-backgrond/01.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/+images/hero-backgrond/04.jpg"></div><div class="group-picture-column"><img data-src="/+images/hero-backgrond/05.jpg"></div></div></div>
 
-<h3 id="1-7-Video-影片"><a href="#1-7-Video-影片" class="headerlink" title="1.7. Video 影片"></a>1.7. <a href="https://theme-next.js.org/docs/tag-plugins/#Video">Video 影片</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% video url %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-7-Video-影片"><a href="#1-7-Video-影片" class="headerlink" title="1.7. Video 影片"></a>1.7. <a href="https://theme-next.js.org/docs/tag-plugins/#Video" target="_blank" rel="noopener">Video 影片</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% video url %&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>只能連自己網站的資源</p>
@@ -416,7 +418,7 @@
 <h4 id="2-1-10-iframe-youtube"><a href="#2-1-10-iframe-youtube" class="headerlink" title="2.1.10. iframe youtube"></a>2.1.10. <strong>iframe youtube</strong></h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% iframe https://www.youtube.com/embed/dQw4w9WgXcQ 1280 720 %&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>網址需要經過處理<br>原始：<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">https://www.youtube.com/watch?v=dQw4w9WgXcQ</a><br>引入：<a href="https://www.youtube.com/embed/dQw4w9WgXcQ">https://www.youtube.com/embed/dQw4w9WgXcQ</a></p>
+<p>網址需要經過處理<br>原始：<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener">https://www.youtube.com/watch?v=dQw4w9WgXcQ</a><br>引入：<a href="https://www.youtube.com/embed/dQw4w9WgXcQ" target="_blank" rel="noopener">https://www.youtube.com/embed/dQw4w9WgXcQ</a></p>
 </blockquote>
 <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="1280" height="720" frameborder="0" loading="lazy" allowfullscreen></iframe>
 
@@ -443,7 +445,7 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% post_link 2024-05-04_[gitHub-學習筆記] %&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><p><strong>[img] 無效</strong><br><img data-src="/1280x720-Placeholder.png" alt="1280x720-Placeholder.png"><br><img data-src="/image/2024-05-05_%5BHexo-%E6%A8%99%E7%B1%A4%E5%A4%96%E6%8E%9B%EF%BC%88Tag-Plugins%EF%BC%89%E9%9B%86%E5%90%88%5D/1715138995941.png" alt="1715138995941"></p>
+<li><p><strong>[img] 無效</strong><br><figure><img data-src="/1280x720-Placeholder.png" alt="1280x720-Placeholder.png"><figcaption aria-hidden="true">1280x720-Placeholder.png</figcaption></figure><br><figure><img data-src="/image/2024-05-05_%5BHexo-%E6%A8%99%E7%B1%A4%E5%A4%96%E6%8E%9B%EF%BC%88Tag-Plugins%EF%BC%89%E9%9B%86%E5%90%88%5D/1715138995941.png" alt="1715138995941"><figcaption aria-hidden="true">1715138995941</figcaption></figure></p>
 </li>
 <li><p><strong>img 不顯示</strong></p>
 <img class="class_names 1280x720-Placeholder.png 1280 720 title">
@@ -459,7 +461,7 @@
 
 </details>
 
-<h2 id="3-其他"><a href="#3-其他" class="headerlink" title="3. 其他"></a>3. 其他</h2><h3 id="3-1-Pixiv-Cat"><a href="#3-1-Pixiv-Cat" class="headerlink" title="3.1. Pixiv Cat"></a>3.1. <a href="https://pixiv.cat/generator.html">Pixiv Cat</a></h3><blockquote>
+<h2 id="3-其他"><a href="#3-其他" class="headerlink" title="3. 其他"></a>3. 其他</h2><h3 id="3-1-Pixiv-Cat"><a href="#3-1-Pixiv-Cat" class="headerlink" title="3.1. Pixiv Cat"></a>3.1. <a href="https://pixiv.cat/generator.html" target="_blank" rel="noopener">Pixiv Cat</a></h3><blockquote>
 <p>Pixiv 圖片轉代理網站</p>
 <blockquote>
 <p>貼上網址後，會生成各種可以直接貼上的圖片連結</p>
@@ -468,20 +470,40 @@
 <img alt="【Arknights】Good Night, Ptilopsis" data-src="https://pixiv.cat/84431948.jpg">
 <a class="btn" href="https://www.pixiv.net/artworks/84431948"><i class="fab fa-pixiv fa-3x"></i>&nbsp;&nbsp;id=2407057</a>
 
-<h3 id="3-2-Buy-me-a-coffee"><a href="#3-2-Buy-me-a-coffee" class="headerlink" title="3.2. Buy me a coffee"></a>3.2. <a href="https://buymeacoffee.com/blackrow">Buy me a coffee</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-name</span>=<span class="string">&quot;bmc-button&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-slug</span>=<span class="string">&quot;blackrow&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-color</span>=<span class="string">&quot;#FFDD00&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-emoji</span>=<span class="string">&quot;🍎&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-font</span>=<span class="string">&quot;Bree&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-text</span>=<span class="string">&quot;Buy me an Apple&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-outline-color</span>=<span class="string">&quot;#000000&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-font-color</span>=<span class="string">&quot;#000000&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-coffee-color</span>=<span class="string">&quot;#ffffff&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.bmc-btn-container</span> <span class="selector-class">.bmc-btn</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">min-width</span>: <span class="number">11rem</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: <span class="number">#000000</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">background-color</span>: <span class="number">#ffdd00</span> <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">2rem</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-radius</span>: <span class="number">6px</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">1rem</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-weight</span>: Bold;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border</span>: none;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">padding</span>: <span class="number">0em</span> <span class="number">1em</span> <span class="number">0em</span> <span class="number">1em</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">line-height</span>: <span class="number">1.2rem</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">text-decoration</span>: none <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">display</span>: inline-flex <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">align-items</span>: center;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-family</span>: <span class="string">&quot;Bree Serif&quot;</span>, cursive <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">    -webkit-<span class="attribute">box-sizing</span>: border-box <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">box-sizing</span>: border-box <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.bmc-btn-text</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-left</span>: -<span class="number">0.5em</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">0.9rem</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">display</span>: inline-block;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">line-height</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">flex-shrink</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-family</span>: [FONT] <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-2-Buy-me-a-coffee"><a href="#3-2-Buy-me-a-coffee" class="headerlink" title="3.2. Buy me a coffee"></a>3.2. <a href="https://buymeacoffee.com/blackrow" target="_blank" rel="noopener">Buy me a coffee</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-name</span>=<span class="string">&quot;bmc-button&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-slug</span>=<span class="string">&quot;blackrow&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-color</span>=<span class="string">&quot;#FFDD00&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-emoji</span>=<span class="string">&quot;🍎&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-font</span>=<span class="string">&quot;Bree&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-text</span>=<span class="string">&quot;Buy me an Apple&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-outline-color</span>=<span class="string">&quot;#000000&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-font-color</span>=<span class="string">&quot;#000000&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-coffee-color</span>=<span class="string">&quot;#ffffff&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.bmc-btn-container</span> <span class="selector-class">.bmc-btn</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">min-width</span>: <span class="number">11rem</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: <span class="number">#000000</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">background-color</span>: <span class="number">#ffdd00</span> <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">2rem</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-radius</span>: <span class="number">6px</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">1rem</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-weight</span>: Bold;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border</span>: none;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">padding</span>: <span class="number">0em</span> <span class="number">1em</span> <span class="number">0em</span> <span class="number">1em</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">line-height</span>: <span class="number">1.2rem</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">text-decoration</span>: none <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">display</span>: inline-flex <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">align-items</span>: center;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-family</span>: <span class="string">&quot;Bree Serif&quot;</span>, cursive <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">    -webkit-<span class="attribute">box-sizing</span>: border-box <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">box-sizing</span>: border-box <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.bmc-btn-text</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-left</span>: -<span class="number">0.5em</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">0.9rem</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">display</span>: inline-block;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">line-height</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">flex-shrink</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-family</span>: [FONT] <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="4-refernce"><a href="#4-refernce" class="headerlink" title="4. ::: refernce :::"></a>4. ::: refernce :::</h2><ol>
-<li><a href="https://hexo.io/docs/tag-plugins">Hexo - tag-plugins</a></li>
-<li><a href="https://theme-next.js.org/docs/tag-plugins/">theme-Next - tag-plugins</a></li>
-<li><a href="https://fontawesome.com/search?o=r&m=free">Font Awesome - Search</a></li>
+<li><a href="https://hexo.io/docs/tag-plugins" target="_blank" rel="noopener">Hexo - tag-plugins</a></li>
+<li><a href="https://theme-next.js.org/docs/tag-plugins/" target="_blank" rel="noopener">theme-Next - tag-plugins</a></li>
+<li><a href="https://fontawesome.com/search?o=r&m=free" target="_blank" rel="noopener">Font Awesome - Search</a></li>
 </ol>
 ]]></content>
       <categories>
         <category>Coding</category>
+        <category>Hexo</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
         <tag>Hexo-NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>庫里肖夫效應</title>
+    <url>/zh-tw/3b9/</url>
+    <content><![CDATA[<p><figure><img data-src="/zh-tw/3b9/Snipaste_2024-05-13_07-03-02.jpg" alt="庫里肖夫效應"><figcaption aria-hidden="true">庫里肖夫效應</figcaption></figure></p>
+<span id="more"></span>
+<h2 id="庫里肖夫實驗"><a href="#庫里肖夫實驗" class="headerlink" title="庫里肖夫實驗"></a>庫里肖夫實驗</h2><p>庫里肖夫將無任何表情的男性（演員伊萬·莫茲尤辛）面部畫面，分別剪輯接上一盆湯、一口棺材和一位小女孩的畫面，觀眾卻對這四組畫面產生了不同的情感認同，認為男性的「表情」具有不同的情緒性：接上湯時他是「饑渴」的，接上棺材時他是「悲傷」的，接上小女孩時他是「愉悅、憐愛」的。</p>
+<blockquote>
+<p>人在對事情做出評價的時候，決定的往往並不是客觀價值。<br>換言之，在別人問我們的感受以前，我們早就被已經獲得的經驗框限住了思考。<br>藝術如此，生活亦然。</p>
+</blockquote>
+<h2 id="refernce"><a href="#refernce" class="headerlink" title="::: refernce :::"></a>::: refernce :::</h2><p><a href="https://zh.wikipedia.org/zh-tw/%E5%BA%93%E9%87%8C%E8%82%96%E5%A4%AB%E6%95%88%E5%BA%94" target="_blank" rel="noopener">庫里肖夫效應wiki</a></p>
+]]></content>
+      <categories>
+        <category>Note</category>
+        <category>Ideas</category>
+      </categories>
+      <tags>
+        <tag>Random Ideas</tag>
       </tags>
   </entry>
 </search>

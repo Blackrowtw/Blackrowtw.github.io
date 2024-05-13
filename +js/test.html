@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic HTML 模板</title>
+  </head>
+  <body>
+    <div id="link_card_template"></div>
+
+    <script src="test.js"></script>
+
+    <style>
+      #link_card_template {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden;
+        overflow-x: scroll;
+      }
+
+      #link_card_template::-webkit-scrollbar {
+        height: 0.5em;
+        background-color: #333;
+      }
+
+      #link-card-btn-content {
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -8px;
+        transition: all 0.2s ease-out;
+        width: 5rem;
+        margin: 0.4rem;
+      }
+
+      #link-card-btn-img {
+        width: 5rem;
+        height: auto;
+      }
+
+      #link-card-btn-title {
+        display: flex; /* ★ */
+        align-items: center; /* ★ */
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin: 0;
+        margin-top: 0.4rem;
+        margin-bottom: 0.1rem;
+      }
+
+      #link-card-btn-subtitle {
+        line-height: 1em;
+        display: flex; /* ★ */
+        align-items: center; /* ★ */
+        text-align: center;
+        height: 1.5rem;
+        margin: 0;
+        margin-bottom: 0.5rem;
+      }
+
+      .link-card-btn {
+        background-color: slategrey;
+      }
+
+      #link-card-btn-01 > div:hover,
+      #link-card-btn-02 > div:hover,
+      #link-card-btn-03 > div:hover,
+      #link-card-btn-04 > div:hover,
+      #link-card-btn-05 > div:hover,
+      #link-card-btn-06 > div:hover,
+      #link-card-btn-07 > div:hover,
+      #link-card-btn-08 > div:hover,
+      #link-card-btn-09 > div:hover,
+      #link-card-btn-10 > div:hover,
+      #link-card-btn-11 > div:hover {
+        transform: scale(1.05);
+      }
+      #link-card-btn-01:hover {
+        background-color: #48b2f8;
+      }
+      #link-card-btn-02:hover {
+        background-color: #0096fa;
+      }
+      #link-card-btn-03:hover {
+        background-color: #9146ff;
+      }
+      #link-card-btn-04:hover {
+        background-color: #da4843;
+      }
+      #link-card-btn-05:hover {
+        background-color: #da4843;
+      }
+      #link-card-btn-06:hover {
+        background-color: #9c9c9c;
+      }
+      #link-card-btn-07:hover {
+        background-color: #fbf38a;
+      }
+      #link-card-btn-08:hover {
+        background-color: #3a8fa7;
+      }
+      #link-card-btn-09:hover {
+        background-color: #ff9b76;
+      }
+      #link-card-btn-10:hover {
+        background-color: #89c623;
+      }
+      #link-card-btn-11:hover {
+        background-color: #89c623;
+        border-color: transparent;
+      }
+    </style>
+  </body>
+</html>
