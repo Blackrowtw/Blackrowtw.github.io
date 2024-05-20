@@ -225,6 +225,25 @@
       </tags>
   </entry>
   <entry>
+    <title>庫里肖夫效應</title>
+    <url>/zh-tw/3b9/</url>
+    <content><![CDATA[<p><figure><img data-src="/zh-tw/3b9/Snipaste_2024-05-13_07-03-02.jpg" alt="庫里肖夫效應" loading="lazy"><figcaption aria-hidden="true">庫里肖夫效應</figcaption></figure></p>
+<span id="more"></span>
+<h2 id="庫里肖夫實驗"><a href="#庫里肖夫實驗" class="headerlink" title="庫里肖夫實驗"></a>庫里肖夫實驗</h2><p>庫里肖夫將無任何表情的男性（演員伊萬·莫茲尤辛）面部畫面，分別剪輯接上一盆湯、一口棺材和一位小女孩的畫面，觀眾卻對這四組畫面產生了不同的情感認同，認為男性的「表情」具有不同的情緒性：接上湯時他是「饑渴」的，接上棺材時他是「悲傷」的，接上小女孩時他是「愉悅、憐愛」的。</p>
+<blockquote>
+<p>人在對事情做出評價的時候，決定的往往並不是客觀價值。<br>換言之，在別人問我們的感受以前，我們早就被已經獲得的經驗框限住了思考。<br>藝術如此，生活亦然。</p>
+</blockquote>
+<h2 id="refernce"><a href="#refernce" class="headerlink" title="::: refernce :::"></a>::: refernce :::</h2><p><a href="https://zh.wikipedia.org/zh-tw/%E5%BA%93%E9%87%8C%E8%82%96%E5%A4%AB%E6%95%88%E5%BA%94" target="_blank" rel="noopener">庫里肖夫效應wiki</a></p>
+]]></content>
+      <categories>
+        <category>Note</category>
+        <category>Ideas</category>
+      </categories>
+      <tags>
+        <tag>Random Ideas</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo 標籤外掛（Tag Plugins）集合</title>
     <url>/zh-tw/7e4/</url>
     <content><![CDATA[<h2 id="1-Hexo-NexT"><a href="#1-Hexo-NexT" class="headerlink" title="1. Hexo NexT"></a>1. Hexo NexT</h2><h3 id="1-1-Centered-Quote-引用"><a href="#1-1-Centered-Quote-引用" class="headerlink" title="1.1. Centered Quote 引用"></a>1.1. <a href="https://theme-next.js.org/docs/tag-plugins/#Centered-Quote" target="_blank" rel="noopener">Centered Quote 引用</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;居中的引言&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
@@ -368,7 +387,7 @@
 
 <h3 id="1-6-Group-Pictures-照片群組"><a href="#1-6-Group-Pictures-照片群組" class="headerlink" title="1.6. Group Pictures 照片群組"></a>1.6. <a href="https://theme-next.js.org/docs/tag-plugins/group-pictures" target="_blank" rel="noopener">Group Pictures 照片群組</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% gp 5-2 %&#125;</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">&#123;% endgp %&#125;</span><br></pre></td></tr></table></figure>
 
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/+images/hero-backgrond/02.jpg"></div><div class="group-picture-column"><img data-src="/+images/hero-backgrond/03.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/+images/hero-backgrond/01.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/+images/hero-backgrond/04.jpg"></div><div class="group-picture-column"><img data-src="/+images/hero-backgrond/05.jpg"></div></div></div>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/+images/hero-backgrond/02.jpg" loading="lazy"></div><div class="group-picture-column"><img data-src="/+images/hero-backgrond/03.jpg" loading="lazy"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/+images/hero-backgrond/01.jpg" loading="lazy"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/+images/hero-backgrond/04.jpg" loading="lazy"></div><div class="group-picture-column"><img data-src="/+images/hero-backgrond/05.jpg" loading="lazy"></div></div></div>
 
 <h3 id="1-7-Video-影片"><a href="#1-7-Video-影片" class="headerlink" title="1.7. Video 影片"></a>1.7. <a href="https://theme-next.js.org/docs/tag-plugins/#Video" target="_blank" rel="noopener">Video 影片</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% video url %&#125;</span><br></pre></td></tr></table></figure>
 
@@ -445,7 +464,7 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% post_link 2024-05-04_[gitHub-學習筆記] %&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><p><strong>[img] 無效</strong><br><figure><img data-src="/1280x720-Placeholder.png" alt="1280x720-Placeholder.png"><figcaption aria-hidden="true">1280x720-Placeholder.png</figcaption></figure><br><figure><img data-src="/image/2024-05-05_%5BHexo-%E6%A8%99%E7%B1%A4%E5%A4%96%E6%8E%9B%EF%BC%88Tag-Plugins%EF%BC%89%E9%9B%86%E5%90%88%5D/1715138995941.png" alt="1715138995941"><figcaption aria-hidden="true">1715138995941</figcaption></figure></p>
+<li><p><strong>[img] 無效</strong><br><figure><img data-src="/1280x720-Placeholder.png" alt="1280x720-Placeholder.png" loading="lazy"><figcaption aria-hidden="true">1280x720-Placeholder.png</figcaption></figure><br><figure><img data-src="/image/2024-05-05_%5BHexo-%E6%A8%99%E7%B1%A4%E5%A4%96%E6%8E%9B%EF%BC%88Tag-Plugins%EF%BC%89%E9%9B%86%E5%90%88%5D/1715138995941.png" alt="1715138995941" loading="lazy"><figcaption aria-hidden="true">1715138995941</figcaption></figure></p>
 </li>
 <li><p><strong>img 不顯示</strong></p>
 <img class="class_names 1280x720-Placeholder.png 1280 720 title">
@@ -485,25 +504,6 @@
       <tags>
         <tag>Hexo</tag>
         <tag>Hexo-NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>庫里肖夫效應</title>
-    <url>/zh-tw/3b9/</url>
-    <content><![CDATA[<p><figure><img data-src="/zh-tw/3b9/Snipaste_2024-05-13_07-03-02.jpg" alt="庫里肖夫效應"><figcaption aria-hidden="true">庫里肖夫效應</figcaption></figure></p>
-<span id="more"></span>
-<h2 id="庫里肖夫實驗"><a href="#庫里肖夫實驗" class="headerlink" title="庫里肖夫實驗"></a>庫里肖夫實驗</h2><p>庫里肖夫將無任何表情的男性（演員伊萬·莫茲尤辛）面部畫面，分別剪輯接上一盆湯、一口棺材和一位小女孩的畫面，觀眾卻對這四組畫面產生了不同的情感認同，認為男性的「表情」具有不同的情緒性：接上湯時他是「饑渴」的，接上棺材時他是「悲傷」的，接上小女孩時他是「愉悅、憐愛」的。</p>
-<blockquote>
-<p>人在對事情做出評價的時候，決定的往往並不是客觀價值。<br>換言之，在別人問我們的感受以前，我們早就被已經獲得的經驗框限住了思考。<br>藝術如此，生活亦然。</p>
-</blockquote>
-<h2 id="refernce"><a href="#refernce" class="headerlink" title="::: refernce :::"></a>::: refernce :::</h2><p><a href="https://zh.wikipedia.org/zh-tw/%E5%BA%93%E9%87%8C%E8%82%96%E5%A4%AB%E6%95%88%E5%BA%94" target="_blank" rel="noopener">庫里肖夫效應wiki</a></p>
-]]></content>
-      <categories>
-        <category>Note</category>
-        <category>Ideas</category>
-      </categories>
-      <tags>
-        <tag>Random Ideas</tag>
       </tags>
   </entry>
 </search>

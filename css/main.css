@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #ff9a71;
+    background: #d6ffed;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3315,7 +3315,7 @@ header.header {
 }
 :root {
   --body-bg-color: #eee;
-  --content-bg-color: rgba(250,250,250,0.85);
+  --content-bg-color: rgba(220,220,218,0.45);
   --card-bg-color: #f5f5f5;
   --text-color: #333;
   --blockquote-color: #666;
@@ -3449,6 +3449,17 @@ a:not(.btn):not(.bmc-btn):hover {
 @media (prefers-color-scheme: dark) {
   .posts-expand .post-meta-container {
     color: #999;
+  }
+}
+/* 菜單(Menu) 計數徽章(Badge) 白天模式改色 */
+.menu-item .badge {
+  background: #555;
+  color: #ccc;
+}
+@media (prefers-color-scheme: dark) {
+  .menu-item .badge {
+    background: #ccc;
+    color: #555;
   }
 }
 /* 次級菜單(Sub Menu) 啟用時的顏色*/

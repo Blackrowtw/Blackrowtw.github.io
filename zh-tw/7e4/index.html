@@ -457,7 +457,7 @@
 
 <h3 id="1-6-Group-Pictures-照片群組"><a href="#1-6-Group-Pictures-照片群組" class="headerlink" title="1.6. Group Pictures 照片群組"></a>1.6. <a href="https://theme-next.js.org/docs/tag-plugins/group-pictures" target="_blank" rel="noopener">Group Pictures 照片群組</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% gp 5-2 %&#125;</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">![](/images/next.svg)</span><br><span class="line">&#123;% endgp %&#125;</span><br></pre></td></tr></table></figure>
 
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/+images/hero-backgrond/02.jpg"></div><div class="group-picture-column"><img data-src="/+images/hero-backgrond/03.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/+images/hero-backgrond/01.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/+images/hero-backgrond/04.jpg"></div><div class="group-picture-column"><img data-src="/+images/hero-backgrond/05.jpg"></div></div></div>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/+images/hero-backgrond/02.jpg" loading="lazy"></div><div class="group-picture-column"><img data-src="/+images/hero-backgrond/03.jpg" loading="lazy"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/+images/hero-backgrond/01.jpg" loading="lazy"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/+images/hero-backgrond/04.jpg" loading="lazy"></div><div class="group-picture-column"><img data-src="/+images/hero-backgrond/05.jpg" loading="lazy"></div></div></div>
 
 <h3 id="1-7-Video-影片"><a href="#1-7-Video-影片" class="headerlink" title="1.7. Video 影片"></a>1.7. <a href="https://theme-next.js.org/docs/tag-plugins/#Video" target="_blank" rel="noopener">Video 影片</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% video url %&#125;</span><br></pre></td></tr></table></figure>
 
@@ -534,7 +534,7 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% post_link 2024-05-04_[gitHub-學習筆記] %&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><p><strong>[img] 無效</strong><br><figure><img data-src="/1280x720-Placeholder.png" alt="1280x720-Placeholder.png"><figcaption aria-hidden="true">1280x720-Placeholder.png</figcaption></figure><br><figure><img data-src="/image/2024-05-05_%5BHexo-%E6%A8%99%E7%B1%A4%E5%A4%96%E6%8E%9B%EF%BC%88Tag-Plugins%EF%BC%89%E9%9B%86%E5%90%88%5D/1715138995941.png" alt="1715138995941"><figcaption aria-hidden="true">1715138995941</figcaption></figure></p>
+<li><p><strong>[img] 無效</strong><br><figure><img data-src="/1280x720-Placeholder.png" alt="1280x720-Placeholder.png" loading="lazy"><figcaption aria-hidden="true">1280x720-Placeholder.png</figcaption></figure><br><figure><img data-src="/image/2024-05-05_%5BHexo-%E6%A8%99%E7%B1%A4%E5%A4%96%E6%8E%9B%EF%BC%88Tag-Plugins%EF%BC%89%E9%9B%86%E5%90%88%5D/1715138995941.png" alt="1715138995941" loading="lazy"><figcaption aria-hidden="true">1715138995941</figcaption></figure></p>
 </li>
 <li><p><strong>img 不顯示</strong></p>
 <img class="class_names 1280x720-Placeholder.png 1280 720 title">
@@ -679,10 +679,11 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
@@ -696,7 +697,7 @@
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
