@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #ff994f;
+    background: #60ff6a;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3333,7 +3333,7 @@ header.header {
   --btn-default-hover-bg: #333;
   --btn-default-hover-color: #ccc;
   --btn-default-hover-border-color: #666;
-  --highlight-background: #cecece;
+  --highlight-background: #b4b4b4;
   --highlight-foreground: #444;
   --highlight-gutter-background: #e1e1e1;
   --highlight-gutter-foreground: #555;

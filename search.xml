@@ -146,6 +146,85 @@
       </tags>
   </entry>
   <entry>
+    <title>gitHub 學習筆記</title>
+    <url>/zh-tw/8455/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+<p>自用筆記備忘錄，記錄在學習中所使用的語法</p>
+
+</blockquote>
+
+<span id="more"></span>
+
+<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>自用筆記備忘錄，記錄在學習中所使用的語法</p>
+<h2 id="2-配置本地-git-倉庫"><a href="#2-配置本地-git-倉庫" class="headerlink" title="2. 配置本地 git 倉庫"></a>2. 配置本地 git 倉庫</h2><p>以我自己的 Minecraft 翻譯項目為例：</p>
+<blockquote>
+<p><a href="https://github.com/Blackrowtw/Translation-zh_tw-of-masa-series-mods" target="_blank" rel="noopener">繁中 masa 系模組翻譯_by.BK</a></p>
+</blockquote>
+<h3 id="2-1-初始化"><a href="#2-1-初始化" class="headerlink" title="2.1. 初始化"></a>2.1. 初始化</h3><ol>
+<li>移動至需要版本控制的資料夾</li>
+<li>進入終端 ; cmd</li>
+<li>初始化：<code>git init</code></li>
+<li>加入全部檔案：<code>git add .</code></li>
+<li>撰寫第一次 commit 描述：<code>git commit -m &quot;第一次&quot;</code></li>
+</ol>
+<h3 id="2-2-連接遠端倉庫"><a href="#2-2-連接遠端倉庫" class="headerlink" title="2.2. 連接遠端倉庫"></a>2.2. 連接遠端倉庫</h3><ol>
+<li>查詢所記錄的遠程倉庫網址：<code>git remote</code></li>
+<li>增加遠程倉庫的網址與別名 origin：<br><code>git remote add origin https://github.com/Blackrowtw/Translation-zh_tw-of-masa-series-mods</code></li>
+<li>查詢遠程倉庫地址並列出詳細網址：<code>git remote -v</code></li>
+<li>重新設定遠端網址 <code>git remote set-url origin https://github.com/xxxx</code></li>
+<li>刪除遠端 <code>git remote remove &lt;name&gt;</code></li>
+</ol>
+<h3 id="2-3-管理分支"><a href="#2-3-管理分支" class="headerlink" title="2.3. 管理分支"></a>2.3. 管理分支</h3><ol>
+<li>查詢所有 git 分支：<code>git branch</code></li>
+<li>修改當前的分支名稱為 main：<code>git branch -m main</code><blockquote>
+<p>如果 github 的分支預設為 main 非 master 的狀況</p>
+</blockquote>
+</li>
+<li>強制執行改名：<code>git branch -M main</code></li>
+<li>從遠程倉庫 origin 拉取分支 master ：<code>git pull origin master</code></li>
+</ol>
+<h3 id="2-4-管理-commit"><a href="#2-4-管理-commit" class="headerlink" title="2.4. 管理 commit"></a>2.4. 管理 commit</h3><ol>
+<li>列出 commit 的修改記錄：<code>git log --oneline</code><blockquote>
+<p>–oneline: 一行表示</p>
+</blockquote>
+</li>
+<li>解決 commit 衝突<code>git pull --rebase origin master</code><blockquote>
+<p>–rebase：重整，將遠程 commit 同步到本地後再創建新的 commit</p>
+</blockquote>
+</li>
+<li>將本地的倉庫推送到遠程：<code>git push origin master</code></li>
+</ol>
+<h2 id="3-分支操作"><a href="#3-分支操作" class="headerlink" title="3. 分支操作"></a>3. 分支操作</h2><ol>
+<li>創建新分支並移動到該分支：<code>git switch -c v1.20.1</code></li>
+<li>將該分支同步到遠程：<code>git push origin v1.20.1</code></li>
+<li>查詢所在分支：<code>git branch</code></li>
+<li>移動回 master 分支：<code>git switch master</code></li>
+<li>刪除 v1.20.1 的分支：<code>git branch -d v1.20.1</code></li>
+<li>github 合併 Pull Request 後，記得同步本地的 commit：<code>git pull</code></li>
+<li>切換到 master：<code>git checkout master</code></li>
+<li>將分支 v1.20.1 合併到當前分支：<code>git merge</code></li>
+</ol>
+<h2 id="4-Tags-和-Releases"><a href="#4-Tags-和-Releases" class="headerlink" title="4. Tags 和 Releases"></a>4. Tags 和 Releases</h2><ol>
+<li>查詢現有 tag：<code>git tag</code></li>
+<li>創建名為 v1.20.1 的 tag，並加上注釋：<code>git tag -a v1.20.1 -m &quot;版本 v1.20.1，2023-07-10 製作&quot;</code><blockquote>
+<p>-a：annotation，註解</p>
+</blockquote>
+</li>
+<li>將標籤 v1.20.1 推送到遠程倉庫：<code>git push origin v1.20.1</code></li>
+<li>刪除標籤 v1.20.1：<code>git tag -d v1.20.1</code></li>
+</ol>
+<h2 id="5-refernce"><a href="#5-refernce" class="headerlink" title="5. ::: refernce :::"></a>5. ::: refernce :::</h2><p><a href="https://www.bilibili.com/video/BV1RC411W7UE/" target="_blank" rel="noopener">给学完 Git，还不会用 GitHub 的朋友们【bilibili】</a></p>
+]]></content>
+      <categories>
+        <category>Coding</category>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo 標籤外掛（Tag Plugins）集合</title>
     <url>/zh-tw/7e4/</url>
     <content><![CDATA[<h2 id="1-Hexo-NexT"><a href="#1-Hexo-NexT" class="headerlink" title="1. Hexo NexT"></a>1. Hexo NexT</h2><h3 id="1-1-Centered-Quote-引用"><a href="#1-1-Centered-Quote-引用" class="headerlink" title="1.1. Centered Quote 引用"></a>1.1. <a href="https://theme-next.js.org/docs/tag-plugins/#Centered-Quote" target="_blank" rel="noopener">Centered Quote 引用</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;居中的引言&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
@@ -406,85 +485,6 @@
       <tags>
         <tag>Hexo</tag>
         <tag>Hexo-NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>gitHub 學習筆記</title>
-    <url>/zh-tw/8455/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">
-<p>自用筆記備忘錄，記錄在學習中所使用的語法</p>
-
-</blockquote>
-
-<span id="more"></span>
-
-<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>自用筆記備忘錄，記錄在學習中所使用的語法</p>
-<h2 id="2-配置本地-git-倉庫"><a href="#2-配置本地-git-倉庫" class="headerlink" title="2. 配置本地 git 倉庫"></a>2. 配置本地 git 倉庫</h2><p>以我自己的 Minecraft 翻譯項目為例：</p>
-<blockquote>
-<p><a href="https://github.com/Blackrowtw/Translation-zh_tw-of-masa-series-mods" target="_blank" rel="noopener">繁中 masa 系模組翻譯_by.BK</a></p>
-</blockquote>
-<h3 id="2-1-初始化"><a href="#2-1-初始化" class="headerlink" title="2.1. 初始化"></a>2.1. 初始化</h3><ol>
-<li>移動至需要版本控制的資料夾</li>
-<li>進入終端 ; cmd</li>
-<li>初始化：<code>git init</code></li>
-<li>加入全部檔案：<code>git add .</code></li>
-<li>撰寫第一次 commit 描述：<code>git commit -m &quot;第一次&quot;</code></li>
-</ol>
-<h3 id="2-2-連接遠端倉庫"><a href="#2-2-連接遠端倉庫" class="headerlink" title="2.2. 連接遠端倉庫"></a>2.2. 連接遠端倉庫</h3><ol>
-<li>查詢所記錄的遠程倉庫網址：<code>git remote</code></li>
-<li>增加遠程倉庫的網址與別名 origin：<br><code>git remote add origin https://github.com/Blackrowtw/Translation-zh_tw-of-masa-series-mods</code></li>
-<li>查詢遠程倉庫地址並列出詳細網址：<code>git remote -v</code></li>
-<li>重新設定遠端網址 <code>git remote set-url origin https://github.com/xxxx</code></li>
-<li>刪除遠端 <code>git remote remove &lt;name&gt;</code></li>
-</ol>
-<h3 id="2-3-管理分支"><a href="#2-3-管理分支" class="headerlink" title="2.3. 管理分支"></a>2.3. 管理分支</h3><ol>
-<li>查詢所有 git 分支：<code>git branch</code></li>
-<li>修改當前的分支名稱為 main：<code>git branch -m main</code><blockquote>
-<p>如果 github 的分支預設為 main 非 master 的狀況</p>
-</blockquote>
-</li>
-<li>強制執行改名：<code>git branch -M main</code></li>
-<li>從遠程倉庫 origin 拉取分支 master ：<code>git pull origin master</code></li>
-</ol>
-<h3 id="2-4-管理-commit"><a href="#2-4-管理-commit" class="headerlink" title="2.4. 管理 commit"></a>2.4. 管理 commit</h3><ol>
-<li>列出 commit 的修改記錄：<code>git log --oneline</code><blockquote>
-<p>–oneline: 一行表示</p>
-</blockquote>
-</li>
-<li>解決 commit 衝突<code>git pull --rebase origin master</code><blockquote>
-<p>–rebase：重整，將遠程 commit 同步到本地後再創建新的 commit</p>
-</blockquote>
-</li>
-<li>將本地的倉庫推送到遠程：<code>git push origin master</code></li>
-</ol>
-<h2 id="3-分支操作"><a href="#3-分支操作" class="headerlink" title="3. 分支操作"></a>3. 分支操作</h2><ol>
-<li>創建新分支並移動到該分支：<code>git switch -c v1.20.1</code></li>
-<li>將該分支同步到遠程：<code>git push origin v1.20.1</code></li>
-<li>查詢所在分支：<code>git branch</code></li>
-<li>移動回 master 分支：<code>git switch master</code></li>
-<li>刪除 v1.20.1 的分支：<code>git branch -d v1.20.1</code></li>
-<li>github 合併 Pull Request 後，記得同步本地的 commit：<code>git pull</code></li>
-<li>切換到 master：<code>git checkout master</code></li>
-<li>將分支 v1.20.1 合併到當前分支：<code>git merge</code></li>
-</ol>
-<h2 id="4-Tags-和-Releases"><a href="#4-Tags-和-Releases" class="headerlink" title="4. Tags 和 Releases"></a>4. Tags 和 Releases</h2><ol>
-<li>查詢現有 tag：<code>git tag</code></li>
-<li>創建名為 v1.20.1 的 tag，並加上注釋：<code>git tag -a v1.20.1 -m &quot;版本 v1.20.1，2023-07-10 製作&quot;</code><blockquote>
-<p>-a：annotation，註解</p>
-</blockquote>
-</li>
-<li>將標籤 v1.20.1 推送到遠程倉庫：<code>git push origin v1.20.1</code></li>
-<li>刪除標籤 v1.20.1：<code>git tag -d v1.20.1</code></li>
-</ol>
-<h2 id="5-refernce"><a href="#5-refernce" class="headerlink" title="5. ::: refernce :::"></a>5. ::: refernce :::</h2><p><a href="https://www.bilibili.com/video/BV1RC411W7UE/" target="_blank" rel="noopener">给学完 Git，还不会用 GitHub 的朋友们【bilibili】</a></p>
-]]></content>
-      <categories>
-        <category>Coding</category>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>github</tag>
       </tags>
   </entry>
   <entry>
