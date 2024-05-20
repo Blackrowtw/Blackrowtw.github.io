@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #d6ffed;
+    background: #ff994f;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3431,8 +3431,8 @@ a:not(.btn):not(.bmc-btn):hover {
 /* 編輯文章的鋼筆，懸浮時變色 和大小調整*/
 .posts-expand .post-title .post-edit-link {
   font-size: 24px;
-  color: #999;
-  text-shadow: rgba(5,5,5,0.314) 0.05em 0.05em 0.1em;
+  color: #ddd;
+  text-shadow: rgba(5,5,5,0.502) 0em 0em 0.1em;
 }
 .posts-expand .post-title .post-edit-link:hover {
   color: var(--secondary-theme-color) !important;
@@ -3453,14 +3453,19 @@ a:not(.btn):not(.bmc-btn):hover {
 }
 /* 菜單(Menu) 計數徽章(Badge) 白天模式改色 */
 .menu-item .badge {
-  background: #555;
-  color: #ccc;
-}
-@media (prefers-color-scheme: dark) {
-  .menu-item .badge {
-    background: #ccc;
-    color: #555;
-  }
+  font-size: 0.75rem;
+  background: var(--menu-item-bg-color);
+  border-radius: 25%;
+  outline-color: #000;
+  color: var(--link-color);
+  padding: 2px 2px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: 20%;
+  line-height: 1rem;
+  height: 1rem;
+  min-width: 1rem;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
 }
 /* 次級菜單(Sub Menu) 啟用時的顏色*/
 .sub-menu .menu-item .menu-item-active {
@@ -3684,7 +3689,7 @@ a:not(.btn):not(.bmc-btn):hover {
 /* 文章下標籤(Tags) 樣式, 底色 */
 .post-tags a {
   background: #151515;
-  border-radius: 3px 0 0 3px;
+  border-radius: 3px 1px 1px 3px;
   color: #999;
   display: inline-block;
   height: 1em;
@@ -3700,12 +3705,12 @@ a:not(.btn):not(.bmc-btn):hover {
   content: "";
   background: transparent;
   border-bottom: 1em solid transparent;
-  border-left: calc(1em + 2px) solid #151515;
+  border-left: calc(1em + 0px) solid #151515;
   border-top: 1em solid transparent;
   position: absolute;
   top: 0px;
   bottom: 0px;
-  right: calc(-1em - 1px);
+  right: calc(-1em + 1px);
 }
 /* 文章下標籤(Tags) 懸浮色 */
 .post-tags a:hover {
@@ -3778,10 +3783,6 @@ a:not(.btn):not(.bmc-btn):hover {
     font-size: 0.7em;
   }
 }
-/* 檔案頁面(Archive) 關閉 Keep on posting */
-.archive .collection-title {
-  display: none !important;
-}
 /* 標籤頁面(page-Tags)，取消超連結 的上級偽類內容 */
 .tag-cloud-tags a::after {
   content: "" !important;
@@ -3819,13 +3820,13 @@ a:not(.btn):not(.bmc-btn):hover {
 /* 標籤頁面(page-Tags) 後箭頭 */
 .tag-cloud-tags a::after {
   background: transparent;
-  border-bottom: calc(1.3em + 1px) solid #151515;
-  border-right: calc(1em - 2px) solid transparent;
-  border-top: calc(1.3em + 1px) solid #151515;
+  border-bottom: calc(1.3em) solid #151515;
+  border-right: calc(0.75em - 0px) solid transparent;
+  border-top: calc(1.3em) solid #151515;
   position: absolute;
   top: 0px;
   bottom: 0px;
-  right: calc(-1em + 2px);
+  right: calc(-0.75em + 0px);
 }
 /* 標籤頁面(page-Tags) 懸浮色 */
 .tag-cloud-tags a:hover {
@@ -3844,4 +3845,43 @@ a:not(.btn):not(.bmc-btn):hover {
 /* 分類頁面(page-Category)，取消超連結 的上級偽類內容 */
 .category-list-link::after {
   content: "" !important;
+}
+/* 分類頁面(page-Category) 計數徽章(Badge)*/
+.category-all-page .category-list-count {
+  font-size: 0.75rem;
+  background: var(--menu-item-bg-color);
+  border-radius: 25%;
+  color: var(--link-color);
+  padding: 2px 2px;
+  margin: 0 0 0 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: 10%;
+  line-height: 1rem;
+  height: 1rem;
+  min-width: 1rem;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+}
+/* 檔案頁面(Archive) 關閉 Keep on posting */
+.archive .collection-title {
+  display: none !important;
+}
+/* 檔案頁面(Archive) 計數徽章(Badge) */
+.posts-collapse .post-content .collection-year .collection-year-count {
+  font-size: 0.75rem;
+  background: var(--menu-item-bg-color);
+  border-radius: 25%;
+  color: var(--link-color);
+  padding: 2px 2px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: 20%;
+  line-height: 1rem;
+  height: 1rem;
+  min-width: 1rem;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+}
+/* 檔案頁面(Archive) 分類下小標題 副標顏色 */
+.posts-collapse .post-content .collection-header small {
+  color: var(--blockquote-color);
 }
