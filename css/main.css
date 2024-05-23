@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #60ff6a;
+    background: #c87190;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3338,11 +3338,12 @@ header.header {
   --highlight-gutter-background: #e1e1e1;
   --highlight-gutter-foreground: #555;
   color-scheme: light;
+  --highlight-js-background: #b4b4b4;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --body-bg-color: #282828;
-    --content-bg-color: rgba(55,55,55,0.85);
+    --content-bg-color: rgba(30,30,30,0.85);
     --card-bg-color: #555;
     --text-color: #ccc;
     --blockquote-color: #bbb;
@@ -3365,11 +3366,45 @@ header.header {
     --highlight-gutter-background: #323131;
     --highlight-gutter-foreground: #e8e8e8;
     color-scheme: dark;
+    --highlight-js-background: #1c1b1b;
+  }
+  img {
+    opacity: 1;
+    filter: brightness(75%);
+  }
+  img:hover {
+    opacity: 1;
+    filter: brightness(90%);
   }
 }
-/* 主要副顏色調整 */
+/* 主視覺 副顏色調整 */
 :root {
   --secondary-theme-color: #6190e8;
+}
+/* 全頁面卷軸條 調整 (新樣式 兼容性) */
+@supports (scrollbar-width: auto) {
+  .scroller {
+    scrollbar-width: thin;
+    scrollbar-color: var(--menu-item-bg-color) var(--highlight-background);
+  }
+}
+/* 全頁面卷軸條 調整 (舊樣式 兼容性) */
+::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+  height: 10px; /* width of the entire scrollbar */
+}
+::-webkit-scrollbar-track {
+  background: var(--highlight-background); /* color of the tracking area */
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--menu-item-bg-color); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 2px solid var(--highlight-background); /* creates padding around scroll thumb */
+}
+/* 圖片(img) 懸浮時放大效果 */
+img:hover {
+  transform: scale(1.01);
+  transition: 0.6s ease-in-out;
 }
 /* 文字反白時的 背景顏色 和 文字的顏色 */
 ::selection {
@@ -3441,6 +3476,10 @@ a:not(.btn):not(.bmc-btn):hover {
   .posts-expand .post-title .post-edit-link {
     color: #555;
   }
+}
+/* 文章標題 資訊部分*/
+.posts-expand .post-header {
+  margin-bottom: 40px;
 }
 /* 文章標題 資訊部分*/
 .posts-expand .post-meta-container {
@@ -3590,6 +3629,78 @@ a:not(.btn):not(.bmc-btn):hover {
 /* 文章內文，連結群組(Link Grid)，取消超連結 的上級偽類內容 */
 .post-body .link-grid a::after {
   content: "" !important;
+}
+/* 可選標題的圖片元素 延伸到文章最邊緣 */
+.post-body figure {
+  margin-inline-start: -1lvw;
+  margin-inline-end: -1lvw;
+}
+/* 文章內文，代碼塊(Highlight) */
+.post-body figure.highlight {
+  background: var(--highlight-js-background);
+  color: var(--highlight-foreground);
+  line-height: 1.6;
+  margin: 0 auto 20px;
+  margin-inline-start: -1lvw;
+  margin-inline-end: -1lvw;
+  box-shadow: 0em 3px 0.5em -3px var(--highlight-background);
+}
+/* 文章內文，代碼塊(Highlight) 前方數字標籤*/
+.post-body figure.highlight .gutter pre {
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  margin-right: -2.5em;
+}
+/* 文章內文，代碼塊(Highlight) 前方數字標籤底線*/
+.post-body figure.highlight .gutter pre span::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: calc(0.5em + 1px);
+  right: 2em;
+  height: 1em;
+  width: 2.5em;
+  background-image: linear-gradient(transparent calc(100% - 2px), var(--highlight-background) 2px);
+  background-size: 100% 100%;
+}
+/* 文章內文，內容邊界調整 小螢幕內文無框效果*/
+.main-inner {
+  padding: 0px;
+}
+.post-block {
+  padding: 40px 2lvw;
+}
+.comments {
+  padding: 40px 8lvw;
+  margin: 5px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-inner {
+    padding: 0px 1lvw;
+  }
+  .post-block {
+    padding: 40px 1lvw;
+  }
+}
+@media (max-width: 767px) {
+  .main-inner {
+    padding: 0px 0lvw;
+  }
+  .post-block {
+    padding: 40px 1lvw;
+  }
+}
+/* 文章內文，背景透明 (blog首頁 每個文章樣式是連續堆疊的)*/
+.main-inner .sub-menu,
+.main-inner .post-block,
+.main-inner .tabs-comment,
+.main-inner > .comments,
+.main-inner .comment-position .comments,
+.main-inner .pagination,
+.main-inner .post-block:not(:first-child):not(:first-child) {
+  border-radius: 0.1rem;
+  background: transparent;
+  backdrop-filter: blur(10px) brightness(99%) grayscale(50%);
 }
 /* 文章內文，筆記(Note)，flat樣式 無(none)筆記文字顏色改為黑色 */
 .post-body .note:not(.default),
@@ -3745,6 +3856,7 @@ a:not(.btn):not(.bmc-btn):hover {
 .footer-inner .copyright {
   line-height: 1.5em;
   width: calc(100% - 0rem);
+  padding: 0 8lvw;
 }
 .author::after {
   content: "Reprinted please specify the source";
@@ -3819,14 +3931,17 @@ a:not(.btn):not(.bmc-btn):hover {
 }
 /* 標籤頁面(page-Tags) 後箭頭 */
 .tag-cloud-tags a::after {
+  height: 0;
+  width: 0;
+  font-size: inherit !important;
   background: transparent;
-  border-bottom: calc(1.3em) solid #151515;
-  border-right: calc(0.75em - 0px) solid transparent;
-  border-top: calc(1.3em) solid #151515;
+  border-bottom: 1em solid #151515;
+  border-right: 0.5em solid transparent;
+  border-top: 1em solid #151515;
   position: absolute;
-  top: 0px;
+  top: calc(50% - 1em);
   bottom: 0px;
-  right: calc(-0.75em + 0px);
+  right: calc(-0.5em + 0px);
 }
 /* 標籤頁面(page-Tags) 懸浮色 */
 .tag-cloud-tags a:hover {
