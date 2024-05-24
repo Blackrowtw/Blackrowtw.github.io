@@ -146,6 +146,104 @@
       </tags>
   </entry>
   <entry>
+    <title>gitHub 學習筆記</title>
+    <url>/zh-tw/8455/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+<p>自用筆記備忘錄，記錄在學習中所使用的語法</p>
+
+</blockquote>
+
+<span id="more"></span>
+
+<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>自用筆記備忘錄，記錄在學習中所使用的語法</p>
+<h2 id="2-配置本地-git-倉庫"><a href="#2-配置本地-git-倉庫" class="headerlink" title="2. 配置本地 git 倉庫"></a>2. 配置本地 git 倉庫</h2><p>以我自己的 Minecraft 翻譯項目為例：</p>
+<blockquote>
+<p><a href="https://github.com/Blackrowtw/Translation-zh_tw-of-masa-series-mods" target="_blank" rel="noopener">繁中 masa 系模組翻譯_by.BK</a></p>
+</blockquote>
+<h3 id="2-1-初始化"><a href="#2-1-初始化" class="headerlink" title="2.1. 初始化"></a>2.1. 初始化</h3><ol>
+<li>移動至需要版本控制的資料夾</li>
+<li>進入終端 ; cmd</li>
+<li>初始化：<code>git init</code></li>
+<li>加入全部檔案：<code>git add .</code></li>
+<li>撰寫第一次 commit 描述：<code>git commit -m &quot;第一次&quot;</code></li>
+</ol>
+<h3 id="2-2-連接遠端倉庫"><a href="#2-2-連接遠端倉庫" class="headerlink" title="2.2. 連接遠端倉庫"></a>2.2. 連接遠端倉庫</h3><ol>
+<li>查詢所記錄的遠程倉庫網址：<code>git remote</code></li>
+<li>增加遠程倉庫的網址與別名 origin：<br><code>git remote add origin https://github.com/Blackrowtw/Translation-zh_tw-of-masa-series-mods</code></li>
+<li>查詢遠程倉庫地址並列出詳細網址：<code>git remote -v</code></li>
+<li>重新設定遠端網址 <code>git remote set-url origin https://github.com/xxxx</code></li>
+<li>刪除遠端 <code>git remote remove &lt;name&gt;</code></li>
+</ol>
+<h3 id="2-3-管理分支"><a href="#2-3-管理分支" class="headerlink" title="2.3. 管理分支"></a>2.3. 管理分支</h3><ol>
+<li>查詢所有 git 分支：<code>git branch</code></li>
+<li>修改當前的分支名稱為 main：<code>git branch -m main</code><blockquote>
+<p>如果 github 的分支預設為 main 非 master 的狀況</p>
+</blockquote>
+</li>
+<li>強制執行改名：<code>git branch -M main</code></li>
+<li>從遠程倉庫 origin 拉取分支 master ：<code>git pull origin master</code></li>
+</ol>
+<h3 id="2-4-管理-commit"><a href="#2-4-管理-commit" class="headerlink" title="2.4. 管理 commit"></a>2.4. 管理 commit</h3><ol>
+<li>列出 commit 的修改記錄：<code>git log --oneline</code><blockquote>
+<p>–oneline: 一行表示</p>
+</blockquote>
+</li>
+<li>解決 commit 衝突<code>git pull --rebase origin master</code><blockquote>
+<p>–rebase：重整，將遠程 commit 同步到本地後再創建新的 commit</p>
+</blockquote>
+</li>
+<li>將本地的倉庫推送到遠程：<code>git push origin master</code></li>
+</ol>
+<h2 id="3-分支操作"><a href="#3-分支操作" class="headerlink" title="3. 分支操作"></a>3. 分支操作</h2><ol>
+<li>創建新分支並移動到該分支：<code>git switch -c v1.20.1</code></li>
+<li>將該分支同步到遠程：<code>git push origin v1.20.1</code></li>
+<li>查詢所在分支：<code>git branch</code></li>
+<li>移動回 master 分支：<code>git switch master</code></li>
+<li>刪除 v1.20.1 的分支：<code>git branch -d v1.20.1</code></li>
+<li>github 合併 Pull Request 後，記得同步本地的 commit：<code>git pull</code></li>
+<li>切換到 master：<code>git checkout master</code></li>
+<li>將分支 v1.20.1 合併到當前分支：<code>git merge</code></li>
+</ol>
+<h2 id="4-Tags-和-Releases"><a href="#4-Tags-和-Releases" class="headerlink" title="4. Tags 和 Releases"></a>4. Tags 和 Releases</h2><ol>
+<li>查詢現有 tag：<code>git tag</code></li>
+<li>創建名為 v1.20.1 的 tag，並加上注釋：<code>git tag -a v1.20.1 -m &quot;版本 v1.20.1，2023-07-10 製作&quot;</code><blockquote>
+<p>-a：annotation，註解</p>
+</blockquote>
+</li>
+<li>將標籤 v1.20.1 推送到遠程倉庫：<code>git push origin v1.20.1</code></li>
+<li>刪除標籤 v1.20.1：<code>git tag -d v1.20.1</code></li>
+</ol>
+<h2 id="5-refernce"><a href="#5-refernce" class="headerlink" title="5. ::: refernce :::"></a>5. ::: refernce :::</h2><p><a href="https://www.bilibili.com/video/BV1RC411W7UE/" target="_blank" rel="noopener">给学完 Git，还不会用 GitHub 的朋友们【bilibili】</a></p>
+]]></content>
+      <categories>
+        <category>Coding</category>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>庫里肖夫效應</title>
+    <url>/zh-tw/3b9/</url>
+    <content><![CDATA[<p><figure><img data-src="/zh-tw/3b9/Snipaste_2024-05-13_07-03-02.jpg" alt="庫里肖夫效應" loading="lazy"><figcaption aria-hidden="true">庫里肖夫效應</figcaption></figure></p>
+<span id="more"></span>
+<h2 id="庫里肖夫實驗"><a href="#庫里肖夫實驗" class="headerlink" title="庫里肖夫實驗"></a>庫里肖夫實驗</h2><p>庫里肖夫將無任何表情的男性（演員伊萬·莫茲尤辛）面部畫面，分別剪輯接上一盆湯、一口棺材和一位小女孩的畫面，觀眾卻對這四組畫面產生了不同的情感認同，認為男性的「表情」具有不同的情緒性：接上湯時他是「饑渴」的，接上棺材時他是「悲傷」的，接上小女孩時他是「愉悅、憐愛」的。</p>
+<blockquote>
+<p>人在對事情做出評價的時候，決定的往往並不是客觀價值。<br>換言之，在別人問我們的感受以前，我們早就被已經獲得的經驗框限住了思考。<br>藝術如此，生活亦然。</p>
+</blockquote>
+<h2 id="refernce"><a href="#refernce" class="headerlink" title="::: refernce :::"></a>::: refernce :::</h2><p><a href="https://zh.wikipedia.org/zh-tw/%E5%BA%93%E9%87%8C%E8%82%96%E5%A4%AB%E6%95%88%E5%BA%94" target="_blank" rel="noopener">庫里肖夫效應wiki</a></p>
+]]></content>
+      <categories>
+        <category>Note</category>
+        <category>Ideas</category>
+      </categories>
+      <tags>
+        <tag>Random Ideas</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo 標籤外掛（Tag Plugins）集合</title>
     <url>/zh-tw/7e4/</url>
     <content><![CDATA[<img data-src="/zh-tw/7e4/1280x720-Placeholder.png" class="" title="**T-E-S-T**">
@@ -413,101 +511,158 @@
       </tags>
   </entry>
   <entry>
-    <title>gitHub 學習筆記</title>
-    <url>/zh-tw/8455/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">
-<p>自用筆記備忘錄，記錄在學習中所使用的語法</p>
-
-</blockquote>
-
+    <title>【Minecraft】[1.20.1] 美化模組推薦 (fabric)</title>
+    <url>/zh-tw/9c61/</url>
+    <content><![CDATA[<p><figure><img data-src="/zh-tw/9c61/00-banner.jpg" alt="MLL sever" loading="lazy"><figcaption aria-hidden="true">MLL sever</figcaption></figure></p>
 <span id="more"></span>
 
-<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>自用筆記備忘錄，記錄在學習中所使用的語法</p>
-<h2 id="2-配置本地-git-倉庫"><a href="#2-配置本地-git-倉庫" class="headerlink" title="2. 配置本地 git 倉庫"></a>2. 配置本地 git 倉庫</h2><p>以我自己的 Minecraft 翻譯項目為例：</p>
+<h2 id="1-20-1-模組推薦"><a href="#1-20-1-模組推薦" class="headerlink" title="[1.20.1] 模組推薦"></a>[1.20.1] 模組推薦</h2><h3 id="01-Chat-Heads"><a href="#01-Chat-Heads" class="headerlink" title="01. Chat Heads"></a>01. <a href="https://modrinth.com/mod/chat-heads" target="_blank" rel="noopener">Chat Heads</a></h3><p>—-【聊天欄玩家頭像】</p>
 <blockquote>
-<p><a href="https://github.com/Blackrowtw/Translation-zh_tw-of-masa-series-mods" target="_blank" rel="noopener">繁中 masa 系模組翻譯_by.BK</a></p>
+<p>在訊息旁邊顯示玩家的頭像。</p>
 </blockquote>
-<h3 id="2-1-初始化"><a href="#2-1-初始化" class="headerlink" title="2.1. 初始化"></a>2.1. 初始化</h3><ol>
-<li>移動至需要版本控制的資料夾</li>
-<li>進入終端 ; cmd</li>
-<li>初始化：<code>git init</code></li>
-<li>加入全部檔案：<code>git add .</code></li>
-<li>撰寫第一次 commit 描述：<code>git commit -m &quot;第一次&quot;</code></li>
-</ol>
-<h3 id="2-2-連接遠端倉庫"><a href="#2-2-連接遠端倉庫" class="headerlink" title="2.2. 連接遠端倉庫"></a>2.2. 連接遠端倉庫</h3><ol>
-<li>查詢所記錄的遠程倉庫網址：<code>git remote</code></li>
-<li>增加遠程倉庫的網址與別名 origin：<br><code>git remote add origin https://github.com/Blackrowtw/Translation-zh_tw-of-masa-series-mods</code></li>
-<li>查詢遠程倉庫地址並列出詳細網址：<code>git remote -v</code></li>
-<li>重新設定遠端網址 <code>git remote set-url origin https://github.com/xxxx</code></li>
-<li>刪除遠端 <code>git remote remove &lt;name&gt;</code></li>
-</ol>
-<h3 id="2-3-管理分支"><a href="#2-3-管理分支" class="headerlink" title="2.3. 管理分支"></a>2.3. 管理分支</h3><ol>
-<li>查詢所有 git 分支：<code>git branch</code></li>
-<li>修改當前的分支名稱為 main：<code>git branch -m main</code><blockquote>
-<p>如果 github 的分支預設為 main 非 master 的狀況</p>
+<p><figure><img data-src="/zh-tw/9c61/01-Chat-Heads.jpg" alt="Chat Heads" loading="lazy"><figcaption aria-hidden="true">Chat Heads</figcaption></figure></p>
+<h3 id="02-Visuality"><a href="#02-Visuality" class="headerlink" title="02. Visuality"></a>02. <a href="https://modrinth.com/mod/visuality" target="_blank" rel="noopener">Visuality</a></h3><p>—-【更多粒子效果】</p>
+<blockquote>
+<p>增加下雨水面漣漪、礦物鎧甲發光、生物受傷粒子等等的效果。</p>
 </blockquote>
-</li>
-<li>強制執行改名：<code>git branch -M main</code></li>
-<li>從遠程倉庫 origin 拉取分支 master ：<code>git pull origin master</code></li>
-</ol>
-<h3 id="2-4-管理-commit"><a href="#2-4-管理-commit" class="headerlink" title="2.4. 管理 commit"></a>2.4. 管理 commit</h3><ol>
-<li>列出 commit 的修改記錄：<code>git log --oneline</code><blockquote>
-<p>–oneline: 一行表示</p>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/02-Visuality-1.png" class="" title="Visuality"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/02-Visuality-2.png" class="" title="Visuality"></div></div></div>
+
+<h3 id="03-Not-Enough-Animations"><a href="#03-Not-Enough-Animations" class="headerlink" title="03. Not Enough Animations"></a>03. <a href="https://modrinth.com/mod/not-enough-animations" target="_blank" rel="noopener">Not Enough Animations</a></h3><p>—-【更多的玩家動作】</p>
+<blockquote>
+<p>增加手持物品、使用武器、進食、划船、騎馬、爬梯、等等人物動畫。</p>
 </blockquote>
-</li>
-<li>解決 commit 衝突<code>git pull --rebase origin master</code><blockquote>
-<p>–rebase：重整，將遠程 commit 同步到本地後再創建新的 commit</p>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/03-Not-Enough-Animations-1.webp" class="" title="Not Enough Animations"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/03-Not-Enough-Animations-2.webp" class="" title="Not Enough Animations"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/03-Not-Enough-Animations-3.webp" class="" title="Not Enough Animations"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/03-Not-Enough-Animations-4.webp" class="" title="Not Enough Animations"></div></div></div>
+
+<h3 id="04-Eating-Animation"><a href="#04-Eating-Animation" class="headerlink" title="04. Eating Animation"></a>04. <a href="https://modrinth.com/mod/eating-animation" target="_blank" rel="noopener">Eating Animation</a></h3><p>—-【更多的進食動畫】</p>
+<blockquote>
+<p>增加進食時，食物慢慢消耗的新動畫。</p>
 </blockquote>
-</li>
-<li>將本地的倉庫推送到遠程：<code>git push origin master</code></li>
-</ol>
-<h2 id="3-分支操作"><a href="#3-分支操作" class="headerlink" title="3. 分支操作"></a>3. 分支操作</h2><ol>
-<li>創建新分支並移動到該分支：<code>git switch -c v1.20.1</code></li>
-<li>將該分支同步到遠程：<code>git push origin v1.20.1</code></li>
-<li>查詢所在分支：<code>git branch</code></li>
-<li>移動回 master 分支：<code>git switch master</code></li>
-<li>刪除 v1.20.1 的分支：<code>git branch -d v1.20.1</code></li>
-<li>github 合併 Pull Request 後，記得同步本地的 commit：<code>git pull</code></li>
-<li>切換到 master：<code>git checkout master</code></li>
-<li>將分支 v1.20.1 合併到當前分支：<code>git merge</code></li>
-</ol>
-<h2 id="4-Tags-和-Releases"><a href="#4-Tags-和-Releases" class="headerlink" title="4. Tags 和 Releases"></a>4. Tags 和 Releases</h2><ol>
-<li>查詢現有 tag：<code>git tag</code></li>
-<li>創建名為 v1.20.1 的 tag，並加上注釋：<code>git tag -a v1.20.1 -m &quot;版本 v1.20.1，2023-07-10 製作&quot;</code><blockquote>
-<p>-a：annotation，註解</p>
+<p><figure><img data-src="/zh-tw/9c61/04-Eating-Animation.webp" alt="Eating Animation" loading="lazy"><figcaption aria-hidden="true">Eating Animation</figcaption></figure></p>
+<h3 id="05-3d-Skin-Layers"><a href="#05-3d-Skin-Layers" class="headerlink" title="05. 3d Skin Layers"></a>05. <a href="https://modrinth.com/mod/3dskinlayers" target="_blank" rel="noopener">3d Skin Layers</a></h3><p>—-【3D皮膚層】</p>
+<blockquote>
+<p>讓你的第2層皮膚有立體的效果。</p>
 </blockquote>
-</li>
-<li>將標籤 v1.20.1 推送到遠程倉庫：<code>git push origin v1.20.1</code></li>
-<li>刪除標籤 v1.20.1：<code>git tag -d v1.20.1</code></li>
-</ol>
-<h2 id="5-refernce"><a href="#5-refernce" class="headerlink" title="5. ::: refernce :::"></a>5. ::: refernce :::</h2><p><a href="https://www.bilibili.com/video/BV1RC411W7UE/" target="_blank" rel="noopener">给学完 Git，还不会用 GitHub 的朋友们【bilibili】</a></p>
+<p><figure><img data-src="/zh-tw/9c61/05-3d-Skin-Layers.webp" alt="3d Skin Layers" loading="lazy"><figcaption aria-hidden="true">3d Skin Layers</figcaption></figure></p>
+<h3 id="06-Item-Model-Fix"><a href="#06-Item-Model-Fix" class="headerlink" title="06. Item Model Fix"></a>06. <a href="https://modrinth.com/mod/modelfix" target="_blank" rel="noopener">Item Model Fix</a></h3><p>—-【修復物品模型隙縫】</p>
+<blockquote>
+<p>修復各種原版Mincraft物品模型的細小錯誤。</p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/06-Item-Model-Fix.png" alt="Item Model Fix" loading="lazy"><figcaption aria-hidden="true">Item Model Fix</figcaption></figure></p>
+<h3 id="07-Hat-List"><a href="#07-Hat-List" class="headerlink" title="07. Hat List"></a>07. <a href="https://modrinth.com/mod/hatlist" target="_blank" rel="noopener">Hat List</a></h3><p>—-【Tab清單顯示皮膚修復】</p>
+<blockquote>
+<p>讓Tab名單中的第2層皮膚能夠正常顯示。</p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/07-Hat-List.gif" alt="Hat List" loading="lazy"><figcaption aria-hidden="true">Hat List</figcaption></figure></p>
+<h3 id="08-LambDynamicLights"><a href="#08-LambDynamicLights" class="headerlink" title="08. LambDynamicLights"></a>08. <a href="https://modrinth.com/mod/lambdynamiclights" target="_blank" rel="noopener">LambDynamicLights</a></h3><p>—-【Lambda的動態光源】</p>
+<blockquote>
+<p>補充Fabric端所沒有的OptiFine功能。<br>讓你手持火把或光源時，能夠照亮周圍。<br>以及讓掉落的物品，或生物發光等等(視覺上)功能。</p>
+</blockquote>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/08-LambDynamicLights-1.webp" class="" title="LambDynamicLights"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/08-LambDynamicLights-2.webp" class="" title="LambDynamicLights"></div></div></div>
+
+<h3 id="09-Continuity"><a href="#09-Continuity" class="headerlink" title="09. Continuity"></a>09. <a href="https://modrinth.com/mod/continuity" target="_blank" rel="noopener">Continuity</a></h3><p>—-【連接材質】</p>
+<blockquote>
+<p>補充Fabric端所沒有的OptiFine功能。<br>實現無縫玻璃、無縫書櫃、草皮過渡到其他方塊等等材質連接的功能。<br>模組自帶基本玻璃、書櫃、砂岩連接材質包。<br><strong>如果有裝Sodium(鈉)模組的話，還需要裝Indium(銦)才可以使用。</strong></p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/09-Continuity.webp" alt="Continuity" loading="lazy"><figcaption aria-hidden="true">Continuity</figcaption></figure></p>
+<h3 id="10-CIT-Resewn"><a href="#10-CIT-Resewn" class="headerlink" title="10. CIT Resewn"></a>10. <a href="https://modrinth.com/mod/cit-resewn" target="_blank" rel="noopener">CIT Resewn</a></h3><p>—-【自定義物品材質】</p>
+<blockquote>
+<p>補充Fabric端所沒有的OptiFine功能。<br>讓更多的物品可以使用材質包改變圖案。</p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/10-CIT-Resewn.webp" alt="CIT Resewn" loading="lazy"><figcaption aria-hidden="true">CIT Resewn</figcaption></figure></p>
+<h3 id="11-Entity-Texture-Features"><a href="#11-Entity-Texture-Features" class="headerlink" title="11. Entity Texture Features"></a>11. <a href="https://modrinth.com/mod/entitytexturefeatures" target="_blank" rel="noopener">Entity Texture Features</a></h3><p>—-【自定義生物材質】</p>
+<blockquote>
+<p>補充Fabric端所沒有的OptiFine功能。<br>讓材質包實現生物材質的發光、隨機等等的特殊效果。<br>玩家高級皮膚的效果。</p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/11-Entity-Texture-Features.png" alt="Entity Texture Features" loading="lazy"><figcaption aria-hidden="true">Entity Texture Features</figcaption></figure></p>
+<h3 id="12-Entity-Model-Features"><a href="#12-Entity-Model-Features" class="headerlink" title="12. Entity Model Features"></a>12. <a href="https://modrinth.com/mod/entity-model-features" target="_blank" rel="noopener">Entity Model Features</a></h3><p>—-【自定義生物模型】</p>
+<blockquote>
+<p>補充Fabric端所沒有的OptiFine功能。<br>讓材質包可以使用不同的生物模型。<br>需要與 <strong>Entity Texture Features</strong> 一起安裝。<br>非常推薦搭配 <strong>Fresh Animations</strong> 材質包使用。</p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/12-Entity-Model-Features.jpg" alt="Entity Model Features" loading="lazy"><figcaption aria-hidden="true">Entity Model Features</figcaption></figure></p>
+<h2 id="材質包推薦"><a href="#材質包推薦" class="headerlink" title="材質包推薦"></a>材質包推薦</h2><h3 id="01-Fresh-Animations"><a href="#01-Fresh-Animations" class="headerlink" title="01. Fresh Animations"></a>01. <a href="https://modrinth.com/resourcepack/fresh-animations" target="_blank" rel="noopener">Fresh Animations</a></h3><blockquote>
+<p>更生動的生物動畫<br>需求 <strong>Entity Texture Features</strong>、<strong>Entity Model Features</strong></p>
+</blockquote>
+<iframe src="https://www.youtube.com/embed/QHHdDbeaMfg" width="360" height="240" frameborder="0" loading="lazy" allowfullscreen></iframe>
+
+<h3 id="02-xali’s-Enchanted-Books"><a href="#02-xali’s-Enchanted-Books" class="headerlink" title="02. xali’s Enchanted Books"></a>02. <a href="https://modrinth.com/resourcepack/xalis-enchanted-books" target="_blank" rel="noopener">xali’s Enchanted Books</a></h3><blockquote>
+<p>附魔書材質<br>需求 <strong>CIT Resewn</strong></p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/xali's-Enchanted-Books.png" alt="xali&#39;s Enchanted Books" loading="lazy"><figcaption aria-hidden="true">xali&#39;s Enchanted Books</figcaption></figure></p>
+<h3 id="03-xali’s-Potions"><a href="#03-xali’s-Potions" class="headerlink" title="03. xali’s Potions"></a>03. <a href="https://modrinth.com/resourcepack/xalis-potion" target="_blank" rel="noopener">xali’s Potions</a></h3><blockquote>
+<p>附藥水材質<br>需求 <strong>CIT Resewn</strong></p>
+</blockquote>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/xali's-Potions-1.png" class="" title="xali" alt="s Potions"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/xali's-Potions-2.png" class="" title="xali" alt="s Potions"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/xali's-Potions-3.png" class="" title="xali" alt="s Potions"></div></div></div>
+
+<h3 id="04-Vanilla-Tweaks"><a href="#04-Vanilla-Tweaks" class="headerlink" title="04. Vanilla Tweaks"></a>04. <a href="https://vanillatweaks.net/picker/resource-packs/" target="_blank" rel="noopener">Vanilla Tweaks</a></h3><blockquote>
+<p>Vanilla Tweaks 原版(香草)調整<br>可以自己選擇需要的功能，自定義自己想要的材質包功能。<br>主要在原版的基礎上做些微的調整，沒有太強烈的風格，很適合原版生存使用。</p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/Vanilla-Tweaks.png" alt="Vanilla Tweaks" loading="lazy"><figcaption aria-hidden="true">Vanilla Tweaks</figcaption></figure></p>
 ]]></content>
       <categories>
-        <category>Coding</category>
-        <category>git</category>
+        <category>Games</category>
+        <category>Minecraft</category>
       </categories>
       <tags>
-        <tag>git</tag>
-        <tag>github</tag>
+        <tag>Minecraft</tag>
+        <tag>fabric</tag>
       </tags>
   </entry>
   <entry>
-    <title>庫里肖夫效應</title>
-    <url>/zh-tw/3b9/</url>
-    <content><![CDATA[<p><figure><img data-src="/zh-tw/3b9/Snipaste_2024-05-13_07-03-02.jpg" alt="庫里肖夫效應" loading="lazy"><figcaption aria-hidden="true">庫里肖夫效應</figcaption></figure></p>
+    <title>【Minecraft】更多頭顱掉落差件 More Mob Heads</title>
+    <url>/zh-tw/63f8/</url>
+    <content><![CDATA[<p><figure><img data-src="/zh-tw/63f8/More-Mob-Heads.png" alt="Even More Mob Heads  - Xisumavoid" loading="lazy"><figcaption aria-hidden="true">Even More Mob Heads  - Xisumavoid</figcaption></figure></p>
 <span id="more"></span>
-<h2 id="庫里肖夫實驗"><a href="#庫里肖夫實驗" class="headerlink" title="庫里肖夫實驗"></a>庫里肖夫實驗</h2><p>庫里肖夫將無任何表情的男性（演員伊萬·莫茲尤辛）面部畫面，分別剪輯接上一盆湯、一口棺材和一位小女孩的畫面，觀眾卻對這四組畫面產生了不同的情感認同，認為男性的「表情」具有不同的情緒性：接上湯時他是「饑渴」的，接上棺材時他是「悲傷」的，接上小女孩時他是「愉悅、憐愛」的。</p>
-<blockquote>
-<p>人在對事情做出評價的時候，決定的往往並不是客觀價值。<br>換言之，在別人問我們的感受以前，我們早就被已經獲得的經驗框限住了思考。<br>藝術如此，生活亦然。</p>
+
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><blockquote>
+<p>讓所有的 Minecraft 生物都會掉落頭顱，供玩家蒐集裝飾。<br>另外可以客製化文件，讓流浪商人有機率販售特殊的頭顱。</p>
 </blockquote>
-<h2 id="refernce"><a href="#refernce" class="headerlink" title="::: refernce :::"></a>::: refernce :::</h2><p><a href="https://zh.wikipedia.org/zh-tw/%E5%BA%93%E9%87%8C%E8%82%96%E5%A4%AB%E6%95%88%E5%BA%94" target="_blank" rel="noopener">庫里肖夫效應wiki</a></p>
+<ul>
+<li>Xisuma 的介紹影片<iframe src="https://www.youtube.com/embed/C04fwclOdQo" width="720" height="360" frameborder="0" loading="lazy" allowfullscreen></iframe></li>
+<li><a href="https://www.spigotmc.org/resources/moremobheads.73997/" target="_blank" rel="noopener">Spigot 插件網址</a></li>
+<li><a href="https://vanillatweaks.net/picker/datapacks/" target="_blank" rel="noopener">資源包 DataPack 版本(Mobs)</a></li>
+</ul>
+<h2 id="自製的客製化文件"><a href="#自製的客製化文件" class="headerlink" title="自製的客製化文件"></a>自製的客製化文件</h2><blockquote>
+<p>提供給伺服器成員使用。</p>
+</blockquote>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/63f8/heads-01.png" class="" title="Custom Heads 符號類-木頭色"></div><div class="group-picture-column"><img data-src="/zh-tw/63f8/heads-02.png" class="" title="Custom Heads 符號類-黑色"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/63f8/heads-03.png" class="" title="Custom Heads 符號類-白色"></div><div class="group-picture-column"><img data-src="/zh-tw/63f8/heads-04.png" class="" title="Custom Heads 食物類"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/63f8/heads-05.png" class="" title="Custom Heads 裝飾類"></div><div class="group-picture-column"><img data-src="/zh-tw/63f8/heads-06.png" class="" title="Custom Heads 娃娃類"></div></div></div>
+
+<h2 id="插件掉落頭顱的-中文翻譯"><a href="#插件掉落頭顱的-中文翻譯" class="headerlink" title="插件掉落頭顱的 中文翻譯"></a>插件掉落頭顱的 中文翻譯</h2><blockquote>
+<p>自翻，將掉落的頭顱翻譯成中文。(<del>熱帶魚超多看都沒看過的名字</del>)</p>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Add the translations for your language here</span></span><br><span class="line"><span class="comment"># 在此處添加您的語言的翻譯</span></span><br><span class="line"><span class="attr">killedby:</span> <span class="string">死於</span></span><br><span class="line"><span class="attr">player:</span> <span class="string">玩家頭顱</span></span><br><span class="line"><span class="attr">allay:</span> <span class="string">悅靈頭顱</span></span><br><span class="line"><span class="attr">axolotl:</span></span><br><span class="line">  <span class="attr">blue:</span> <span class="string">藍色六角恐龍頭顱</span></span><br><span class="line">  <span class="attr">cyan:</span> <span class="string">青色六角恐龍頭顱</span></span><br><span class="line">  <span class="attr">gold:</span> <span class="string">金色角恐龍頭顱</span></span><br><span class="line">  <span class="attr">lucy:</span> <span class="string">粉紅色六角恐龍頭顱</span></span><br><span class="line">  <span class="attr">wild:</span> <span class="string">棕色六角恐龍頭顱</span></span><br><span class="line"><span class="attr">bat:</span> <span class="string">蝙蝠頭顱</span></span><br><span class="line"><span class="attr">bee:</span></span><br><span class="line">  <span class="attr">angry_pollinated:</span> <span class="string">憤怒授粉的蜜蜂頭顱</span></span><br><span class="line">  <span class="attr">angry:</span> <span class="string">憤怒蜜蜂頭顱</span></span><br><span class="line">  <span class="attr">pollinated:</span> <span class="string">授粉的蜜蜂頭顱</span></span><br><span class="line">  <span class="attr">none:</span> <span class="string">蜜蜂頭顱</span></span><br><span class="line"><span class="attr">blaze:</span> <span class="string">烈焰人頭顱</span></span><br><span class="line"><span class="attr">camel:</span> <span class="string">駱駝頭顱</span></span><br><span class="line"><span class="attr">cat:</span></span><br><span class="line">  <span class="attr">all_black:</span> <span class="string">黑貓頭顱</span></span><br><span class="line">  <span class="attr">black:</span> <span class="string">燕尾服貓頭顱</span></span><br><span class="line">  <span class="attr">british_shorthair:</span> <span class="string">英國短毛貓貓頭顱</span></span><br><span class="line">  <span class="attr">calico:</span> <span class="string">花貓布貓頭顱</span></span><br><span class="line">  <span class="attr">jellie:</span> <span class="string">灰橘虎斑貓頭顱</span></span><br><span class="line">  <span class="attr">persian:</span> <span class="string">波斯貓頭顱</span></span><br><span class="line">  <span class="attr">ragdoll:</span> <span class="string">布偶貓頭顱</span></span><br><span class="line">  <span class="attr">red:</span> <span class="string">橘虎斑貓頭顱</span></span><br><span class="line">  <span class="attr">siamese:</span> <span class="string">暹羅貓頭顱</span></span><br><span class="line">  <span class="attr">tabby:</span> <span class="string">虎斑貓頭顱</span></span><br><span class="line">  <span class="attr">white:</span> <span class="string">白色貓頭顱</span></span><br><span class="line">  <span class="attr">wild_ocelot:</span> <span class="string">豹貓頭顱</span></span><br><span class="line"><span class="attr">cave_spider:</span> <span class="string">洞穴蜘蛛頭顱</span></span><br><span class="line"><span class="attr">chicken:</span> <span class="string">雞頭顱</span></span><br><span class="line"><span class="attr">cod:</span> <span class="string">鱈魚頭顱</span></span><br><span class="line"><span class="attr">cow:</span> <span class="string">牛頭顱</span></span><br><span class="line"><span class="attr">creeper:</span> <span class="string">苦力怕頭顱</span></span><br><span class="line"><span class="attr">creepeer_charged:</span> <span class="string">帶電的苦力怕頭顱</span></span><br><span class="line"><span class="attr">dolphin:</span> <span class="string">海豚頭顱</span></span><br><span class="line"><span class="attr">donkey:</span> <span class="string">驢頭顱</span></span><br><span class="line"><span class="attr">drowned:</span> <span class="string">沉屍頭顱</span></span><br><span class="line"><span class="attr">elder_guardian:</span> <span class="string">遠古守衛者頭顱</span></span><br><span class="line"><span class="attr">ender_dragon:</span> <span class="string">終界龍頭顱</span></span><br><span class="line"><span class="attr">enderman:</span> <span class="string">終界使者頭顱</span></span><br><span class="line"><span class="attr">endermite:</span> <span class="string">終界蟎頭顱</span></span><br><span class="line"><span class="attr">evoker:</span> <span class="string">喚魔者頭顱</span></span><br><span class="line"><span class="attr">fox:</span></span><br><span class="line">  <span class="attr">red:</span> <span class="string">赤狐狸頭顱</span></span><br><span class="line">  <span class="attr">snow:</span> <span class="string">雪狐狸頭顱</span></span><br><span class="line"><span class="attr">frog:</span></span><br><span class="line">  <span class="attr">cold:</span> <span class="string">寒帶青蛙頭顱</span></span><br><span class="line">  <span class="attr">temperate:</span> <span class="string">溫帶青蛙頭顱</span></span><br><span class="line">  <span class="attr">warm:</span> <span class="string">熱帶青蛙頭顱</span></span><br><span class="line"><span class="attr">ghast:</span> <span class="string">地獄幽靈頭顱</span></span><br><span class="line"><span class="attr">giant:</span> <span class="string">巨人頭顱</span></span><br><span class="line"><span class="attr">glow_squid:</span> <span class="string">螢光魷魚頭顱</span></span><br><span class="line"><span class="attr">goat:</span></span><br><span class="line">  <span class="attr">normal:</span> <span class="string">山羊頭顱</span></span><br><span class="line">  <span class="attr">screaming:</span> <span class="string">尖叫山羊頭顱</span></span><br><span class="line"><span class="attr">guardian:</span> <span class="string">守衛者頭顱</span></span><br><span class="line"><span class="attr">hoglin:</span> <span class="string">豬布獸頭顱</span></span><br><span class="line"><span class="attr">horse:</span></span><br><span class="line">  <span class="attr">black:</span> <span class="string">黑色馬頭顱</span></span><br><span class="line">  <span class="attr">brown:</span> <span class="string">棕色馬頭顱</span></span><br><span class="line">  <span class="attr">chestnut:</span> <span class="string">栗子色馬頭顱</span></span><br><span class="line">  <span class="attr">creamy:</span> <span class="string">奶油色馬頭顱</span></span><br><span class="line">  <span class="attr">dark_brown:</span> <span class="string">深棕色馬頭顱</span></span><br><span class="line">  <span class="attr">gray:</span> <span class="string">灰色馬頭顱</span></span><br><span class="line">  <span class="attr">white:</span> <span class="string">白色馬頭顱</span></span><br><span class="line"><span class="attr">husk:</span> <span class="string">屍殼頭顱</span></span><br><span class="line"><span class="attr">illusioner:</span> <span class="string">幻術師頭顱</span></span><br><span class="line"><span class="attr">iron_golem:</span> <span class="string">鐵傀儡頭顱</span></span><br><span class="line"><span class="attr">llama:</span></span><br><span class="line">  <span class="attr">brown:</span> <span class="string">棕色羊駝頭顱</span></span><br><span class="line">  <span class="attr">creamy:</span> <span class="string">奶油色羊駝頭顱</span></span><br><span class="line">  <span class="attr">gray:</span> <span class="string">灰色羊駝頭顱</span></span><br><span class="line">  <span class="attr">white:</span> <span class="string">白色羊駝頭顱</span></span><br><span class="line"><span class="attr">magma_cube:</span> <span class="string">岩漿立方怪頭顱</span></span><br><span class="line"><span class="attr">mule:</span> <span class="string">馬騾頭顱</span></span><br><span class="line"><span class="attr">mushroom_cow:</span></span><br><span class="line">  <span class="attr">red:</span> <span class="string">蘑菇牛頭顱</span></span><br><span class="line">  <span class="attr">brown:</span> <span class="string">棕色蘑菇牛頭顱</span></span><br><span class="line"><span class="attr">panda:</span></span><br><span class="line">  <span class="attr">aggressive:</span> <span class="string">好鬥熊貓頭顱</span></span><br><span class="line">  <span class="attr">brown:</span> <span class="string">棕色熊貓頭顱</span></span><br><span class="line">  <span class="attr">lazy:</span> <span class="string">懶惰熊貓頭顱</span></span><br><span class="line">  <span class="attr">normal:</span> <span class="string">熊貓頭顱</span></span><br><span class="line">  <span class="attr">playful:</span> <span class="string">愛玩的熊貓頭顱</span></span><br><span class="line">  <span class="attr">weak:</span> <span class="string">虛弱熊貓頭顱</span></span><br><span class="line">  <span class="attr">worried:</span> <span class="string">擔心熊貓頭顱</span></span><br><span class="line"><span class="attr">parrot:</span></span><br><span class="line">  <span class="attr">blue:</span> <span class="string">藍色鸚鵡頭顱</span></span><br><span class="line">  <span class="attr">cyan:</span> <span class="string">青色鸚鵡頭顱</span></span><br><span class="line">  <span class="attr">gray:</span> <span class="string">灰色鸚鵡頭顱</span></span><br><span class="line">  <span class="attr">green:</span> <span class="string">綠色鸚鵡頭顱</span></span><br><span class="line">  <span class="attr">red:</span> <span class="string">紅色鸚鵡頭顱</span></span><br><span class="line"><span class="attr">phantom:</span> <span class="string">夜魅頭顱</span></span><br><span class="line"><span class="attr">pig:</span> <span class="string">豬頭顱</span></span><br><span class="line"><span class="attr">piglin:</span> <span class="string">豬布林頭顱</span></span><br><span class="line"><span class="attr">piglin_brute:</span> <span class="string">豬布林蠻兵頭顱</span></span><br><span class="line"><span class="attr">pig_zombie:</span> <span class="string">殭屍化豬布林頭顱</span></span><br><span class="line"><span class="attr">pillager:</span> <span class="string">掠奪者頭顱</span></span><br><span class="line"><span class="attr">polar_bear:</span> <span class="string">北極熊頭顱</span></span><br><span class="line"><span class="attr">pufferfish:</span> <span class="string">河豚魚頭顱</span></span><br><span class="line"><span class="attr">rabbit:</span></span><br><span class="line">  <span class="attr">black:</span> <span class="string">黑色兔子頭顱</span></span><br><span class="line">  <span class="attr">black_and_white:</span> <span class="string">黑白斑點兔子頭顱</span></span><br><span class="line">  <span class="attr">brown:</span> <span class="string">棕色兔子頭顱</span></span><br><span class="line">  <span class="attr">gold:</span> <span class="string">奶油色兔子頭顱</span></span><br><span class="line">  <span class="attr">salt_and_pepper:</span> <span class="string">胡椒色兔子頭顱</span></span><br><span class="line">  <span class="attr">the_killer_bunny:</span> <span class="string">殺手兔子頭顱</span></span><br><span class="line">  <span class="attr">toast:</span> <span class="string">Toast兔子頭顱</span></span><br><span class="line">  <span class="attr">white:</span> <span class="string">白色兔子頭顱</span></span><br><span class="line"><span class="attr">ravager:</span> <span class="string">劫毀獸頭顱</span></span><br><span class="line"><span class="attr">salmon:</span> <span class="string">鮭魚頭顱</span></span><br><span class="line"><span class="attr">sheep:</span></span><br><span class="line">  <span class="attr">black:</span> <span class="string">黑色羊頭顱</span></span><br><span class="line">  <span class="attr">blue:</span> <span class="string">藍色羊頭顱</span></span><br><span class="line">  <span class="attr">brown:</span> <span class="string">棕色羊頭顱</span></span><br><span class="line">  <span class="attr">cyan:</span> <span class="string">青色羊頭顱</span></span><br><span class="line">  <span class="attr">gray:</span> <span class="string">灰色羊頭顱</span></span><br><span class="line">  <span class="attr">green:</span> <span class="string">綠色羊頭顱</span></span><br><span class="line">  <span class="attr">jeb_:</span> <span class="string">Jeb_羊頭顱</span></span><br><span class="line">  <span class="attr">light_blue:</span> <span class="string">淺藍羊頭顱</span></span><br><span class="line">  <span class="attr">light_gray:</span> <span class="string">淺灰色羊頭顱</span></span><br><span class="line">  <span class="attr">lime:</span> <span class="string">淺綠色羊頭顱</span></span><br><span class="line">  <span class="attr">magenta:</span> <span class="string">洋紅羊頭顱</span></span><br><span class="line">  <span class="attr">orange:</span> <span class="string">橘色羊頭顱</span></span><br><span class="line">  <span class="attr">pink:</span> <span class="string">粉紅羊頭顱</span></span><br><span class="line">  <span class="attr">purple:</span> <span class="string">紫色羊頭顱</span></span><br><span class="line">  <span class="attr">red:</span> <span class="string">紅色羊頭顱</span></span><br><span class="line">  <span class="attr">white:</span> <span class="string">白色羊頭顱</span></span><br><span class="line">  <span class="attr">yellow:</span> <span class="string">黃色羊頭顱</span></span><br><span class="line"><span class="attr">shulker:</span> <span class="string">界伏蚌頭顱</span></span><br><span class="line"><span class="attr">silverfish:</span> <span class="string">蠹魚頭顱</span></span><br><span class="line"><span class="attr">skeleton:</span> <span class="string">骷髏頭顱</span></span><br><span class="line"><span class="attr">skeleton_horse:</span> <span class="string">骷髏馬頭顱</span></span><br><span class="line"><span class="attr">slime:</span> <span class="string">史萊姆頭顱</span></span><br><span class="line"><span class="attr">sniffer:</span> <span class="string">嗅探獸的頭顱</span></span><br><span class="line"><span class="attr">snowman:</span> <span class="string">雪人頭顱</span></span><br><span class="line"><span class="attr">spider:</span> <span class="string">蜘蛛頭顱</span></span><br><span class="line"><span class="attr">squid:</span> <span class="string">烏賊頭顱</span></span><br><span class="line"><span class="attr">stray:</span> <span class="string">流髑頭顱</span></span><br><span class="line"><span class="attr">strider:</span> <span class="string">熾足獸頭顱</span></span><br><span class="line"><span class="attr">strider_shivering:</span> <span class="string">發抖的熾足獸頭顱</span></span><br><span class="line"><span class="attr">tadpole:</span> <span class="string">蝌蚪頭顱</span></span><br><span class="line"><span class="attr">trader_llama:</span></span><br><span class="line">  <span class="attr">brown:</span> <span class="string">棕色羊駝商人頭顱</span></span><br><span class="line">  <span class="attr">creamy:</span> <span class="string">奶油色羊駝商人頭顱</span></span><br><span class="line">  <span class="attr">gray:</span> <span class="string">灰色羊駝商人頭顱</span></span><br><span class="line">  <span class="attr">white:</span> <span class="string">白色羊駝商人頭顱</span></span><br><span class="line"><span class="attr">tropical_fish:</span></span><br><span class="line">  <span class="attr">tropical_fish:</span> <span class="string">熱帶魚頭顱</span></span><br><span class="line">  <span class="attr">anemone:</span> <span class="string">海葵魚頭顱</span></span><br><span class="line">  <span class="attr">black_tang:</span> <span class="string">長鼻高鰭刺尾魚頭顱</span></span><br><span class="line">  <span class="attr">blue_tang:</span> <span class="string">擬刺尾鯛頭顱</span></span><br><span class="line">  <span class="attr">butterflyfish:</span> <span class="string">蝴蝶魚頭顱</span></span><br><span class="line">  <span class="attr">cichlid:</span> <span class="string">慈鯛頭顱</span></span><br><span class="line">  <span class="attr">clownfish:</span> <span class="string">小丑魚頭顱</span></span><br><span class="line">  <span class="attr">cotton_candy_betta:</span> <span class="string">五彩搏魚頭顱</span></span><br><span class="line">  <span class="attr">dottyback:</span> <span class="string">紅黃繡雀鯛頭顱</span></span><br><span class="line">  <span class="attr">emperor_red_snapper:</span> <span class="string">川紋笛鯛頭顱</span></span><br><span class="line">  <span class="attr">goatfish:</span> <span class="string">鬚鯛頭顱</span></span><br><span class="line">  <span class="attr">moorish_idol:</span> <span class="string">角蝶魚頭顱</span></span><br><span class="line">  <span class="attr">ornate_butterflyfish:</span> <span class="string">華麗蝴蝶魚頭顱</span></span><br><span class="line">  <span class="attr">parrotfish:</span> <span class="string">鸚哥魚頭顱</span></span><br><span class="line">  <span class="attr">queen_angelfish:</span> <span class="string">額斑刺蝶魚頭顱</span></span><br><span class="line">  <span class="attr">red_cichlid:</span> <span class="string">赤慈鯛頭顱</span></span><br><span class="line">  <span class="attr">red_lipped_blenny:</span> <span class="string">紅唇真蛇䲁頭顱</span></span><br><span class="line">  <span class="attr">red_snapper:</span> <span class="string">西大西洋笛鯛頭顱</span></span><br><span class="line">  <span class="attr">threadfin:</span> <span class="string">馬鮁頭顱</span></span><br><span class="line">  <span class="attr">tomato_clownfish:</span> <span class="string">白條雙鋸魚頭顱</span></span><br><span class="line">  <span class="attr">triggerfish:</span> <span class="string">鱗魨頭顱</span></span><br><span class="line">  <span class="attr">yellow_parrotfish:</span> <span class="string">高鰭鸚哥魚頭顱</span></span><br><span class="line">  <span class="attr">yellow_tang:</span> <span class="string">黃高鰭刺尾魚頭顱</span></span><br><span class="line"><span class="attr">turtle:</span> <span class="string">海龜頭顱</span></span><br><span class="line"><span class="attr">vex:</span> <span class="string">惱鬼頭顱</span></span><br><span class="line"><span class="attr">villager:</span></span><br><span class="line">  <span class="attr">desert:</span></span><br><span class="line">    <span class="attr">armorer:</span> <span class="string">沙漠盔甲匠村民頭顱</span></span><br><span class="line">    <span class="attr">butcher:</span> <span class="string">沙漠屠夫村民頭顱</span></span><br><span class="line">    <span class="attr">cartographer:</span> <span class="string">沙漠製圖師村民頭顱</span></span><br><span class="line">    <span class="attr">cleric:</span> <span class="string">沙漠神職人員村民頭顱</span></span><br><span class="line">    <span class="attr">farmer:</span> <span class="string">沙漠農夫村民頭顱</span></span><br><span class="line">    <span class="attr">fisherman:</span> <span class="string">沙漠漁夫村民頭顱</span></span><br><span class="line">    <span class="attr">fletcher:</span> <span class="string">沙漠製箭師村民頭顱</span></span><br><span class="line">    <span class="attr">leatherworker:</span> <span class="string">沙漠皮匠村民頭顱</span></span><br><span class="line">    <span class="attr">librarian:</span> <span class="string">沙漠圖書管理員村民頭顱</span></span><br><span class="line">    <span class="attr">mason:</span> <span class="string">沙漠石匠村民頭顱</span></span><br><span class="line">    <span class="attr">nitwit:</span> <span class="string">沙漠傻子村民頭顱</span></span><br><span class="line">    <span class="attr">none:</span> <span class="string">沙漠村民頭顱</span></span><br><span class="line">    <span class="attr">shepherd:</span> <span class="string">沙漠牧羊人村民頭顱</span></span><br><span class="line">    <span class="attr">toolsmith:</span> <span class="string">沙漠工具匠村民頭顱</span></span><br><span class="line">    <span class="attr">weaponsmith:</span> <span class="string">沙漠武器匠村民頭顱</span></span><br><span class="line">  <span class="attr">jungle:</span></span><br><span class="line">    <span class="attr">armorer:</span> <span class="string">叢林盔甲匠村民頭顱</span></span><br><span class="line">    <span class="attr">butcher:</span> <span class="string">叢林屠夫村民頭顱</span></span><br><span class="line">    <span class="attr">cartographer:</span> <span class="string">叢林製圖師村民頭顱</span></span><br><span class="line">    <span class="attr">cleric:</span> <span class="string">叢林神職人員村民頭顱</span></span><br><span class="line">    <span class="attr">farmer:</span> <span class="string">叢林農夫村民頭顱</span></span><br><span class="line">    <span class="attr">fisherman:</span> <span class="string">叢林漁夫村民頭顱</span></span><br><span class="line">    <span class="attr">fletcher:</span> <span class="string">叢林製箭師村民頭顱</span></span><br><span class="line">    <span class="attr">leatherworker:</span> <span class="string">叢林皮匠村民頭顱</span></span><br><span class="line">    <span class="attr">librarian:</span> <span class="string">叢林圖書管理員村民頭顱</span></span><br><span class="line">    <span class="attr">mason:</span> <span class="string">叢林石匠村民頭顱</span></span><br><span class="line">    <span class="attr">nitwit:</span> <span class="string">叢林傻子村民頭顱</span></span><br><span class="line">    <span class="attr">none:</span> <span class="string">叢林村民頭顱</span></span><br><span class="line">    <span class="attr">shepherd:</span> <span class="string">叢林牧羊人村民頭顱</span></span><br><span class="line">    <span class="attr">toolsmith:</span> <span class="string">叢林工具匠村民頭顱</span></span><br><span class="line">    <span class="attr">weaponsmith:</span> <span class="string">叢林武器匠村民頭顱</span></span><br><span class="line">  <span class="attr">plains:</span></span><br><span class="line">    <span class="attr">armorer:</span> <span class="string">平原盔甲匠村民頭顱</span></span><br><span class="line">    <span class="attr">butcher:</span> <span class="string">平原屠夫村民頭顱</span></span><br><span class="line">    <span class="attr">cartographer:</span> <span class="string">平原製圖師村民頭顱</span></span><br><span class="line">    <span class="attr">cleric:</span> <span class="string">平原神職人員村民頭顱</span></span><br><span class="line">    <span class="attr">farmer:</span> <span class="string">平原農夫村民頭顱</span></span><br><span class="line">    <span class="attr">fisherman:</span> <span class="string">平原漁夫村民頭顱</span></span><br><span class="line">    <span class="attr">fletcher:</span> <span class="string">平原製箭師村民頭顱</span></span><br><span class="line">    <span class="attr">leatherworker:</span> <span class="string">平原皮匠村民頭顱</span></span><br><span class="line">    <span class="attr">librarian:</span> <span class="string">平原圖書管理員村民頭顱</span></span><br><span class="line">    <span class="attr">mason:</span> <span class="string">平原石匠村民頭顱</span></span><br><span class="line">    <span class="attr">nitwit:</span> <span class="string">平原傻子村民頭顱</span></span><br><span class="line">    <span class="attr">none:</span> <span class="string">平原村民頭顱</span></span><br><span class="line">    <span class="attr">shepherd:</span> <span class="string">平原牧羊人村民頭顱</span></span><br><span class="line">    <span class="attr">toolsmith:</span> <span class="string">平原工具匠村民頭顱</span></span><br><span class="line">    <span class="attr">weaponsmith:</span> <span class="string">平原武器匠村民頭顱</span></span><br><span class="line">  <span class="attr">savanna:</span></span><br><span class="line">    <span class="attr">armorer:</span> <span class="string">莽原盔甲匠村民頭顱</span></span><br><span class="line">    <span class="attr">butcher:</span> <span class="string">莽原屠夫村民頭顱</span></span><br><span class="line">    <span class="attr">cartographer:</span> <span class="string">莽原製圖師村民頭顱</span></span><br><span class="line">    <span class="attr">cleric:</span> <span class="string">莽原神職人員村民頭顱</span></span><br><span class="line">    <span class="attr">farmer:</span> <span class="string">莽原農夫村民頭顱</span></span><br><span class="line">    <span class="attr">fisherman:</span> <span class="string">莽原漁夫村民頭顱</span></span><br><span class="line">    <span class="attr">fletcher:</span> <span class="string">莽原製箭師村民頭顱</span></span><br><span class="line">    <span class="attr">leatherworker:</span> <span class="string">莽原皮匠村民頭顱</span></span><br><span class="line">    <span class="attr">librarian:</span> <span class="string">莽原圖書管理員村民頭顱</span></span><br><span class="line">    <span class="attr">mason:</span> <span class="string">莽原石匠村民頭顱</span></span><br><span class="line">    <span class="attr">nitwit:</span> <span class="string">莽原傻子村民頭顱</span></span><br><span class="line">    <span class="attr">none:</span> <span class="string">莽原村民頭顱</span></span><br><span class="line">    <span class="attr">shepherd:</span> <span class="string">莽原牧羊人村民頭顱</span></span><br><span class="line">    <span class="attr">toolsmith:</span> <span class="string">莽原工具匠村民頭顱</span></span><br><span class="line">    <span class="attr">weaponsmith:</span> <span class="string">莽原武器匠村民頭顱</span></span><br><span class="line">  <span class="attr">snow:</span></span><br><span class="line">    <span class="attr">armorer:</span> <span class="string">雪原盔甲匠村民頭顱</span></span><br><span class="line">    <span class="attr">butcher:</span> <span class="string">雪原屠夫村民頭顱</span></span><br><span class="line">    <span class="attr">cartographer:</span> <span class="string">雪原製圖師村民頭顱</span></span><br><span class="line">    <span class="attr">cleric:</span> <span class="string">雪原神職人員村民頭顱</span></span><br><span class="line">    <span class="attr">farmer:</span> <span class="string">雪原農夫村民頭顱</span></span><br><span class="line">    <span class="attr">fisherman:</span> <span class="string">雪原漁夫村民頭顱</span></span><br><span class="line">    <span class="attr">fletcher:</span> <span class="string">雪原製箭師村民頭顱</span></span><br><span class="line">    <span class="attr">leatherworker:</span> <span class="string">雪原皮匠村民頭顱</span></span><br><span class="line">    <span class="attr">librarian:</span> <span class="string">雪原圖書管理員村民頭顱</span></span><br><span class="line">    <span class="attr">mason:</span> <span class="string">雪原石匠村民頭顱</span></span><br><span class="line">    <span class="attr">nitwit:</span> <span class="string">雪原傻子村民頭顱</span></span><br><span class="line">    <span class="attr">none:</span> <span class="string">雪原村民頭顱</span></span><br><span class="line">    <span class="attr">shepherd:</span> <span class="string">雪原牧羊人村民頭顱</span></span><br><span class="line">    <span class="attr">toolsmith:</span> <span class="string">雪原工具匠村民頭顱</span></span><br><span class="line">    <span class="attr">weaponsmith:</span> <span class="string">雪原武器匠村民頭顱</span></span><br><span class="line">  <span class="attr">swamp:</span></span><br><span class="line">    <span class="attr">armorer:</span> <span class="string">沼澤盔甲匠村民頭顱</span></span><br><span class="line">    <span class="attr">butcher:</span> <span class="string">沼澤屠夫村民頭顱</span></span><br><span class="line">    <span class="attr">cartographer:</span> <span class="string">沼澤製圖師村民頭顱</span></span><br><span class="line">    <span class="attr">cleric:</span> <span class="string">沼澤神職人員村民頭顱</span></span><br><span class="line">    <span class="attr">farmer:</span> <span class="string">沼澤農夫村民頭顱</span></span><br><span class="line">    <span class="attr">fisherman:</span> <span class="string">沼澤漁夫村民頭顱</span></span><br><span class="line">    <span class="attr">fletcher:</span> <span class="string">沼澤製箭師村民頭顱</span></span><br><span class="line">    <span class="attr">leatherworker:</span> <span class="string">沼澤皮匠村民頭顱</span></span><br><span class="line">    <span class="attr">librarian:</span> <span class="string">沼澤圖書管理員村民頭顱</span></span><br><span class="line">    <span class="attr">mason:</span> <span class="string">沼澤石匠村民頭顱</span></span><br><span class="line">    <span class="attr">nitwit:</span> <span class="string">沼澤傻子村民頭顱</span></span><br><span class="line">    <span class="attr">none:</span> <span class="string">沼澤村民頭顱</span></span><br><span class="line">    <span class="attr">shepherd:</span> <span class="string">沼澤牧羊人村民頭顱</span></span><br><span class="line">    <span class="attr">toolsmith:</span> <span class="string">沼澤工具匠村民頭顱</span></span><br><span class="line">    <span class="attr">weaponsmith:</span> <span class="string">沼澤武器匠村民頭顱</span></span><br><span class="line">  <span class="attr">taiga:</span></span><br><span class="line">    <span class="attr">armorer:</span> <span class="string">針葉林盔甲匠村民頭顱</span></span><br><span class="line">    <span class="attr">butcher:</span> <span class="string">針葉林屠夫村民頭顱</span></span><br><span class="line">    <span class="attr">cartographer:</span> <span class="string">針葉林製圖師村民頭顱</span></span><br><span class="line">    <span class="attr">cleric:</span> <span class="string">針葉林神職人員村民頭顱</span></span><br><span class="line">    <span class="attr">farmer:</span> <span class="string">針葉林農夫村民頭顱</span></span><br><span class="line">    <span class="attr">fisherman:</span> <span class="string">針葉林漁夫村民頭顱</span></span><br><span class="line">    <span class="attr">fletcher:</span> <span class="string">針葉林製箭師村民頭顱</span></span><br><span class="line">    <span class="attr">leatherworker:</span> <span class="string">針葉林皮匠村民頭顱</span></span><br><span class="line">    <span class="attr">librarian:</span> <span class="string">針葉林圖書管理員村民頭顱</span></span><br><span class="line">    <span class="attr">mason:</span> <span class="string">針葉林石匠村民頭顱</span></span><br><span class="line">    <span class="attr">nitwit:</span> <span class="string">針葉林傻子村民頭顱</span></span><br><span class="line">    <span class="attr">none:</span> <span class="string">針葉林村民頭顱</span></span><br><span class="line">    <span class="attr">shepherd:</span> <span class="string">針葉林牧羊人村民頭顱</span></span><br><span class="line">    <span class="attr">toolsmith:</span> <span class="string">針葉林工具匠村民頭顱</span></span><br><span class="line">    <span class="attr">weaponsmith:</span> <span class="string">針葉林武器匠村民頭顱</span></span><br><span class="line"><span class="attr">vindicator:</span> <span class="string">衛道士頭顱</span></span><br><span class="line"><span class="attr">wandering_trader:</span> <span class="string">流浪商人頭顱</span></span><br><span class="line"><span class="attr">warden:</span> <span class="string">伏守者頭顱</span></span><br><span class="line"><span class="attr">witch:</span> <span class="string">巫婆頭顱</span></span><br><span class="line"><span class="attr">wither:</span></span><br><span class="line">  <span class="attr">normal:</span> <span class="string">凋零怪頭顱</span></span><br><span class="line">  <span class="attr">projectile:</span> <span class="string">凋零怪投射物頭顱</span></span><br><span class="line">  <span class="attr">blue_projectile:</span> <span class="string">藍色凋零怪投射物頭顱</span></span><br><span class="line"><span class="attr">wither_skeleton:</span> <span class="string">凋零骷髏頭顱</span></span><br><span class="line"><span class="attr">wolf:</span> <span class="string">狼頭顱</span></span><br><span class="line"><span class="attr">wolf_angry:</span> <span class="string">憤怒狼頭顱</span></span><br><span class="line"><span class="attr">zoglin:</span> <span class="string">豬屍獸頭顱</span></span><br><span class="line"><span class="attr">zombie:</span> <span class="string">殭屍頭顱</span></span><br><span class="line"><span class="attr">zombie_hoglin:</span> <span class="string">豬屍獸頭顱</span></span><br><span class="line"><span class="attr">zombie_horse:</span> <span class="string">殭屍馬頭顱</span></span><br><span class="line"><span class="attr">zombie_pigman:</span> <span class="string">殭屍豬人頭顱</span></span><br><span class="line"><span class="attr">zombified_piglin:</span> <span class="string">殭屍豬人頭顱</span></span><br><span class="line"><span class="attr">zombie_villager:</span></span><br><span class="line">  <span class="attr">armorer:</span> <span class="string">殭屍盔甲匠村民頭顱</span></span><br><span class="line">  <span class="attr">butcher:</span> <span class="string">殭屍屠夫村民頭顱</span></span><br><span class="line">  <span class="attr">cartographer:</span> <span class="string">殭屍製圖師村民頭顱</span></span><br><span class="line">  <span class="attr">cleric:</span> <span class="string">殭屍神職人員村民頭顱</span></span><br><span class="line">  <span class="attr">farmer:</span> <span class="string">殭屍農夫村民頭顱</span></span><br><span class="line">  <span class="attr">fisherman:</span> <span class="string">殭屍漁夫村民頭顱</span></span><br><span class="line">  <span class="attr">fletcher:</span> <span class="string">殭屍製箭師村民頭顱</span></span><br><span class="line">  <span class="attr">leatherworker:</span> <span class="string">殭屍皮匠村民頭顱</span></span><br><span class="line">  <span class="attr">librarian:</span> <span class="string">殭屍圖書管理員村民頭顱</span></span><br><span class="line">  <span class="attr">mason:</span> <span class="string">殭屍石匠村民頭顱</span></span><br><span class="line">  <span class="attr">nitwit:</span> <span class="string">殭屍傻子村民頭顱</span></span><br><span class="line">  <span class="attr">none:</span> <span class="string">殭屍村民頭顱</span></span><br><span class="line">  <span class="attr">shepherd:</span> <span class="string">殭屍牧羊人村民頭顱</span></span><br><span class="line">  <span class="attr">toolsmith:</span> <span class="string">殭屍工具匠村民頭顱</span></span><br><span class="line">  <span class="attr">weaponsmith:</span> <span class="string">殭屍武器匠村民頭顱</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Note</category>
-        <category>Ideas</category>
+        <category>Games</category>
+        <category>Minecraft</category>
       </categories>
       <tags>
-        <tag>Random Ideas</tag>
+        <tag>Minecraft</tag>
+        <tag>More Mob Heads</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Minecraft】啟動器推薦 PrismLauncher (棱镜啟動器)</title>
+    <url>/zh-tw/1614/</url>
+    <content><![CDATA[<p><figure><img data-src="/zh-tw/1614/PrismLauncher.png" alt="Prism Launcher" loading="lazy"><figcaption aria-hidden="true">Prism Launcher</figcaption></figure></p>
+<span id="more"></span>
+
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><blockquote>
+<p>Prism Launcher is a custom launcher for Minecraft that allows you to easily manage multiple installations of Minecraft at once.<br>Prism Launcher 是專為 Minecraft 定製的啟動器，可讓您一次輕鬆管理多個 Minecraft 版本安裝。</p>
+</blockquote>
+<p>輕量化、可攜帶。<br>易於管理與更新模組，安裝光影、資源包沒問題，設定檔、遊戲截圖也很方便。</p>
+<ul>
+<li><a href="https://prismlauncher.org/" target="_blank" rel="noopener">官方網站</a></li>
+<li><a href="https://forum.gamer.com.tw/C.php?bsn=18673&snA=197823" target="_blank" rel="noopener">巴哈姆特介紹文 (StarskyXIII)</a></li>
+</ul>
+<p><figure><img data-src="/zh-tw/1614/demo.gif" alt="操作方式" loading="lazy"><figcaption aria-hidden="true">操作方式</figcaption></figure></p>
+]]></content>
+      <categories>
+        <category>Games</category>
+        <category>Minecraft</category>
+      </categories>
+      <tags>
+        <tag>Minecraft</tag>
+        <tag>PrismLauncher</tag>
       </tags>
   </entry>
 </search>

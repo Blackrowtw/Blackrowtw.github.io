@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #035299;
+    background: #ff6f74;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3526,7 +3526,7 @@ a:not(.btn):not(.bmc-btn):hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(0deg, #151515 10%, #222 40%, #222 60%, #151515 90%);
+    background: linear-gradient(0deg, rgba(21,21,21,0.941) 10%, rgba(34,34,34,0.941) 40%, rgba(34,34,34,0.941) 60%, rgba(21,21,21,0.941) 90%);
   }
   .sidebar .sidebar-inner {
     color: #ccc;
@@ -3627,9 +3627,9 @@ a:not(.btn):not(.bmc-btn):hover {
 /* 圖片元素 延伸到文章最邊緣 */
 .post-body > figure:has(img) {
   margin-bottom: 20px;
-  width: 100%;
+  width: calc(100% + 2rem);
   height: auto;
-  margin-inline: 0 0;
+  margin-inline: -1rem -1rem;
 }
 .post-body > a:not([data-fancybox="group"]):has(img) {
   display: block;
