@@ -32,9 +32,10 @@
 <meta property="og:description" content="關於 -  BlacKrow">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://blackrowtw.github.io/+images/favicon/apple-touch-icon-180x180-BK.png">
-<meta property="og:image" content="https://blackrowtw.github.io/about/index.htmlundefined">
+<meta property="og:image" content="https://blackrowtw.github.io/about/$%7Blink_data.img_link%7D">
+<meta property="og:image" content="https://blackrowtw.github.io/about/$%7Blink_data.img_link%7D">
 <meta property="article:published_time" content="2024-05-10T19:00:00.000Z">
-<meta property="article:modified_time" content="2024-05-23T07:42:34.891Z">
+<meta property="article:modified_time" content="2024-05-24T05:56:16.448Z">
 <meta property="article:author" content="BlacKrow">
 <meta property="article:tag" content="BlacKrow">
 <meta property="article:tag" content="BlacKrowtw">
@@ -259,7 +260,7 @@
 </style>
 <!-- 去除右上編輯用鋼筆圖案 結束 -->
 
-<p><img data-src="/+images/favicon/apple-touch-icon-180x180-BK.png" loading="lazy"></p>
+<p><figure><img data-src="/+images/favicon/apple-touch-icon-180x180-BK.png" alt="BlacK&#39;row" loading="lazy"><figcaption aria-hidden="true">BlacK&#39;row</figcaption></figure></p>
 <!-- 引入 Link-Card 模板 CSS -->
 <!-- <link
   rel="stylesheet"
@@ -268,19 +269,6 @@
 /> -->
 
 <style>
-  #link_card_template {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  overflow: hidden;
-  overflow-x: scroll;
-}
-
-#link_card_template::-webkit-scrollbar {
-  height: 0.5em;
-  background-color: transparent;
-}
 
 #link-card-content {
   padding: 0.2rem;
@@ -323,6 +311,7 @@
   height: 5rem;
   opacity: 1;
   margin: 0px;
+  background-color: white;
 }
 
 #link-card-btn-text-content {
@@ -346,65 +335,208 @@
   margin: 0rem 0.2rem 0rem 0.2rem;
 }
 
-#link-card-btn-01 > div:hover,
-#link-card-btn-02 > div:hover,
-#link-card-btn-03 > div:hover,
-#link-card-btn-04 > div:hover,
-#link-card-btn-05 > div:hover,
-#link-card-btn-06 > div:hover,
-#link-card-btn-07 > div:hover,
-#link-card-btn-08 > div:hover,
-#link-card-btn-09 > div:hover,
-#link-card-btn-10 > div:hover,
-#link-card-btn-11 > div:hover,
-#link-card-btn-12 > div:hover {
-  transform: scale(1.05);
-}
-#link-card-btn-06 > div:hover {
+#bk-link-card-06 > div:hover {
   color: #fafbfc;
 }
 
-#link-card-btn-01:hover {
+#bk-link-card-01:hover {
   background-color: #48b2f8;
 }
-#link-card-btn-02:hover {
+#bk-link-card-02:hover {
   background-color: #0096fa;
 }
-#link-card-btn-03:hover {
+#bk-link-card-03:hover {
   background-color: #9146ff;
 }
-#link-card-btn-04:hover {
+#bk-link-card-04:hover {
   background-color: #da4843;
 }
-#link-card-btn-05:hover {
+#bk-link-card-05:hover {
   background-color: #da4843;
 }
-#link-card-btn-06:hover {
+#bk-link-card-06:hover {
   background-color: #24292e;
 }
-#link-card-btn-07:hover {
+#bk-link-card-07:hover {
   background-color: #fbf38a;
 }
-#link-card-btn-08:hover {
+#bk-link-card-08:hover {
   background-color: #3a8fa7;
 }
-#link-card-btn-09:hover {
+#bk-link-card-09:hover {
   background-color: #ff9b76;
 }
-#link-card-btn-10:hover {
+#bk-link-card-10:hover {
   background-color: #89c623;
 }
-#link-card-btn-11:hover {
+#bk-link-card-11:hover {
   background-color: #89c623;
 }
-#link-card-btn-12:hover {
+#bk-link-card-12:hover {
   background-color: #abd5e7;
+}
+
+
+#bk-link-card-template {
+  padding: 2rem 20rem;
+  display: grid;
+  gap: 10rem;
+  grid-auto-flow: column;
+  overflow-y: hidden;
+  overflow-x: auto;
+  /* mask-image: linear-gradient(to right,#0000,#000,#000,#0000); */
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 10rem;
+   &::-webkit-scrollbar {
+    height: 0.75em;
+  }
+}
+
+.bk-link-card-scrollor {
+  height: 5rem;
+  width: 10rem;
+  padding: 5rem 0 0;
+  background-color: #77777760;
+  box-shadow: inset #444 0 0 0 3px, inset black 0px 10px 10px -8px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  transition: ease-in-out 250ms;
+  scroll-snap-align: center;
+  scroll-snap-stop: normal;
+}
+
+.bk-link-card-scrollor:hover {
+  transform: scale(1.05);
+  box-shadow: inset #444 0 0 0 0px;
+}
+
+.bk-link-card-image {
+  position: absolute;
+  height: 7.5rem;
+  width: 7.5rem;
+  right: 1.25rem;
+  top: 1.875rem;
+  transition: ease-in-out 1s;
+}
+
+.bk-link-card-scrollor:hover .bk-link-card-image {
+  transform: scale(0.5) translateY(-80%);
+}
+
+.bk-link-card-body {
+  height: 10rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bk-link-card-scrollor:hover .bk-link-card-body {
+  background: linear-gradient(
+    rgb(0 0 0 / 0),
+    rgb(0 0 0 / 0.3) 15%,
+    rgb(0 0 0 / 0.5) 50%,
+    rgb(0 0 0 / 1)
+  );
+}
+
+.bk-link-card-title {
+  cursor: pointer;
+  margin: 0 0;
+  padding: 0 0;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.375em;
+  line-height: 1.375em;
+  letter-spacing: 4px;
+  color: #050505;
+  background-color: transparent;
+  border-color: transparent;
+}
+.bk-link-card-scrollor:hover .bk-link-card-title {
+  color: #eee;
+  letter-spacing: 2px;
+}
+
+.bk-link-card-subtitle {
+  height: 1.25rem;
+  margin: 0.25em 0 0;
+  font-size: 0.875em;
+  line-height: 1.25em;
+  text-align: center;
+  display: flex; /* ★ */
+  align-items: top; /* ★ */
+}
+
+.bk-link-card-subtitle p {
+  color: hsl(0deg 50% 100% / 0.8);
+}
+
+@media (hover: hover), (prefers-reduced-motion: no-preference) {
+  .bk-link-card-body {
+    transform: translateY(-45%);
+    transition: transform 500ms ease;
+  }
+
+  .bk-link-card-scrollor:hover .bk-link-card-body {
+    transform: translateY(1%);
+    transition-delay: 500ms;
+  }
+
+  .bk-link-card-body > *:not(.bk-link-card-title) {
+    opacity: 0;
+    transition: opacity 1200ms linear 400ms;
+  }
+
+  .bk-link-card-scrollor:hover .bk-link-card-body > *:not(.bk-link-card-title) {
+    opacity: 1;
+  }
+
+  .bk-link-card-title::after {
+    content: "";
+    position: absolute;
+    left: -0.75rem;
+    top: 100%;
+    height: 3px;
+    width: calc(100% + 1.5rem);
+    background: #eee;
+    transform: scaleX(0);
+    transition: transform 200ms ease;
+    transform-origin: center;
+  }
+
+  .bk-link-card-scrollor:hover .bk-link-card-title::after {
+    transition: transform 500ms ease;
+    transform: scaleX(1);
+  }
+}
+
+.bk-link-card-button {
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  background: red;
+  padding: 0.5em 1.25em;
+  border-radius: 0.25rem;
+}
+
+.bk-link-card-button:hover {
+  background: white;
+}
+.bk-link-card-title {
+  position: relative;
+  width: max-content;
 }
 
 </style>
 
 <!-- 生成 Link-Card 模板 位置 -->
-<div id="link_card_template"></div>
+
+<div id="bk-link-card-template"></div>
 
 <!-- 引入 Link-Card 模板生成 JS -->
 <!-- <script src="/+js/__creatTemplate_link-card.js"></script> -->
@@ -438,16 +570,16 @@
     },
     {
       number: "04",
-      title: "Main",
-      subtitle: "Youtube-Channel_01",
+      title: "Youtube",
+      subtitle: "Channel_01</br>Main",
       color_rgb: "#C4302B",
       url: "https://www.youtube.com/channel/UCvhNgXA61EyiiSnMZn-7qcA",
       img_link: "/+images/icon/icon-youtube_x512.png",
     },
     {
       number: "05",
-      title: "Stream",
-      subtitle: "Youtube-Channel_02",
+      title: "Youtube",
+      subtitle: "Channel_02</br>for Stream",
       color_rgb: "#C4302B",
       url: "https://www.youtube.com/channel/UCtDyeUUMhmFvoydc1b-DQwg",
       img_link: "/+images/icon/icon-youtube_x512.png",
@@ -471,7 +603,7 @@
     {
       number: "08",
       title: "巴哈姆特",
-      subtitle: "個人小屋 [CN]",
+      subtitle: "個人小屋</br>[CN]",
       color_rgb: "#0B7897",
       url: "https://home.gamer.com.tw/homeindex.php?owner=backsliding",
       img_link: "/+images/icon/icon-bahamut_x512.png",
@@ -479,7 +611,7 @@
     {
       number: "09",
       title: "Plurk",
-      subtitle: "放置中-AFK [CN]",
+      subtitle: "放置中-AFK</br>[CN]",
       color_rgb: "#FF9B76",
       url: "https://www.plurk.com/blackrow",
       img_link: "/+images/icon/icon-plurk_x512.png",
@@ -513,23 +645,38 @@
   // 定義生成 HTML 模板的函數
   function creatTemplate_link_card(link_data) {
     return `
-      <div id="link-card-content">
-          <button class="link-card-btn" id="link-card-btn-${link_data.number}"
-                  onclick="location.href='${link_data.url}'" target="_blank">
-              <div id="link-card-btn-content">
-                  <img data-src="/about/index.htmlundefined" />
-                  <div id="link-card-btn-text-content">
-                    <p id="link-card-btn-title">${link_data.title}</p>
-                    <p id="link-card-btn-subtitle">${link_data.subtitle}</p>
-                  </div>
-              </div>
-          </button>
+      <div class="bk-link-card-scrollor" id="bk-link-card-${link_data.number}">
+        <div class="bk-link-card-image">
+          <img data-src="${link_data.img_link}" 
+            alt="icon-${link_data.title}.png is BROKEN!! :("
+            width="auto" height="auto"
+          />
+        </div>
+        <div class="bk-link-card-body">
+          <a href="${link_data.url}" class="bk-link-card-title headerlink">${link_data.title}</a>
+          <div class="bk-link-card-subtitle">
+            <p>${link_data.subtitle}</p>
+          </div>
+
+        </div>
       </div>
-      `;
+      `
+//          <div id="link-card-content">
+//          <button class="link-card-btn" id="link-card-btn-${link_data.number}"
+//                  onclick="location.href='${link_data.url}'" target="_blank">
+//              <div id="link-card-btn-content">
+//                  <img id="link-card-btn-img" data-src="${link_data.img_link}" alt="icon-${link_data.title}.png is BROKEN!! :(" width="auto" height="auto"/>
+//                  <div id="link-card-btn-text-content">
+//                    <p id="link-card-btn-title">${link_data.title}</p>
+//                    <p id="link-card-btn-subtitle">${link_data.subtitle}</p>
+//                  </div>
+//              </div>
+//          </button>
+//      </div>;
   }
   // 在 HTML 中動態生成模板並填入資料
   const link_card_template_Container =
-    document.getElementById("link_card_template");
+    document.getElementById("bk-link-card-template");
   link_card_info.forEach((link_data) => {
     link_card_template_Container.innerHTML += creatTemplate_link_card(link_data);
   });

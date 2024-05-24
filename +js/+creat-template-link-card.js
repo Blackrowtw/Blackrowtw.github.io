@@ -1,26 +1,3 @@
-// 假設這是你的資料
-// const data = [
-//   { name: "甲", age: 20 },
-//   { name: "乙", age: 25 },
-//   { name: "丙", age: 100 },
-// ];
-
-// // 定義生成 HTML 模板的函數
-// function generateTemplate(person) {
-//   return `
-//             <div>
-//                 <h2>${person.name}</h2>
-//                 <p>年齡：${person.age}</p>
-//             </div>
-//         `;
-// }
-
-// // 在 HTML 中動態生成模板並填入資料
-// const templateContainer = document.getElementById("template");
-// data.forEach((i) => {
-//   templateContainer.innerHTML += generateTemplate(i);
-// });
-
 // Card資料
 const link_card_info = [
   {
@@ -134,6 +111,29 @@ const link_card_template_Container =
 link_card_info.forEach((link_data) => {
   link_card_template_Container.innerHTML += creatTemplate_link_card(link_data);
 });
+
+// 假設這是你的資料
+// const data = [
+//   { name: "甲", age: 20 },
+//   { name: "乙", age: 25 },
+//   { name: "丙", age: 100 },
+// ];
+
+// // 定義生成 HTML 模板的函數
+// function generateTemplate(person) {
+//   return `
+//             <div>
+//                 <h2>${person.name}</h2>
+//                 <p>年齡：${person.age}</p>
+//             </div>
+//         `;
+// }
+
+// // 在 HTML 中動態生成模板並填入資料
+// const templateContainer = document.getElementById("template");
+// data.forEach((i) => {
+//   templateContainer.innerHTML += generateTemplate(i);
+// });
 
 // // 定義生成 HTML 模板的函數
 // function createTemplateLinkCard(link_data) {

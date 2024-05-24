@@ -403,9 +403,9 @@
 
 <a href="/404">404_NOT_FOUND</a>
 
-<h4 id="2-1-7-full-url-for"><a href="#2-1-7-full-url-for" class="headerlink" title="2.1.7. full_url_for"></a>2.1.7. full_url_for</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% full_url_for &quot;Hexo 架設筆記&quot; zh-tw/94673272/ %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-1-7-full-url-for"><a href="#2-1-7-full-url-for" class="headerlink" title="2.1.7. full_url_for"></a>2.1.7. full_url_for</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% full_url_for &quot;Hexo 架設筆記&quot; zh-tw/5d25/ %&#125;</span><br></pre></td></tr></table></figure>
 
-<a href="https://blackrowtw.github.io/zh-tw/94673272/">Hexo 架設筆記</a>
+<a href="https://blackrowtw.github.io/zh-tw/5d25/">Hexo 架設筆記</a>
 
 <h4 id="2-1-8-pullquote"><a href="#2-1-8-pullquote" class="headerlink" title="2.1.8. pullquote"></a>2.1.8. <strong>pullquote</strong></h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% pullquote class %&#125;</span><br><span class="line">**T-E-S-T**</span><br><span class="line">&#123;% endpullquote %&#125;</span><br></pre></td></tr></table></figure>
 
@@ -469,7 +469,7 @@
 <p>貼上網址後，會生成各種可以直接貼上的圖片連結</p>
 </blockquote>
 </blockquote>
-<img data-src="/zh-tw/7e4/" >
+<p><figure><img data-src="https://pixiv.cat/84431948.jpg" alt="【Arknights】Good Night, Ptilopsis" loading="lazy"><figcaption aria-hidden="true">【Arknights】Good Night, Ptilopsis</figcaption></figure></p>
 <a class="btn" href="https://www.pixiv.net/artworks/84431948"><i class="fab fa-pixiv fa-3x"></i>&nbsp;&nbsp;id=2407057</a>
 
 <h3 id="3-2-Buy-me-a-coffee"><a href="#3-2-Buy-me-a-coffee" class="headerlink" title="3.2. Buy me a coffee"></a>3.2. <a href="https://buymeacoffee.com/blackrow" target="_blank" rel="noopener">Buy me a coffee</a></h3><div class="bmc-btn-container"></div>

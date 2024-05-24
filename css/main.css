@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #c87190;
+    background: #6ee4fa;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3339,6 +3339,10 @@ header.header {
   --highlight-gutter-foreground: #555;
   color-scheme: light;
   --highlight-js-background: #b4b4b4;
+  --gitalk-background: #ccc;
+  --post-edit-icon-color: #ddd;
+  --post-meta-text-color: #666;
+  --site-link-text-shadow: rgba(5,5,5,0.314) 0.1em 0.1em 0.1em;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -3367,6 +3371,10 @@ header.header {
     --highlight-gutter-foreground: #e8e8e8;
     color-scheme: dark;
     --highlight-js-background: #1c1b1b;
+    --gitalk-background: #404040;
+    --post-edit-icon-color: #555;
+    --post-meta-text-color: #999;
+    --site-link-text-shadow: #050505 0.1em 0.1em 0.1em;
   }
   img {
     opacity: 1;
@@ -3410,14 +3418,17 @@ img:hover {
 ::selection {
   background: var(--secondary-theme-color);
   color: #151515;
+  text-shadow: rgba(0,0,0,0) 0em 0em 0em;
 }
 ::-webkit-selection {
   background: var(--secondary-theme-color);
   color: #151515;
+  text-shadow: rgba(0,0,0,0) 0em 0em 0em;
 }
 ::-moz-selection {
   background: var(--secondary-theme-color);
   color: #151515;
+  text-shadow: rgba(0,0,0,0) 0em 0em 0em;
 }
 /* 網站標題 字體 */
 .site-title {
@@ -3432,24 +3443,14 @@ img:hover {
   color: #ccc;
   font-size: 24px;
 }
-/* 全站，超連結 顏色 底線 */
+/* 全站，超連結 陰影樣式 底線取消 */
 a:not(.btn):not(.bmc-btn) {
   border-bottom: 1px none #999;
-  text-shadow: rgba(5,5,5,0.314) 0.1em 0.1em 0.1em;
+  text-shadow: var(--site-link-text-shadow);
 }
 a:not(.btn):not(.bmc-btn):hover {
   color: var(--secondary-theme-color);
   text-shadow: rgba(197,197,197,0.188) 0em 0em 0.5em;
-}
-@media (prefers-color-scheme: dark) {
-  a:not(.btn):not(.bmc-btn) {
-    border-bottom: 1px none #999;
-    text-shadow: #050505 0.1em 0.1em 0.1em;
-  }
-  a:not(.btn):not(.bmc-btn):hover {
-    color: var(--secondary-theme-color);
-    text-shadow: rgba(197,197,197,0.188) 0em 0em 0.5em;
-  }
 }
 /* 選單按鈕，懸浮時變色 */
 .toggle:hover .toggle-line {
@@ -3466,16 +3467,11 @@ a:not(.btn):not(.bmc-btn):hover {
 /* 編輯文章的鋼筆，懸浮時變色 和大小調整*/
 .posts-expand .post-title .post-edit-link {
   font-size: 24px;
-  color: #ddd;
+  color: var(--post-edit-icon-color);
   text-shadow: rgba(5,5,5,0.502) 0em 0em 0.1em;
 }
 .posts-expand .post-title .post-edit-link:hover {
   color: var(--secondary-theme-color) !important;
-}
-@media (prefers-color-scheme: dark) {
-  .posts-expand .post-title .post-edit-link {
-    color: #555;
-  }
 }
 /* 文章標題 資訊部分*/
 .posts-expand .post-header {
@@ -3483,12 +3479,7 @@ a:not(.btn):not(.bmc-btn):hover {
 }
 /* 文章標題 資訊部分*/
 .posts-expand .post-meta-container {
-  color: var(--blockquote-color);
-}
-@media (prefers-color-scheme: dark) {
-  .posts-expand .post-meta-container {
-    color: #999;
-  }
+  color: var(--post-meta-text-color);
 }
 /* 菜單(Menu) 計數徽章(Badge) 白天模式改色 */
 .menu-item .badge {
@@ -3511,6 +3502,14 @@ a:not(.btn):not(.bmc-btn):hover {
   color: var(--secondary-theme-color);
   font-weight: bold;
   font-size: 0.875em;
+}
+/* 次級菜單(Sub Menu) "關於"的icon*/
+.sub-menu a[href="/about/"] {
+  margin: 0px 0px;
+}
+.sub-menu a[href="/about/"] > i {
+  font-size: 1.25em !important;
+  margin: 0px 0px;
 }
 /* 側邊欄 大螢幕時 */
 @media (min-width: 992px) {
@@ -3593,34 +3592,33 @@ a:not(.btn):not(.bmc-btn):hover {
 .sidebar-overview-active .sidebar-nav-overview:hover {
   color: var(--secondary-theme-color);
 }
-/* 文章內文，超連結 懸浮顏色 */
+/* 文章內文，超連結樣式 &懸浮顏色 */
 .post-body a:hover {
   color: var(--secondary-theme-color);
 }
-.post-body a:not(.btn):not(.fancybox) {
-  color: #444;
-}
-.post-body a:not(.btn):not(.fancybox):hover {
-  color: var(--secondary-theme-color);
-}
-@media (prefers-color-scheme: dark) {
-  .post-body a:not(.btn):not(.fancybox) {
-    color: #aaa;
-  }
-  .post-body a:not(.btn):not(.fancybox):hover {
-    color: var(--secondary-theme-color);
-  }
-}
-/* 文章內文，超連結後面 icon 排除btn, fancybox */
-.post-body a:not(.btn):not(.fancybox)::after {
+/* 文章內文，超連結偽元素 icon || 排除btn, fancybox, headerlink tag-cloud*/
+.post-body a:not(.btn)::after,
+.post-body a:not(.fancybox)::after,
+.post-body a:not(.headerlink)::after,
+.post-body a:not([class*="tag-cloud"])::after {
   font-family: FontAwesome;
   content: "\f08e";
   display: inline-block;
   padding-right: 3px;
   padding-left: 3px;
-  color: #777;
+  color: var(--secondary-theme-color);
   font-size: 0.75em;
+  text-shadow: rgba(0,0,0,0) 0em 0em 0em;
   vertical-align: bottom;
+}
+/* 文章內文，超連結偽元素 icon 懸浮效果 || 排除btn, fancybox, headerlink tag-cloud*/
+.post-body a:not(.btn):hover::after,
+.post-body a:not(.fancybox):hover::after,
+.post-body a:not(.headerlink):hover::after,
+.post-body a:not([class*="tag-cloud"]):hover::after {
+  color: #eee;
+  transform: translateY(-0.25em) scale(1.1);
+  transition: 0.5s;
 }
 /* 文章內文，切換標籤(Tab)，取消超連結 的上級偽類內容 */
 .post-body .nav-tabs li a::after {
@@ -3834,13 +3832,8 @@ a:not(.btn):not(.bmc-btn):hover {
 }
 /* 文章底部評論區(gitalk) */
 .gitalk-container {
-  background: #ccc !important;
+  background: var(--gitalk-background) !important;
   border-radius: 0.75rem !important;
-}
-@media (prefers-color-scheme: dark) {
-  .gitalk-container {
-    background: #404040 !important;
-  }
 }
 /* 頁腳(footer) 容器 */
 .footer-inner {
@@ -3917,7 +3910,6 @@ a:not(.btn):not(.bmc-btn):hover {
   padding: 0.5em 0.5em 0.5em 0;
   position: relative;
   text-decoration: none;
-  -webkit-transition: color 0.2s;
 }
 /* 標籤頁面(page-Tags) 前(#)號 */
 .tag-cloud-tags a::before {
