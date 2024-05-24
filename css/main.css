@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #6ee4fa;
+    background: #035299;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3592,15 +3592,80 @@ a:not(.btn):not(.bmc-btn):hover {
 .sidebar-overview-active .sidebar-nav-overview:hover {
   color: var(--secondary-theme-color);
 }
+/* ------------------------ */
+/* 文章內文，內容邊界距離調整 */
+/* ------------------------ */
+/* 大螢幕 */
+.main-inner {
+  padding: 0px;
+}
+.post-block {
+  padding: 40px 2lvw;
+}
+.comments {
+  padding: 40px 8lvw;
+  margin: 5px;
+}
+/* 中螢幕 */
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-inner {
+    padding: 0px 1lvw;
+  }
+  .post-block {
+    padding: 40px 1rem;
+  }
+}
+/* 小螢幕 */
+@media (max-width: 767px) {
+  .main-inner {
+    padding: 0px 0lvw;
+  }
+  .post-block {
+    padding: 40px 1rem;
+  }
+}
+/* 圖片元素 延伸到文章最邊緣 */
+.post-body > figure:has(img) {
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  margin-inline: 0 0;
+}
+.post-body > a:not([data-fancybox="group"]):has(img) {
+  display: block;
+  width: calc(100% + 2rem);
+  height: auto;
+  margin-inline: -1rem -1rem;
+}
+/* 文章內文底部 版權聲明 延伸到最邊緣 */
+.post-footer .post-copyright {
+  margin-inline: -1rem -1rem;
+}
+.post-footer .post-copyright li {
+  font-size: 0.875em;
+  line-height: 1.875em;
+}
+/* 文章內文，背景透明 (blog首頁 每個文章樣式是連續堆疊的)*/
+.main-inner .sub-menu,
+.main-inner .post-block,
+.main-inner .tabs-comment,
+.main-inner > .comments,
+.main-inner .comment-position .comments,
+.main-inner .pagination,
+.main-inner .post-block:not(:first-child):not(:first-child) {
+  border-radius: 0.1rem;
+  background: transparent;
+  backdrop-filter: blur(10px) brightness(99%) grayscale(50%);
+}
 /* 文章內文，超連結樣式 &懸浮顏色 */
 .post-body a:hover {
   color: var(--secondary-theme-color);
 }
 /* 文章內文，超連結偽元素 icon || 排除btn, fancybox, headerlink tag-cloud*/
-.post-body a:not(.btn)::after,
-.post-body a:not(.fancybox)::after,
-.post-body a:not(.headerlink)::after,
-.post-body a:not([class*="tag-cloud"])::after {
+.post-body a:not(.btn,
+.fancybox,
+.headerlink,
+[href*="/tags/"])::after {
   font-family: FontAwesome;
   content: "\f08e";
   display: inline-block;
@@ -3612,10 +3677,10 @@ a:not(.btn):not(.bmc-btn):hover {
   vertical-align: bottom;
 }
 /* 文章內文，超連結偽元素 icon 懸浮效果 || 排除btn, fancybox, headerlink tag-cloud*/
-.post-body a:not(.btn):hover::after,
-.post-body a:not(.fancybox):hover::after,
-.post-body a:not(.headerlink):hover::after,
-.post-body a:not([class*="tag-cloud"]):hover::after {
+.post-body a:not(.btn,
+.fancybox,
+.headerlink,
+[href*="/tags/"]):hover::after {
   color: #eee;
   transform: translateY(-0.25em) scale(1.1);
   transition: 0.5s;
@@ -3628,16 +3693,20 @@ a:not(.btn):not(.bmc-btn):hover {
 .post-body .link-grid a::after {
   content: "" !important;
 }
-/* 可選標題的圖片元素 延伸到文章最邊緣 */
-.post-body figure {
-  margin-inline-start: -1lvw;
-  margin-inline-end: -1lvw;
+/* 文章內文，筆記(Note)，flat樣式 無(none)筆記文字顏色改為黑色 */
+.post-body .note:not(.default),
+.post-body .note:not(.primary),
+.post-body .note:not(.info),
+.post-body .note:not(.success),
+.post-body .note:not(.warning),
+.post-body .note:not(.danger) {
+  color: #bbb;
 }
 /* 文章內文，代碼塊(Highlight) */
 .post-body figure.highlight {
   background: var(--highlight-js-background);
   color: var(--highlight-foreground);
-  line-height: 1.6;
+  line-height: 1.6em;
   margin: 0 auto 20px;
   margin-inline-start: -1lvw;
   margin-inline-end: -1lvw;
@@ -3660,54 +3729,6 @@ a:not(.btn):not(.bmc-btn):hover {
   width: 2.5em;
   background-image: linear-gradient(transparent calc(100% - 2px), var(--highlight-background) 2px);
   background-size: 100% 100%;
-}
-/* 文章內文，內容邊界調整 小螢幕內文無框效果*/
-.main-inner {
-  padding: 0px;
-}
-.post-block {
-  padding: 40px 2lvw;
-}
-.comments {
-  padding: 40px 8lvw;
-  margin: 5px;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .main-inner {
-    padding: 0px 1lvw;
-  }
-  .post-block {
-    padding: 40px 1lvw;
-  }
-}
-@media (max-width: 767px) {
-  .main-inner {
-    padding: 0px 0lvw;
-  }
-  .post-block {
-    padding: 40px 1lvw;
-  }
-}
-/* 文章內文，背景透明 (blog首頁 每個文章樣式是連續堆疊的)*/
-.main-inner .sub-menu,
-.main-inner .post-block,
-.main-inner .tabs-comment,
-.main-inner > .comments,
-.main-inner .comment-position .comments,
-.main-inner .pagination,
-.main-inner .post-block:not(:first-child):not(:first-child) {
-  border-radius: 0.1rem;
-  background: transparent;
-  backdrop-filter: blur(10px) brightness(99%) grayscale(50%);
-}
-/* 文章內文，筆記(Note)，flat樣式 無(none)筆記文字顏色改為黑色 */
-.post-body .note:not(.default),
-.post-body .note:not(.primary),
-.post-body .note:not(.info),
-.post-body .note:not(.success),
-.post-body .note:not(.warning),
-.post-body .note:not(.danger) {
-  color: #bbb;
 }
 /* 文章內文，切換標籤(Tab) 樣式*/
 .post-body .tabs .tab-content,

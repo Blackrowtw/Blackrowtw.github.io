@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://blackrowtw.github.io/about/$%7Blink_data.img_link%7D">
 <meta property="og:image" content="https://blackrowtw.github.io/about/$%7Blink_data.img_link%7D">
 <meta property="article:published_time" content="2024-05-10T19:00:00.000Z">
-<meta property="article:modified_time" content="2024-05-24T05:56:16.448Z">
+<meta property="article:modified_time" content="2024-05-24T12:28:07.738Z">
 <meta property="article:author" content="BlacKrow">
 <meta property="article:tag" content="BlacKrow">
 <meta property="article:tag" content="BlacKrowtw">
@@ -378,13 +378,13 @@
 
 
 #bk-link-card-template {
-  padding: 2rem 20rem;
+  padding: 2rem calc(50% - 5rem);
   display: grid;
-  gap: 10rem;
+  gap: calc(50%);
   grid-auto-flow: column;
   overflow-y: hidden;
   overflow-x: auto;
-  /* mask-image: linear-gradient(to right,#0000,#000,#000,#0000); */
+  mask-image: linear-gradient(to right,#0000,#000,#000,#0000);
   scroll-snap-type: x mandatory;
   scroll-padding: 0 10rem;
    &::-webkit-scrollbar {
@@ -396,8 +396,8 @@
   height: 5rem;
   width: 10rem;
   padding: 5rem 0 0;
-  background-color: #77777760;
-  box-shadow: inset #444 0 0 0 3px, inset black 0px 10px 10px -8px;
+  background-color: #666;
+  box-shadow: inset #606060 0 0 0 3px, inset black 0px 10px 10px -8px;
   border-radius: 0.5rem;
   overflow: hidden;
   position: relative;
@@ -413,15 +413,15 @@
 
 .bk-link-card-image {
   position: absolute;
-  height: 7.5rem;
-  width: 7.5rem;
-  right: 1.25rem;
-  top: 1.875rem;
+  height: 8rem;
+  width: 8rem;
+  right: 1rem;
+  top: 1rem;
   transition: ease-in-out 1s;
 }
 
 .bk-link-card-scrollor:hover .bk-link-card-image {
-  transform: scale(0.5) translateY(-80%);
+  transform: scale(0.5) translateY(-55%);
 }
 
 .bk-link-card-body {
@@ -434,8 +434,8 @@
 .bk-link-card-scrollor:hover .bk-link-card-body {
   background: linear-gradient(
     rgb(0 0 0 / 0),
-    rgb(0 0 0 / 0.3) 15%,
-    rgb(0 0 0 / 0.5) 50%,
+    rgb(0 0 0 / 0.5) 15%,
+    rgb(0 0 0 / 0.8) 50%,
     rgb(0 0 0 / 1)
   );
 }
@@ -450,12 +450,17 @@
   line-height: 1.375em;
   letter-spacing: 4px;
   color: #050505;
+  text-shadow: #00000000 0em 0em 0em !important;
   background-color: transparent;
   border-color: transparent;
+  transition: ease-in-out 0.6s;
+  opacity: 0;
 }
 .bk-link-card-scrollor:hover .bk-link-card-title {
   color: #eee;
+  text-shadow: #00000000 0em 0em 0em;
   letter-spacing: 2px;
+  opacity: 1;
 }
 
 .bk-link-card-subtitle {
@@ -472,44 +477,44 @@
   color: hsl(0deg 50% 100% / 0.8);
 }
 
-@media (hover: hover), (prefers-reduced-motion: no-preference) {
-  .bk-link-card-body {
-    transform: translateY(-45%);
-    transition: transform 500ms ease;
-  }
 
-  .bk-link-card-scrollor:hover .bk-link-card-body {
-    transform: translateY(1%);
-    transition-delay: 500ms;
-  }
-
-  .bk-link-card-body > *:not(.bk-link-card-title) {
-    opacity: 0;
-    transition: opacity 1200ms linear 400ms;
-  }
-
-  .bk-link-card-scrollor:hover .bk-link-card-body > *:not(.bk-link-card-title) {
-    opacity: 1;
-  }
-
-  .bk-link-card-title::after {
-    content: "";
-    position: absolute;
-    left: -0.75rem;
-    top: 100%;
-    height: 3px;
-    width: calc(100% + 1.5rem);
-    background: #eee;
-    transform: scaleX(0);
-    transition: transform 200ms ease;
-    transform-origin: center;
-  }
-
-  .bk-link-card-scrollor:hover .bk-link-card-title::after {
-    transition: transform 500ms ease;
-    transform: scaleX(1);
-  }
+.bk-link-card-body {
+  transform: translateY(-45%);
+  transition: transform 500ms ease;
 }
+
+.bk-link-card-scrollor:hover .bk-link-card-body {
+  transform: translateY(1%);
+  transition-delay: 500ms;
+}
+
+.bk-link-card-body > *:not(.bk-link-card-title) {
+  opacity: 0;
+  transition: opacity 800ms linear 400ms;
+}
+
+.bk-link-card-scrollor:hover .bk-link-card-body > *:not(.bk-link-card-title) {
+  opacity: 1;
+}
+
+.bk-link-card-title::after {
+  content: "";
+  position: absolute;
+  left: -0.75rem;
+  top: 100%;
+  height: 3px;
+  width: calc(100% + 1.5rem);
+  background: #eee;
+  transform: scaleX(0);
+  transition: transform 200ms ease;
+  transform-origin: center;
+}
+
+.bk-link-card-scrollor:hover .bk-link-card-title::after {
+  transition: transform 500ms ease;
+  transform: scaleX(1);
+}
+
 
 .bk-link-card-button {
   cursor: pointer;
