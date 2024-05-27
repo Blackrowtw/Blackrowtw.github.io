@@ -54,7 +54,7 @@ const link_card_info = [
     subtitle: "blackrow",
     color_rgb: "#FBF38A",
     url: "https://blackrow.fanbox.cc",
-    img_link: "/+images/icon/icon-pixivfanbox-2_x512.png",
+    img_link: "/+images/icon/icon-pixivfanbox_x512.png",
   },
   {
     number: "08",

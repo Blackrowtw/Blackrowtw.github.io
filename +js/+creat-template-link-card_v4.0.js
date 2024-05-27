@@ -18,14 +18,6 @@ const link_card_info = [
   },
   {
     number: "03",
-    title: "Twitch",
-    subtitle: "blackrowtw",
-    color_rgb: "#9146ff",
-    url: "https://www.twitch.tv/blackrowtw",
-    img_link: "/+images/icon/icon-twitch_x512.png",
-  },
-  {
-    number: "04",
     title: "Youtube",
     subtitle: "Channel_01</br>Main",
     color_rgb: "#C4302B",
@@ -33,15 +25,7 @@ const link_card_info = [
     img_link: "/+images/icon/icon-youtube_x512.png",
   },
   {
-    number: "05",
-    title: "Youtube",
-    subtitle: "Channel_02</br>for Stream",
-    color_rgb: "#C4302B",
-    url: "https://www.youtube.com/channel/UCtDyeUUMhmFvoydc1b-DQwg",
-    img_link: "/+images/icon/icon-youtube_x512.png",
-  },
-  {
-    number: "06",
+    number: "04",
     title: "Github",
     subtitle: "Blackrowtw",
     color_rgb: "#24292E",
@@ -49,15 +33,7 @@ const link_card_info = [
     img_link: "/+images/icon/icon-github_x512.png",
   },
   {
-    number: "07",
-    title: "Fanbox",
-    subtitle: "blackrow",
-    color_rgb: "#FBF38A",
-    url: "https://blackrow.fanbox.cc",
-    img_link: "/+images/icon/icon-pixivfanbox-2_x512.png",
-  },
-  {
-    number: "08",
+    number: "05",
     title: "巴哈姆特",
     subtitle: "個人小屋</br>[CN]",
     color_rgb: "#0B7897",
@@ -65,37 +41,93 @@ const link_card_info = [
     img_link: "/+images/icon/icon-bahamut_x512.png",
   },
   {
-    number: "09",
-    title: "Plurk",
-    subtitle: "放置中-AFK</br>[CN]",
-    color_rgb: "#FF9B76",
-    url: "https://www.plurk.com/blackrow",
-    img_link: "/+images/icon/icon-plurk_x512.png",
+    number: "06",
+    title: "Youtube",
+    subtitle: "Channel_02</br>for Stream",
+    color_rgb: "#C4302B",
+    url: "https://www.youtube.com/channel/UCtDyeUUMhmFvoydc1b-DQwg",
+    img_link: "/+images/icon/icon-youtube_x512.png",
   },
   {
+    number: "07",
+    title: "Twitch",
+    subtitle: "blackrowtw",
+    color_rgb: "#9146ff",
+    url: "https://www.twitch.tv/blackrowtw",
+    img_link: "/+images/icon/icon-twitch_x512.png",
+  },
+  // {
+  //   number: "08",
+  //   title: "Buy Me",
+  //   subtitle: "a Coffee",
+  //   color_rgb: "#FFDD00",
+  //   url: "https://buymeacoffee.com/blackrow",
+  //   img_link: "/+images/icon/icon-buymeacoffee_x512.png",
+  // },
+  // {
+  //   number: "09",
+  //   title: "Fanbox",
+  //   subtitle: "blackrow",
+  //   color_rgb: "#FBF38A",
+  //   url: "https://blackrow.fanbox.cc",
+  //   img_link: "/+images/icon/icon-pixivfanbox_x512.png",
+  // },
+  {
     number: "10",
+    title: "Tenor",
+    subtitle: "Gif 圖庫",
+    color_rgb: "#ABD5E7",
+    url: "https://tenor.com/zh-TW/users/blackrow_tw",
+    img_link: "/+images/icon/icon-tenor_x512.png",
+  },
+  {
+    number: "11",
     title: "Imgur",
-    subtitle: "Self-works [old]",
+    subtitle: "Self-works</br>[old]",
     color_rgb: "#89C623",
     url: "https://imgur.com/a/klo47",
     img_link: "/+images/icon/icon-imgur_x512.png",
   },
   {
-    number: "11",
+    number: "12",
     title: "Imgur",
-    subtitle: "Self-works [2020+]",
+    subtitle: "Self-works</br>[2020+]",
     color_rgb: "#89C623",
     url: "https://imgur.com/a/U56JE73",
     img_link: "/+images/icon/icon-imgur_x512.png",
   },
   {
-    number: "12",
-    title: "Tenor",
-    subtitle: "Gif 圖庫",
-    color_rgb: "abd5e7",
-    url: "https://tenor.com/zh-TW/users/blackrow_tw",
-    img_link: "/+images/icon/icon-tenor_x512.png",
+    number: "13",
+    title: "Plurk",
+    subtitle: "AFK</br>[CN]",
+    color_rgb: "#FF9B76",
+    url: "https://www.plurk.com/blackrow",
+    img_link: "/+images/icon/icon-plurk_x512.png",
   },
+  {
+    number: "14",
+    title: "Tumblr",
+    subtitle: "AFK",
+    color_rgb: "#36465D",
+    url: "https://blackrowtw.tumblr.com",
+    img_link: "/+images/icon/icon-tumblr_x512.png",
+  },
+  // {
+  //   number: "15",
+  //   title: "Steam",
+  //   subtitle: "阿噗哩嘎嘎!!",
+  //   color_rgb: "#102A59",
+  //   url: "https://steamcommunity.com/id/blackrowtw",
+  //   img_link: "/+images/icon/icon-steam_x512.png",
+  // },
+  // {
+  //   number: "16",
+  //   title: "Discord",
+  //   subtitle: "Spice & Wolf</br>[CN]",
+  //   color_rgb: "#7289DA",
+  //   url: "https://discord.com/invite/qYcVzdY",
+  //   img_link: "/+images/icon/icon-discord_x512.png",
+  // },
 ];
 
 // 定義生成 HTML 模板的函數
@@ -120,7 +152,9 @@ function creatTemplate_link_card(link_data) {
           </div>
         </div>
       </div>
-      <div class="bk-link-card-bg" id="bk-link-card-bg-${link_data.number}"></div>
+      <div class="bk-link-card-bg" id="bk-link-card-bg-${link_data.number}" style="background-color: ${link_data.color_rgb};">
+        <div class="bk-link-card-bg-inner"></div>
+      </div>
     </div>
   `;
 }
