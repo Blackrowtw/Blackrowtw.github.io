@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #ff6f74;
+    background: #324626;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3387,7 +3387,7 @@ header.header {
 }
 /* 主視覺 副顏色調整 */
 :root {
-  --secondary-theme-color: #6190e8;
+  --secondary-theme-color: #6495ed;
 }
 /* 全頁面卷軸條 調整 (新樣式 兼容性) */
 @supports (scrollbar-width: auto) {
@@ -3671,6 +3671,7 @@ a:not(.btn):not(.bmc-btn):hover {
   display: inline-block;
   padding-right: 3px;
   padding-left: 3px;
+  filter: brightness(50%);
   color: var(--secondary-theme-color);
   font-size: 0.75em;
   text-shadow: rgba(0,0,0,0) 0em 0em 0em;
@@ -3681,9 +3682,14 @@ a:not(.btn):not(.bmc-btn):hover {
 .fancybox,
 .headerlink,
 [href*="/tags/"]):hover::after {
+  filter: brightness(100%);
   color: #eee;
   transform: translateY(-0.25em) scale(1.1);
   transition: 0.5s;
+}
+/* 文章內文，按鈕(btn) icon後面留空*/
+.post-body .btn > i::before {
+  padding: 0 0.25em 0 0;
 }
 /* 文章內文，切換標籤(Tab)，取消超連結 的上級偽類內容 */
 .post-body .nav-tabs li a::after {

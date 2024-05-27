@@ -1,0 +1,298 @@
+.bk-link-card:hover + #bk-link-card-bg-01 {
+  background-color: #48b2f8;
+}
+.bk-link-card:hover + #bk-link-card-bg-02 {
+  background-color: #0096fa;
+}
+.bk-link-card:hover + #bk-link-card-bg-03 {
+  background-color: #9146ff;
+}
+.bk-link-card:hover + #bk-link-card-bg-04 {
+  background-color: #da4843;
+}
+.bk-link-card:hover + #bk-link-card-bg-05 {
+  background-color: #da4843;
+}
+.bk-link-card:hover + #bk-link-card-bg-06 {
+  background-color: #24292e;
+}
+.bk-link-card:hover + #bk-link-card-bg-07 {
+  background-color: #fbf38a;
+}
+.bk-link-card:hover + #bk-link-card-bg-08 {
+  background-color: #3a8fa7;
+}
+.bk-link-card:hover + #bk-link-card-bg-09 {
+  background-color: #ff9b76;
+}
+.bk-link-card:hover + #bk-link-card-bg-10 {
+  background-color: #89c623;
+}
+.bk-link-card:hover + #bk-link-card-bg-11 {
+  background-color: #89c623;
+}
+.bk-link-card:hover + #bk-link-card-bg-12 {
+  background-color: #abd5e7;
+}
+
+/* CSS 參考來源 */
+/* https://codepen.io/kevinpowell/pen/BapvMve */
+
+/* ----------- */
+/* 卡片基本設定 */
+/* ----------- */
+
+/* 卡片容器外框 (卷軸) */
+#bk-link-card-template {
+  /* background-color: #234ec6; */
+  padding: 2rem calc(50% - 5rem);
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  mask-image: linear-gradient(
+    90deg,
+    transparent 5%,
+    #000 30%,
+    #000 70%,
+    transparent 95%
+  );
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 10rem;
+  &::-webkit-scrollbar {
+    height: 0.75em;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: cornflowerblue;
+  }
+}
+
+/* 卡片卷軸定位用 (卡片間距) */
+.bk-link-card-scrollor {
+  /* background-color: #89c623; */
+  padding: 0 2rem;
+  height: 6rem;
+  width: 6rem;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+/* 卡片主體 */
+.bk-link-card {
+  height: 3rem;
+  padding: 3rem 0 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* 卡片背景 */
+.bk-link-card-bg {
+  background-color: #666;
+  height: 6rem;
+  width: 6rem;
+  box-shadow: inset #606060 0 0 0 3px, inset black 0px 10px 10px -8px,
+    inset black 0px -10px 10px -8px;
+  border-radius: 0.5rem;
+  position: relative;
+  top: -6rem;
+  transition: 250ms ease-in-out;
+  transition-property: opacity, transform;
+}
+
+/* 卡片背景 投影偽元素 */
+.bk-link-card-bg::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 24px 16px -8px;
+  transition: opacity 300ms ease-in-out;
+}
+
+/* 卡片背景 懸浮效果 作用時取消外框 */
+.bk-link-card:hover + .bk-link-card-bg {
+  box-shadow: inset #444 0 0 0 0px;
+  background: linear-gradient(
+    rgb(0 0 0 / 0),
+    rgb(0 0 0 / 0.1) 30%,
+    rgb(0 0 0 / 0.5) 50%,
+    rgb(0 0 0 / 0.8)
+  );
+}
+
+/* 連結圖標 */
+.bk-link-card-icon {
+  /* background-color: red; */
+  position: absolute;
+  height: 5.6rem;
+  width: 5.6rem;
+  right: 0.2rem;
+  top: 0.2rem;
+  transition: ease-in-out 1s;
+  transition-property: opacity, transform, filter;
+  filter: blur(0px);
+}
+
+/* 卡片內容(伸縮部分) */
+.bk-link-card-body {
+  height: 6rem;
+  width: 6rem;
+  padding: 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+}
+
+/* 卡片內容(伸縮部分) 懸浮效果 作用時產生背景漸變 */
+/* .bk-link-card:hover .bk-link-card-body {
+  background: linear-gradient(
+    rgb(0 0 0 / 0),
+    rgb(0 0 0 / 0.5) 15%,
+    rgb(0 0 0 / 0.8) 50%,
+    rgb(0 0 0 / 1)
+  );
+} */
+
+/* 卡片內容(伸縮部分) 標題 */
+.bk-link-card-title {
+  position: relative;
+  cursor: pointer;
+  margin: 0 0;
+  padding: 0.5em 0 0;
+  width: max-content;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 0.9em;
+  letter-spacing: 4px;
+  text-shadow: #fffcf2fa 0em 0em 0.5em !important;
+  color: #eee !important;
+  background-color: transparent;
+  border-color: transparent;
+  transition: ease-in 600ms;
+  transition-property: opacity, scale, transform;
+  transition-delay: 600ms;
+}
+
+/* 卡片內容(伸縮部分) 標題 懸浮效果 */
+.bk-link-card:hover .bk-link-card-title {
+  letter-spacing: 2px;
+  scale: 1;
+  opacity: 1;
+}
+
+/* 卡片內容(伸縮部分) 標題 懸浮效果 作用在標題本身 */
+.bk-link-card-title:hover {
+  color: #eee !important;
+  text-shadow: #fffcf2fa 0em 0em 0.5em !important;
+}
+
+/* 卡片內容(伸縮部分) 標題 前偽元素 */
+/* .bk-link-card-title::before {
+  font-family: FontAwesome;
+  content: "\f2f6";
+  display: inline-block;
+  padding-right: 3px;
+  padding-left: 3px;
+  filter: brightness(50%);
+  color: var(--secondary-theme-color);
+  font-size: 0.25em;
+  text-shadow: #00000000 0em 0em 0em;
+  vertical-align: bottom;
+} */
+
+/* 卡片內容(伸縮部分) 副標題 容器 */
+.bk-link-card-subtitle {
+  margin: 0.25rem 0 0;
+  height: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+/* 卡片內容(伸縮部分) 副標題 */
+.bk-link-card-subtitle div {
+  color: hsla(0, 0%, 80%, 0.8);
+  vertical-align: middle;
+  font-size: 0.625em;
+  line-height: 1.25em;
+  text-align: center;
+}
+
+/* ----------- */
+/* 變形動畫部分 */
+/* ----------- */
+
+@media (hover: hover), (prefers-reduced-motion: no-preference) {
+  /* 卡片內容 變形前位置 */
+  .bk-link-card-body {
+    padding: 0rem 0 0;
+    transform: scale(1.2);
+    transform: translateY(-50%);
+    transition: transform 500ms ease;
+  }
+
+  /* 卡片標題 變形前位置 */
+  .bk-link-card-title {
+    transform: translateY(-20%);
+    scale: 1.2;
+    opacity: 0;
+  }
+
+  /* 卡片背景 懸浮效果 3D變形 旋轉*/
+  .bk-link-card:hover + .bk-link-card-bg {
+    transform: perspective(250px) rotateX(50deg) rotateY(2deg) rotateZ(1deg)
+      translateY(15%);
+  }
+
+  /* 卡片背景 懸浮效果 投影偽元素 */
+  .bk-link-card:hover + .bk-link-card-bg::after {
+    opacity: 1;
+  }
+
+  /* 連結圖標 懸浮效果  */
+  .bk-link-card:hover .bk-link-card-icon {
+    transform: scale(0.45) translateY(-15%);
+    filter: blur(4px);
+  }
+
+  /* 卡片內容 懸浮效果  */
+  .bk-link-card:hover .bk-link-card-body {
+    transform: translateY(-10%);
+    transition-delay: 500ms;
+  }
+
+  /* 卡片內容(除了標題) 變形前位置 */
+  .bk-link-card-body > *:not(.bk-link-card-title) {
+    opacity: 0;
+    transition: opacity 800ms linear 400ms;
+  }
+
+  /* 卡片內容(除了標題) 懸浮效果 */
+  .bk-link-card:hover .bk-link-card-body > *:not(.bk-link-card-title) {
+    opacity: 1;
+  }
+
+  /* 卡片標題 下畫線(偽元素) 變形前位置 */
+  .bk-link-card-title::after {
+    content: "";
+    position: absolute;
+    left: -0.25rem;
+    top: 100%;
+    height: 2px;
+    width: calc(100% + 0.5rem);
+    background: #eee;
+    transform: scaleX(0);
+    transition: transform 200ms ease;
+    transform-origin: center;
+  }
+
+  /* 卡片標題 下畫線(偽元素) 懸浮效果 */
+  .bk-link-card-scrollor:hover .bk-link-card-title::after {
+    transition: transform 1200ms ease 800ms;
+    transform: scaleX(1);
+  }
+}
