@@ -242,7 +242,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          庫里肖夫效應<a href="https://github.com/Blackrowtw/Blackrowtw.github.io_Hexo/edit/master/source/_posts/2024-05-13_[%E5%BA%AB%E9%87%8C%E8%82%96%E5%A4%AB%E6%95%88%E6%87%89].md" class="post-edit-link" title="編輯" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          庫里肖夫效應<a href="https://github.com/Blackrowtw/Blackrowtw.github.io_Hexo/edit/master/source/_posts/2024-05-13__%E5%BA%AB%E9%87%8C%E8%82%96%E5%A4%AB%E6%95%88%E6%87%89__.md" class="post-edit-link" title="編輯" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
         </h1>
 
         <div class="post-meta-container">
@@ -384,10 +384,18 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>總字數：</span>
-    <span title="總字數">22k</span>
+    <span title="總字數">21k</span>
   </span>
 </div>
 <div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
     <span class="post-meta-item" id="busuanzi_container_site_pv">
       <span class="post-meta-item-icon">
         <i class="fa fa-eye"></i>
@@ -398,7 +406,33 @@
     </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
-  </div>
+  </div><!-- 引入 Link-Card 模板 CSS -->
+<link
+  href="/+css/+__bk-dark-mode-buttom.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+<!-- 黑夜模式按鈕位置 -->
+<!-- <div class="bk-dark-btn-container"> -->
+<div class="bk-toggle-btn" id="bk-auto-mode-button">
+  <input type="checkbox" id="bk-auto-mode-checkbox" />
+  <span><i class="fa-regular fa-lightbulb"></i></span>
+</div>
+
+<div class="bk-toggle-btn" id="bk-dark-mode-button">
+  <input type="checkbox" id="bk-dark-mode-checkbox" />
+  <span id="bk-dark-mode-sunandmoon"></span>
+</div>
+
+<div class="bk-toggle-btn" id="bk-dark-mode-desc">
+  <span id="bk-dark-mode-text"></span>
+</div>
+<!-- </div> -->
+
+<!-- 引入 Link-Card 模板生成 JS -->
+<script src="/+js/+__bk-dark-mode-buttom.js"></script>
+
 
     </div>
   </footer>
@@ -452,46 +486,13 @@
 
 <script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"Blackrowtw","repo":"Blackrowtw.github.io","client_id":"Ov23linJiq7IZxHbb8Bo","client_secret":"aeff1b08dde5d2b020451437e415332f827bf54f","admin_user":"Blackrowtw","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","labels":"Gitalk","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"e5b62d224b98473b4db7be43e06e4b49"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
-<!-- 背景調整 邊緣暗角 -->
+<!-- 3D 鳥群背景(vanta) 邊緣暗角 -->
 <div id="vanta-js-birds-overlay"></div>
 
-<!-- 全景背景層 設定 -->
+<!-- 3D 鳥群背景(vanta) 生成位置 -->
 <div id="vanta-js-birds-bg"></div>
 
-<style>
-  #vanta-js-birds-bg {
-    display: flex;
-    height: 100lvh;
-    width: 100lvw;
-    position: fixed;
-    inset: 0px;
-    z-index: -1;
-    opacity: 1;
-    mix-blend-mode: screen;
-    /* filter: blur(2px); */
-  }
-
-  #vanta-js-birds-overlay {
-    display: flex;
-    height: 100lvh;
-    width: 100lvw;
-    position: fixed;
-    inset: 0px;
-    z-index: -1;
-    background: radial-gradient(#e9f5f5 5%, #b6b6b3 80%, #8b8e99 100%);
-  }
-  @media (prefers-color-scheme: dark) {
-    #vanta-js-birds-bg {
-      mix-blend-mode: screen;
-      opacity: 0.3;
-    }
-    #vanta-js-birds-overlay {
-      background: radial-gradient(#232325 5%, #151618 80%, #050505 100%);
-    }
-  }
-</style>
-
-<!-- 3D 鳥群背景 -->
+<!-- 3D 鳥群背景 js 引入-->
 <!-- https://www.vantajs.com/ -->
 <script>
   VANTA.BIRDS({

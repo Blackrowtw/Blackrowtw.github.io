@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+
+    <!-- 
+                                                
+▀███▀▀▀██▄       ██     ▀███▀▀▀██▄ ▀████▀ ▀███▀ 
+  ██    ▀██▄    ▄██▄      ██   ▀██▄  ██   ▄█▀   
+  ██     ▀██   ▄█▀██▄     ██   ▄██   ██ ▄█▀     
+  ██      ██  ▄█  ▀██     ███████    █████▄     
+  ██     ▄██  ████████    ██  ██▄    ██  ███    
+  ██    ▄██▀ █▀      ██   ██   ▀██▄  ██   ▀██▄  
+▄████████▀ ▄███▄   ▄████▄████▄ ▄███▄████▄   ███▄
+                                                 -->
+
+    <style>
+      #wrapDarkLightSwitch {
+        display: inline-block;
+        position: relative;
+        user-select: none;
+        margin-top: 50px;
+      }
+      #darkLightSwitch {
+        cursor: pointer;
+        padding: 4px 5px 2px;
+        position: relative;
+        display: inline-block;
+      }
+      #darkLightSwitch svg {
+        fill: #000;
+        height: 24px;
+        width: 24px;
+        transition: all 1s;
+      }
+      .darkModeOn #darkLightSwitch svg {
+        fill: #fff;
+      }
+      #darkLightSvgWrap {
+        height: 24px;
+        width: 24px;
+        overflow: hidden;
+        position: relative;
+        transition: all 0.3s;
+        margin-bottom: 5px;
+      }
+      #darkLightSwitch:hover #darkLightSvgWrap {
+        transform: scale(1) rotate(45deg);
+      }
+      .darkModeOn #darkLightSvgWrap svg {
+        height: 44px;
+        width: 44px;
+        position: absolute;
+        transition: all 0.5s;
+        top: -10px;
+        right: -10px;
+      }
+      .darkModeOn #darkLightSvgWrap {
+        border-radius: 10px;
+      }
+      #darkLightOverlay {
+        width: 6px;
+        height: 10px;
+        position: absolute;
+        background: #fff;
+        transition: all 0.5s;
+        top: 11px;
+        left: 16px;
+        border-radius: 0 10px 10px 0;
+      }
+      .darkModeOn #darkLightOverlay {
+        width: 22px;
+        height: 22px;
+        border-radius: 20px;
+        top: 0;
+        left: 0;
+        background: #456;
+      }
+      /*Your custom theme styles below this*/
+      body {
+        background: #f7fbff;
+        color: #000;
+      }
+      body.darkModeOn {
+        background: #456;
+        color: #fff;
+      }
+    </style>
+
+    <div id="wrapDarkLightSwitch">
+      <div id="darkLightSwitch" title="Dark / Light View">
+        <div id="darkLightSvgWrap">
+          <svg
+            height="20px"
+            width="20px"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 207.628 207.628"
+            xml:space="preserve"
+          >
+            <circle cx="103.814" cy="103.814" r="45.868" />
+            <path
+              d="M103.814,157.183c-29.427,0-53.368-23.941-53.368-53.368s23.941-53.368,53.368-53.368s53.368,23.941,53.368,53.368 S133.241,157.183,103.814,157.183z M103.814,65.446c-21.156,0-38.368,17.212-38.368,38.368s17.212,38.368,38.368,38.368 s38.368-17.212,38.368-38.368S124.97,65.446,103.814,65.446z"
+            />
+            <path
+              d="M103.814,39.385c-4.142,0-7.5-3.358-7.5-7.5V7.5c0-4.142,3.358-7.5,7.5-7.5s7.5,3.358,7.5,7.5v24.385 C111.314,36.027,107.956,39.385,103.814,39.385z"
+            />
+            <path
+              d="M103.814,207.628c-4.142,0-7.5-3.358-7.5-7.5v-24.385c0-4.142,3.358-7.5,7.5-7.5s7.5,3.358,7.5,7.5v24.385 C111.314,204.271,107.956,207.628,103.814,207.628z"
+            />
+            <path
+              d="M200.128,111.314h-24.385c-4.142,0-7.5-3.358-7.5-7.5s3.358-7.5,7.5-7.5h24.385c4.142,0,7.5,3.358,7.5,7.5 S204.271,111.314,200.128,111.314z"
+            />
+            <path
+              d="M31.885,111.314H7.5c-4.142,0-7.5-3.358-7.5-7.5s3.358-7.5,7.5-7.5h24.385c4.142,0,7.5,3.358,7.5,7.5 S36.027,111.314,31.885,111.314z"
+            />
+            <path
+              d="M154.676,60.452c-1.919,0-3.839-0.732-5.303-2.197c-2.929-2.929-2.929-7.678,0-10.606l17.243-17.242 c2.929-2.929,7.678-2.93,10.606,0c2.929,2.929,2.929,7.678,0,10.606l-17.243,17.242C158.515,59.72,156.595,60.452,154.676,60.452z"
+            />
+            <path
+              d="M35.709,179.419c-1.919,0-3.839-0.732-5.303-2.197c-2.929-2.929-2.929-7.678,0-10.606l17.243-17.243 c2.929-2.929,7.678-2.929,10.606,0c2.929,2.929,2.929,7.678,0,10.606l-17.243,17.243C39.548,178.687,37.629,179.419,35.709,179.419z"
+            />
+            <path
+              d="M171.918,179.419c-1.919,0-3.839-0.732-5.303-2.197l-17.243-17.243c-2.929-2.929-2.929-7.678,0-10.606 c2.929-2.929,7.678-2.929,10.606,0l17.243,17.243c2.929,2.929,2.929,7.678,0,10.606 C175.757,178.687,173.838,179.419,171.918,179.419z"
+            />
+            <path
+              d="M52.952,60.452c-1.919,0-3.839-0.732-5.303-2.197L30.406,41.013c-2.929-2.929-2.929-7.677,0-10.606 c2.929-2.929,7.678-2.93,10.606,0l17.243,17.242c2.929,2.929,2.929,7.677,0,10.606C56.791,59.72,54.872,60.452,52.952,60.452z"
+            />
+          </svg>
+        </div>
+        <div id="darkLightOverlay"></div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("wrapDarkLightSwitch").onclick = function () {
+        document.body.classList.toggle("darkModeOn");
+      };
+    </script>
+
+    <!-- 
+                                                                     
+▀████▀  ▀████▀▀███▀▀▀███      ██     ▀███▀▀▀██▄ ▀███▀▀▀███▀███▀▀▀██▄  
+  ██      ██    ██    ▀█     ▄██▄      ██    ▀██▄ ██    ▀█  ██   ▀██▄ 
+  ██      ██    ██   █      ▄█▀██▄     ██     ▀██ ██   █    ██   ▄██  
+  ██████████    ██████     ▄█  ▀██     ██      ██ ██████    ███████   
+  ██      ██    ██   █  ▄  ████████    ██     ▄██ ██   █  ▄ ██  ██▄   
+  ██      ██    ██     ▄█ █▀      ██   ██    ▄██▀ ██     ▄█ ██   ▀██▄ 
+▄████▄  ▄████▄▄█████████████▄   ▄████▄████████▀ ▄██████████████▄ ▄███▄
+                                                                       -->
+
+    <style>
+      .htmlmenu-wrapper {
+        background-color: aquamarine;
+        position: relative;
+        top: 50px;
+      }
+
+      /* HTML MENU HEADER */
+
+      .htmlmenu-header {
+        position: relative;
+        font-size: 16px;
+        background: rgba(0, 0, 255, 1);
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        box-sizing: border-box;
+      }
+
+      .htmlmenu-header *,
+      .htmlmenu-header *:before,
+      .htmlmenu-header *:after {
+        box-sizing: border-box;
+      }
+
+      /* HTML MENU CONTAINER */
+
+      .htmlmenu-container {
+        position: relative;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1024px;
+      }
+
+      /* HTML MENU HEADER SHADOW */
+
+      .htmlmenu-header-shadow {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .htmlmenu-header-shadow:before {
+        display: block;
+        position: relative;
+        content: "";
+        width: 100%;
+        height: 60px;
+        top: -60px;
+        border-radius: 50%;
+        box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.08);
+      }
+
+      /* HTML MENU LOGO */
+
+      .htmlmenu-logo {
+        padding: 0 0 0 0px;
+        text-align: left;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 50px;
+      }
+
+      .htmlmenu-logo a {
+        -webkit-text-decoration: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: sans-serif;
+        color: #ff0000;
+      }
+
+      .htmlmenu-logo a img {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      /* HTML MENU TOGGLE */
+
+      .htmlmenu-toggle {
+        position: absolute;
+        width: 0;
+        height: 0;
+        margin: 0;
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+      }
+
+      .htmlmenu-toggle + label {
+        position: absolute;
+        top: 16.25px;
+        right: 0px;
+        width: 20px;
+        height: 16px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        cursor: pointer;
+        -webkit-transition: -webkit-transform 200ms ease-out;
+        -webkit-transition: transform 200ms ease-out;
+        transition: transform 200ms ease-out;
+      }
+
+      .htmlmenu-toggle + label > span {
+        display: block;
+        background-color: #ff0000;
+        border-radius: 2px;
+        width: 100%;
+        height: 2px;
+        -webkit-transition: all 200ms;
+        transition: all 200ms;
+      }
+
+      .htmlmenu-toggle + label > span:last-child {
+        -webkit-transform-origin: left;
+        -ms-transform-origin: left;
+        transform-origin: left;
+      }
+
+      .htmlmenu-toggle:checked + label {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+
+      .htmlmenu-toggle:checked + label > span:first-child {
+        width: 50%;
+        -webkit-transform: rotate(-90deg) translateX(3px);
+        -ms-transform: rotate(-90deg) translateX(3px);
+        transform: rotate(-90deg) translateX(3px);
+        -webkit-transform-origin: right;
+        -ms-transform-origin: right;
+        transform-origin: right;
+      }
+
+      .htmlmenu-toggle:checked + label > span:last-child {
+        width: 50%;
+        -webkit-transform: rotate(-90deg) translateX(-3px) translateY(10px);
+        -ms-transform: rotate(-90deg) translateX(-3px) translateY(10px);
+        transform: rotate(-90deg) translateX(-3px) translateY(10px);
+      }
+
+      .htmlmenu-toggle:checked ~ .htmlmenu-menu {
+        padding-bottom: 20px;
+      }
+
+      .htmlmenu-toggle:checked ~ .htmlmenu-menu > ul {
+        display: block;
+      }
+
+      .htmlmenu-toggle:checked ~ .htmlmenu-menu > ul > li > input:checked ~ a {
+        color: #f2980f;
+      }
+
+      .htmlmenu-toggle:checked ~ .htmlmenu-menu input:checked ~ ul {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      /* HTML MENU MENU */
+
+      .htmlmenu-menu {
+        line-height: 1.5;
+      }
+
+      .htmlmenu-menu ul {
+        margin: 0;
+        padding: 0;
+        display: none;
+        list-style: none;
+      }
+
+      .htmlmenu-menu li {
+        position: relative;
+        list-style: none;
+      }
+
+      .htmlmenu-menu li > a {
+        display: block;
+        font-family: sans-serif;
+        color: #ff0000;
+        padding: 15px 0px;
+        -webkit-text-decoration: none;
+        text-decoration: none;
+        position: relative;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .htmlmenu-menu input[type="checkbox"] {
+        position: absolute;
+        width: 0;
+        height: 0;
+        margin: 0;
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+      }
+
+      .htmlmenu-menu input[type="checkbox"]:checked ~ a > label {
+        -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+      }
+
+      .htmlmenu-menu input[type="checkbox"]:checked ~ a > label:before {
+        opacity: 0;
+      }
+
+      .htmlmenu-menu label {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        right: -5px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: 32px;
+        width: 32px;
+        line-height: 1.5;
+        text-align: center;
+        z-index: 1;
+        -webkit-transition: -webkit-transform 0.4s;
+        -webkit-transition: transform 0.4s;
+        transition: transform 0.4s;
+      }
+
+      .htmlmenu-menu label:before,
+      .htmlmenu-menu label:after {
+        position: absolute;
+        content: "";
+        width: 45%;
+        height: 1px;
+        background-color: #ff0000;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+        -webkit-transition: transform 0.4s, opacity 0.4s;
+        transition: transform 0.4s, opacity 0.4s;
+        opacity: 1;
+      }
+
+      .htmlmenu-menu label:after {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+
+      .htmlmenu-menu > ul > li > a {
+        font-size: 15px;
+        font-style: normal;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .htmlmenu-menu > ul > li:hover > a,
+      .htmlmenu-menu > ul > li.htmlmenu-menu-current > a {
+        color: #f2980f;
+      }
+
+      .htmlmenu-menu ul ul li > a {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: normal;
+        text-transform: none;
+        padding: 12px 0px;
+      }
+
+      @media (min-width: 800px) {
+        .htmlmenu-wrapper {
+       
+        }
+        /* HTML MENU HEADER */
+        .htmlmenu-header {
+            
+          -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+          position: fixed;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 50px;
+          top: 0;
+          z-index: 99999;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-dark {
+          background: transparent;
+          position: fixed;
+          left: 0;
+          right: 0;
+          height: 50px;
+          top: 0;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-dark .htmlmenu-logo a {
+          color: #f0f0f0;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-dark
+          .htmlmenu-menu
+          > ul
+          > li
+          > a,
+        .htmlmenu-header.htmlmenu-header-transparent-dark
+          .htmlmenu-toggle:checked
+          ~ .htmlmenu-menu
+          > ul
+          > li
+          > input:checked
+          ~ a {
+          color: #f0f0f0;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-dark
+          .htmlmenu-menu
+          > ul
+          > li
+          > a
+          > label {
+          border-color: #f0f0f0;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-dark
+          .htmlmenu-menu
+          > ul
+          > li:hover
+          > a,
+        .htmlmenu-header.htmlmenu-header-transparent-dark
+          .htmlmenu-toggle:checked
+          ~ .htmlmenu-menu
+          > ul
+          > li:hover
+          > input:checked
+          ~ a,
+        .htmlmenu-header.htmlmenu-header-transparent-dark
+          .htmlmenu-menu
+          > ul
+          > li.htmlmenu-menu-current
+          > a,
+        .htmlmenu-header.htmlmenu-header-transparent-dark
+          .htmlmenu-toggle:checked
+          ~ .htmlmenu-menu
+          > ul
+          > li.htmlmenu-menu-current
+          > input:checked
+          ~ a {
+          color: #f2980f;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-dark
+          .htmlmenu-menu.htmlmenu-menu-style-2
+          > ul
+          > li:hover
+          > a
+          > label,
+        .htmlmenu-header.htmlmenu-header-transparent-dark
+          .htmlmenu-menu.htmlmenu-menu-style-2
+          > ul
+          > li.htmlmenu-menu-current
+          > a
+          > label {
+          border-color: #ff0000;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-dark
+          + .htmlmenu-header-spacer {
+          height: 0;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-dark
+          > .htmlmenu-header-shadow {
+          opacity: 0;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-dark.htmlmenu-header-scrolled {
+          background: rgba(0, 0, 255, 1);
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-dark.htmlmenu-header-scrolled
+          .htmlmenu-logo
+          a {
+          color: #ff0000;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-dark.htmlmenu-header-scrolled
+          .htmlmenu-menu
+          > ul
+          > li
+          > a,
+        .htmlmenu-header.htmlmenu-header-transparent-dark.htmlmenu-header-scrolled
+          .htmlmenu-toggle:checked
+          ~ .htmlmenu-menu
+          > ul
+          > li
+          > input:checked
+          ~ a {
+          color: #ff0000;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-dark.htmlmenu-header-scrolled
+          .htmlmenu-menu
+          > ul
+          > li
+          > a
+          > label {
+          border-color: #ff0000;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-dark.htmlmenu-header-scrolled
+          .htmlmenu-menu
+          > ul
+          > li:hover
+          > a,
+        .htmlmenu-header.htmlmenu-header-transparent-dark.htmlmenu-header-scrolled
+          .htmlmenu-toggle:checked
+          ~ .htmlmenu-menu
+          > ul
+          > li:hover
+          > input:checked
+          ~ a,
+        .htmlmenu-header.htmlmenu-header-transparent-dark.htmlmenu-header-scrolled
+          .htmlmenu-menu
+          > ul
+          > li.htmlmenu-menu-current
+          > a,
+        .htmlmenu-header.htmlmenu-header-transparent-dark.htmlmenu-header-scrolled
+          .htmlmenu-toggle:checked
+          ~ .htmlmenu-menu
+          > ul
+          > li.htmlmenu-menu-current
+          > input:checked
+          ~ a {
+          color: #f2980f;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-dark.htmlmenu-header-scrolled
+          .htmlmenu-menu.htmlmenu-menu-style-3
+          > ul
+          > li:hover
+          > a
+          > label,
+        .htmlmenu-header.htmlmenu-header-transparent-dark.htmlmenu-header-scrolled
+          .htmlmenu-menu.htmlmenu-menu-style-3
+          > ul
+          > li.htmlmenu-menu-current
+          > a
+          > label {
+          border-color: #0000ff;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-dark.htmlmenu-header-scrolled
+          > .htmlmenu-header-shadow {
+          opacity: 1;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-light {
+          background: transparent;
+          position: fixed;
+          left: 0;
+          right: 0;
+          height: 50px;
+          top: 0;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-light .htmlmenu-logo a {
+          color: #3a3a3a;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-light
+          .htmlmenu-menu
+          > ul
+          > li
+          > a,
+        .htmlmenu-header.htmlmenu-header-transparent-light
+          .htmlmenu-toggle:checked
+          ~ .htmlmenu-menu
+          > ul
+          > li
+          > input:checked
+          ~ a {
+          color: #3a3a3a;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-light
+          .htmlmenu-menu
+          > ul
+          > li:hover
+          > a,
+        .htmlmenu-header.htmlmenu-header-transparent-light
+          .htmlmenu-toggle:checked
+          ~ .htmlmenu-menu
+          > ul
+          > li:hover
+          > input:checked
+          ~ a,
+        .htmlmenu-header.htmlmenu-header-transparent-light
+          .htmlmenu-menu
+          > ul
+          > li.htmlmenu-menu-current
+          > a,
+        .htmlmenu-header.htmlmenu-header-transparent-light
+          .htmlmenu-toggle:checked
+          ~ .htmlmenu-menu
+          > ul
+          > li.htmlmenu-menu-current
+          > input:checked
+          ~ a {
+          color: #f2980f;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-light
+          .htmlmenu-menu
+          > ul
+          > li
+          > a
+          > label {
+          border-color: #3a3a3a;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-light
+          .htmlmenu-menu.htmlmenu-menu-style-2
+          > ul
+          > li:hover
+          > a
+          > label,
+        .htmlmenu-header.htmlmenu-header-transparent-light
+          .htmlmenu-menu.htmlmenu-menu-style-2
+          > ul
+          > li.htmlmenu-menu-current
+          > a
+          > label {
+          border-color: #ff0000;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-light
+          + .htmlmenu-header-spacer {
+          height: 0;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-light
+          > .htmlmenu-header-shadow {
+          opacity: 0;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-light.htmlmenu-header-scrolled {
+          background: rgba(0, 0, 255, 1);
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-light.htmlmenu-header-scrolled
+          .htmlmenu-logo
+          a {
+          color: #ff0000;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-light.htmlmenu-header-scrolled
+          .htmlmenu-menu
+          > ul
+          > li
+          > a,
+        .htmlmenu-header.htmlmenu-header-transparent-light.htmlmenu-header-scrolled
+          .htmlmenu-toggle:checked
+          ~ .htmlmenu-menu
+          > ul
+          > li
+          > input:checked
+          ~ a {
+          color: #ff0000;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-light.htmlmenu-header-scrolled
+          .htmlmenu-menu
+          > ul
+          > li:hover
+          > a,
+        .htmlmenu-header.htmlmenu-header-transparent-light.htmlmenu-header-scrolled
+          .htmlmenu-toggle:checked
+          ~ .htmlmenu-menu
+          > ul
+          > li:hover
+          > input:checked
+          ~ a,
+        .htmlmenu-header.htmlmenu-header-transparent-light.htmlmenu-header-scrolled
+          .htmlmenu-menu
+          > ul
+          > li.htmlmenu-menu-current
+          > a,
+        .htmlmenu-header.htmlmenu-header-transparent-light.htmlmenu-header-scrolled
+          .htmlmenu-toggle:checked
+          ~ .htmlmenu-menu
+          > ul
+          > li.htmlmenu-menu-current
+          > input:checked
+          ~ a {
+          color: #f2980f;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-light.htmlmenu-header-scrolled
+          .htmlmenu-menu
+          > ul
+          > li
+          > a
+          > label {
+          border-color: #ff0000;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-light.htmlmenu-header-scrolled
+          .htmlmenu-menu.htmlmenu-menu-style-3
+          > ul
+          > li:hover
+          > a
+          > label,
+        .htmlmenu-header.htmlmenu-header-transparent-light.htmlmenu-header-scrolled
+          .htmlmenu-menu.htmlmenu-menu-style-3
+          > ul
+          > li.htmlmenu-menu-current
+          > a
+          > label {
+          border-color: #0000ff;
+        }
+        .htmlmenu-header.htmlmenu-header-transparent-light.htmlmenu-header-scrolled
+          > .htmlmenu-header-shadow {
+          opacity: 1;
+        }
+        /* HTML MENU CONTAINER */
+        .htmlmenu-container {
+          height: 50px;
+          padding: 0 0px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+        }
+        /* HTML MENU HEADER SHADOW */
+        .htmlmenu-header-shadow {
+          z-index: -1;
+        }
+        /* HTML MENU LOGO */
+        .htmlmenu-logo {
+          position: relative;
+          padding: 0;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          line-height: 50px;
+        }
+        .htmlmenu-logo a {
+          line-height: unset;
+        }
+        .htmlmenu-logo a img {
+          display: block;
+        }
+        .htmlmenu-header-spacer {
+          height: 50px;
+        }
+        .htmlmenu-toggle:checked ~ .htmlmenu-menu {
+          padding-bottom: 0;
+        }
+        .htmlmenu-toggle:checked ~ .htmlmenu-menu input:checked ~ ul {
+          background: rgba(0, 0, 255, 1);
+        }
+        .htmlmenu-toggle:checked ~ .htmlmenu-menu > ul {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+        }
+        .htmlmenu-toggle:checked
+          ~ .htmlmenu-menu
+          > ul
+          > li
+          > input:checked
+          ~ a {
+          color: #ff0000;
+          background-color: transparent;
+        }
+        .htmlmenu-toggle:checked
+          ~ .htmlmenu-menu
+          > ul
+          > li:hover
+          > input:checked
+          ~ a,
+        .htmlmenu-toggle:checked
+          ~ .htmlmenu-menu
+          > ul
+          > li.htmlmenu-menu-current
+          > input:checked
+          ~ a {
+          color: #f2980f;
+        }
+        .htmlmenu-toggle + label {
+          opacity: 0;
+          pointer-events: none;
+        }
+        /* HTML MENU MENU */
+        .htmlmenu-menu {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          margin: 0 auto;
+        }
+        .htmlmenu-menu ul {
+          display: block;
+          font-size: 0;
+        }
+        .htmlmenu-menu li:hover > a {
+          opacity: 1;
+          color: #f2980f;
+        }
+        .htmlmenu-menu label {
+          bottom: 3px;
+          right: 5px;
+          height: 6px;
+          width: 6px;
+          border-style: solid;
+          border-color: #ff0000;
+          border-width: 0px 1px 1px 0px;
+          -webkit-transform: rotate(-45deg) !important;
+          -ms-transform: rotate(-45deg) !important;
+          transform: rotate(-45deg) !important;
+        }
+        .htmlmenu-menu label:before,
+        .htmlmenu-menu label:after {
+          content: none;
+        }
+        .htmlmenu-menu > ul {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+        }
+        .htmlmenu-menu > ul > li {
+          display: inline-block;
+        }
+        .htmlmenu-menu > ul > li > a {
+          position: relative;
+          height: 50px;
+          line-height: 50px;
+          white-space: nowrap;
+          padding: 0 20px;
+        }
+        .htmlmenu-menu > ul > li:last-child > a {
+          padding: 0 0 0 20px;
+        }
+        .htmlmenu-menu > ul > li > a > label {
+          position: relative;
+          display: inline-block;
+          margin-left: 15px;
+          right: inherit;
+          bottom: inherit;
+          vertical-align: middle;
+          top: -2px;
+          -webkit-transform: rotate(45deg) !important;
+          -ms-transform: rotate(45deg) !important;
+          transform: rotate(45deg) !important;
+          border-color: #ff0000;
+        }
+        .htmlmenu-menu li > ul {
+          border-top-width: 4px;
+          border-top-style: solid;
+          border-top-color: #f2980f;
+          display: block;
+          position: absolute;
+          width: 200px;
+          background: rgba(0, 0, 255, 1);
+          padding: 12px 0;
+          box-shadow: 0px 12px 30px -2px rgba(0, 0, 0, 0.1);
+          -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+          z-index: 1;
+          will-change: transform, opacity;
+          pointer-events: none;
+          visibility: hidden;
+          opacity: 0;
+          top: 100%;
+          left: 0;
+        }
+        .htmlmenu-menu li:hover > ul {
+          opacity: 1;
+          pointer-events: auto;
+          visibility: visible;
+        }
+        .htmlmenu-menu li > ul ul {
+          left: 100%;
+          top: -15px;
+        }
+        .htmlmenu-menu li > ul label {
+          position: absolute;
+          right: 20px;
+        }
+        .htmlmenu-menu li.htmlmenu-submenu-right > ul {
+          left: inherit;
+          right: 0;
+        }
+        .htmlmenu-menu li.htmlmenu-submenu-right > ul ul {
+          left: -100%;
+          right: 0;
+        }
+        .htmlmenu-menu ul ul li > a {
+          padding: 10px 20px;
+          font-size: 16px;
+          color: #ff0000;
+        }
+        .htmlmenu-menu.htmlmenu-submenu-bordered ul ul li:after {
+          position: absolute;
+          content: "";
+          bottom: 0;
+          left: 20px;
+          right: 20px;
+          height: 1px;
+          background: #1212ff;
+        }
+        .htmlmenu-menu.htmlmenu-submenu-bordered ul ul li:last-child:after {
+          display: none;
+        }
+        .htmlmenu-menu.htmlmenu-menu-style-1 > ul > li > a:before {
+          position: absolute;
+          content: "";
+          top: 50%;
+          right: 0;
+          width: 1px;
+          height: 20px;
+          background: rgba(255, 0, 0, 0.15);
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+        .htmlmenu-menu.htmlmenu-menu-style-1 > ul > li:last-child > a:before {
+          display: none;
+        }
+        .htmlmenu-menu.htmlmenu-menu-style-1 > ul > li:hover > a,
+        .htmlmenu-menu.htmlmenu-menu-style-1
+          > ul
+          > li.htmlmenu-menu-current
+          > a {
+          color: #f2980f !important;
+          background-color: transparent !important;
+        }
+        .htmlmenu-menu.htmlmenu-menu-style-2 > ul > li > a:after {
+          position: absolute;
+          content: "";
+          left: 0;
+          bottom: -4px;
+          width: 100%;
+          height: 4px;
+          background: #f2980f;
+          opacity: 0;
+          z-index: 0;
+          -webkit-transition: opacity 0.4s ease-in-out;
+          transition: opacity 0.4s ease-in-out;
+        }
+        .htmlmenu-menu.htmlmenu-menu-style-2 > ul > li:last-child > a {
+          padding: 0 20px;
+        }
+        .htmlmenu-menu.htmlmenu-menu-style-2 > ul > li:hover > a,
+        .htmlmenu-menu.htmlmenu-menu-style-2
+          > ul
+          > li.htmlmenu-menu-current
+          > a {
+          color: #ff0000 !important;
+          background-color: #1717ff !important;
+        }
+        .htmlmenu-menu.htmlmenu-menu-style-2 > ul > li:hover > a:after,
+        .htmlmenu-menu.htmlmenu-menu-style-2
+          > ul
+          > li.htmlmenu-menu-current
+          > a:after {
+          opacity: 1;
+        }
+        .htmlmenu-menu.htmlmenu-menu-style-3 > ul > li:last-child > a {
+          padding: 0 20px;
+        }
+        .htmlmenu-menu.htmlmenu-menu-style-3 > ul > li:hover > a,
+        .htmlmenu-menu.htmlmenu-menu-style-3
+          > ul
+          > li.htmlmenu-menu-current
+          > a {
+          color: #0000ff !important;
+          background-color: #f2980f !important;
+        }
+        .htmlmenu-menu.htmlmenu-menu-style-3 > ul > li:hover > a > label,
+        .htmlmenu-menu.htmlmenu-menu-style-3
+          > ul
+          > li.htmlmenu-menu-current
+          > a
+          > label {
+          border-color: #0000ff;
+        }
+        .htmlmenu-menu.htmlmenu-submenu-scale li > ul {
+          -webkit-transform: scale(0.5);
+          -ms-transform: scale(0.5);
+          transform: scale(0.5);
+          -webkit-transform-origin: 0 0;
+          -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+        }
+        .htmlmenu-menu.htmlmenu-submenu-scale li.htmlmenu-submenu-right > ul,
+        .htmlmenu-menu.htmlmenu-submenu-scale
+          li.htmlmenu-submenu-right
+          > ul
+          ul {
+          -webkit-transform-origin: 100% 0;
+          -ms-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+        }
+        .htmlmenu-menu.htmlmenu-submenu-scale li:hover > ul {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+        }
+        .htmlmenu-menu.htmlmenu-submenu-swing-out li {
+          -webkit-perspective: 1000px;
+          -moz-perspective: 1000px;
+          -ms-perspective: 1000px;
+          perspective: 1000px;
+        }
+        .htmlmenu-menu.htmlmenu-submenu-swing-out li > ul {
+          -webkit-transform: rotateX(-45deg);
+          -ms-transform: rotateX(-45deg);
+          transform: rotateX(-45deg);
+          -webkit-transform-origin: 0 0;
+          -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+        }
+        .htmlmenu-menu.htmlmenu-submenu-swing-out li > ul ul {
+          -webkit-transform: rotateY(45deg);
+          -ms-transform: rotateY(45deg);
+          transform: rotateY(45deg);
+          -webkit-transform-origin: 0 0;
+          -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+        }
+        .htmlmenu-menu.htmlmenu-submenu-swing-out
+          li.htmlmenu-submenu-right
+          > ul {
+          -webkit-transform-origin: 100% 0;
+          -ms-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+        }
+        .htmlmenu-menu.htmlmenu-submenu-swing-out
+          li.htmlmenu-submenu-right
+          > ul
+          ul {
+          -webkit-transform: rotateY(-45deg);
+          -ms-transform: rotateY(-45deg);
+          transform: rotateY(-45deg);
+          -webkit-transform-origin: 100% 0;
+          -ms-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+        }
+        .htmlmenu-menu.htmlmenu-submenu-swing-out li:hover > ul {
+          -webkit-transform: rotate(0deg) !important;
+          -ms-transform: rotate(0deg) !important;
+          transform: rotate(0deg) !important;
+        }
+        .htmlmenu-menu.htmlmenu-submenu-slide-up li > ul {
+          -webkit-transform: translateY(15px);
+          -ms-transform: translateY(15px);
+          transform: translateY(15px);
+        }
+        .htmlmenu-menu.htmlmenu-submenu-slide-up li:hover > ul {
+          -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+          transform: translateY(0);
+        }
+        .htmlmenu-menu.htmlmenu-submenu-slide-down li > ul {
+          -webkit-transform: translateY(-15px);
+          -ms-transform: translateY(-15px);
+          transform: translateY(-15px);
+        }
+        .htmlmenu-menu.htmlmenu-submenu-slide-down li:hover > ul {
+          -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+          transform: translateY(0);
+        }
+      }
+    </style>
+
+    <div class="htmlmenu-wrapper">
+      <div class="htmlmenu-header htmlmenu-header-transparent-dark">
+        <div class="htmlmenu-container">
+          <div class="htmlmenu-logo"></div>
+          <input type="checkbox" id="htmlmenu-toggle" class="htmlmenu-toggle" />
+          <label for="htmlmenu-toggle"
+            ><span></span><span></span><span></span
+          ></label>
+          <nav
+            class="htmlmenu-menu htmlmenu-menu-style-1 htmlmenu-submenu-slide-down htmlmenu-submenu-bordered"
+            role="navigation"
+          >
+            <ul>
+              <li class="htmlmenu-menu-current">
+                <input type="checkbox" id="htmlmenu-1539847293313" />
+                <a href="#"
+                  >Home
+                  <label for="htmlmenu-1539847293313"></label>
+                </a>
+                <ul>
+                  <li>
+                    <a href="#">New</a>
+                  </li>
+                  <li>
+                    <a href="#">New</a>
+                  </li>
+                  <li>
+                    <a href="#">New</a>
+                  </li>
+                  <li>
+                    <a href="#">New</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="htmlmenu-header-shadow"></div>
+      </div>
+      <div class="htmlmenu-header-spacer"></div>
+    </div>
+
+    <script>
+      (function () {
+        var node = document.querySelector(".htmlmenu-header");
+        var stop = node.offsetTop;
+        var window_last_position = 0;
+        var scroll =
+          window.requestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame ||
+          window.msRequestAnimationFrame ||
+          window.oRequestAnimationFrame ||
+          // IE Fallback, you can even fallback to onscroll
+          function (callback) {
+            window.setTimeout(callback, 1000 / 60);
+          };
+
+        var loop = function () {
+          // avoid calculations if not needed
+          if (window_last_position === window.pageYOffset) {
+            scroll(loop);
+            return false;
+          } else window_last_position = window.pageYOffset;
+
+          //... calculations
+          if (window_last_position > stop) {
+            // stick the div
+            if (node.className.indexOf(" htmlmenu-header-scrolled") === -1) {
+              node.className = node.className + " htmlmenu-header-scrolled";
+            }
+          } else {
+            // release the div
+            node.className =
+              node.className.indexOf(" htmlmenu-header-scrolled") >= 0
+                ? node.className.replace(" htmlmenu-header-scrolled", "")
+                : node.className;
+          }
+
+          scroll(loop);
+        };
+
+        // call the loop for the first time
+        loop();
+      })();
+    </script>
+  </body>
+</html>

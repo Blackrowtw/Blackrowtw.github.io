@@ -1,0 +1,131 @@
+.bk-toggle-btn {
+  margin: 0.5rem 0.25rem;
+  border-radius: 40px;
+  order: -1;
+}
+
+input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: 0px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+/* Dark-mode toggle btn */
+#bk-dark-mode-button {
+  position: relative;
+  width: 5rem;
+  height: 1.75rem;
+}
+
+#bk-dark-mode-button span {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow: hidden;
+  background-color: var(--menu-item-bg-color);
+  box-shadow: 0px 0px 8px -2px var(--link-hover-color);
+  border-radius: 40px;
+  transition: 0.8s ease background-color, 0.4s ease opacity;
+}
+
+#bk-dark-mode-button span:before,
+#bk-dark-mode-button span:after {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  transition: 0.8s ease transform 0.4s, 0.8s ease background-color;
+}
+
+#bk-dark-mode-button span:before {
+  background-color: var(--menu-item-bg-color);
+  transform: translate(1.55rem, -0.45rem);
+  z-index: 1;
+}
+
+#bk-dark-mode-button span:after {
+  background-color: var(--link-color);
+  transform: translate(1rem, 0px);
+  z-index: 0;
+}
+
+#bk-dark-mode-button input[type="checkbox"]:active + span {
+  opacity: 0.1;
+}
+
+#bk-dark-mode-button input[type="checkbox"]:checked + span {
+  box-shadow: 0px 0px 8px -2px var(--link-color);
+}
+
+#bk-dark-mode-button input[type="checkbox"]:checked + span:before {
+  transform: translate(-4.3rem, -0.45rem);
+}
+
+#bk-dark-mode-button input[type="checkbox"]:checked + span:after {
+  transform: translate(-2.25rem, 0px);
+}
+
+/* Dark-mode toggle btn completed */
+
+/* Auto-mode toggle btn */
+#bk-auto-mode-button {
+  position: relative;
+  left: 3.75rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  z-index: 10;
+}
+
+#bk-auto-mode-button span {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow: hidden;
+  color: var(--link-color);
+  /* background-color: var(--menu-item-bg-color); */
+  border-radius: 40px;
+  transition: 0.2s ease background-color, 1s ease-in-out rotate, 0.2s ease;
+  opacity: 0.2;
+  scale: 0.8;
+  rotate: 180deg;
+  box-shadow: inset 0px 0px 0px 0px transparent;
+}
+
+#bk-auto-mode-button input[type="checkbox"]:active + span {
+  scale: 1.2;
+  transform: translate(0, -0.1rem);
+}
+
+#bk-auto-mode-button input[type="checkbox"]:checked + span {
+  opacity: 1;
+  scale: 1;
+  rotate: 0deg;
+  box-shadow: inset 0px 0px 8px -2px #000;
+}
+/* Auto-mode toggle btn completed */
+
+/* bk-Dark-Mode-desc */
+#bk-dark-mode-desc {
+  position: relative;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+#bk-dark-mode-text {
+  text-wrap: nowrap;
+}
+/* bk-Dark-Mode-desc completed */

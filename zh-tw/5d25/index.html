@@ -32,7 +32,7 @@
 <meta property="og:description" content="自用筆記備忘錄，記錄在學習中所使用的語法">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-05-04T07:57:37.000Z">
-<meta property="article:modified_time" content="2024-05-23T15:30:08.652Z">
+<meta property="article:modified_time" content="2024-05-28T15:19:58.984Z">
 <meta property="article:author" content="BlacKrow">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Hexo-NexT">
@@ -243,7 +243,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hexo 架設筆記<a href="https://github.com/Blackrowtw/Blackrowtw.github.io_Hexo/edit/master/source/_posts/2024-05-04_[Hexo-%E6%9E%B6%E8%A8%AD%E7%AD%86%E8%A8%98].md" class="post-edit-link" title="編輯" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          Hexo 架設筆記<a href="https://github.com/Blackrowtw/Blackrowtw.github.io_Hexo/edit/master/source/_posts/2024-05-04__Hexo-%E6%9E%B6%E8%A8%AD%E7%AD%86%E8%A8%98__.md" class="post-edit-link" title="編輯" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
         </h1>
 
         <div class="post-meta-container">
@@ -261,7 +261,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-05-23 23:30:08" itemprop="dateModified" datetime="2024-05-23T23:30:08+08:00">2024-05-23</time>
+      <time title="修改時間：2024-05-28 23:19:58" itemprop="dateModified" datetime="2024-05-28T23:19:58+08:00">2024-05-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -291,7 +291,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>834</span>
+      <span>941</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
@@ -317,7 +317,7 @@
 
 <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>Hexo : 快速、簡單且強大的網誌框架</p>
 <p>原先使用的Jekyll已經忘得差不多了，所以改用Hexo從頭架設一次</p>
-<p>一樣選擇放在gitHub的個人網頁，作為靜態網站的站點再合適不過</p>
+<p>一樣選擇放在gitHub的個人網頁，作為靜態網站的站點再合適不過。</p>
 <h2 id="2-環境搭建"><a href="#2-環境搭建" class="headerlink" title="2. 環境搭建"></a>2. 環境搭建</h2><blockquote>
 <p>建置時使用的版本：</p>
 <blockquote>
@@ -327,17 +327,28 @@
 <p><code>hexo: 7.1.1</code><br><code>hexo-theme-next@8.19.1</code></p>
 </blockquote>
 </blockquote>
+<ol>
+<li><p>首先確認已經安裝完成以下的軟體</p>
+<ul>
+<li>Node.js (Node.js 版本需不低於8.10，建議使用 Node.js 10.0 及以上版本)</li>
+<li>Git</li>
+</ul>
+</li>
+<li><p>可以在 cmd 終端中使用 <code>git -v</code> 以及 <code>node -v</code> 確認版本</p>
+</li>
+</ol>
 <h3 id="2-1-選擇當前資料夾並進入終端-cmd"><a href="#2-1-選擇當前資料夾並進入終端-cmd" class="headerlink" title="2.1. 選擇當前資料夾並進入終端(cmd)"></a>2.1. 選擇當前資料夾並進入終端(cmd)</h3><ol>
-<li>利用 npm 在資料夾裡安裝 hexo <code>npm install hexo-cli -g</code><blockquote>
+<li>利用 npm 安裝 hexo <code>npm install hexo-cli -g</code><blockquote>
 <p>npm： <a href="https://nodejs.org/en" target="_blank" rel="noopener">Node.js</a> package manager | 套件管理工具</p>
 </blockquote>
 </li>
-<li>git 初始化：<code>git init</code><blockquote>
+<li>安裝完 hexo 後，就可以進入專案的資料夾進行初始化，在資料夾的路徑中輸入 cmd 進入對應的終端中</li>
+<li>使用 <code>hexo init</code> ，Hexo 會生成所有您需要的檔案</li>
+<li>進行 npm 初始化：<code>npm install</code></li>
+<li>進行 git 初始化：<code>git init</code><blockquote>
 <p><a href="https://git-scm.com/" target="_blank" rel="noopener">git</a>: 使用命令行的版本控制軟體</p>
 </blockquote>
 </li>
-<li>npm 初始化：<code>npm install</code></li>
-<li>hexo 初始化：<code>hexo init</code></li>
 <li>安裝hexo的next主題：<code>npm install hexo-theme-next</code><blockquote>
 <p><a href="https://theme-next.js.org/" target="_blank" rel="noopener">🎉 Elegant and powerful theme for Hexo.</a></p>
 </blockquote>
@@ -514,10 +525,18 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>總字數：</span>
-    <span title="總字數">22k</span>
+    <span title="總字數">21k</span>
   </span>
 </div>
 <div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
     <span class="post-meta-item" id="busuanzi_container_site_pv">
       <span class="post-meta-item-icon">
         <i class="fa fa-eye"></i>
@@ -528,7 +547,33 @@
     </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
-  </div>
+  </div><!-- 引入 Link-Card 模板 CSS -->
+<link
+  href="/+css/+__bk-dark-mode-buttom.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+<!-- 黑夜模式按鈕位置 -->
+<!-- <div class="bk-dark-btn-container"> -->
+<div class="bk-toggle-btn" id="bk-auto-mode-button">
+  <input type="checkbox" id="bk-auto-mode-checkbox" />
+  <span><i class="fa-regular fa-lightbulb"></i></span>
+</div>
+
+<div class="bk-toggle-btn" id="bk-dark-mode-button">
+  <input type="checkbox" id="bk-dark-mode-checkbox" />
+  <span id="bk-dark-mode-sunandmoon"></span>
+</div>
+
+<div class="bk-toggle-btn" id="bk-dark-mode-desc">
+  <span id="bk-dark-mode-text"></span>
+</div>
+<!-- </div> -->
+
+<!-- 引入 Link-Card 模板生成 JS -->
+<script src="/+js/+__bk-dark-mode-buttom.js"></script>
+
 
     </div>
   </footer>
@@ -582,46 +627,13 @@
 
 <script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"Blackrowtw","repo":"Blackrowtw.github.io","client_id":"Ov23linJiq7IZxHbb8Bo","client_secret":"aeff1b08dde5d2b020451437e415332f827bf54f","admin_user":"Blackrowtw","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","labels":"Gitalk","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"883dba1096bff0d59d67bff2dc5e6e7a"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
-<!-- 背景調整 邊緣暗角 -->
+<!-- 3D 鳥群背景(vanta) 邊緣暗角 -->
 <div id="vanta-js-birds-overlay"></div>
 
-<!-- 全景背景層 設定 -->
+<!-- 3D 鳥群背景(vanta) 生成位置 -->
 <div id="vanta-js-birds-bg"></div>
 
-<style>
-  #vanta-js-birds-bg {
-    display: flex;
-    height: 100lvh;
-    width: 100lvw;
-    position: fixed;
-    inset: 0px;
-    z-index: -1;
-    opacity: 1;
-    mix-blend-mode: screen;
-    /* filter: blur(2px); */
-  }
-
-  #vanta-js-birds-overlay {
-    display: flex;
-    height: 100lvh;
-    width: 100lvw;
-    position: fixed;
-    inset: 0px;
-    z-index: -1;
-    background: radial-gradient(#e9f5f5 5%, #b6b6b3 80%, #8b8e99 100%);
-  }
-  @media (prefers-color-scheme: dark) {
-    #vanta-js-birds-bg {
-      mix-blend-mode: screen;
-      opacity: 0.3;
-    }
-    #vanta-js-birds-overlay {
-      background: radial-gradient(#232325 5%, #151618 80%, #050505 100%);
-    }
-  }
-</style>
-
-<!-- 3D 鳥群背景 -->
+<!-- 3D 鳥群背景 js 引入-->
 <!-- https://www.vantajs.com/ -->
 <script>
   VANTA.BIRDS({

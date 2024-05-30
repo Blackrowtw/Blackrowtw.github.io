@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #b4fbff;
+    background: #418e08;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -1978,6 +1978,30 @@ pre code {
   color: #999;
   font-size: 0.8125em;
 }
+.sidebar-post-related {
+  font-size: 0.8125em;
+  padding: 18px 0 0 0;
+}
+.popular-posts {
+  margin: 0;
+  padding: 1em 0;
+  text-align: left;
+}
+.popular-posts .popular-posts-item {
+  display: block;
+}
+.popular-posts .popular-posts-item .popular-posts-link {
+  border-bottom: 0;
+  display: block;
+  padding: 5px 20px;
+  transition: background 0.2s ease-in-out;
+}
+.popular-posts .popular-posts-item .popular-posts-link:hover {
+  background: var(--menu-item-bg-color);
+}
+.popular-posts .popular-posts-item .popular-posts-time {
+  color: #999;
+}
 .footer {
   color: #999;
   font-size: 0.875em;
@@ -2039,6 +2063,9 @@ pre code {
   display: inline-block;
   margin: 0 5px;
   animation: icon-animate 1.33s ease-in-out infinite;
+}
+.busuanzi-count #busuanzi_container_site_uv {
+  display: none;
 }
 .busuanzi-count #busuanzi_container_site_pv {
   display: none;
@@ -3333,16 +3360,17 @@ header.header {
   --btn-default-hover-bg: #333;
   --btn-default-hover-color: #ccc;
   --btn-default-hover-border-color: #666;
-  --highlight-background: #b4b4b4;
+  --highlight-background: #e7e5e4;
   --highlight-foreground: #444;
-  --highlight-gutter-background: #e1e1e1;
+  --highlight-gutter-background: #f5f5f5;
   --highlight-gutter-foreground: #555;
   color-scheme: light;
-  --highlight-js-background: #b4b4b4;
   --gitalk-background: #ccc;
   --post-edit-icon-color: #ddd;
   --post-meta-text-color: #666;
   --site-link-text-shadow: rgba(5,5,5,0.314) 0.1em 0.1em 0.1em;
+  --vanta-birds-bg-color: radial-gradient(#e9f5f5 5%, #b3b4b6 75%, #8c8b99 100%);
+  --vanta-birds-bg-opacity: 1;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -3370,11 +3398,12 @@ header.header {
     --highlight-gutter-background: #323131;
     --highlight-gutter-foreground: #e8e8e8;
     color-scheme: dark;
-    --highlight-js-background: #1c1b1b;
     --gitalk-background: #404040;
     --post-edit-icon-color: #555;
     --post-meta-text-color: #999;
     --site-link-text-shadow: #050505 0.1em 0.1em 0.1em;
+    --vanta-birds-bg-color: radial-gradient(#232325 5%, #151618 75%, #050505 100%);
+    --vanta-birds-bg-opacity: 0.3;
   }
   img {
     opacity: 1;
@@ -3384,6 +3413,78 @@ header.header {
     opacity: 1;
     filter: brightness(90%);
   }
+}
+body.bk-light-mode-on {
+  --body-bg-color: #eee;
+  --content-bg-color: rgba(220,220,218,0.45);
+  --card-bg-color: #f5f5f5;
+  --text-color: #333;
+  --blockquote-color: #666;
+  --link-color: #555;
+  --link-hover-color: #222;
+  --brand-color: #fff;
+  --brand-hover-color: #fff;
+  --table-row-odd-bg-color: #f9f9f9;
+  --table-row-hover-bg-color: #f5f5f5;
+  --menu-item-bg-color: #f5f5f5;
+  --theme-color: #222;
+  --btn-default-bg: #222;
+  --btn-default-color: #ccc;
+  --btn-default-border-color: #555;
+  --btn-default-hover-bg: #333;
+  --btn-default-hover-color: #ccc;
+  --btn-default-hover-border-color: #666;
+  --highlight-background: #e7e5e4;
+  --highlight-foreground: #444;
+  --highlight-gutter-background: #f5f5f5;
+  --highlight-gutter-foreground: #555;
+  color-scheme: light;
+  --gitalk-background: #ccc;
+  --post-edit-icon-color: #ddd;
+  --post-meta-text-color: #666;
+  --site-link-text-shadow: rgba(5,5,5,0.314) 0.1em 0.1em 0.1em;
+  --vanta-birds-bg-color: radial-gradient(#e9f5f5 5%, #b3b4b6 75%, #8c8b99 100%);
+  --vanta-birds-bg-opacity: 1;
+}
+body.bk-dark-mode-on {
+  --body-bg-color: #282828;
+  --content-bg-color: rgba(30,30,30,0.85);
+  --card-bg-color: #555;
+  --text-color: #ccc;
+  --blockquote-color: #bbb;
+  --link-color: #ccc;
+  --link-hover-color: #eee;
+  --brand-color: #ddd;
+  --brand-hover-color: #ddd;
+  --table-row-odd-bg-color: #282828;
+  --table-row-hover-bg-color: #363636;
+  --menu-item-bg-color: #555;
+  --theme-color: #222;
+  --btn-default-bg: #222;
+  --btn-default-color: #ccc;
+  --btn-default-border-color: #555;
+  --btn-default-hover-bg: #333;
+  --btn-default-hover-color: #ccc;
+  --btn-default-hover-border-color: #666;
+  --highlight-background: #1c1b1b;
+  --highlight-foreground: #fff;
+  --highlight-gutter-background: #323131;
+  --highlight-gutter-foreground: #e8e8e8;
+  color-scheme: dark;
+  --gitalk-background: #404040;
+  --post-edit-icon-color: #555;
+  --post-meta-text-color: #999;
+  --site-link-text-shadow: #050505 0.1em 0.1em 0.1em;
+  --vanta-birds-bg-color: radial-gradient(#232325 5%, #151618 75%, #050505 100%);
+  --vanta-birds-bg-opacity: 0.3;
+}
+body.bk-dark-mode-on img {
+  opacity: 1;
+  filter: brightness(75%);
+}
+body.bk-dark-mode-on img:hover {
+  opacity: 1;
+  filter: brightness(90%);
 }
 /* 主視覺 副顏色調整 */
 :root {
@@ -3710,7 +3811,7 @@ a:not(.btn):not(.bmc-btn):hover {
 }
 /* 文章內文，代碼塊(Highlight) */
 .post-body figure.highlight {
-  background: var(--highlight-js-background);
+  background: var(--highlight-background);
   color: var(--highlight-foreground);
   line-height: 1.6em;
   margin: 0 auto 20px;
@@ -3862,6 +3963,16 @@ a:not(.btn):not(.bmc-btn):hover {
   background: var(--gitalk-background) !important;
   border-radius: 0.75rem !important;
 }
+/* 文章頁數 數字的背景 修正白天模式看不見 */
+.pagination .page-number.current {
+  background: var(--text-color);
+}
+/* 文章頁數 數字的上邊線 去除 */
+.pagination .prev,
+.pagination .next,
+.pagination .page-number {
+  border-top: 0px;
+}
 /* 頁腳(footer) 容器 */
 .footer-inner {
   color: var(--text-color);
@@ -3889,8 +4000,13 @@ a:not(.btn):not(.bmc-btn):hover {
   line-height: 2em;
 }
 /* 頁腳(footer) 全站字數 圖案 */
-.footer-inner .wordcount .post-meta-item .post-meta-item-icon i:before {
+.footer-inner .wordcount .post-meta-item .post-meta-item-icon i::before {
   content: "\f1c2";
+}
+/* 頁腳(footer) 全站訪客數 前分隔線 */
+.footer-inner .busuanzi-count #busuanzi_container_site_uv::before {
+  content: "|";
+  margin: 0 0.5em;
 }
 /* 頁腳(footer) 全站瀏覽數 */
 .footer-inner .busuanzi-count {
@@ -4018,4 +4134,34 @@ a:not(.btn):not(.bmc-btn):hover {
 /* 檔案頁面(Archive) 分類下小標題 副標顏色 */
 .posts-collapse .post-content .collection-header small {
   color: var(--blockquote-color);
+}
+/* 3D 鳥群背景(vanta) 樣式 */
+#vanta-js-birds-bg {
+  display: flex;
+  height: 100lvh;
+  width: 100lvw;
+  position: fixed;
+  inset: 0px;
+  z-index: -1;
+  opacity: var(--vanta-birds-bg-opacity);
+  mix-blend-mode: screen;
+/* filter: blur(2px); */
+}
+/* 3D 鳥群背景(vanta) 邊緣暗角 */
+#vanta-js-birds-overlay {
+  display: flex;
+  height: 100lvh;
+  width: 100lvw;
+  position: fixed;
+  inset: 0px;
+  z-index: -1;
+  background: var(--vanta-birds-bg-color);
+}
+@media (prefers-color-scheme: dark) {
+  #vanta-js-birds-bg {
+    opacity: var(--vanta-birds-bg-opacity);
+  }
+  #vanta-js-birds-overlay {
+    background: var(--vanta-birds-bg-color);
+  }
 }
