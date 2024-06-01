@@ -1,131 +1,318 @@
-.bk-toggle-btn {
-  margin: 0.5rem 0.25rem;
-  border-radius: 40px;
-  order: -1;
+body.bk-light-mode-on {
+  --body-bg-color: #eee;
+  --content-bg-color: rgba(220, 220, 218, 0.45);
+  --card-bg-color: #f5f5f5;
+  --text-color: #333;
+  --blockquote-color: #666;
+  --link-color: #555;
+  --link-hover-color: #222;
+  --brand-color: #fff;
+  --brand-hover-color: #fff;
+  --table-row-odd-bg-color: #f9f9f9;
+  --table-row-hover-bg-color: #f5f5f5;
+  --menu-item-bg-color: #f5f5f5;
+  --theme-color: #222;
+  --btn-default-bg: #222;
+  --btn-default-color: #ccc;
+  --btn-default-border-color: #555;
+  --btn-default-hover-bg: #333;
+  --btn-default-hover-color: #ccc;
+  --btn-default-hover-border-color: #666;
+  --highlight-background: #e7e5e4;
+  --highlight-foreground: #444;
+  --highlight-gutter-background: #f5f5f5;
+  --highlight-gutter-foreground: #555;
+  color-scheme: light;
+  --gitalk-background: #ccc;
+  --post-edit-icon-color: #ddd;
+  --post-meta-text-color: #666;
+  --site-link-text-shadow: #05050550 0.1em 0.1em 0.1em;
+  --vanta-birds-bg-color: radial-gradient(
+    #e9f5f5 5%,
+    #b3b4b6 75%,
+    #8c8b99 100%
+  );
+  --vanta-birds-bg-opacity: 1;
 }
 
-input[type="checkbox"] {
+body.bk-dark-mode-on {
+  --body-bg-color: #282828;
+  --content-bg-color: rgba(30, 30, 30, 0.85);
+  --card-bg-color: #555;
+  --text-color: #ccc;
+  --blockquote-color: #bbb;
+  --link-color: #ccc;
+  --link-hover-color: #eee;
+  --brand-color: #ddd;
+  --brand-hover-color: #ddd;
+  --table-row-odd-bg-color: #282828;
+  --table-row-hover-bg-color: #363636;
+  --menu-item-bg-color: #555;
+  --theme-color: #222;
+  --btn-default-bg: #222;
+  --btn-default-color: #ccc;
+  --btn-default-border-color: #555;
+  --btn-default-hover-bg: #333;
+  --btn-default-hover-color: #ccc;
+  --btn-default-hover-border-color: #666;
+  --highlight-background: #323131;
+  --highlight-foreground: #fff;
+  --highlight-gutter-background: #1c1b1b;
+  --highlight-gutter-foreground: #e8e8e8;
+  color-scheme: light dark;
+  --gitalk-background: #404040;
+  --post-edit-icon-color: #555;
+  --post-meta-text-color: #999;
+  --site-link-text-shadow: #050505 0.1em 0.1em 0.1em;
+  --vanta-birds-bg-color: radial-gradient(
+    #232325 5%,
+    #151618 75%,
+    #050505 100%
+  );
+  --vanta-birds-bg-opacity: 0.3;
+}
+
+/*  按鈕外包裝 */
+.bk-DKM-btn-container {
   width: 100%;
-  height: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* <!-- 
+█████████████████████████████████████████████████████████████████████████
+/* bk-DKM-animed 動畫處理 基本設定 */
+
+/* 按鈕外圍裝飾 大小由容器內容決定 */
+.bk-DKM-animed-outer {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 4rem;
+  box-shadow: 0 0 0 3px var(--link-color), 0 0 4px 4px var(--btn-default-bg);
+  background-color: var(--body-bg-color);
+}
+
+/* 按鈕大小設定 排版設定*/
+.bk-DKM-animed {
+  --bk-btns-outer-w: 5rem;
+  --bk-btns-outer-h: 1.75rem;
+  --bk-circle-size: 1.25rem;
+  width: var(--bk-btns-outer-w);
+  height: var(--bk-btns-outer-h);
+  border-radius: 4rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 按鈕內 文字(Font Awesome) 排版*/
+.bk-DKM-animed > i {
+  position: relative;
+  line-height: 2rem;
+  color: var(--link-hover-color);
+}
+
+/* 按鈕指示器 圓球的容器 */
+.bk-DKM-animed > span.bk-DKM-animed-circle {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  margin: 0px;
-  cursor: pointer;
+  width: var(--bk-btns-outer-w);
+  height: var(--bk-btns-outer-h);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* 按鈕 可點擊部分*/
+/* 陽光與星星 裝飾動畫 的容器 */
+.bk-DKM-animed > div.bk-DKM-animed-sun,
+.bk-DKM-animed > div.bk-DKM-animed-moon {
+  width: var(--bk-circle-size);
+  height: var(--bk-circle-size);
+  margin: 0.25rem;
+  z-index: 3;
+}
+
+/* 圓球　偽元素 基礎狀態設定 */
+/* before = Mask = 遮罩 = 陰影 */
+/* after = Circle = 太陽 = 月亮 */
+.bk-DKM-animed > span:before,
+.bk-DKM-animed > span:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - calc(var(--bk-circle-size) / 2));
+  left: calc(50% - calc(var(--bk-circle-size) / 2));
+  width: var(--bk-circle-size);
+  height: var(--bk-circle-size);
+  border-radius: 50%;
+  transition: 0.8s ease-in-out transform 0.4s, 0.8s ease-in-out background-color,
+    0.6s ease-in-out opacity 0.6s, 0.8s ease-in-out scale 0.4s;
+}
+
+/* bk-DKM-animed 動畫部分 */
+/* Mask */
+/* 基礎設定 */
+.bk-DKM-animed > span:before {
+  background-color: var(--body-bg-color);
   opacity: 0;
+  scale: 1.125;
   z-index: 2;
 }
 
-/* Dark-mode toggle btn */
-#bk-dark-mode-button {
-  position: relative;
-  width: 5rem;
-  height: 1.75rem;
-}
-
-#bk-dark-mode-button span {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  overflow: hidden;
-  background-color: var(--menu-item-bg-color);
-  box-shadow: 0px 0px 8px -2px var(--link-hover-color);
-  border-radius: 40px;
-  transition: 0.8s ease background-color, 0.4s ease opacity;
-}
-
-#bk-dark-mode-button span:before,
-#bk-dark-mode-button span:after {
-  content: "";
-  position: absolute;
-  top: 0.25rem;
-  width: 1.25rem;
-  height: 1.25rem;
-  border-radius: 50%;
-  transition: 0.8s ease transform 0.4s, 0.8s ease background-color;
-}
-
-#bk-dark-mode-button span:before {
-  background-color: var(--menu-item-bg-color);
-  transform: translate(1.55rem, -0.45rem);
+/* Circle */
+/* 基礎設定 */
+.bk-DKM-animed > span:after {
+  background-color: var(--link-color);
   z-index: 1;
 }
 
-#bk-dark-mode-button span:after {
-  background-color: var(--link-color);
-  transform: translate(1rem, 0px);
-  z-index: 0;
+/* Mask */
+/* bk-DKM-light 啟動時 */
+.bk-DKM-animed.bk-DKM-light > span:before {
+  transform: translate(0rem, 0rem);
+  opacity: 0;
 }
 
-#bk-dark-mode-button input[type="checkbox"]:active + span {
+/* Circle */
+/* bk-DKM-light 啟動時 */
+.bk-DKM-animed.bk-DKM-light > span:after {
+  scale: 1.125;
+  transform: translate(calc(-1rem - (var(--bk-circle-size) / 3)), 0);
+}
+
+/* Mask */
+/* bk-DKM-dark 啟動時 */
+.bk-DKM-animed.bk-DKM-dark > span:before {
+  opacity: 1;
+  scale: 0.85;
+  transform: translate(
+    calc(1rem + (var(--bk-circle-size) / 2.4)),
+    calc(0rem - (var(--bk-circle-size) / 6))
+  );
+}
+
+/* Circle */
+/* bk-DKM-dark 啟動時 */
+.bk-DKM-animed.bk-DKM-dark > span:after {
+  transform: translate(calc(1rem + (var(--bk-circle-size) / 2.4)), 0);
+}
+
+/* 按鈕內 文字(Font Awesome) 基本設定*/
+.bk-DKM-animed > i {
   opacity: 0.1;
+  transition: 0.4s ease-in 0s;
+  transform: translateY(2px) translateX(1px) rotate(180deg);
 }
 
-#bk-dark-mode-button input[type="checkbox"]:checked + span {
-  box-shadow: 0px 0px 8px -2px var(--link-color);
+/* 按鈕內 文字(Font Awesome) 旋轉*/
+/* bk-DKM-auto 啟動時 */
+.bk-DKM-animed.bk-DKM-auto > i {
+  opacity: 1;
+  transform: translateY(-2px) translateX(1px) rotate(0deg);
 }
-
-#bk-dark-mode-button input[type="checkbox"]:checked + span:before {
-  transform: translate(-4.3rem, -0.45rem);
+/* Mask Circle 關閉 */
+/* bk-DKM-auto 啟動時 */
+.bk-DKM-animed.bk-DKM-auto > span:after,
+.bk-DKM-animed.bk-DKM-auto > span:before {
+  opacity: 0;
 }
+/* bk-DKM-animed 結束 */
 
-#bk-dark-mode-button input[type="checkbox"]:checked + span:after {
-  transform: translate(-2.25rem, 0px);
-}
-
-/* Dark-mode toggle btn completed */
-
-/* Auto-mode toggle btn */
-#bk-auto-mode-button {
+/* 陽光與星星　偽元素 基礎狀態設定 */
+.bk-DKM-animed > div > span {
   position: relative;
-  left: 3.75rem;
-  width: 1.75rem;
-  height: 1.75rem;
-  z-index: 10;
-}
-
-#bk-auto-mode-button span {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  width: var(--bk-circle-size);
+  height: var(--bk-circle-size);
+  text-align: center;
   overflow: hidden;
+}
+
+/* bk-DKM-animed-sun 動畫部分 */
+/* Sun Light 陽光*/
+/* 基礎設定 */
+.bk-DKM-animed div.bk-DKM-animed-sun > span::after,
+.bk-DKM-animed div.bk-DKM-animed-sun > span::before {
+  content: "";
+  position: absolute;
+  top: calc(1.25rem - var(--bk-circle-size) / 1);
+  left: calc(0.655rem - var(--bk-circle-size) / 1);
+  width: var(--bk-circle-size);
+  height: var(--bk-circle-size);
+  border-radius: 50%;
+  transition: all 0s 0.4s;
+  background-color: var(--body-bg-color);
+  scale: 0;
+  opacity: 0;
+}
+
+/* 動畫部分 時間設定 */
+/* bk-DKM-light 啟動時 */
+.bk-DKM-animed.bk-DKM-light div.bk-DKM-animed-sun > span::after,
+.bk-DKM-animed.bk-DKM-light div.bk-DKM-animed-sun > span::before {
+  transition: 0.4s ease-in background-color 1s, 0.2s ease-in opacity 0s,
+    0.2s ease-in scale 1s;
+}
+
+/* 內圈實心部分 */
+/* bk-DKM-light 啟動時 */
+.bk-DKM-animed.bk-DKM-light div.bk-DKM-animed-sun > span::after {
+  scale: 0.85;
+  opacity: 1;
+}
+
+/* 內圈發光部分 */
+/* bk-DKM-light 啟動時 */
+.bk-DKM-animed.bk-DKM-light div.bk-DKM-animed-sun > span::before {
+  scale: 1;
+  opacity: 1;
+  filter: blur(4px);
+  background-color: var(--link-color);
+}
+/* bk-DKM-animed-sun 結束 */
+
+/* bk-DKM-animed-moon 動畫部分 */
+/* Moon & Star 星星 */
+/* 基礎設定 */
+.bk-DKM-animed div.bk-DKM-animed-moon > span::after {
+  --bk-star-size: 1rem;
+  content: "⯌";
+  font-size: var(--bk-star-size);
   color: var(--link-color);
-  /* background-color: var(--menu-item-bg-color); */
-  border-radius: 40px;
-  transition: 0.2s ease background-color, 1s ease-in-out rotate, 0.2s ease;
-  opacity: 0.2;
+  width: var(--bk-circle-size);
+  height: var(--bk-circle-size);
+  position: absolute;
+  left: calc(50% - calc(var(--bk-circle-size) / 2));
+}
+
+/* 動畫部分 初始狀態與時間設定 */
+.bk-DKM-animed div.bk-DKM-animed-moon > span::after {
+  opacity: 0;
   scale: 0.8;
-  rotate: 180deg;
-  box-shadow: inset 0px 0px 0px 0px transparent;
+  transform: translate(
+    calc(0rem - var(--bk-star-size) / 2),
+    calc(-0.5rem - (var(--bk-star-size) / 1))
+  );
+  transition: 0.8s ease-in-out background-color, 0.6s ease-in-out 0.4s;
 }
 
-#bk-auto-mode-button input[type="checkbox"]:active + span {
-  scale: 1.2;
-  transform: translate(0, -0.1rem);
-}
-
-#bk-auto-mode-button input[type="checkbox"]:checked + span {
+/* bk-DKM-dark 啟動時 */
+.bk-DKM-animed.bk-DKM-dark div.bk-DKM-animed-moon > span::after {
   opacity: 1;
   scale: 1;
-  rotate: 0deg;
-  box-shadow: inset 0px 0px 8px -2px #000;
+  transform: translate(
+    calc(0rem - (var(--bk-star-size) / 2)),
+    calc(0rem - (var(--bk-star-size) / 1.5))
+  );
 }
-/* Auto-mode toggle btn completed */
+/* bk-DKM-animed-moon 結束 */
 
-/* bk-Dark-Mode-desc */
-#bk-dark-mode-desc {
-  position: relative;
-  width: 1.75rem;
-  height: 1.75rem;
+/* 與按鈕互動時的效果 */
+.bk-DKM-animed div.bk-DKM-animed-sun:active,
+.bk-DKM-animed div.bk-DKM-animed-moon:active,
+.bk-DKM-animed div.bk-DKM-animed-sun:active ~ span.bk-DKM-animed-circle,
+.bk-DKM-animed div.bk-DKM-animed-moon:active ~ span.bk-DKM-animed-circle {
+  scale: 1.05;
+  opacity: 0.5;
+  transform: translate(0, -0.1rem);
 }
-
-#bk-dark-mode-text {
-  text-wrap: nowrap;
-}
-/* bk-Dark-Mode-desc completed */

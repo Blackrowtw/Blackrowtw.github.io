@@ -221,7 +221,7 @@ body {
   background: var(--body-bg-color);
   box-sizing: border-box;
   color: var(--text-color);
-  font-family: Lato, "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Lato, "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 1em;
   line-height: 2;
   min-height: 100%;
@@ -234,7 +234,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: sans-serif;, Lato, "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: sans-serif, Lato, "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 30px 0 15px;
@@ -1471,7 +1471,7 @@ pre code {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: Kanit, serif;, Lato, "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Kanit, serif, Lato, "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   line-height: 1.5;
@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #418e08;
+    background: #17fffb;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2274,7 +2274,7 @@ pre code {
   width: 4px;
 }
 .post-body {
-  font-family: sans-serif;, Lato, "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: sans-serif, Lato, "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   overflow-wrap: break-word;
 }
 @media (min-width: 1200px) {
@@ -2476,7 +2476,7 @@ pre code {
 }
 .posts-expand .post-meta-container {
   color: #999;
-  font-family: sans-serif;, Lato, "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: sans-serif, Lato, "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 0.75em;
   margin-top: 3px;
 }
@@ -3393,9 +3393,9 @@ header.header {
     --btn-default-hover-bg: #333;
     --btn-default-hover-color: #ccc;
     --btn-default-hover-border-color: #666;
-    --highlight-background: #1c1b1b;
+    --highlight-background: #323131;
     --highlight-foreground: #fff;
-    --highlight-gutter-background: #323131;
+    --highlight-gutter-background: #1c1b1b;
     --highlight-gutter-foreground: #e8e8e8;
     color-scheme: dark;
     --gitalk-background: #404040;
@@ -3413,70 +3413,6 @@ header.header {
     opacity: 1;
     filter: brightness(90%);
   }
-}
-body.bk-light-mode-on {
-  --body-bg-color: #eee;
-  --content-bg-color: rgba(220,220,218,0.45);
-  --card-bg-color: #f5f5f5;
-  --text-color: #333;
-  --blockquote-color: #666;
-  --link-color: #555;
-  --link-hover-color: #222;
-  --brand-color: #fff;
-  --brand-hover-color: #fff;
-  --table-row-odd-bg-color: #f9f9f9;
-  --table-row-hover-bg-color: #f5f5f5;
-  --menu-item-bg-color: #f5f5f5;
-  --theme-color: #222;
-  --btn-default-bg: #222;
-  --btn-default-color: #ccc;
-  --btn-default-border-color: #555;
-  --btn-default-hover-bg: #333;
-  --btn-default-hover-color: #ccc;
-  --btn-default-hover-border-color: #666;
-  --highlight-background: #e7e5e4;
-  --highlight-foreground: #444;
-  --highlight-gutter-background: #f5f5f5;
-  --highlight-gutter-foreground: #555;
-  color-scheme: light;
-  --gitalk-background: #ccc;
-  --post-edit-icon-color: #ddd;
-  --post-meta-text-color: #666;
-  --site-link-text-shadow: rgba(5,5,5,0.314) 0.1em 0.1em 0.1em;
-  --vanta-birds-bg-color: radial-gradient(#e9f5f5 5%, #b3b4b6 75%, #8c8b99 100%);
-  --vanta-birds-bg-opacity: 1;
-}
-body.bk-dark-mode-on {
-  --body-bg-color: #282828;
-  --content-bg-color: rgba(30,30,30,0.85);
-  --card-bg-color: #555;
-  --text-color: #ccc;
-  --blockquote-color: #bbb;
-  --link-color: #ccc;
-  --link-hover-color: #eee;
-  --brand-color: #ddd;
-  --brand-hover-color: #ddd;
-  --table-row-odd-bg-color: #282828;
-  --table-row-hover-bg-color: #363636;
-  --menu-item-bg-color: #555;
-  --theme-color: #222;
-  --btn-default-bg: #222;
-  --btn-default-color: #ccc;
-  --btn-default-border-color: #555;
-  --btn-default-hover-bg: #333;
-  --btn-default-hover-color: #ccc;
-  --btn-default-hover-border-color: #666;
-  --highlight-background: #1c1b1b;
-  --highlight-foreground: #fff;
-  --highlight-gutter-background: #323131;
-  --highlight-gutter-foreground: #e8e8e8;
-  color-scheme: dark;
-  --gitalk-background: #404040;
-  --post-edit-icon-color: #555;
-  --post-meta-text-color: #999;
-  --site-link-text-shadow: #050505 0.1em 0.1em 0.1em;
-  --vanta-birds-bg-color: radial-gradient(#232325 5%, #151618 75%, #050505 100%);
-  --vanta-birds-bg-opacity: 0.3;
 }
 body.bk-dark-mode-on img {
   opacity: 1;
@@ -3544,14 +3480,54 @@ img:hover {
   color: #ccc;
   font-size: 24px;
 }
-/* 全站，超連結 陰影樣式 底線取消 */
-a:not(.btn):not(.bmc-btn) {
-  border-bottom: 1px none #999;
-  text-shadow: var(--site-link-text-shadow);
+/* h1 標題 文章頁面 文章內文*/
+.post-body h1,
+.posts-expand .post-title {
+  border-bottom: 0px solid transparent;
+  font-family: "Arial Black", sans-serif;
+  font-size: 1.75em;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 700;
+  font-variant-caps: capitalize;
+  overflow-wrap: break-word;
+  text-align: center;
+  text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3), 2px 2px 4px rgba(206,105,137,0) !important;
 }
-a:not(.btn):not(.bmc-btn):hover {
+/* 文章頁面 底線 */
+.posts-expand .post-title-link {
+  text-decoration: none 0rem;
+  color: var(--text-color);
+}
+.posts-expand .post-title-link:hover {
   color: var(--secondary-theme-color);
-  text-shadow: rgba(197,197,197,0.188) 0em 0em 0.5em;
+}
+.posts-expand .post-title-link:hover::before {
+  background: var(--secondary-theme-color);
+}
+/* 文章內文 頭部標題 */
+.posts-expand h1.post-title {
+  font-family: sans-serif !important;
+  font-weight: 400;
+}
+/* 文章內文 h1 標題 */
+.post-body h1 {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding-left: 1.125em;
+/* border-bottom: 3px solid var(--text-color); */
+/* text-emphasis: "⯌";
+  text-emphasis-color: var(--post-meta-text-color);
+  text-emphasis-position: under right; */
+}
+.post-body h1 a::after {
+  contain: "aaa";
+  border-bottom: 3px solid var(--text-color);
+  position: absolute;
+  height: 2;
+  background-color: #f00;
 }
 /* 選單按鈕，懸浮時變色 */
 .toggle:hover .toggle-line {
@@ -3566,21 +3542,25 @@ a:not(.btn):not(.bmc-btn):hover {
   color: var(--secondary-theme-color);
 }
 /* 編輯文章的鋼筆，懸浮時變色 和大小調整*/
-.posts-expand .post-title .post-edit-link {
+.posts-block .post-title .post-edit-link {
   font-size: 24px;
   color: var(--post-edit-icon-color);
   text-shadow: rgba(5,5,5,0.502) 0em 0em 0.1em;
 }
-.posts-expand .post-title .post-edit-link:hover {
+.posts-block .post-title .post-edit-link:hover {
   color: var(--secondary-theme-color) !important;
 }
 /* 文章標題 資訊部分*/
-.posts-expand .post-header {
+.posts-block .post-header {
   margin-bottom: 40px;
 }
 /* 文章標題 資訊部分*/
 .posts-expand .post-meta-container {
-  color: var(--post-meta-text-color);
+  color: var(--blockquote-color);
+}
+/* 文章標題 不算子人數在最後面(小螢幕排版破壞)*/
+#busuanzi_container_page_pv.post-meta-item {
+  order: 1;
 }
 /* 菜單(Menu) 計數徽章(Badge) 白天模式改色 */
 .menu-item .badge {
@@ -3758,6 +3738,19 @@ a:not(.btn):not(.bmc-btn):hover {
   background: transparent;
   backdrop-filter: blur(10px) brightness(99%) grayscale(50%);
 }
+/* 全站，超連結 陰影樣式 底線取消 */
+a:not(.btn,
+.bmc-btn,
+.post-title-link) {
+  border-bottom: 1px none #999;
+  text-shadow: var(--site-link-text-shadow);
+}
+a:not(.btn:hover,
+.bmc-btn:hover,
+.post-title-link):hover {
+  color: var(--secondary-theme-color);
+  text-shadow: rgba(197,197,197,0.188) 0em 0em 0.5em;
+}
 /* 文章內文，超連結樣式 &懸浮顏色 */
 .post-body a:hover {
   color: var(--secondary-theme-color);
@@ -3896,27 +3889,58 @@ a:not(.btn):not(.bmc-btn):hover {
     border-bottom-color: transparent;
   }
 }
-/* 文章內文，標題底線顏色 */
-.post-body h1,
+/* 文章內文 h2標題底線顏色 */
 .post-body h2 {
-  border-bottom: 1px solid #777;
+  width: fit-content;
+  padding-left: 0.5em;
+  margin-left: 0.5em;
+  margin-inline-start: 0;
+/* box-shadow: 24px 0px 16px -24px inset hsla(0, 0%, 50%, 0.8); */
+  border-left: 0.75em solid var(--blockquote-color);
+  border-bottom: 3px solid var(--blockquote-color);
 }
-/* 文章內文，次標題底線顏色 */
+/* 文章內文 h3 次標題底線顏色 */
 .post-body h3 {
-  border-bottom: 1px dotted #777;
+  border-bottom: 1px dotted var(--post-meta-text-color);
+  margin-inline-start: 0.375rem;
+  margin-inline-end: 0.375rem;
 }
-/* 文章內文，標題前方塊 */
-.post-body h2::before {
-  content: "▋ ";
+/* 文章內文，h2 標題後元素 */
+.post-body h2::after {
+  margin-right: 0.375em;
+  color: var(--text-color);
+  content: "123";
 }
 /* 文章內文，段落間距 */
 .post-body p {
-  margin: 0 0 0.5rem;
+  margin-inline-start: 0.375rem;
+  margin-inline-end: 0.375rem;
+  margin-left: 0.75rem;
 }
 /* 文章內文，引文部分 間距減掉線寬*/
 .post-body blockquote:not(.blockquote-center) {
-  border-left: 4px solid #555;
-  padding: 0 calc(1rem - 4px);
+  border-left: 3px solid var(--blockquote-color);
+  width: fit-content;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 16px 0px 12px -16px inset rgba(128,128,128,0.4), 12px 0px 10px -16px rgba(128,128,128,0.4), 0px 12px 10px -16px rgba(128,128,128,0.4), 0px -12px 10px -16px rgba(128,128,128,0.4);
+/* background-color: hsla(0, 0%, 50%, 0.1); */
+  padding: 0.25rem calc(1rem - 3px);
+  margin-inline-start: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+.post-body blockquote:not(.blockquote-center) p {
+  margin-inline-start: 0rem;
+  margin-bottom: 0px;
+}
+/* 置中引言 修正無內容時 排版壞掉 和線寬顏色變動 */
+.blockquote-center {
+  min-height: 1rem;
+}
+.blockquote-center::before {
+  border-top: 1px solid var(--blockquote-color);
+}
+.blockquote-center::after {
+  border-bottom: 1px solid var(--blockquote-color);
 }
 /* 文章下標籤(Tags) 容器樣式 */
 .post-tags {
