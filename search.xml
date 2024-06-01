@@ -138,7 +138,7 @@
 <li><input disabled="" type="checkbox"> 學習 Hexo Tag Plugins 寫法，並試著開始撰寫文章</li>
 <li><input disabled="" type="checkbox"> 學習 Reject 把寫好的代碼模組化提高複用性</li>
 </ul>
-<h2 id="6-refernce"><a href="#6-refernce" class="headerlink" title="6. ::: refernce :::"></a>6. ::: refernce :::</h2><ol>
+<h2 id="Refernce"><a href="#Refernce" class="headerlink" title="::: Refernce :::"></a><em>::: Refernce :::</em></h2><ol>
 <li><a href="https://hexo.io/zh-tw/" target="_blank" rel="noopener">Hexo 官方網站</a></li>
 <li><a href="https://theme-next.js.org/" target="_blank" rel="noopener">Hexo NexT 主題</a></li>
 <li><a href="https://israynotarray.com/hexo/20200914/3741834499/" target="_blank" rel="noopener">試著學 Hexo - 序章</a></li>
@@ -154,6 +154,25 @@
         <tag>Hexo-NexT</tag>
         <tag>Nodejs</tag>
         <tag>Tailwind css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>庫里肖夫效應</title>
+    <url>/zh-tw/3b9/</url>
+    <content><![CDATA[<p><figure><img data-src="/zh-tw/3b9/Snipaste_2024-05-13_07-03-02.jpg" alt="庫里肖夫效應" loading="lazy"><figcaption aria-hidden="true">庫里肖夫效應</figcaption></figure></p>
+<span id="more"></span>
+<h2 id="庫里肖夫實驗"><a href="#庫里肖夫實驗" class="headerlink" title="庫里肖夫實驗"></a>庫里肖夫實驗</h2><p>庫里肖夫將無任何表情的男性（演員伊萬·莫茲尤辛）面部畫面，分別剪輯接上一盆湯、一口棺材和一位小女孩的畫面，觀眾卻對這四組畫面產生了不同的情感認同，認為男性的「表情」具有不同的情緒性：接上湯時他是「饑渴」的，接上棺材時他是「悲傷」的，接上小女孩時他是「愉悅、憐愛」的。</p>
+<blockquote>
+<p>人在對事情做出評價的時候，決定的往往並不是客觀價值。<br>換言之，在別人問我們的感受以前，我們早就被已經獲得的經驗框限住了思考。<br>藝術如此，生活亦然。</p>
+</blockquote>
+<h2 id="Refernce"><a href="#Refernce" class="headerlink" title="::: Refernce :::"></a>::: Refernce :::</h2><p><a href="https://zh.wikipedia.org/zh-tw/%E5%BA%93%E9%87%8C%E8%82%96%E5%A4%AB%E6%95%88%E5%BA%94" target="_blank" rel="noopener">庫里肖夫效應wiki</a></p>
+]]></content>
+      <categories>
+        <category>Note</category>
+        <category>Ideas</category>
+      </categories>
+      <tags>
+        <tag>Random Ideas</tag>
       </tags>
   </entry>
   <entry>
@@ -224,7 +243,7 @@
 <li>將標籤 v1.20.1 推送到遠程倉庫：<code>git push origin v1.20.1</code></li>
 <li>刪除標籤 v1.20.1：<code>git tag -d v1.20.1</code></li>
 </ol>
-<h2 id="5-refernce"><a href="#5-refernce" class="headerlink" title="5. ::: refernce :::"></a>5. ::: refernce :::</h2><p><a href="https://www.bilibili.com/video/BV1RC411W7UE/" target="_blank" rel="noopener">给学完 Git，还不会用 GitHub 的朋友们【bilibili】</a></p>
+<h2 id="Refernce"><a href="#Refernce" class="headerlink" title="::: Refernce :::"></a>::: Refernce :::</h2><p><a href="https://www.bilibili.com/video/BV1RC411W7UE/" target="_blank" rel="noopener">给学完 Git，还不会用 GitHub 的朋友们【bilibili】</a></p>
 ]]></content>
       <categories>
         <category>Coding</category>
@@ -233,6 +252,106 @@
       <tags>
         <tag>git</tag>
         <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Minecraft】[1.20.1] 美化模組推薦 (fabric)</title>
+    <url>/zh-tw/9c61/</url>
+    <content><![CDATA[<p><figure><img data-src="/zh-tw/9c61/00-banner.jpg" alt="MLL sever" loading="lazy"><figcaption aria-hidden="true">MLL sever</figcaption></figure></p>
+<span id="more"></span>
+
+<h2 id="模組推薦-1-20-1"><a href="#模組推薦-1-20-1" class="headerlink" title="模組推薦 [1.20.1]"></a>模組推薦 [1.20.1]</h2><h3 id="01-Chat-Heads"><a href="#01-Chat-Heads" class="headerlink" title="01. Chat Heads"></a>01. <a href="https://modrinth.com/mod/chat-heads" target="_blank" rel="noopener">Chat Heads</a></h3><p>—【聊天欄玩家頭像】</p>
+<blockquote>
+<p>在訊息旁邊顯示玩家的頭像。</p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/01-Chat-Heads.jpg" alt="Chat Heads" loading="lazy"><figcaption aria-hidden="true">Chat Heads</figcaption></figure></p>
+<h3 id="02-Visuality"><a href="#02-Visuality" class="headerlink" title="02. Visuality"></a>02. <a href="https://modrinth.com/mod/visuality" target="_blank" rel="noopener">Visuality</a></h3><p>—【更多粒子效果】</p>
+<blockquote>
+<p>增加下雨水面漣漪、礦物鎧甲發光、生物受傷粒子等等的效果。</p>
+</blockquote>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/02-Visuality-1.png" class="" title="Visuality"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/02-Visuality-2.png" class="" title="Visuality"></div></div></div>
+
+<h3 id="03-Not-Enough-Animations"><a href="#03-Not-Enough-Animations" class="headerlink" title="03. Not Enough Animations"></a>03. <a href="https://modrinth.com/mod/not-enough-animations" target="_blank" rel="noopener">Not Enough Animations</a></h3><p>—【更多的玩家動作】</p>
+<blockquote>
+<p>增加手持物品、使用武器、進食、划船、騎馬、爬梯、等等人物動畫。</p>
+</blockquote>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/03-Not-Enough-Animations-1.webp" class="" title="Not Enough Animations"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/03-Not-Enough-Animations-2.webp" class="" title="Not Enough Animations"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/03-Not-Enough-Animations-3.webp" class="" title="Not Enough Animations"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/03-Not-Enough-Animations-4.webp" class="" title="Not Enough Animations"></div></div></div>
+
+<h3 id="04-Eating-Animation"><a href="#04-Eating-Animation" class="headerlink" title="04. Eating Animation"></a>04. <a href="https://modrinth.com/mod/eating-animation" target="_blank" rel="noopener">Eating Animation</a></h3><p>—【更多的進食動畫】</p>
+<blockquote>
+<p>增加進食時，食物慢慢消耗的新動畫。</p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/04-Eating-Animation.webp" alt="Eating Animation" loading="lazy"><figcaption aria-hidden="true">Eating Animation</figcaption></figure></p>
+<h3 id="05-3d-Skin-Layers"><a href="#05-3d-Skin-Layers" class="headerlink" title="05. 3d Skin Layers"></a>05. <a href="https://modrinth.com/mod/3dskinlayers" target="_blank" rel="noopener">3d Skin Layers</a></h3><p>—【3D皮膚層】</p>
+<blockquote>
+<p>讓你的第2層皮膚有立體的效果。</p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/05-3d-Skin-Layers.webp" alt="3d Skin Layers" loading="lazy"><figcaption aria-hidden="true">3d Skin Layers</figcaption></figure></p>
+<h3 id="06-Item-Model-Fix"><a href="#06-Item-Model-Fix" class="headerlink" title="06. Item Model Fix"></a>06. <a href="https://modrinth.com/mod/modelfix" target="_blank" rel="noopener">Item Model Fix</a></h3><p>—【修復物品模型隙縫】</p>
+<blockquote>
+<p>修復各種原版Mincraft物品模型的細小錯誤。</p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/06-Item-Model-Fix.png" alt="Item Model Fix" loading="lazy"><figcaption aria-hidden="true">Item Model Fix</figcaption></figure></p>
+<h3 id="07-Hat-List"><a href="#07-Hat-List" class="headerlink" title="07. Hat List"></a>07. <a href="https://modrinth.com/mod/hatlist" target="_blank" rel="noopener">Hat List</a></h3><p>—【Tab清單顯示皮膚修復】</p>
+<blockquote>
+<p>讓Tab名單中的第2層皮膚能夠正常顯示。</p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/07-Hat-List.gif" alt="Hat List" loading="lazy"><figcaption aria-hidden="true">Hat List</figcaption></figure></p>
+<h3 id="08-LambDynamicLights"><a href="#08-LambDynamicLights" class="headerlink" title="08. LambDynamicLights"></a>08. <a href="https://modrinth.com/mod/lambdynamiclights" target="_blank" rel="noopener">LambDynamicLights</a></h3><p>—【Lambda的動態光源】</p>
+<blockquote>
+<p>補充Fabric端所沒有的OptiFine功能。<br>讓你手持火把或光源時，能夠照亮周圍。<br>以及讓掉落的物品，或生物發光等等(視覺上)功能。</p>
+</blockquote>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/08-LambDynamicLights-1.webp" class="" title="LambDynamicLights"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/08-LambDynamicLights-2.webp" class="" title="LambDynamicLights"></div></div></div>
+
+<h3 id="09-Continuity"><a href="#09-Continuity" class="headerlink" title="09. Continuity"></a>09. <a href="https://modrinth.com/mod/continuity" target="_blank" rel="noopener">Continuity</a></h3><p>—【連接材質】</p>
+<blockquote>
+<p>補充Fabric端所沒有的OptiFine功能。<br>實現無縫玻璃、無縫書櫃、草皮過渡到其他方塊等等材質連接的功能。<br>模組自帶基本玻璃、書櫃、砂岩連接材質包。<br><strong>如果有裝Sodium(鈉)模組的話，還需要裝Indium(銦)才可以使用。</strong></p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/09-Continuity.webp" alt="Continuity" loading="lazy"><figcaption aria-hidden="true">Continuity</figcaption></figure></p>
+<h3 id="10-CIT-Resewn"><a href="#10-CIT-Resewn" class="headerlink" title="10. CIT Resewn"></a>10. <a href="https://modrinth.com/mod/cit-resewn" target="_blank" rel="noopener">CIT Resewn</a></h3><p>—【自定義物品材質】</p>
+<blockquote>
+<p>補充Fabric端所沒有的OptiFine功能。<br>讓更多的物品可以使用材質包改變圖案。</p>
+</blockquote>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/10-CIT-Resewn-1.webp" class="" title="Entity CIT Resewn"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/10-CIT-Resewn-2.png" class="" title="CIT Resewn"></div></div></div>
+
+<h3 id="11-Entity-Texture-Features"><a href="#11-Entity-Texture-Features" class="headerlink" title="11. Entity Texture Features"></a>11. <a href="https://modrinth.com/mod/entitytexturefeatures" target="_blank" rel="noopener">Entity Texture Features</a></h3><p>—【自定義生物材質】</p>
+<blockquote>
+<p>補充Fabric端所沒有的OptiFine功能。<br>讓材質包實現生物材質的發光、隨機等等的特殊效果。<br>玩家高級皮膚的效果。</p>
+</blockquote>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/11-Entity-Texture-Features-1.png" class="" title="Entity Texture Features"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/11-Entity-Texture-Features-2.png" class="" title="Entity Texture Features"></div></div></div>
+
+<h3 id="12-Entity-Model-Features"><a href="#12-Entity-Model-Features" class="headerlink" title="12. Entity Model Features"></a>12. <a href="https://modrinth.com/mod/entity-model-features" target="_blank" rel="noopener">Entity Model Features</a></h3><p>—【自定義生物模型】</p>
+<blockquote>
+<p>補充Fabric端所沒有的OptiFine功能。<br>讓材質包可以使用不同的生物模型。<br>需要與 <strong>Entity Texture Features</strong> 一起安裝。<br>非常推薦搭配 <strong>Fresh Animations</strong> 材質包使用。</p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/12-Entity-Model-Features.jpg" alt="Entity Model Features" loading="lazy"><figcaption aria-hidden="true">Entity Model Features</figcaption></figure></p>
+<h2 id="材質包推薦"><a href="#材質包推薦" class="headerlink" title="材質包推薦"></a>材質包推薦</h2><h3 id="01-Fresh-Animations"><a href="#01-Fresh-Animations" class="headerlink" title="01. Fresh Animations"></a>01. <a href="https://modrinth.com/resourcepack/fresh-animations" target="_blank" rel="noopener">Fresh Animations</a></h3><blockquote>
+<p>更生動的生物動畫<br>需求 <strong>Entity Texture Features</strong>、<strong>Entity Model Features</strong></p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/Fresh-Animations.jpg" alt="Fresh Animations" loading="lazy"><figcaption aria-hidden="true">Fresh Animations</figcaption></figure></p>
+<iframe src="https://www.youtube.com/embed/QHHdDbeaMfg" width="360" height="240" frameborder="0" loading="lazy" allowfullscreen></iframe>
+
+<h3 id="02-xali’s-Enchanted-Books"><a href="#02-xali’s-Enchanted-Books" class="headerlink" title="02. xali’s Enchanted Books"></a>02. <a href="https://modrinth.com/resourcepack/xalis-enchanted-books" target="_blank" rel="noopener">xali’s Enchanted Books</a></h3><blockquote>
+<p>附魔書材質<br>需求 <strong>CIT Resewn</strong></p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/xali's-Enchanted-Books.png" alt="xali&#39;s Enchanted Books" loading="lazy"><figcaption aria-hidden="true">xali&#39;s Enchanted Books</figcaption></figure></p>
+<h3 id="03-xali’s-Potions"><a href="#03-xali’s-Potions" class="headerlink" title="03. xali’s Potions"></a>03. <a href="https://modrinth.com/resourcepack/xalis-potion" target="_blank" rel="noopener">xali’s Potions</a></h3><blockquote>
+<p>附藥水材質<br>需求 <strong>CIT Resewn</strong></p>
+</blockquote>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/xali's-Potions-1.png" class="" title="xali" alt="s Potions"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/xali's-Potions-2.png" class="" title="xali" alt="s Potions"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/xali's-Potions-3.png" class="" title="xali" alt="s Potions"></div></div></div>
+
+<h3 id="04-Vanilla-Tweaks"><a href="#04-Vanilla-Tweaks" class="headerlink" title="04. Vanilla Tweaks"></a>04. <a href="https://vanillatweaks.net/picker/resource-packs/" target="_blank" rel="noopener">Vanilla Tweaks</a></h3><blockquote>
+<p>Vanilla Tweaks 原版(香草)調整<br>可以自己選擇需要的功能，自定義自己想要的材質包功能。<br>主要在原版的基礎上做些微的調整，沒有太強烈的風格，很適合原版生存使用。</p>
+</blockquote>
+<p><figure><img data-src="/zh-tw/9c61/Vanilla-Tweaks.png" alt="Vanilla Tweaks" loading="lazy"><figcaption aria-hidden="true">Vanilla Tweaks</figcaption></figure></p>
+]]></content>
+      <categories>
+        <category>Games</category>
+        <category>Minecraft</category>
+      </categories>
+      <tags>
+        <tag>Minecraft</tag>
+        <tag>fabric</tag>
       </tags>
   </entry>
   <entry>
@@ -605,7 +724,7 @@
 
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-name</span>=<span class="string">&quot;bmc-button&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-slug</span>=<span class="string">&quot;blackrow&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-color</span>=<span class="string">&quot;#FFDD00&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-emoji</span>=<span class="string">&quot;🍎&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-font</span>=<span class="string">&quot;Bree&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-text</span>=<span class="string">&quot;Buy me an Apple&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-outline-color</span>=<span class="string">&quot;#000000&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-font-color</span>=<span class="string">&quot;#000000&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data-coffee-color</span>=<span class="string">&quot;#ffffff&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.bmc-btn-container</span> <span class="selector-class">.bmc-btn</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">min-width</span>: <span class="number">11rem</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: <span class="number">#000000</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">background-color</span>: <span class="number">#ffdd00</span> <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">2rem</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-radius</span>: <span class="number">6px</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">1rem</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-weight</span>: Bold;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border</span>: none;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">padding</span>: <span class="number">0em</span> <span class="number">1em</span> <span class="number">0em</span> <span class="number">1em</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">line-height</span>: <span class="number">1.2rem</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">text-decoration</span>: none <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">display</span>: inline-flex <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">align-items</span>: center;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-family</span>: <span class="string">&quot;Bree Serif&quot;</span>, cursive <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">    -webkit-<span class="attribute">box-sizing</span>: border-box <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">box-sizing</span>: border-box <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.bmc-btn-text</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-left</span>: -<span class="number">0.5em</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">0.9rem</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">display</span>: inline-block;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">line-height</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">flex-shrink</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-family</span>: [FONT] <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="Refernce-█"><a href="#Refernce-█" class="headerlink" title="::: Refernce :::  █"></a>::: Refernce :::  █</h2><ol>
+<h2 id="Refernce"><a href="#Refernce" class="headerlink" title="::: Refernce :::"></a><em>::: Refernce :::</em></h2><ol>
 <li><a href="https://hexo.io/docs/tag-plugins" target="_blank" rel="noopener">Hexo - tag-plugins</a></li>
 <li><a href="https://theme-next.js.org/docs/tag-plugins/" target="_blank" rel="noopener">theme-Next - tag-plugins</a></li>
 <li><a href="https://fontawesome.com/search?o=r&m=free" target="_blank" rel="noopener">Font Awesome - Search</a></li>
@@ -621,158 +740,10 @@
       </tags>
   </entry>
   <entry>
-    <title>庫里肖夫效應</title>
-    <url>/zh-tw/3b9/</url>
-    <content><![CDATA[<p><figure><img data-src="/zh-tw/3b9/Snipaste_2024-05-13_07-03-02.jpg" alt="庫里肖夫效應" loading="lazy"><figcaption aria-hidden="true">庫里肖夫效應</figcaption></figure></p>
-<span id="more"></span>
-<h2 id="庫里肖夫實驗"><a href="#庫里肖夫實驗" class="headerlink" title="庫里肖夫實驗"></a>庫里肖夫實驗</h2><p>庫里肖夫將無任何表情的男性（演員伊萬·莫茲尤辛）面部畫面，分別剪輯接上一盆湯、一口棺材和一位小女孩的畫面，觀眾卻對這四組畫面產生了不同的情感認同，認為男性的「表情」具有不同的情緒性：接上湯時他是「饑渴」的，接上棺材時他是「悲傷」的，接上小女孩時他是「愉悅、憐愛」的。</p>
-<blockquote>
-<p>人在對事情做出評價的時候，決定的往往並不是客觀價值。<br>換言之，在別人問我們的感受以前，我們早就被已經獲得的經驗框限住了思考。<br>藝術如此，生活亦然。</p>
-</blockquote>
-<h2 id="refernce"><a href="#refernce" class="headerlink" title="::: refernce :::"></a>::: refernce :::</h2><p><a href="https://zh.wikipedia.org/zh-tw/%E5%BA%93%E9%87%8C%E8%82%96%E5%A4%AB%E6%95%88%E5%BA%94" target="_blank" rel="noopener">庫里肖夫效應wiki</a></p>
-]]></content>
-      <categories>
-        <category>Note</category>
-        <category>Ideas</category>
-      </categories>
-      <tags>
-        <tag>Random Ideas</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Minecraft】啟動器推薦 PrismLauncher (棱镜啟動器)</title>
-    <url>/zh-tw/1614/</url>
-    <content><![CDATA[<p><figure><img data-src="/zh-tw/1614/PrismLauncher.png" alt="Prism Launcher" loading="lazy"><figcaption aria-hidden="true">Prism Launcher</figcaption></figure></p>
-<span id="more"></span>
-
-<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><blockquote>
-<p>Prism Launcher is a custom launcher for Minecraft,<br>that allows you to easily manage multiple installations of Minecraft at once.</p>
-</blockquote>
-<blockquote>
-<p>Prism Launcher 是專為 Minecraft 定製的啟動器，可讓您一次輕鬆管理多個 Minecraft 版本安裝。</p>
-</blockquote>
-<p>輕量化、可攜帶。<br>易於管理與更新模組，安裝光影、資源包沒問題，設定檔、遊戲截圖也很方便。</p>
-<ul>
-<li><a href="https://prismlauncher.org/" target="_blank" rel="noopener">官方網站</a></li>
-<li><a href="https://forum.gamer.com.tw/C.php?bsn=18673&snA=197823" target="_blank" rel="noopener">巴哈姆特介紹文 (StarskyXIII)</a></li>
-</ul>
-<p><figure><img data-src="/zh-tw/1614/demo.gif" alt="操作方式" loading="lazy"><figcaption aria-hidden="true">操作方式</figcaption></figure></p>
-]]></content>
-      <categories>
-        <category>Games</category>
-        <category>Minecraft</category>
-      </categories>
-      <tags>
-        <tag>Minecraft</tag>
-        <tag>PrismLauncher</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Minecraft】[1.20.1] 美化模組推薦 (fabric)</title>
-    <url>/zh-tw/9c61/</url>
-    <content><![CDATA[<p><figure><img data-src="/zh-tw/9c61/00-banner.jpg" alt="MLL sever" loading="lazy"><figcaption aria-hidden="true">MLL sever</figcaption></figure></p>
-<span id="more"></span>
-
-<h2 id="模組推薦-1-20-1"><a href="#模組推薦-1-20-1" class="headerlink" title="模組推薦 [1.20.1]"></a>模組推薦 [1.20.1]</h2><h3 id="01-Chat-Heads"><a href="#01-Chat-Heads" class="headerlink" title="01. Chat Heads"></a>01. <a href="https://modrinth.com/mod/chat-heads" target="_blank" rel="noopener">Chat Heads</a></h3><p>—【聊天欄玩家頭像】</p>
-<blockquote>
-<p>在訊息旁邊顯示玩家的頭像。</p>
-</blockquote>
-<p><figure><img data-src="/zh-tw/9c61/01-Chat-Heads.jpg" alt="Chat Heads" loading="lazy"><figcaption aria-hidden="true">Chat Heads</figcaption></figure></p>
-<h3 id="02-Visuality"><a href="#02-Visuality" class="headerlink" title="02. Visuality"></a>02. <a href="https://modrinth.com/mod/visuality" target="_blank" rel="noopener">Visuality</a></h3><p>—【更多粒子效果】</p>
-<blockquote>
-<p>增加下雨水面漣漪、礦物鎧甲發光、生物受傷粒子等等的效果。</p>
-</blockquote>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/02-Visuality-1.png" class="" title="Visuality"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/02-Visuality-2.png" class="" title="Visuality"></div></div></div>
-
-<h3 id="03-Not-Enough-Animations"><a href="#03-Not-Enough-Animations" class="headerlink" title="03. Not Enough Animations"></a>03. <a href="https://modrinth.com/mod/not-enough-animations" target="_blank" rel="noopener">Not Enough Animations</a></h3><p>—【更多的玩家動作】</p>
-<blockquote>
-<p>增加手持物品、使用武器、進食、划船、騎馬、爬梯、等等人物動畫。</p>
-</blockquote>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/03-Not-Enough-Animations-1.webp" class="" title="Not Enough Animations"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/03-Not-Enough-Animations-2.webp" class="" title="Not Enough Animations"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/03-Not-Enough-Animations-3.webp" class="" title="Not Enough Animations"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/03-Not-Enough-Animations-4.webp" class="" title="Not Enough Animations"></div></div></div>
-
-<h3 id="04-Eating-Animation"><a href="#04-Eating-Animation" class="headerlink" title="04. Eating Animation"></a>04. <a href="https://modrinth.com/mod/eating-animation" target="_blank" rel="noopener">Eating Animation</a></h3><p>—【更多的進食動畫】</p>
-<blockquote>
-<p>增加進食時，食物慢慢消耗的新動畫。</p>
-</blockquote>
-<p><figure><img data-src="/zh-tw/9c61/04-Eating-Animation.webp" alt="Eating Animation" loading="lazy"><figcaption aria-hidden="true">Eating Animation</figcaption></figure></p>
-<h3 id="05-3d-Skin-Layers"><a href="#05-3d-Skin-Layers" class="headerlink" title="05. 3d Skin Layers"></a>05. <a href="https://modrinth.com/mod/3dskinlayers" target="_blank" rel="noopener">3d Skin Layers</a></h3><p>—【3D皮膚層】</p>
-<blockquote>
-<p>讓你的第2層皮膚有立體的效果。</p>
-</blockquote>
-<p><figure><img data-src="/zh-tw/9c61/05-3d-Skin-Layers.webp" alt="3d Skin Layers" loading="lazy"><figcaption aria-hidden="true">3d Skin Layers</figcaption></figure></p>
-<h3 id="06-Item-Model-Fix"><a href="#06-Item-Model-Fix" class="headerlink" title="06. Item Model Fix"></a>06. <a href="https://modrinth.com/mod/modelfix" target="_blank" rel="noopener">Item Model Fix</a></h3><p>—【修復物品模型隙縫】</p>
-<blockquote>
-<p>修復各種原版Mincraft物品模型的細小錯誤。</p>
-</blockquote>
-<p><figure><img data-src="/zh-tw/9c61/06-Item-Model-Fix.png" alt="Item Model Fix" loading="lazy"><figcaption aria-hidden="true">Item Model Fix</figcaption></figure></p>
-<h3 id="07-Hat-List"><a href="#07-Hat-List" class="headerlink" title="07. Hat List"></a>07. <a href="https://modrinth.com/mod/hatlist" target="_blank" rel="noopener">Hat List</a></h3><p>—【Tab清單顯示皮膚修復】</p>
-<blockquote>
-<p>讓Tab名單中的第2層皮膚能夠正常顯示。</p>
-</blockquote>
-<p><figure><img data-src="/zh-tw/9c61/07-Hat-List.gif" alt="Hat List" loading="lazy"><figcaption aria-hidden="true">Hat List</figcaption></figure></p>
-<h3 id="08-LambDynamicLights"><a href="#08-LambDynamicLights" class="headerlink" title="08. LambDynamicLights"></a>08. <a href="https://modrinth.com/mod/lambdynamiclights" target="_blank" rel="noopener">LambDynamicLights</a></h3><p>—【Lambda的動態光源】</p>
-<blockquote>
-<p>補充Fabric端所沒有的OptiFine功能。<br>讓你手持火把或光源時，能夠照亮周圍。<br>以及讓掉落的物品，或生物發光等等(視覺上)功能。</p>
-</blockquote>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/08-LambDynamicLights-1.webp" class="" title="LambDynamicLights"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/08-LambDynamicLights-2.webp" class="" title="LambDynamicLights"></div></div></div>
-
-<h3 id="09-Continuity"><a href="#09-Continuity" class="headerlink" title="09. Continuity"></a>09. <a href="https://modrinth.com/mod/continuity" target="_blank" rel="noopener">Continuity</a></h3><p>—【連接材質】</p>
-<blockquote>
-<p>補充Fabric端所沒有的OptiFine功能。<br>實現無縫玻璃、無縫書櫃、草皮過渡到其他方塊等等材質連接的功能。<br>模組自帶基本玻璃、書櫃、砂岩連接材質包。<br><strong>如果有裝Sodium(鈉)模組的話，還需要裝Indium(銦)才可以使用。</strong></p>
-</blockquote>
-<p><figure><img data-src="/zh-tw/9c61/09-Continuity.webp" alt="Continuity" loading="lazy"><figcaption aria-hidden="true">Continuity</figcaption></figure></p>
-<h3 id="10-CIT-Resewn"><a href="#10-CIT-Resewn" class="headerlink" title="10. CIT Resewn"></a>10. <a href="https://modrinth.com/mod/cit-resewn" target="_blank" rel="noopener">CIT Resewn</a></h3><p>—【自定義物品材質】</p>
-<blockquote>
-<p>補充Fabric端所沒有的OptiFine功能。<br>讓更多的物品可以使用材質包改變圖案。</p>
-</blockquote>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/10-CIT-Resewn-1.webp" class="" title="Entity CIT Resewn"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/10-CIT-Resewn-2.png" class="" title="CIT Resewn"></div></div></div>
-
-<h3 id="11-Entity-Texture-Features"><a href="#11-Entity-Texture-Features" class="headerlink" title="11. Entity Texture Features"></a>11. <a href="https://modrinth.com/mod/entitytexturefeatures" target="_blank" rel="noopener">Entity Texture Features</a></h3><p>—【自定義生物材質】</p>
-<blockquote>
-<p>補充Fabric端所沒有的OptiFine功能。<br>讓材質包實現生物材質的發光、隨機等等的特殊效果。<br>玩家高級皮膚的效果。</p>
-</blockquote>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/11-Entity-Texture-Features-1.png" class="" title="Entity Texture Features"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/11-Entity-Texture-Features-2.png" class="" title="Entity Texture Features"></div></div></div>
-
-<h3 id="12-Entity-Model-Features"><a href="#12-Entity-Model-Features" class="headerlink" title="12. Entity Model Features"></a>12. <a href="https://modrinth.com/mod/entity-model-features" target="_blank" rel="noopener">Entity Model Features</a></h3><p>—【自定義生物模型】</p>
-<blockquote>
-<p>補充Fabric端所沒有的OptiFine功能。<br>讓材質包可以使用不同的生物模型。<br>需要與 <strong>Entity Texture Features</strong> 一起安裝。<br>非常推薦搭配 <strong>Fresh Animations</strong> 材質包使用。</p>
-</blockquote>
-<p><figure><img data-src="/zh-tw/9c61/12-Entity-Model-Features.jpg" alt="Entity Model Features" loading="lazy"><figcaption aria-hidden="true">Entity Model Features</figcaption></figure></p>
-<h2 id="材質包推薦"><a href="#材質包推薦" class="headerlink" title="材質包推薦"></a>材質包推薦</h2><h3 id="01-Fresh-Animations"><a href="#01-Fresh-Animations" class="headerlink" title="01. Fresh Animations"></a>01. <a href="https://modrinth.com/resourcepack/fresh-animations" target="_blank" rel="noopener">Fresh Animations</a></h3><blockquote>
-<p>更生動的生物動畫<br>需求 <strong>Entity Texture Features</strong>、<strong>Entity Model Features</strong></p>
-</blockquote>
-<p><figure><img data-src="/zh-tw/9c61/Fresh-Animations.jpg" alt="Fresh Animations" loading="lazy"><figcaption aria-hidden="true">Fresh Animations</figcaption></figure></p>
-<iframe src="https://www.youtube.com/embed/QHHdDbeaMfg" width="360" height="240" frameborder="0" loading="lazy" allowfullscreen></iframe>
-
-<h3 id="02-xali’s-Enchanted-Books"><a href="#02-xali’s-Enchanted-Books" class="headerlink" title="02. xali’s Enchanted Books"></a>02. <a href="https://modrinth.com/resourcepack/xalis-enchanted-books" target="_blank" rel="noopener">xali’s Enchanted Books</a></h3><blockquote>
-<p>附魔書材質<br>需求 <strong>CIT Resewn</strong></p>
-</blockquote>
-<p><figure><img data-src="/zh-tw/9c61/xali's-Enchanted-Books.png" alt="xali&#39;s Enchanted Books" loading="lazy"><figcaption aria-hidden="true">xali&#39;s Enchanted Books</figcaption></figure></p>
-<h3 id="03-xali’s-Potions"><a href="#03-xali’s-Potions" class="headerlink" title="03. xali’s Potions"></a>03. <a href="https://modrinth.com/resourcepack/xalis-potion" target="_blank" rel="noopener">xali’s Potions</a></h3><blockquote>
-<p>附藥水材質<br>需求 <strong>CIT Resewn</strong></p>
-</blockquote>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/xali's-Potions-1.png" class="" title="xali" alt="s Potions"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/9c61/xali's-Potions-2.png" class="" title="xali" alt="s Potions"></div><div class="group-picture-column"><img data-src="/zh-tw/9c61/xali's-Potions-3.png" class="" title="xali" alt="s Potions"></div></div></div>
-
-<h3 id="04-Vanilla-Tweaks"><a href="#04-Vanilla-Tweaks" class="headerlink" title="04. Vanilla Tweaks"></a>04. <a href="https://vanillatweaks.net/picker/resource-packs/" target="_blank" rel="noopener">Vanilla Tweaks</a></h3><blockquote>
-<p>Vanilla Tweaks 原版(香草)調整<br>可以自己選擇需要的功能，自定義自己想要的材質包功能。<br>主要在原版的基礎上做些微的調整，沒有太強烈的風格，很適合原版生存使用。</p>
-</blockquote>
-<p><figure><img data-src="/zh-tw/9c61/Vanilla-Tweaks.png" alt="Vanilla Tweaks" loading="lazy"><figcaption aria-hidden="true">Vanilla Tweaks</figcaption></figure></p>
-]]></content>
-      <categories>
-        <category>Games</category>
-        <category>Minecraft</category>
-      </categories>
-      <tags>
-        <tag>Minecraft</tag>
-        <tag>fabric</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【Minecraft】更多頭顱掉落插件 More Mob Heads</title>
     <url>/zh-tw/63f8/</url>
     <content><![CDATA[<p><figure><img data-src="/zh-tw/63f8/More-Mob-Heads.jpg" alt="Even More Mob Heads  - Xisumavoid" loading="lazy"><figcaption aria-hidden="true">Even More Mob Heads  - Xisumavoid</figcaption></figure></p>
 <span id="more"></span>
-
 <h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><blockquote>
 <p>讓所有的 Minecraft 生物都會掉落頭顱，供玩家蒐集裝飾。<br>另外可以客製化文件，讓流浪商人有機率販售特殊的頭顱。</p>
 </blockquote>
@@ -786,11 +757,11 @@
 </li>
 </ul>
 <h2 id="自製的客製化文件"><a href="#自製的客製化文件" class="headerlink" title="自製的客製化文件"></a>自製的客製化文件</h2><blockquote>
-<p>提供給伺服器成員使用。<br>修改流浪商人的販售物，並且設定好出現頻率。<br>將檔案放到… [伺服器資料夾] <code>\plugins\MoreMobHeads\custom_trades.yml</code></p>
+<p>提供給伺服器成員使用。<br>修改流浪商人的販售物，並且設定好出現頻率。<br>將檔案放到 ..[伺服器資料夾] <code>\plugins\MoreMobHeads\custom_trades.yml</code></p>
 </blockquote>
 
 
-<p><a class="btn" href="../custom_trades.yml" title="自定義 流浪商人販售" download><i class="fa-solid fa-download"></i>custom_trades.yml</a></p>
+<p><a class="btn" href="./custom_trades.yml" title="自定義 流浪商人販售" download><i class="fa-solid fa-download"></i>custom_trades.yml</a></p>
 <!-- <a class="btn" href="../../+downloads/code/custom_trades.yml" title="自定義頭顱掉落"><i class="fa-solid fa-file-arrow-down"></i>custom_trades.yml</a> -->
 
 <div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/63f8/heads-01.png" class="" title="Custom Heads 符號類-木頭色"></div><div class="group-picture-column"><img data-src="/zh-tw/63f8/heads-02.png" class="" title="Custom Heads 符號類-黑色"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/63f8/heads-03.png" class="" title="Custom Heads 符號類-白色"></div><div class="group-picture-column"><img data-src="/zh-tw/63f8/heads-04.png" class="" title="Custom Heads 食物類"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/zh-tw/63f8/heads-05.png" class="" title="Custom Heads 裝飾類"></div><div class="group-picture-column"><img data-src="/zh-tw/63f8/heads-06.png" class="" title="Custom Heads 娃娃類"></div></div></div>
@@ -798,9 +769,9 @@
 <h2 id="插件掉落頭顱的-中文翻譯"><a href="#插件掉落頭顱的-中文翻譯" class="headerlink" title="插件掉落頭顱的 中文翻譯"></a>插件掉落頭顱的 中文翻譯</h2><blockquote>
 <p>自翻，將掉落的頭顱翻譯成中文。(<del>熱帶魚超多看都沒看過的名字</del>)<br>將檔案放到 ..[伺服器資料夾]<code>\plugins\MoreMobHeads\lang\zh_TW_mobnames.yml</code></p>
 </blockquote>
+<p><a class="btn" href="./zh_TW_mobnames.yml" title="自定義 頭顱掉落" download><i class="fa-solid fa-download"></i>custom_trades.yml</a></p>
 <figure class="highlight yml"><figcaption><span>zh_TW_mobnames.yml</span><a href="/+downloads/code/zh_TW_mobnames.yml">view raw</a></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Add the translations for your language here</span></span><br><span class="line"><span class="comment"># 在此處添加您的語言的翻譯</span></span><br><span class="line"><span class="attr">killedby:</span> <span class="string">死於</span></span><br><span class="line"><span class="attr">player:</span> <span class="string">玩家頭顱</span></span><br><span class="line"><span class="attr">allay:</span> <span class="string">悅靈頭顱</span></span><br><span class="line"><span class="attr">axolotl:</span></span><br><span class="line">  <span class="attr">blue:</span> <span class="string">藍色六角恐龍頭顱</span></span><br><span class="line">  <span class="attr">cyan:</span> <span class="string">青色六角恐龍頭顱</span></span><br><span class="line">  <span class="attr">gold:</span> <span class="string">金色角恐龍頭顱</span></span><br><span class="line">  <span class="attr">lucy:</span> <span class="string">粉紅色六角恐龍頭顱</span></span><br><span class="line">  <span class="attr">wild:</span> <span class="string">棕色六角恐龍頭顱</span></span><br><span class="line"><span class="attr">bat:</span> <span class="string">蝙蝠頭顱</span></span><br><span class="line"><span class="attr">bee:</span></span><br><span class="line">  <span class="attr">angry_pollinated:</span> <span class="string">憤怒授粉的蜜蜂頭顱</span></span><br><span class="line">  <span class="attr">angry:</span> <span class="string">憤怒蜜蜂頭顱</span></span><br><span class="line">  <span class="attr">pollinated:</span> <span class="string">授粉的蜜蜂頭顱</span></span><br><span class="line">  <span class="attr">none:</span> <span class="string">蜜蜂頭顱</span></span><br><span class="line"><span class="attr">blaze:</span> <span class="string">烈焰人頭顱</span></span><br><span class="line"><span class="attr">camel:</span> <span class="string">駱駝頭顱</span></span><br><span class="line"><span class="attr">cat:</span></span><br><span class="line">  <span class="attr">all_black:</span> <span class="string">黑貓頭顱</span></span><br><span class="line">  <span class="attr">black:</span> <span class="string">燕尾服貓頭顱</span></span><br><span class="line">  <span class="attr">british_shorthair:</span> <span class="string">英國短毛貓貓頭顱</span></span><br><span class="line">  <span class="attr">calico:</span> <span class="string">花貓布貓頭顱</span></span><br><span class="line">  <span class="attr">jellie:</span> <span class="string">灰橘虎斑貓頭顱</span></span><br><span class="line">  <span class="attr">persian:</span> <span class="string">波斯貓頭顱</span></span><br><span class="line">  <span class="attr">ragdoll:</span> <span class="string">布偶貓頭顱</span></span><br><span class="line">  <span class="attr">red:</span> <span class="string">橘虎斑貓頭顱</span></span><br><span class="line">  <span class="attr">siamese:</span> <span class="string">暹羅貓頭顱</span></span><br><span class="line">  <span class="attr">tabby:</span> <span class="string">虎斑貓頭顱</span></span><br></pre></td></tr></table></figure>
 
-<p><a class="btn" href="../code/zh_TW_mobnames.yml" title="自定義 頭顱掉落" download><i class="fa-solid fa-download"></i>custom_trades.yml</a></p>
 <!-- <a class="btn" href="../../+downloads/code/zh_TW_mobnames.yml" title="自定義頭顱掉落"><i class="fa-solid fa-file-arrow-down"></i>zh_TW_mobnames.yml</a> -->]]></content>
       <categories>
         <category>Games</category>
@@ -837,7 +808,7 @@
 <p>人只要在什麼事情上獲得成功，馬上就會告訴自己「那是我人生的轉捩點」、「因為我那麼做才成功」，總是喜歡回顧過去，並且就此滿足，我並不認為這是好的。</p>
 <p>轉捩點不只一個只要抱著這樣的想法，就能理解到所謂工作，是建立在不斷挑戰的基礎之上才能成立，自己的判斷主軸便不致偏離。從今而後，也將持續迎向各種挑戰。</p>
 <p>— 二〇一三年四月<br><em>SEVEN &amp; i 集團總裁CEO</em><br><strong>鈴木敏文</strong></p>
-<h2 id="refernce"><a href="#refernce" class="headerlink" title="::: refernce :::"></a>::: refernce :::</h2><p><a href="https://www.sanmin.com.tw/product/index/005134686" target="_blank" rel="noopener">改變的力量：7-Eleven的致勝思考法 <em>三民網路書店</em></a></p>
+<h2 id="Refernce"><a href="#Refernce" class="headerlink" title="::: Refernce :::"></a>::: Refernce :::</h2><p><a href="https://www.sanmin.com.tw/product/index/005134686" target="_blank" rel="noopener">改變的力量：7-Eleven的致勝思考法 <em>三民網路書店</em></a></p>
 ]]></content>
       <categories>
         <category>Note</category>
@@ -845,6 +816,34 @@
       </categories>
       <tags>
         <tag>讀書筆記</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Minecraft】啟動器推薦 PrismLauncher (棱镜啟動器)</title>
+    <url>/zh-tw/1614/</url>
+    <content><![CDATA[<p><figure><img data-src="/zh-tw/1614/PrismLauncher.png" alt="Prism Launcher" loading="lazy"><figcaption aria-hidden="true">Prism Launcher</figcaption></figure></p>
+<span id="more"></span>
+
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><blockquote>
+<p>Prism Launcher is a custom launcher for Minecraft,<br>that allows you to easily manage multiple installations of Minecraft at once.</p>
+</blockquote>
+<blockquote>
+<p>Prism Launcher 是專為 Minecraft 定製的啟動器，可讓您一次輕鬆管理多個 Minecraft 版本安裝。</p>
+</blockquote>
+<p>輕量化、可攜帶。<br>易於管理與更新模組，安裝光影、資源包沒問題，設定檔、遊戲截圖也很方便。</p>
+<ul>
+<li><a href="https://prismlauncher.org/" target="_blank" rel="noopener">官方網站</a></li>
+<li><a href="https://forum.gamer.com.tw/C.php?bsn=18673&snA=197823" target="_blank" rel="noopener">巴哈姆特介紹文 (StarskyXIII)</a></li>
+</ul>
+<p><figure><img data-src="/zh-tw/1614/demo.gif" alt="操作方式" loading="lazy"><figcaption aria-hidden="true">操作方式</figcaption></figure></p>
+]]></content>
+      <categories>
+        <category>Games</category>
+        <category>Minecraft</category>
+      </categories>
+      <tags>
+        <tag>Minecraft</tag>
+        <tag>PrismLauncher</tag>
       </tags>
   </entry>
   <entry>
@@ -877,12 +876,12 @@
 <h3 id="1-1-法國大革命以後"><a href="#1-1-法國大革命以後" class="headerlink" title="1.1. 法國大革命以後"></a>1.1. 法國大革命以後</h3><p>在那一小群應對法國大革命的爆發負責的狂熱倡導者中，德·孔多塞侯爵<code>①</code>是人格最高尚的人物之一。他為窮苦和不幸人們的事業獻出了自己的生命。他還是德·朗貝爾和狄德羅編纂《百科全書》時的主要助手之一。在大革命爆發的最初幾年，他一直是國民公會裡的溫和派首領。</p>
 <p>當國王和保皇分子的叛國陰謀使得激進分子有機會控制政府並大肆屠殺反對派人士的時候，孔多塞侯爵的寬容、仁慈和堅定使他淪為了受懷疑的對象。孔多塞被宣佈為「不受法律保護的人」，可以任由每一個真正的愛國者隨心所欲地處置。他的朋友願意冒著生命危險藏匿他，可孔多塞拒絕接受朋友們的犧牲。他偷偷逃出巴黎，試圖回到老家，那裡也許是安全的。三個夜晚，他餐風露宿，衣衫襤褸，身上被劃得傷痕累累。最後，他走進一家鄉村小客店要些東西吃。警惕的鄉民搜查了他，找出一本他隨身攜帶的古拉丁詩人賀拉斯的詩集。這證明他們的囚犯是一個出身高貴的人，而在一個所有受過教育的人們都被視為革命之敵的時代，他是不應該出現在馬路上的。鄉民們將孔多塞捆綁起來，塞住他的嘴，將他扔進鄉村拘押所。第二天早晨，當士兵們趕來把他押回巴黎斬首時，孔多塞已經死了。</p>
 <p>這個人為人類的幸福獻出了一切，卻落得如此悲慘的下場，他本來是完全有理由憎惡人類的。可他寫過一段話，到今天仍然與130年前一樣鏗鏘在耳。</p>
-<p><figure><img data-src="/zh-tw/56e4/Markdown-Editor_1716847441731.jpg" alt="自由的嚮往 攝影 19世紀末" loading="lazy"><figcaption aria-hidden="true">自由的嚮往 攝影 19世紀末</figcaption></figure></p>
-<p>我把它們抄錄在下，以饗讀者。<br>「自然賦予人類無限的希望。現在，人類掙脫枷鎖，並以堅定的步伐向真理、德性、幸福的大道邁進的情景，給哲學家提供了一幅光明的前景，使他從至今仍在茶毒這個世界的種種錯誤、謬行和不公中超拔出來，得到莫大<br>的安慰。」</p>
+<p>我把它們抄錄在下，以饗讀者。<br>「自然賦予人類無限的希望。現在，人類掙脫枷鎖，並以堅定的步伐向真理、德性、幸福的大道邁進的情景，給哲學家提供了一幅光明的前景，使他從至今仍在茶毒這個世界的種種錯誤、謬行和不公中超拔出來，得到莫大的安慰。」</p>
 <p>我們身處的世界剛經歷了一場劇烈的痛苦，與之相比，法國大革命不過是一次偶然事件。人們感受到巨大的震驚與幻滅之情，它撲滅了成百上千萬人心中最後一線希望之火。他們也會為人類進步高唱讚歌，可隨著他們的和平祈禱而來的，卻是4年殘酷無比的戰爭。因此，他們不禁要自問：「值得嗎？我們爲尙未超越穴居階段的人類所付出的種種艱辛和勞役，這些究竟是不是值得？」</p>
 <p>答案只有一個。</p>
 <p>那就是「值得」。</p>
 <p>第一次世界大戰無疑是一場可怕的災難，可它並不意味著世界末日。正相反，它開啟了一個新的時代。</p>
+<p><figure><img data-src="/zh-tw/56e4/Markdown-Editor_1716847441731.jpg" alt="自由的嚮往 攝影 19世紀末" loading="lazy"><figcaption aria-hidden="true">自由的嚮往 攝影 19世紀末</figcaption></figure></p>
 <blockquote>
 <p><code>註①</code> 1743~1794，法國哲學家、數學家，法國大革命時期立法會議中的吉倫特派，主要著作為《人類精神進步歷史概觀》。<br><code>註②</code> 指第一次世界大戰。</p>
 <p><strong>自由的嚮往</strong><br><em>攝影19世紀末</em></p>
@@ -1060,7 +1059,7 @@
 
 <p>— <a href="https://baike.baidu.hk/item/%E5%85%A9%E5%80%8B%E6%93%B2%E5%BD%88%E5%85%B5/15400088" target="_blank" rel="noopener">Source: Baidu百科</a></p>
 <h2 id="13-女先知-自歷史了解世界"><a href="#13-女先知-自歷史了解世界" class="headerlink" title="13. 女先知 自歷史了解世界"></a>13. 女先知 自歷史了解世界</h2><p>忘掉這個女人不是更好嗎？當然是這樣的。不過這個世界上已經有夠多的歷史書，它們能精確而詳盡地告訴你那些歷史大事，而我希望你們從歷史中瞭解到比一連串的歷史事實稍微多一些的東西。我要你們帶著一顆毫無偏見的心靈去接近歷史、觸摸歷史，絕不僅僅滿足於「何時何地發生了什麼」這樣簡單的陳述。去發掘隱藏在每個行為下面的動機，而後你對世界的瞭解就會更上一層，你也將更有機會去幫助別人。歸根究柢，這才是唯一真正令人滿意的生活方式。</p>
-<h2 id="14-refernce"><a href="#14-refernce" class="headerlink" title="14. ::: refernce :::"></a>14. ::: refernce :::</h2><p><a href="https://zh.wikipedia.org/zh-tw/%E4%BA%BA%E9%A1%9E%E7%9A%84%E6%95%85%E4%BA%8B" target="_blank" rel="noopener">《人類的故事》The Story of Mankind -wiki</a></p>
+<h2 id="Refernce"><a href="#Refernce" class="headerlink" title="::: Refernce :::"></a>::: Refernce :::</h2><p><a href="https://zh.wikipedia.org/zh-tw/%E4%BA%BA%E9%A1%9E%E7%9A%84%E6%95%85%E4%BA%8B" target="_blank" rel="noopener">《人類的故事》The Story of Mankind -wiki</a></p>
 ]]></content>
       <categories>
         <category>Note</category>
