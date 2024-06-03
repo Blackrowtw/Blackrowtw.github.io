@@ -1,40 +1,3 @@
-.bk-link-card:hover + #bk-link-card-bg-01 {
-  background-color: #48b2f8;
-}
-.bk-link-card:hover + #bk-link-card-bg-02 {
-  background-color: #0096fa;
-}
-.bk-link-card:hover + #bk-link-card-bg-03 {
-  background-color: #9146ff;
-}
-.bk-link-card:hover + #bk-link-card-bg-04 {
-  background-color: #da4843;
-}
-.bk-link-card:hover + #bk-link-card-bg-05 {
-  background-color: #da4843;
-}
-.bk-link-card:hover + #bk-link-card-bg-06 {
-  background-color: #24292e;
-}
-.bk-link-card:hover + #bk-link-card-bg-07 {
-  background-color: #fbf38a;
-}
-.bk-link-card:hover + #bk-link-card-bg-08 {
-  background-color: #3a8fa7;
-}
-.bk-link-card:hover + #bk-link-card-bg-09 {
-  background-color: #ff9b76;
-}
-.bk-link-card:hover + #bk-link-card-bg-10 {
-  background-color: #89c623;
-}
-.bk-link-card:hover + #bk-link-card-bg-11 {
-  background-color: #89c623;
-}
-.bk-link-card:hover + #bk-link-card-bg-12 {
-  background-color: #abd5e7;
-}
-
 /* CSS 參考來源 */
 /* https://codepen.io/kevinpowell/pen/BapvMve */
 
@@ -103,18 +66,17 @@
     inset black 0px -12px 12px -8px;
   border-radius: 0.5rem;
   transition: 500ms ease-in 300ms;
-  transition-property: opacity;
-  opacity: 1;
+  transition-property: background-color;
 }
 
 /* 卡片背景 偽元素 投影 */
-.bk-link-card-bg::after {
+.bk-link-card-bg-inner::after {
   content: "";
   position: absolute;
   z-index: -1;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  opacity: 0.5;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 24px 16px -8px;
   transition: opacity 300ms ease-in-out;
@@ -132,7 +94,7 @@
 
 /* 卡片背景-裡面 懸浮效果 作用時取消外框 背景 */
 .bk-link-card:hover + .bk-link-card-bg > .bk-link-card-bg-inner {
-  opacity: 0;
+  background-color: transparent;
   box-shadow: inset #444 0 0 0 0px;
 }
 
@@ -262,7 +224,7 @@
   }
 
   /* 卡片背景 偽元素 投影 懸浮效果 */
-  .bk-link-card:hover + .bk-link-card-bg::after {
+  .bk-link-card:hover + .bk-link-card-bg .bk-link-card-bg-inner::after {
     opacity: 1;
   }
 
@@ -274,7 +236,7 @@
 
   /* 卡片內容 懸浮效果  */
   .bk-link-card:hover .bk-link-card-body {
-    transform: translateY(-10%);
+    transform: translateY(-20%);
     transition-delay: 1200ms;
   }
 

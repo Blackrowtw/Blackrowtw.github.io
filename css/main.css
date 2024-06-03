@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #16ffbb;
+    background: #f9b846;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -4094,12 +4094,12 @@ a:not(.btn:hover,
   font-size: inherit !important;
   background: transparent;
   border-bottom: 1em solid #151515;
-  border-right: 0.5em solid transparent;
+  border-right: calc(0.5em + 0px) solid transparent;
   border-top: 1em solid #151515;
   position: absolute;
-  top: calc(50% - 1em);
+  top: 0px;
   bottom: 0px;
-  right: calc(-0.5em + 0px);
+  right: calc(-0.5em + 1px);
 }
 /* 標籤頁面(page-Tags) 懸浮色 */
 .tag-cloud-tags a:hover {
