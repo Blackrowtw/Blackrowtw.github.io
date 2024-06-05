@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #d7ffff;
+    background: #9fffff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3378,7 +3378,7 @@ header.header {
     --content-bg-color: rgba(30,30,30,0.85);
     --card-bg-color: #555;
     --text-color: #ccc;
-    --blockquote-color: #bbb;
+    --blockquote-color: #777;
     --link-color: #ccc;
     --link-hover-color: #eee;
     --brand-color: #ddd;

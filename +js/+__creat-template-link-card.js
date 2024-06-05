@@ -1,4 +1,6 @@
+// Card資料
 import { link_card_info } from "./+__link-card-info.js";
+
 // 定義生成 HTML 模板的函數
 function creatTemplate_link_card(link_data) {
   return `
