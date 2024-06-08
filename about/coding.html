@@ -67,6 +67,10 @@
 <!-- https://www.vantajs.com/ -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+<!-- Google 自訂引入字型 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
@@ -107,7 +111,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-blog"><a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Blog</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa-solid fa-crow fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">12</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa-regular fa-folder fa-fw"></i>分類<span class="badge">10</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa-solid fa-arrow-down-short-wide fa-fw"></i>歸檔<span class="badge">16</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-blog"><a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Blog</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa-solid fa-crow fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">12</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa-regular fa-folder fa-fw"></i>分類<span class="badge">9</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa-solid fa-arrow-down-short-wide fa-fw"></i>歸檔<span class="badge">17</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
         </a>
@@ -172,13 +176,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -205,13 +209,6 @@
         <a href="mailto:blackrow.020@gmail.com" title="E-Mail → mailto:blackrow.020@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
       </span>
   </div>
-<!-- 引入 bk-dark-mode-buttom 模板 CSS -->
-<link
-  href="/+css/+__bk-dark-mode-buttom.css"
-  rel="stylesheet"
-  type="text/css"
-/>
-
 <!-- 黑夜模式按鈕位置 -->
 <!-- DKM 動畫按鈕 -->
 <div class="bk-DKM-btn-container">
@@ -228,9 +225,6 @@
     </div>
   </div>
 </div>
-<!-- DKM 動畫按鈕 結束 -->
-<!-- 引入 bk-dark-mode-buttom 模板生成 JS -->
-<script src="/+js/+__bk-dark-mode-buttom.js"></script>
 
 <!-- <script
   type="text/javascript"
@@ -363,7 +357,19 @@
     </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
-  </div>
+  </div><!-- 引入 bk-dark-mode-buttom 模板生成 JS -->
+<script src="/+js/+__bk-dark-mode-buttom.js"></script>
+
+<!-- 引入 hexo-infinite-scroll 無限往下滑動 JS -->
+<script src="//cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script> 
+<script>
+    infiniteScroll({
+    showNum: 5,
+    loadTime: 400,
+    style: 'line-scale',
+    color: '#025ab1'
+    })
+</script>
 
     </div>
   </footer>

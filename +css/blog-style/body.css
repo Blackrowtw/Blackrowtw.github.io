@@ -1,0 +1,234 @@
+:root {
+  --body-bg-color: #eee;
+  --content-bg-color: rgba(220, 220, 218, 0.45);
+  --card-bg-color: #f5f5f5;
+  --text-color: #333;
+  --blockquote-color: #666;
+  --link-color: #555;
+  --link-hover-color: #222;
+  --brand-color: #fff;
+  --brand-hover-color: #fff;
+  --table-row-odd-bg-color: #f9f9f9;
+  --table-row-hover-bg-color: #f5f5f5;
+  --menu-item-bg-color: #f5f5f5;
+  --theme-color: #222;
+  --btn-default-bg: #222;
+  --btn-default-color: #ccc;
+  --btn-default-border-color: #555;
+  --btn-default-hover-bg: #333;
+  --btn-default-hover-color: #ccc;
+  --btn-default-hover-border-color: #666;
+  --highlight-background: #e7e5e4;
+  --highlight-foreground: #444;
+  --highlight-gutter-background: #f5f5f5;
+  --highlight-gutter-foreground: #555;
+  color-scheme: light;
+  --gitalk-background: #ccc;
+  --post-edit-icon-color: #ddd;
+  --post-meta-text-color: #666;
+  --site-link-text-shadow: #05050530 1px 1px 0.1em;
+  --vanta-birds-bg-color: radial-gradient(
+    #e9f5f5 5%,
+    #b3b4b6 75%,
+    #8c8b99 100%
+  );
+  --vanta-birds-bg-opacity: 1;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg-color: #282828;
+    --content-bg-color: rgba(30, 30, 30, 0.85);
+    --card-bg-color: #555;
+    --text-color: #ccc;
+    --blockquote-color: #777;
+    --link-color: #ccc;
+    --link-hover-color: #eee;
+    --brand-color: #ddd;
+    --brand-hover-color: #ddd;
+    --table-row-odd-bg-color: #282828;
+    --table-row-hover-bg-color: #363636;
+    --menu-item-bg-color: #555;
+    --theme-color: #222;
+    --btn-default-bg: #222;
+    --btn-default-color: #ccc;
+    --btn-default-border-color: #555;
+    --btn-default-hover-bg: #333;
+    --btn-default-hover-color: #ccc;
+    --btn-default-hover-border-color: #666;
+    --highlight-background: #323131;
+    --highlight-foreground: #fff;
+    --highlight-gutter-background: #1c1b1b;
+    --highlight-gutter-foreground: #e8e8e8;
+    color-scheme: dark;
+    --gitalk-background: #404040;
+    --post-edit-icon-color: #555;
+    --post-meta-text-color: #999;
+    --site-link-text-shadow: #050505 1px 1px 0.1em;
+    --vanta-birds-bg-color: radial-gradient(
+      #232325 5%,
+      #151618 75%,
+      #050505 100%
+    );
+    --vanta-birds-bg-opacity: 0.3;
+  }
+  /* 黑夜模式 圖片亮度調整 (原為透明度改為亮度) */
+  img {
+    opacity: 1;
+    filter: brightness(75%);
+  }
+  img:hover {
+    opacity: 1;
+    filter: brightness(90%);
+  }
+}
+
+body.bk-dark-mode-on img {
+  opacity: 1;
+  filter: brightness(75%);
+}
+body.bk-dark-mode-on img:hover {
+  opacity: 1;
+  filter: brightness(90%);
+}
+
+/* 主視覺 副顏色調整 */
+:root {
+  --secondary-theme-color: cornflowerblue;
+}
+
+/* 全頁面卷軸條 調整 (新樣式 兼容性) */
+@supports (scrollbar-width: auto) {
+  .scroller {
+    scrollbar-width: thin;
+    scrollbar-color: var(--blockquote-color) var(--highlight-background);
+  }
+}
+
+/* 全頁面卷軸條 調整 (舊樣式 兼容性) */
+::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+  height: 12px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--highlight-background); /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blockquote-color); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 2px solid var(--highlight-gutter-background); /* creates padding around scroll thumb */
+}
+
+/* 圖片(img) 懸浮時放大效果 */
+img:hover {
+  transform: scale(1.01);
+  transition: 0.6s ease-in-out;
+}
+
+/* 文字反白時的 背景顏色 和 文字的顏色 */
+::selection {
+  background: var(--secondary-theme-color);
+  color: #151515;
+  text-shadow: #00000000 0em 0em 0em;
+}
+::-webkit-selection {
+  background: var(--secondary-theme-color);
+  color: #151515;
+  text-shadow: #00000000 0em 0em 0em;
+}
+::-moz-selection {
+  background: var(--secondary-theme-color);
+  color: #151515;
+  text-shadow: #00000000 0em 0em 0em;
+}
+
+/* 全站行高 */
+body {
+  background: var(--body-bg-color);
+  color: var(--text-color);
+}
+
+/* 無序標籤 */
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* 分隔線 */
+hr {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #ddd,
+    #ddd 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  border: 0;
+  height: 3px;
+  margin: 40px 0;
+}
+
+/* 表格 */
+dt {
+  font-weight: bold;
+}
+dd {
+  margin: 0;
+  padding: 0;
+}
+.table-container {
+  overflow: auto;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 0.875em;
+  margin: 0 0 20px;
+  width: 100%;
+}
+tbody tr:nth-of-type(odd) {
+  background: var(--table-row-odd-bg-color);
+}
+tbody tr:hover {
+  background: var(--table-row-hover-bg-color);
+}
+caption,
+th,
+td {
+  padding: 8px;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  border-bottom: 3px solid #ddd;
+}
+th {
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+td {
+  border-bottom-width: 1px;
+}
+
+/* 全站超連結 陰影樣式 底線取消 */
+a:not(.btn, .bmc-btn, .post-title-link) {
+  border-bottom: 1px none #999;
+  text-shadow: var(--site-link-text-shadow);
+  &:hover {
+    color: var(--secondary-theme-color);
+    text-shadow: transparent 0em 0em 0em;
+    transform: translateY(-0.125em) scale(1);
+    transition: 0.5s;
+  }
+}
+
+/* 網站標題 字體 */
+.site-title {
+  font-family: Kanit;
+}
+
+/* 網站副標題 文字粗細 */
+.site-subtitle {
+  font-weight: lighter;
+}

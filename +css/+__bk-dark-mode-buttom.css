@@ -26,7 +26,7 @@ body.bk-light-mode-on {
   --gitalk-background: #ccc;
   --post-edit-icon-color: #ddd;
   --post-meta-text-color: #666;
-  --site-link-text-shadow: #05050550 0.1em 0.1em 0.1em;
+  --site-link-text-shadow: #cccccc30 1px 1px 0.1em;
   --vanta-birds-bg-color: radial-gradient(
     #e9f5f5 5%,
     #b3b4b6 75%,
@@ -73,7 +73,7 @@ body.bk-dark-mode-on {
   --gitalk-background: #404040;
   --post-edit-icon-color: #555;
   --post-meta-text-color: #999;
-  --site-link-text-shadow: #050505 0.1em 0.1em 0.1em;
+  --site-link-text-shadow: #050505 1px 1px 0.1em;
   --vanta-birds-bg-color: radial-gradient(
     #232325 5%,
     #151618 75%,

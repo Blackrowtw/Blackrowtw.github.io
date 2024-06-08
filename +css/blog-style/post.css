@@ -1,0 +1,415 @@
+/* ------------------------ */
+/* 文章內文，文字元素排版     */
+/* ------------------------ */
+
+/* 文章內文 h1 標題 */
+.post-body h1 {
+  width: fit-content;
+  overflow-wrap: anywhere;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding-left: 1.5em;
+  /* border-bottom: 3px solid var(--text-color); */
+  /* text-emphasis: "⯌";
+      text-emphasis-color: var(--post-meta-text-color);
+      text-emphasis-position: under right; */
+}
+
+/* 文章內文 h2標題底線顏色 */
+.post-body h2 {
+  width: fit-content;
+  overflow-wrap: anywhere;
+  padding-left: 0.5em;
+  margin-left: 0.5em;
+  margin-inline-start: 0;
+  /* box-shadow: 24px 0px 16px -24px inset hsla(0, 0%, 50%, 0.8); */
+  border-left: 0.75em solid var(--blockquote-color);
+  border-bottom: 3px solid var(--blockquote-color);
+}
+
+/* 文章內文 h3 次標題底線顏色 */
+.post-body h3 {
+  border-bottom: 1px dotted var(--post-meta-text-color);
+  margin-inline-start: 0.375rem;
+  margin-inline-end: 0.375rem;
+}
+
+/* ------------------------ */
+/* 文章頭部，meta元素樣式調整 */
+/* ------------------------ */
+
+/* 編輯文章的鋼筆，懸浮時變色 和大小調整*/
+.posts-expand .post-title .post-edit-link {
+  font-size: 24px;
+  color: var(--post-edit-icon-color);
+  text-shadow: #05050580 0em 0em 0.1em;
+  &:hover {
+    color: var(--secondary-theme-color) !important;
+  }
+}
+
+/* 文章內文 頭部標題 */
+.posts-expand h1.post-title {
+  font-family: Kanit, sans-serif !important;
+  font-weight: 400;
+}
+
+/* 文章標題 資訊部分*/
+.posts-expand .post-header {
+  margin-bottom: 3rem;
+}
+
+/* 文章標題 資訊部分*/
+.posts-expand .post-meta-container {
+  color: var(--blockquote-color);
+}
+
+/* 文章標題 不算子人數在最後面(小螢幕排版破壞)*/
+#busuanzi_container_page_pv.post-meta-item {
+  order: 1;
+}
+
+/* ------------------------ */
+/* 文章內文，內容邊界距離調整 */
+/* ------------------------ */
+
+/* 大螢幕 */
+.main-inner {
+  padding: 0px;
+}
+.post-block {
+  padding: 40px 2lvw;
+}
+.comments {
+  padding: 40px 8lvw;
+  margin: 5px;
+}
+
+/* 中螢幕 */
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-inner {
+    padding: 0px 1lvw;
+  }
+  .post-block {
+    padding: 40px 1rem;
+  }
+}
+
+/* 小螢幕 */
+@media (max-width: 767px) {
+  .main-inner {
+    padding: 0px 0lvw;
+  }
+  .post-block {
+    padding: 40px 1rem;
+  }
+}
+/* ------------------------ */
+/* 文章內文，圖片與超連結調整 */
+/* ------------------------ */
+
+/* 圖片元素 延伸到文章最邊緣 */
+.post-body > figure:has(img) {
+  margin-bottom: 20px;
+  width: calc(100% + 2rem);
+  height: auto;
+  margin-inline: -1rem -1rem;
+}
+.post-body > a:not([data-fancybox="group"]):has(img) {
+  display: block;
+  width: calc(100% + 2rem);
+  height: auto;
+  margin-inline: -1rem -1rem;
+}
+
+/* 文章內文，超連結偽元素 icon || 排除btn, fancybox, headerlink tag-cloud*/
+.post-body a:not(.btn, .fancybox, .headerlink, [href*="/tags/"])::after {
+  font-family: FontAwesome;
+  content: "\f08e";
+  display: inline-block;
+  padding-right: 3px;
+  padding-left: 3px;
+  filter: brightness(50%);
+  color: var(--secondary-theme-color);
+  font-size: 0.75em;
+  text-shadow: #00000000 0em 0em 0em;
+  vertical-align: bottom;
+}
+
+/* 文章內文，超連結樣式 &懸浮顏色 */
+.post-body a:hover {
+  color: var(--secondary-theme-color);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+    0px -5px 35px rgba(255, 255, 255, 0.3), 2px 2px 4px rgba(206, 105, 137, 0),
+    0px -5px 35px -5px var(--secondary-theme-color);
+}
+
+/* 文章內文，超連結偽元素 icon 懸浮效果 || 排除btn, fancybox, headerlink tag-cloud*/
+.post-body a:not(.btn, .fancybox, .headerlink, [href*="/tags/"]):hover::after {
+  filter: brightness(100%);
+  color: #eee;
+  text-shadow: var(--secondary-theme-color) 0em 0em 0.5em,
+    var(--secondary-theme-color) 0em 0em 0.2em,
+    var(--secondary-theme-color) 0em 0em 0.2em,
+    var(--secondary-theme-color) 0em 0em 0.2em;
+  transform: translateY(-0.25em) scale(1.1);
+  transition: 0.5s;
+}
+
+/* ------------------------ */
+/* 文章內文，tag 插件樣式調整 */
+/* ------------------------ */
+
+/* 文章內文，引文部分 間距減掉線寬*/
+.post-body blockquote:not(.blockquote-center) {
+  border-left: 3px solid var(--blockquote-color);
+  width: fit-content;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 16px 0px 12px -16px inset hsla(0, 0%, 50%, 0.4),
+    12px 0px 10px -16px hsla(0, 0%, 50%, 0.4),
+    0px 12px 10px -16px hsla(0, 0%, 50%, 0.4),
+    0px -12px 10px -16px hsla(0, 0%, 50%, 0.4);
+  /* background-color: hsla(0, 0%, 50%, 0.1); */
+  padding: 0.25rem calc(1rem - 3px);
+  margin-inline-start: 0.5rem;
+  margin-inline-end: 0.5rem;
+  & p {
+    margin-inline-start: 0rem;
+    margin-bottom: 0px;
+  }
+  & code {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* 置中引言 修正無內容時 排版壞掉 和線寬顏色變動 */
+.blockquote-center {
+  min-height: 1rem;
+  &::before {
+    border-top: 1px solid var(--blockquote-color);
+  }
+  &::after {
+    border-bottom: 1px solid var(--blockquote-color);
+  }
+}
+
+/* 文章內文，按鈕(btn) icon後面留空*/
+.post-body .btn > i::before {
+  padding: 0 0.25em 0 0;
+}
+
+/* 文章內文，切換標籤(Tab)，取消超連結 的上級偽類內容 */
+.post-body .nav-tabs li a::after {
+  content: "" !important;
+}
+
+/* 文章內文，連結群組(Link Grid)，取消超連結 的上級偽類內容 */
+.post-body .link-grid a::after {
+  content: "" !important;
+}
+
+/* 文章內文，筆記(Note)，flat樣式 無(none)筆記文字顏色改為黑色 */
+/* .post-body .note:not(.default, .primary, .info, .success, .warning, .danger) {
+  color: #bbb;
+} */
+
+/* 文章內文，筆記(Note)，無(none)背景色與文字顏色 */
+.post-body .note {
+  background: #f9f9f9;
+  border: initial;
+  border-left: 3px solid #333;
+  color: #333 !important;
+}
+@media (prefers-color-scheme: dark) {
+  .post-body .note {
+    background: #3c3c3c;
+    border: initial;
+    border-left: 3px solid #eee;
+    color: #ccc !important;
+  }
+}
+
+/* 文章內文，筆記(Note)，flat樣式 展開(summary)按鈕圖案放大 */
+.post-body .note summary::marker {
+  font-size: 1.25em;
+  line-height: 1em;
+}
+
+/* 文章內文，筆記(Note)，標題取消裝飾 並且改為inline 與按鈕並排 */
+.post-body .note h2,
+.post-body .note h3,
+.post-body .note h4,
+.post-body .note h5,
+.post-body .note h6 {
+  display: inline;
+  border: initial;
+}
+
+/* 文章內文，筆記(Note)，Icon 改為對齊第一行 */
+.post-body .note:not(.no-icon)::before {
+  top: calc(20px - 0.5em);
+  line-height: inherit;
+}
+
+/* 文章內文，代碼塊(Highlight) */
+.post-body figure.highlight {
+  background: var(--highlight-background);
+  color: var(--highlight-foreground);
+  line-height: 1.6em;
+  margin: 0 auto 20px;
+  margin-inline-start: -1lvw;
+  margin-inline-end: -1lvw;
+  box-shadow: 0em 3px 0.5em -3px var(--highlight-background);
+}
+
+/* 文章內文，代碼塊(Highlight) 前方數字標籤*/
+.post-body figure.highlight .gutter pre {
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  margin-right: -2.5em;
+}
+
+/* 文章內文，代碼塊(Highlight) 前方數字標籤底線*/
+.post-body figure.highlight .gutter pre span::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: calc(0.5em + 1px);
+  right: 2em;
+  height: 1em;
+  width: 2.5em;
+  background-image: linear-gradient(
+    transparent calc(100% - 2px),
+    var(--highlight-background) 2px
+  );
+  background-size: 100% 100%;
+}
+
+/* 文章內文，切換標籤(Tab) 樣式*/
+.post-body .tabs .tab-content,
+.tabs-comment .tab-content {
+  border: 1px solid #777;
+  border-radius: 0 0 0 0;
+  border-top-color: transparent;
+  background: none;
+}
+@media (max-width: 413px) {
+  .post-body .tabs .tab-content,
+  .tabs-comment .tab-content {
+    border-radius: 0 0 0 0;
+    border-top-color: #777;
+  }
+}
+
+/* 文章內文，切換標籤(Tab) 樣式 啟動時 大螢幕*/
+.post-body .tabs ul.nav-tabs li.tab.active,
+.post-body .tabs-comment ul.nav-tabs li.tab.active {
+  border-top-color: var(--secondary-theme-color);
+  border-top-width: 0.5em;
+  border-left-color: #777;
+  border-left-width: 1px;
+  border-right-color: #777;
+  border-right-width: 1px;
+}
+.post-body .tabs ul.nav-tabs li.tab.active a {
+  color: var(--text-color);
+  font-weight: 800;
+}
+
+/* 文章內文，切換標籤(Tab) 樣式 啟動時 小螢幕*/
+@media (max-width: 413px) {
+  .post-body .tabs ul.nav-tabs li.tab.active,
+  .post-body .tabs-comment ul.nav-tabs li.tab.active {
+    border-top-color: #777;
+    border-top-width: 1px;
+    border-bottom-color: #777;
+    border-bottom-width: 1px;
+    border-left-color: var(--secondary-theme-color);
+    border-left-width: 0.5em;
+    border-right-color: var(--secondary-theme-color);
+    border-right-width: 0.5em;
+  }
+}
+
+/* 文章內文，切換標籤(Tab) 樣式 非啟動 大螢幕*/
+.post-body .tabs ul.nav-tabs li.tab,
+.post-body .tabs ul.nav-tabs li.tab:not(.active),
+.post-body .tabs-comment ul.nav-tabs li.tab:not(.active) {
+  border-bottom-color: #777;
+  background: var(--highlight-background);
+  opacity: 0.8;
+}
+/* 文章內文，切換標籤(Tab) 樣式 非啟動 小螢幕*/
+@media (max-width: 413px) {
+  .post-body .tabs ul.nav-tabs li.tab,
+  .post-body .tabs ul.nav-tabs li.tab:not(.active),
+  .post-body .tabs-comment ul.nav-tabs li.tab:not(.active) {
+    border-bottom-color: transparent;
+  }
+}
+
+/* ------------------------- */
+/* 文章底部，版權與標籤樣式調整 */
+/* ------------------------- */
+
+/* 文章內文底部 版權聲明 延伸到最邊緣 */
+.post-footer .post-copyright {
+  margin-inline: -1rem -1rem;
+  & li {
+    font-size: 0.875em;
+    line-height: 1.875em;
+  }
+}
+
+/* 文章下標籤(Tags) 容器樣式 */
+.post-tags {
+  list-style: none;
+  overflow: hidden;
+}
+
+/* 文章下標籤(Tags) 樣式, 底色 */
+.post-tags a {
+  background: #151515;
+  color: #bbb;
+  text-shadow: none !important;
+  display: inline-block;
+  height: 1em;
+  line-height: 1em;
+  margin: 0em 1em 0em 1em;
+  padding: 0.5em 0.3em 0.5em 0.7em;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+/* 文章下標籤(Tags) 後箭頭 */
+.post-tags a::after {
+  content: "";
+  background: transparent;
+  border-bottom: 1em solid transparent;
+  border-left: calc(1em + 0px) solid #151515;
+  border-top: 1em solid transparent;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: calc(-1em + 0px);
+}
+
+/* 文章下標籤(Tags) 懸浮色 */
+.post-tags a:hover {
+  background-color: var(--secondary-theme-color);
+  color: #eee !important;
+}
+
+/* 文章下標籤(Tags) 後箭頭 懸浮色 */
+.post-tags a:hover::after {
+  border-left-color: var(--secondary-theme-color);
+  transition: 0.5s;
+}
+
+/* 文章底部評論區(gitalk) */
+.gitalk-container {
+  background: var(--gitalk-background) !important;
+  border-radius: 0.75rem !important;
+}

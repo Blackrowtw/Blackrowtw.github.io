@@ -1,0 +1,51 @@
+/* 文章內文，背景透明 (blog首頁 每個文章樣式是連續堆疊的)*/
+.main-inner .sub-menu,
+.main-inner .post-block,
+.main-inner .tabs-comment,
+.main-inner > .comments,
+.main-inner .comment-position .comments,
+.main-inner .pagination,
+.main-inner .post-block:not(:first-child):not(:first-child) {
+  border-radius: 0.1rem;
+  background: transparent;
+  backdrop-filter: blur(10px) brightness(99%) grayscale(50%);
+}
+
+/* h1 標題 文章頁面 文章內文*/
+.post-body h1,
+.posts-expand .post-title {
+  border-bottom: 0px solid transparent;
+  font-family: Kanit, "Arial Black", sans-serif;
+  font-size: 1.75em;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 700;
+  font-variant-caps: capitalize;
+  overflow-wrap: break-word;
+  text-align: center;
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+    0px -5px 35px rgba(255, 255, 255, 0.3), 2px 2px 4px rgba(206, 105, 137, 0) !important;
+}
+
+/* 文章頁面 底線 */
+.posts-expand .post-title-link {
+  text-decoration: none 0rem;
+  color: var(--text-color);
+  &:hover {
+    color: var(--secondary-theme-color);
+  }
+  &:hover::before {
+    background: var(--secondary-theme-color);
+  }
+}
+
+/* 文章頁數 數字的背景 修正白天模式看不見 */
+.pagination .page-number.current {
+  background: var(--text-color);
+}
+/* 文章頁數 數字的上邊線 去除 */
+.pagination .prev,
+.pagination .next,
+.pagination .page-number {
+  border-top: 0px;
+}

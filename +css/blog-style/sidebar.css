@@ -1,0 +1,115 @@
+/* 網站作者名 文字大小 */
+.site-author-name {
+  color: #ccc;
+  font-size: 1.5rem;
+  font-family: Kanit;
+}
+
+/* 網站狀態 計數 */
+.site-state-item-count {
+  font-size: 1.125rem;
+  font-family: Kanit;
+}
+
+/* 側邊欄 大螢幕時 */
+@media (min-width: 992px) {
+  /* 內陰影和圓角 */
+  .sidebar-inner {
+    color: #ccc;
+    box-shadow: inset 0em 0em 0.5em #080808;
+    border-radius: 0.75rem;
+    background: #151515;
+  }
+}
+
+/* 側邊欄 小螢幕時 */
+@media (max-width: 991px) {
+  /* 側邊攔，內容物置中 */
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(
+      0deg,
+      #151515f0 10%,
+      #222222f0 40%,
+      #222222f0 60%,
+      #151515f0 90%
+    );
+  }
+
+  /* 縮小後取消內陰影和圓角 */
+  .sidebar .sidebar-inner {
+    color: #ccc;
+    box-shadow: inset 0em 0em 0em #080808;
+    border-radius: 0rem;
+  }
+
+  /* 側邊攔，按鈕 */
+  .links-of-author a {
+    /* 底下的線段顏色 */
+    border-bottom-color: transparent;
+    /* 奇怪的邊界 */
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+
+  /* 側邊攔，按鈕上奇怪的紅點點 */
+  .links-of-author a::before {
+    background: none;
+    display: inline-block;
+    margin-right: 0px;
+    transform: translateY(0px);
+    border-radius: 50%;
+    content: "";
+    height: 0px;
+    width: 0px;
+  }
+
+  /* 側邊攔，按鈕大小 */
+  .links-of-author span {
+    height: 40px;
+    vertical-align: bottom;
+  }
+  .links-of-author a {
+    font-size: 1.25em;
+    padding-right: 2px;
+    padding-left: 2px;
+    vertical-align: bottom;
+  }
+}
+
+/* 內文 TOC 導航欄 */
+.sidebar-nav li {
+  color: #eee;
+  font-weight: 800;
+}
+.sidebar-nav li:hover {
+  color: var(--secondary-theme-color);
+  font-weight: 800;
+}
+
+.sidebar-panel a {
+  color: #bbb;
+}
+
+.post-toc .nav .active > a {
+  border-bottom-color: var(--secondary-theme-color);
+  color: var(--secondary-theme-color);
+}
+.post-toc .nav .active-current > a {
+  color: var(--secondary-theme-color);
+}
+.post-toc .nav .active-current > a:hover {
+  color: var(--secondary-theme-color);
+}
+
+.sidebar-toc-active .sidebar-nav-toc,
+.sidebar-overview-active .sidebar-nav-overview {
+  border-bottom-color: var(--secondary-theme-color);
+  color: var(--secondary-theme-color);
+}
+.sidebar-toc-active .sidebar-nav-toc:hover,
+.sidebar-overview-active .sidebar-nav-overview:hover {
+  color: var(--secondary-theme-color);
+}

@@ -1,0 +1,35 @@
+/* 3D 鳥群背景(vanta) 樣式 */
+#vanta-js-birds-bg {
+  display: flex;
+  height: 100lvh;
+  width: 100lvw;
+  position: fixed;
+  inset: 0px;
+  z-index: -1;
+  opacity: var(--vanta-birds-bg-opacity);
+  mix-blend-mode: screen;
+  /* filter: blur(2px); */
+}
+
+/* 3D 鳥群背景(vanta) 邊緣暗角 */
+#vanta-js-birds-overlay {
+  display: flex;
+  height: 100lvh;
+  width: 100lvw;
+  position: fixed;
+  inset: 0px;
+  z-index: -1;
+  background: var(--vanta-birds-bg-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* 3D 鳥群背景(vanta) 樣式 黑暗模式*/
+  #vanta-js-birds-bg {
+    opacity: var(--vanta-birds-bg-opacity);
+  }
+
+  /* 3D 鳥群背景(vanta) 邊緣暗角 黑暗模式*/
+  #vanta-js-birds-overlay {
+    background: var(--vanta-birds-bg-color);
+  }
+}

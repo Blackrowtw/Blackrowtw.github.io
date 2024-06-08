@@ -1,0 +1,59 @@
+.menu .menu-item a {
+  font-family: Kanit;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+/* 選單按鈕，懸浮時變色 */
+.toggle:hover .toggle-line {
+  background: var(--secondary-theme-color);
+}
+
+/* 搜尋放大鏡，懸浮時變色 */
+.popup-trigger:hover > i {
+  color: var(--secondary-theme-color);
+}
+
+/* 回到最頂端按鈕，懸浮時變色 */
+.back-to-top:hover {
+  color: var(--secondary-theme-color);
+}
+
+/* 菜單(Menu) 計數徽章(Badge) 白天模式改色 */
+.menu-item .badge {
+  font-family: Kanit;
+  font-size: 0.75rem;
+  background: var(--menu-item-bg-color);
+  border-radius: 25%;
+  outline-color: #000;
+  color: var(--link-color);
+  padding: 2px 2px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: 20%;
+  line-height: 1rem;
+  height: 1rem;
+  min-width: 1rem;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* 次級菜單(Sub Menu) 啟用時的顏色*/
+.sub-menu .menu-item .menu-item-active {
+  color: var(--secondary-theme-color);
+  font-weight: bold;
+  font-size: 0.875em;
+}
+
+/* 次級菜單(Sub Menu) 超連結懸浮顏色*/
+.sub-menu .menu-item a:hover {
+  color: var(--secondary-theme-color);
+}
+
+/* 次級菜單(Sub Menu) "關於"的icon*/
+.sub-menu a[href="/about/"] {
+  margin: 0px 0px;
+}
+.sub-menu a[href="/about/"] > i {
+  font-size: 1.25em !important;
+  margin: 0px 0px;
+}

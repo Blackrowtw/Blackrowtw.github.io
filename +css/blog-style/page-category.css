@@ -1,0 +1,61 @@
+/* 分類頁面(page-Category)，取消超連結 的上級偽類內容 */
+.category-list-link::after {
+  content: "" !important;
+}
+
+/* 分類頁面(page-Category) 計數徽章(Badge)*/
+.category-all-page .category-list-count {
+  font-size: 0.75rem;
+  background: var(--menu-item-bg-color);
+  border-radius: 25%;
+  color: var(--link-color);
+  padding: 2px 2px;
+  margin: 0 0 0 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: 10%;
+  line-height: 1rem;
+  height: 1rem;
+  min-width: 1rem;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* 分類表單 整體樣式 */
+.category-all-page .category-all {
+  width: fit-content;
+  margin: 3em auto;
+  font-family: Kanit;
+}
+
+/* 第一層 大層樣式 */
+.category-all-page .category-list {
+  margin-left: 1.5em;
+}
+
+/* 第一層 文字樣式 */
+.category-all-page .category-list > li > a {
+  font-size: 1.5em;
+  font-weight: 700;
+  background: transparent;
+  background: linear-gradient(
+    0deg,
+    var(--blockquote-color) 10%,
+    rgba(255, 255, 255, 0) 10%
+  );
+  text-align: center;
+  margin-right: 0.25em;
+}
+
+/* 第二層 大層樣式 */
+.category-all-page .category-list > li > ul {
+  margin-left: 1.5em;
+  font-size: 1.25em;
+  line-height: 1.25em;
+  color: var(--blockquote-color);
+}
+
+/* 第二層 文字樣式 */
+.category-all-page .category-list > li > ul > li > a {
+  font-size: 1em;
+  margin-right: 0.2em;
+}

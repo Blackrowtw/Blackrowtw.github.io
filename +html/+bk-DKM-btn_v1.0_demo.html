@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    ████████████████████████████████████████████████████████████████████████████████████████████████████
+    ▄▄▄▄                     ▄▄                                      ▄▄          
+    ▀███▀▀▀██▄           ▄█▀ ▀▀                   ▀███   ██       ▄█▀▀▀█▄█ ██             ▀███          
+      ██    ▀██▄         ██▀                        ██   ██      ▄██    ▀█ ██               ██          
+      ██     ▀██ ▄▄█▀██ █████  ▄█▀██▄ ▀███  ▀███    ██ ██████    ▀███▄   ██████▀██▀   ▀██▀  ██   ▄▄█▀██ 
+      ██      ██▄█▀   ██ ██   ██   ██   ██    ██    ██   ██        ▀█████▄ ██    ██   ▄█    ██  ▄█▀   ██
+      ██     ▄████▀▀▀▀▀▀ ██    ▄█████   ██    ██    ██   ██      ▄     ▀██ ██     ██ ▄█     ██  ██▀▀▀▀▀▀
+      ██    ▄██▀██▄    ▄ ██   ██   ██   ██    ██    ██   ██      ██     ██ ██      ███      ██  ██▄    ▄
+    ▄████████▀   ▀█████▀████▄ ▀████▀██▄ ▀████▀███▄▄████▄ ▀████   █▀█████▀  ▀████   ▄█     ▄████▄ ▀█████▀
+                                                                                 ▄█                     
+                                                                               ██▀                      
+    ████████████████████████████████████████████████████████████████████████████████████████████████████ -->
+    <style>
+      :root {
+        --body-bg-color: #eee;
+        --content-bg-color: rgba(220, 220, 218, 0.45);
+        --card-bg-color: #f5f5f5;
+        --text-color: #333;
+        --blockquote-color: #666;
+        --link-color: #555;
+        --link-hover-color: #222;
+        --brand-color: #fff;
+        --brand-hover-color: #fff;
+        --table-row-odd-bg-color: #f9f9f9;
+        --table-row-hover-bg-color: #f5f5f5;
+        --menu-item-bg-color: #f5f5f5;
+        --theme-color: #222;
+        --btn-default-bg: #222;
+        --btn-default-color: #ccc;
+        --btn-default-border-color: #555;
+        --btn-default-hover-bg: #333;
+        --btn-default-hover-color: #ccc;
+        --btn-default-hover-border-color: #666;
+        --highlight-background: #e7e5e4;
+        --highlight-foreground: #444;
+        --highlight-gutter-background: #f5f5f5;
+        --highlight-gutter-foreground: #555;
+        color-scheme: light;
+        --gitalk-background: #ccc;
+        --post-edit-icon-color: #ddd;
+        --post-meta-text-color: #666;
+        --site-link-text-shadow: #05050550 0.1em 0.1em 0.1em;
+        --vanta-birds-bg-color: radial-gradient(
+          #e9f5f5 5%,
+          #b3b4b6 75%,
+          #8c8b99 100%
+        );
+        --vanta-birds-bg-opacity: 1;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --body-bg-color: #282828;
+          --content-bg-color: rgba(30, 30, 30, 0.85);
+          --card-bg-color: #555;
+          --text-color: #ccc;
+          --blockquote-color: #bbb;
+          --link-color: #ccc;
+          --link-hover-color: #eee;
+          --brand-color: #ddd;
+          --brand-hover-color: #ddd;
+          --table-row-odd-bg-color: #282828;
+          --table-row-hover-bg-color: #363636;
+          --menu-item-bg-color: #555;
+          --theme-color: #222;
+          --btn-default-bg: #222;
+          --btn-default-color: #ccc;
+          --btn-default-border-color: #555;
+          --btn-default-hover-bg: #333;
+          --btn-default-hover-color: #ccc;
+          --btn-default-hover-border-color: #666;
+          --highlight-background: #323131;
+          --highlight-foreground: #fff;
+          --highlight-gutter-background: #1c1b1b;
+          --highlight-gutter-foreground: #e8e8e8;
+          color-scheme: dark;
+          --gitalk-background: #404040;
+          --post-edit-icon-color: #555;
+          --post-meta-text-color: #999;
+          --site-link-text-shadow: #050505 0.1em 0.1em 0.1em;
+          --vanta-birds-bg-color: radial-gradient(
+            #232325 5%,
+            #151618 75%,
+            #050505 100%
+          );
+          --vanta-birds-bg-opacity: 0.3;
+        }
+        /* 黑夜模式 圖片亮度調整 (原為透明度改為亮度) */
+        img {
+          opacity: 1;
+          filter: brightness(75%);
+        }
+        img:hover {
+          opacity: 1;
+          filter: brightness(90%);
+        }
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        background: var(--body-bg-color);
+        box-sizing: border-box;
+        color: var(--text-color);
+        font-family: Lato, "Helvetica", "Arial", "LiHei Pro", "黑體-繁",
+          "微軟正黑體", sans-serif, "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-size: 1em;
+        line-height: 2;
+        min-height: 100%;
+        position: relative;
+        transition: padding 0.2s ease-in-out;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: sans-serif, Lato, "Helvetica", "Arial", "LiHei Pro",
+          "黑體-繁", "微軟正黑體", sans-serif, "PingFang SC", "Microsoft YaHei",
+          sans-serif;
+        font-weight: bold;
+        line-height: 1.5;
+        margin: 30px 0 15px;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+      h2 {
+        font-size: 1.375em;
+      }
+      h3 {
+        font-size: 1.25em;
+      }
+      h4 {
+        font-size: 1.125em;
+      }
+      h5 {
+        font-size: 1em;
+      }
+      h6 {
+        font-size: 0.875em;
+      }
+      p {
+        margin: 0 0 20px;
+      }
+      a {
+        border-bottom: 1px solid #999;
+        color: var(--link-color);
+        cursor: pointer;
+        outline: 0;
+        text-decoration: none;
+        overflow-wrap: break-word;
+      }
+      a:hover {
+        border-bottom-color: var(--link-hover-color);
+        color: var(--link-hover-color);
+      }
+      iframe,
+      img,
+      video,
+      embed {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+      }
+      hr {
+        background-image: repeating-linear-gradient(
+          -45deg,
+          #ddd,
+          #ddd 4px,
+          transparent 4px,
+          transparent 8px
+        );
+        border: 0;
+        height: 3px;
+        margin: 40px 0;
+      }
+      blockquote {
+        border-left: 4px solid #ddd;
+        color: var(--blockquote-color);
+        margin: 0;
+        padding: 0 15px;
+      }
+      blockquote cite::before {
+        content: "-";
+        padding: 0 5px;
+      }
+      dt {
+        font-weight: bold;
+      }
+      dd {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <!-- bk-DKM switch -->
+    <style>
+      body.bk-light-mode-on {
+        --body-bg-color: #eee;
+        --content-bg-color: rgba(220, 220, 218, 0.45);
+        --card-bg-color: #f5f5f5;
+        --text-color: #333;
+        --blockquote-color: #666;
+        --link-color: #555;
+        --link-hover-color: #222;
+        --brand-color: #fff;
+        --brand-hover-color: #fff;
+        --table-row-odd-bg-color: #f9f9f9;
+        --table-row-hover-bg-color: #f5f5f5;
+        --menu-item-bg-color: #f5f5f5;
+        --theme-color: #222;
+        --btn-default-bg: #222;
+        --btn-default-color: #ccc;
+        --btn-default-border-color: #555;
+        --btn-default-hover-bg: #333;
+        --btn-default-hover-color: #ccc;
+        --btn-default-hover-border-color: #666;
+        --highlight-background: #e7e5e4;
+        --highlight-foreground: #444;
+        --highlight-gutter-background: #f5f5f5;
+        --highlight-gutter-foreground: #555;
+        color-scheme: light;
+        --gitalk-background: #ccc;
+        --post-edit-icon-color: #ddd;
+        --post-meta-text-color: #666;
+        --site-link-text-shadow: #05050550 0.1em 0.1em 0.1em;
+        --vanta-birds-bg-color: radial-gradient(
+          #e9f5f5 5%,
+          #b3b4b6 75%,
+          #8c8b99 100%
+        );
+        --vanta-birds-bg-opacity: 1;
+      }
+
+      /* 白天模式 圖片亮度調整 (原為透明度改為亮度) */
+      body.bk-light-mode-on img {
+        opacity: 1;
+        filter: brightness(100%);
+      }
+      body.bk-light-mode-on img:hover {
+        opacity: 1;
+        filter: brightness(100%);
+      }
+
+      body.bk-dark-mode-on {
+        --body-bg-color: #282828;
+        --content-bg-color: rgba(30, 30, 30, 0.85);
+        --card-bg-color: #555;
+        --text-color: #ccc;
+        --blockquote-color: #777;
+        --link-color: #ccc;
+        --link-hover-color: #eee;
+        --brand-color: #ddd;
+        --brand-hover-color: #ddd;
+        --table-row-odd-bg-color: #282828;
+        --table-row-hover-bg-color: #363636;
+        --menu-item-bg-color: #555;
+        --theme-color: #222;
+        --btn-default-bg: #222;
+        --btn-default-color: #ccc;
+        --btn-default-border-color: #555;
+        --btn-default-hover-bg: #333;
+        --btn-default-hover-color: #ccc;
+        --btn-default-hover-border-color: #666;
+        --highlight-background: #323131;
+        --highlight-foreground: #fff;
+        --highlight-gutter-background: #1c1b1b;
+        --highlight-gutter-foreground: #e8e8e8;
+        color-scheme: dark;
+        --gitalk-background: #404040;
+        --post-edit-icon-color: #555;
+        --post-meta-text-color: #999;
+        --site-link-text-shadow: #050505 0.1em 0.1em 0.1em;
+        --vanta-birds-bg-color: radial-gradient(
+          #232325 5%,
+          #151618 75%,
+          #050505 100%
+        );
+        --vanta-birds-bg-opacity: 0.3;
+      }
+
+      /* 黑夜模式 圖片亮度調整 (原為透明度改為亮度) */
+      body.bk-dark-mode-on img {
+        opacity: 1;
+        filter: brightness(75%);
+      }
+      body.bk-dark-mode-on img:hover {
+        opacity: 1;
+        filter: brightness(90%);
+      }
+    </style>
+    <!-- 
+    █████████████████████████████████████████████████████████████████████████
+
+                  ▀████▄     ▄███▀               ▀████▀ ▀███▀                
+      █████████      ████    ████                   ██   ▄█▀        █████████ 
+                     █ ██   ▄█ ██  ▄█▀██▄ ▀███▄███  ██ ▄█▀                    
+      █████████      █  ██  █▀ ██ ██   ██   ██▀ ▀▀  █████▄          █████████ 
+                     █  ██▄█▀  ██  ▄█████   ██      ██  ███                   
+      █████████      █  ▀██▀   ██ ██   ██   ██      ██   ▀██▄       █████████ 
+                  ▄███▄ ▀▀  ▄████▄████▀██▄████▄  ▄████▄   ███▄               
+
+    █████████████████████████████████████████████████████████████████████████-->
+    <!-- test.html 裡面css設定 (模擬 blog 偏一邊的狀況) -->
+    <!-- 各種 container 設定 -->
+    <style>
+      body {
+        background-color: var(--body-bg-color);
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        width: calc(100% - 100px);
+      }
+
+      .container {
+        width: fit-content;
+        height: fit-content;
+        border-radius: 2rem;
+        padding: 0.5em;
+        box-shadow: inset 0 2px 4px #333;
+      }
+      .container-bk-toggle-btn {
+        width: fit-content;
+        height: calc(100% -25px);
+        border-radius: 0.25rem;
+        padding: 0.5em 1em;
+
+        margin: 0 auto;
+        box-sizing: border-box;
+        text-align: center;
+
+        box-shadow: inset 0 2px 4px #333;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--content-bg-color);
+      }
+      .container-bk-toggle-btn > p {
+        margin: 0 0;
+        line-height: 1.2em;
+        width: 100%;
+        color: var(--blockquote-color);
+      }
+      :is(
+          #bk-js-data-01,
+          #bk-js-data-02,
+          #bk-js-data-03,
+          #bk-js-data-04,
+          #bk-js-data-05
+        ) {
+        margin: 0 0;
+        font-size: 1.2em;
+        font-weight: 800;
+        line-height: 1.2em;
+        width: 100%;
+        color: var(--text-color);
+      }
+    </style>
+    <!-- 
+    █████████████████████████████████████████████████████████████████████████
+
+                   ▀████▄     ▄███▀               ▀████▀ ▀███▀                
+      █████████      ████    ████                   ██   ▄█▀        █████████
+                     █ ██   ▄█ ██  ▄█▀██▄ ▀███▄███  ██ ▄█▀                    
+      █████████      █  ██  █▀ ██ ██   ██   ██▀ ▀▀  █████▄          █████████
+                     █  ██▄█▀  ██  ▄█████   ██      ██  ███                   
+      █████████      █  ▀██▀   ██ ██   ██   ██      ██   ▀██▄       █████████
+                   ▄███▄ ▀▀  ▄████▄████▀██▄████▄  ▄████▄   ███▄               
+
+    █████████████████████████████████████████████████████████████████████████-->
+    <!-- #.1 黑暗模式按鈕 來源 -->
+    <!-- https://html-online.com/articles/dark-light-template-switch/ -->
+    <!-- #.1 黑暗模式按鈕 樣式開始 -->
+    <style>
+      #wrapDarkLightSwitch {
+        display: inline-block;
+        position: relative;
+        user-select: none;
+        height: 3rem;
+        width: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #darkLightSwitch {
+        cursor: pointer;
+        padding: 4px 5px 2px;
+        position: relative;
+        display: inline-block;
+      }
+      #darkLightSwitch svg {
+        fill: #000;
+        height: 24px;
+        width: 24px;
+        border: #456 2xp;
+        border-radius: 0.5rem;
+        transition: all 1s;
+      }
+      .bk-dark-mode-on #darkLightSwitch svg {
+        fill: #fff;
+      }
+      #darkLightSvgWrap {
+        height: 24px;
+        width: 24px;
+        overflow: hidden;
+        position: relative;
+        transition: all 0.3s;
+        margin-bottom: 5px;
+      }
+      #darkLightSwitch:hover #darkLightSvgWrap {
+        transform: scale(1) rotate(45deg);
+      }
+      .bk-dark-mode-on #darkLightSvgWrap svg {
+        height: 44px;
+        width: 44px;
+        position: absolute;
+        transition: all 0.5s;
+        top: -10px;
+        right: -10px;
+      }
+      .bk-dark-mode-on #darkLightSvgWrap {
+        border-radius: 10px;
+      }
+      #darkLightOverlay {
+        width: 6px;
+        height: 10px;
+        position: absolute;
+        background: #fff;
+        transition: all 0.5s;
+        top: 11px;
+        left: 16px;
+        border-radius: 0 10px 10px 0;
+      }
+      .bk-dark-mode-on #darkLightOverlay {
+        width: 22px;
+        height: 22px;
+        border-radius: 20px;
+        top: 0;
+        left: 0;
+        background: #456;
+      }
+
+      /*Your custom theme styles below this*/
+      .container {
+        margin: 0.5em;
+      }
+      #fake-body {
+        height: 100px;
+        width: 100%;
+        background: #f7fbff;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .bk-dark-mode-on #fake-body {
+        background: #456;
+        color: #fff;
+      }
+    </style>
+    <!-- #.1 黑暗模式按鈕 樣式結束 -->
+    <div id="fake-body">
+      <!-- #.1 黑暗模式按鈕 Html 開始 -->
+      <div class="container">
+        <div id="wrapDarkLightSwitch">
+          <div id="darkLightSwitch" title="Dark / Light View">
+            <div id="darkLightSvgWrap">
+              <svg
+                height="20px"
+                width="20px"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 207.628 207.628"
+                xml:space="preserve"
+              >
+                <circle cx="103.814" cy="103.814" r="45.868" />
+                <path
+                  d="M103.814,157.183c-29.427,0-53.368-23.941-53.368-53.368s23.941-53.368,53.368-53.368s53.368,23.941,53.368,53.368 S133.241,157.183,103.814,157.183z M103.814,65.446c-21.156,0-38.368,17.212-38.368,38.368s17.212,38.368,38.368,38.368 s38.368-17.212,38.368-38.368S124.97,65.446,103.814,65.446z"
+                />
+                <path
+                  d="M103.814,39.385c-4.142,0-7.5-3.358-7.5-7.5V7.5c0-4.142,3.358-7.5,7.5-7.5s7.5,3.358,7.5,7.5v24.385 C111.314,36.027,107.956,39.385,103.814,39.385z"
+                />
+                <path
+                  d="M103.814,207.628c-4.142,0-7.5-3.358-7.5-7.5v-24.385c0-4.142,3.358-7.5,7.5-7.5s7.5,3.358,7.5,7.5v24.385 C111.314,204.271,107.956,207.628,103.814,207.628z"
+                />
+                <path
+                  d="M200.128,111.314h-24.385c-4.142,0-7.5-3.358-7.5-7.5s3.358-7.5,7.5-7.5h24.385c4.142,0,7.5,3.358,7.5,7.5 S204.271,111.314,200.128,111.314z"
+                />
+                <path
+                  d="M31.885,111.314H7.5c-4.142,0-7.5-3.358-7.5-7.5s3.358-7.5,7.5-7.5h24.385c4.142,0,7.5,3.358,7.5,7.5 S36.027,111.314,31.885,111.314z"
+                />
+                <path
+                  d="M154.676,60.452c-1.919,0-3.839-0.732-5.303-2.197c-2.929-2.929-2.929-7.678,0-10.606l17.243-17.242 c2.929-2.929,7.678-2.93,10.606,0c2.929,2.929,2.929,7.678,0,10.606l-17.243,17.242C158.515,59.72,156.595,60.452,154.676,60.452z"
+                />
+                <path
+                  d="M35.709,179.419c-1.919,0-3.839-0.732-5.303-2.197c-2.929-2.929-2.929-7.678,0-10.606l17.243-17.243 c2.929-2.929,7.678-2.929,10.606,0c2.929,2.929,2.929,7.678,0,10.606l-17.243,17.243C39.548,178.687,37.629,179.419,35.709,179.419z"
+                />
+                <path
+                  d="M171.918,179.419c-1.919,0-3.839-0.732-5.303-2.197l-17.243-17.243c-2.929-2.929-2.929-7.678,0-10.606 c2.929-2.929,7.678-2.929,10.606,0l17.243,17.243c2.929,2.929,2.929,7.678,0,10.606 C175.757,178.687,173.838,179.419,171.918,179.419z"
+                />
+                <path
+                  d="M52.952,60.452c-1.919,0-3.839-0.732-5.303-2.197L30.406,41.013c-2.929-2.929-2.929-7.677,0-10.606 c2.929-2.929,7.678-2.93,10.606,0l17.243,17.242c2.929,2.929,2.929,7.677,0,10.606C56.791,59.72,54.872,60.452,52.952,60.452z"
+                />
+              </svg>
+            </div>
+            <div id="darkLightOverlay"></div>
+          </div>
+        </div>
+      </div>
+      <span>
+        <a href="https://html-online.com/articles/dark-light-template-switch/"
+          >Simple Animated Dark-Light Theme Switch</a
+        >
+      </span>
+      <!-- #.1 黑暗模式按鈕 Html 結束 -->
+      <!-- #.1 黑暗模式按鈕 JS 開始 -->
+      <script>
+        document.getElementById("wrapDarkLightSwitch").onclick = function () {
+          document.body.classList.toggle("bk-dark-mode-on");
+        };
+      </script>
+      <!-- #.1 黑暗模式按鈕 JS 結束 -->
+    </div>
+    <!-- 
+    █████████████████████████████████████████████████████████████████████████
+
+                  ▀████▄     ▄███▀               ▀████▀ ▀███▀                
+      █████████      ████    ████                   ██   ▄█▀        █████████ 
+                     █ ██   ▄█ ██  ▄█▀██▄ ▀███▄███  ██ ▄█▀                    
+      █████████      █  ██  █▀ ██ ██   ██   ██▀ ▀▀  █████▄          █████████ 
+                     █  ██▄█▀  ██  ▄█████   ██      ██  ███                   
+      █████████      █  ▀██▀   ██ ██   ██   ██      ██   ▀██▄       █████████ 
+                  ▄███▄ ▀▀  ▄████▄████▀██▄████▄  ▄████▄   ███▄               
+
+    █████████████████████████████████████████████████████████████████████████-->
+    <!-- bk-Dark-Mode toggle btns bk-黑暗模式按鈕 v1.0 -->
+    <style>
+      .bk-toggle-btn {
+        margin: 0.5rem 0.25rem;
+        border-radius: 40px;
+        order: -1;
+      }
+
+      .bk-toggle-btn input[type="checkbox"] {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: 0px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+      }
+
+      /* Dark-mode toggle btn */
+      #bk-dark-mode-button {
+        position: relative;
+        width: 5rem;
+        height: 1.75rem;
+        box-shadow: 0 0 0 3px var(--post-edit-icon-color),
+          0 0 4px 4px var(--btn-default-bg);
+      }
+
+      #bk-dark-mode-button span {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        overflow: hidden;
+        background-color: var(--menu-item-bg-color);
+        box-shadow: 0px 0px 8px -2px var(--link-hover-color);
+        border-radius: 40px;
+        transition: 0.8s ease background-color, 0.4s ease opacity;
+      }
+
+      #bk-dark-mode-button span:before,
+      #bk-dark-mode-button span:after {
+        content: "";
+        position: absolute;
+        top: 0.25rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 50%;
+        transition: 0.8s ease transform 0.4s, 0.8s ease background-color;
+      }
+
+      #bk-dark-mode-button span:before {
+        background-color: var(--menu-item-bg-color);
+        transform: translate(1.55rem, -0.45rem);
+        z-index: 1;
+      }
+
+      #bk-dark-mode-button span:after {
+        background-color: var(--link-color);
+        transform: translate(1rem, 0px);
+        z-index: 0;
+      }
+
+      #bk-dark-mode-button input[type="checkbox"]:active + span {
+        opacity: 0.1;
+      }
+
+      #bk-dark-mode-button input[type="checkbox"]:checked + span {
+        box-shadow: 0px 0px 8px -2px var(--link-color);
+      }
+
+      #bk-dark-mode-button input[type="checkbox"]:checked + span:before {
+        transform: translate(-4.3rem, -0.45rem);
+      }
+
+      #bk-dark-mode-button input[type="checkbox"]:checked + span:after {
+        transform: translate(-2.25rem, 0px);
+      }
+
+      /* Dark-mode toggle btn completed */
+
+      /* Auto-mode toggle btn */
+      #bk-auto-mode-button {
+        position: relative;
+        left: 3.75rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        z-index: 10;
+      }
+
+      #bk-auto-mode-button span {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        overflow: hidden;
+        color: var(--link-color);
+        background-color: transparent;
+        border-radius: 40px;
+        transition: 0.2s ease background-color, 1s ease-in-out rotate, 0.2s ease;
+
+        opacity: 0.2;
+        scale: 0.8;
+        rotate: 180deg;
+        box-shadow: inset 0px 0px 0px 0px transparent;
+      }
+
+      #bk-auto-mode-button input[type="checkbox"]:active + span {
+        scale: 1.2;
+        transform: translate(0, -0.1rem);
+      }
+
+      #bk-auto-mode-button input[type="checkbox"]:checked + span {
+        opacity: 1;
+        scale: 1;
+        rotate: 0deg;
+        background-color: var(--menu-item-bg-color);
+        box-shadow: inset 0px 0px 8px -2px #000;
+      }
+      /* Auto-mode toggle btn completed */
+
+      /* bk-Dark-Mode-desc */
+      #bk-dark-mode-desc {
+        position: relative;
+        width: 1.75rem;
+        height: 1.75rem;
+      }
+
+      #bk-dark-mode-text {
+        text-wrap: nowrap;
+      }
+      /* bk-Dark-Mode-desc completed */
+    </style>
+
+    <h3>hello world</h3>
+    <!--  █████████████████████████████████████████████████████████████████████████-->
+    <!-- bk-dark-mode-toggle-btn START -->
+    <div class="container-bk-toggle-btn">
+      <div class="bk-toggle-btn" id="bk-auto-mode-button">
+        <input type="checkbox" id="bk-auto-mode-checkbox" />
+        <span><i class="fa-regular fa-lightbulb"></i>^</span>
+      </div>
+
+      <div class="bk-toggle-btn" id="bk-dark-mode-button">
+        <input type="checkbox" id="bk-dark-mode-checkbox" />
+        <span id="bk-dark-mode-sunandmoon"></span>
+      </div>
+
+      <div class="bk-toggle-btn" id="bk-dark-mode-desc">
+        <span></span>
+      </div>
+
+      <p>
+        <span> local_scheme now is: </span>
+        <span id="bk-js-data-01"></span>
+      </p>
+      <p>
+        <span> auto_mode now is: </span>
+        <span id="bk-js-data-02"></span>
+      </p>
+      <p>
+        <span> system_schem now is: </span>
+        <span id="bk-js-data-03"></span>
+      </p>
+      <p>
+        <span> click_buttom_count: </span>
+        <span id="bk-js-data-04"></span>
+      </p>
+      <p>
+        <span> 你現在使用的是: </span>
+        <span id="bk-js-data-05"></span>
+        <span> 模式</span>
+      </p>
+      <p>
+        <span id="bk-js-data-06"></span>
+      </p>
+    </div>
+    <!-- bk-dark-mode-toggle-btn END -->
+    <!--  █████████████████████████████████████████████████████████████████████████-->
+    <h3>hello form</h3>
+    <div>
+      <input name="name" type="text" value="text input" />
+      <br />
+      <textarea cols="30" rows="2">Long text.</textarea>
+      <br />
+      <input name="sex" type="radio" value="male" checked="checked" /> Male
+      <input name="sex" type="radio" value="female" /> Female
+      <input name="sex" type="radio" value="female" /> Helicopters
+      <br />
+      <input name="democheckbox" type="checkbox" value="1" checked="checked" />
+      dog <input name="democheckbox" type="checkbox" value="1" /> cat
+      <input name="democheckbox" type="checkbox" value="1" /> crow
+      <input name="democheckbox" type="checkbox" value="1" /> rabbit
+      <br />
+      <select>
+        <option selected="selected" value="1">Yes</option>
+        <option value="2">No</option>
+        <option value="3">Both</option>
+      </select>
+      <button type="submit" value="Submit">Button</button>
+    </div>
+    <script>
+      // █████████████████████████████████████████████████████████████████████████-->
+      // -----------
+      // 常數變數區域
+      // -----------
+      // █████████████████████████████████████████████████████████████████████████-->
+      const toggle_button_auto = document.querySelector("#bk-auto-mode-button");
+      let auto_mode = localStorage.getItem("auto");
+
+      const toggle_button_dark = document.querySelector("#bk-dark-mode-button");
+      let local_scheme = localStorage.getItem("theme");
+
+      let system_scheme = localStorage.getItem("system");
+
+      let buttom_click_counter = 0;
+
+      console.log(buttom_click_counter);
+      console.log("local_scheme is: " + local_scheme);
+      console.log("auto_mode is: " + auto_mode);
+      console.log("system_schem is: " + system_scheme);
+
+      // 初始化
+      document.getElementById("bk-js-data-01").innerText = local_scheme;
+      document.getElementById("bk-js-data-02").innerText = auto_mode;
+      document.getElementById("bk-js-data-03").innerText = system_scheme;
+      document.getElementById("bk-js-data-04").innerText = buttom_click_counter;
+      document.getElementById("bk-js-data-05").innerText = "";
+
+      bk_site_init();
+      reset_auto_mode_btn_by(auto_mode);
+      bk_dark_mode_debug();
+
+      // █████████████████████████████████████████████████████████████████████████-->
+      // -------
+      // 監聽區域
+      // -------
+      // █████████████████████████████████████████████████████████████████████████-->
+      // 事件監聽 自動模式按鈕 按下
+      toggle_button_auto.addEventListener("click", () => {
+        auto_mode = localStorage.getItem("auto");
+        if (auto_mode === "manual") {
+          turn_off_auto_mode();
+          click_buttom_count();
+        } else {
+          clear_body_class();
+          turn_on_auto_mode();
+          click_buttom_count();
+        }
+      });
+
+      // 事件監聽 黑暗模式按鈕 按下
+      toggle_button_dark.addEventListener("click", (e) => {
+        local_scheme = localStorage.getItem("theme");
+        if (local_scheme === "dark") {
+          turn_off_dark_mode();
+          click_buttom_count();
+        } else {
+          turn_on_dark_mode();
+          click_buttom_count();
+        }
+        document.getElementById("bk-dark-mode-button").style.opacity = "1";
+      });
+
+      // 事件監聽 用戶切換主題
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          let scheme = event.matches ? "dark" : "light";
+          reset_dark_mode_btn_by(scheme);
+          bk_dark_mode_debug();
+          if (scheme === "dark") {
+            localStorage.setItem("system", "dark");
+          } else {
+            if (scheme === "light") {
+              localStorage.setItem("system", "light");
+            } else {
+              localStorage.setItem("system", "SOME TINGS WRONG!!");
+            }
+          }
+        });
+      // █████████████████████████████████████████████████████████████████████████-->
+      // -------
+      // 功能區域
+      // -------
+      // █████████████████████████████████████████████████████████████████████████-->
+      // 網頁初始化
+      function bk_site_init() {
+        if (local_scheme === "dark") {
+          if (auto_mode === "auto") {
+            turn_on_dark_mode();
+          } else {
+            reset_dark_mode_btn_by(local_scheme);
+          }
+        } else {
+          if (auto_mode === "auto") {
+            turn_off_dark_mode();
+          } else {
+            reset_dark_mode_btn_by(local_scheme);
+          }
+        }
+        document.getElementById("bk-dark-mode-button").style.content = "";
+        console.log("bk_dark_btn_init: Done!");
+      }
+
+      // 確認系統使用主題
+      function get_system_scheme() {
+        //預設為 Dark
+        var theme = "light";
+
+        //本地儲存主題 覆蓋 作業系統主題設置
+        if (localStorage.getItem("theme")) {
+          if (localStorage.getItem("theme") == "dark") {
+            var theme = "dark";
+          }
+        } else if (!window.matchMedia) {
+          //matchMedia method not supported
+          return "Error!!!!";
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          //OS theme setting detected as dark
+          var theme = "dark";
+        }
+
+        //dark theme preferred, set document with a `data-theme` attribute
+        if (theme == "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+        return theme;
+      }
+
+      // ██████████-->
+      // 清除 class
+      function clear_body_class() {
+        document.body.classList.remove("bk-light-mode-on");
+        document.body.classList.remove("bk-dark-mode-on");
+        console.log("clear_body_class Done!");
+      }
+
+      // 關閉 黑暗模式按鈕 清除 class 並 auto_mode 設為 自動
+      function turn_on_auto_mode() {
+        document.getElementById("bk-dark-mode-button").style.scale = "0";
+        document.getElementById("bk-auto-mode-checkbox").checked = true;
+        localStorage.setItem("auto", "manual");
+        bk_dark_mode_debug();
+      }
+
+      // 開啟 黑暗模式按鈕 並 auto_mode 設為 手動
+      function turn_off_auto_mode() {
+        document.getElementById("bk-dark-mode-button").style.scale = "1";
+        document.getElementById("bk-auto-mode-checkbox").checked = false;
+        localStorage.setItem("auto", "auto");
+        bk_dark_mode_debug();
+      }
+
+      // 改變 class 加上黑暗模式 local_scheme 設為 Dark
+      function turn_on_dark_mode() {
+        clear_body_class();
+        document.getElementById("bk-dark-mode-checkbox").checked = true;
+        document.body.classList.add("bk-light-mode-on");
+        localStorage.setItem("theme", "dark");
+        bk_dark_mode_debug();
+      }
+
+      //  改變 class 加上白天模式 local_scheme 設為 light
+      function turn_off_dark_mode() {
+        clear_body_class();
+        document.getElementById("bk-dark-mode-checkbox").checked = false;
+        document.body.classList.add("bk-dark-mode-on");
+        localStorage.setItem("theme", "light");
+        bk_dark_mode_debug();
+      }
+
+      // ████████████████████████████████████████-->
+      // 根據傳參 重設按鈕狀態 並儲存為 local theme
+      function reset_dark_mode_btn_by(mode) {
+        if (mode === "dark") {
+          document.getElementById("bk-dark-mode-checkbox").checked = false;
+          document.getElementById("bk-dark-mode-button").style.content = "";
+          localStorage.setItem("theme", mode);
+          if ((auto_mode = "manual")) {
+            clear_body_class();
+            document.body.classList.add("bk-dark-mode-on");
+          }
+        } else {
+          if (mode === "light") {
+            document.getElementById("bk-dark-mode-checkbox").checked = true;
+            document.getElementById("bk-dark-mode-button").style.content = "";
+            localStorage.setItem("theme", mode);
+            if ((auto_mode = "manual")) {
+              clear_body_class();
+              document.body.classList.add("bk-light-mode-on");
+            }
+          } else {
+            console.log(
+              "reset_dark_mode_btn_by is SOME TINGH GOT ERROR!! " + mode
+            );
+          }
+        }
+      }
+      function reset_auto_mode_btn_by(mode) {
+        if (mode === "auto") {
+          document.getElementById("bk-dark-mode-button").style.scale = "0";
+          document.getElementById("bk-auto-mode-checkbox").checked = true;
+          document.getElementById("bk-auto-mode-button").style.content = "";
+          localStorage.setItem("auto", mode);
+        } else {
+          if (mode === "manual") {
+            document.getElementById("bk-dark-mode-button").style.scale = "1";
+            document.getElementById("bk-auto-mode-checkbox").checked = false;
+
+            document.getElementById("bk-auto-mode-button").style.content = "";
+            localStorage.setItem("auto", mode);
+          } else {
+            console.log(
+              "reset_auto_mode_btn_by is SOME TINGH GOT ERROR!! " + mode
+            );
+          }
+        }
+      }
+      // █████████-->
+      // 按鈕計數器
+      function click_buttom_count() {
+        buttom_click_counter++;
+        bk_dark_mode_debug();
+        console.log("click_counter: " + buttom_click_counter);
+      }
+
+      // 根據狀態 設定文字
+      function bk_dark_mode_debug() {
+        document.getElementById("bk-js-data-01").innerText = local_scheme;
+        document.getElementById("bk-js-data-02").innerText = auto_mode;
+        document.getElementById("bk-js-data-03").innerText = system_scheme;
+        document.getElementById("bk-js-data-04").innerText =
+          buttom_click_counter;
+        // bk-js-data-05
+        if (local_scheme === "dark") {
+          document.getElementById("bk-js-data-05").innerText = "DARK";
+          if (auto_mode === "auto") {
+            document.getElementById("bk-js-data-05").innerText = "AUTO";
+          }
+        } else {
+          document.getElementById("bk-js-data-05").innerText = "LIGHT";
+          if (auto_mode === "auto") {
+            document.getElementById("bk-js-data-05").innerText = "AUTO";
+          }
+        }
+        // let last_Log;
+        // console.oldLog = console.log;
+        // console.log = function (str) {
+        //   console.oldLog(str);
+        //   last_Log = str;
+        // };
+        // document.getElementById("bk-js-data-06").innerText = last_Log;
+      }
+
+      console.log("local_scheme now is: " + local_scheme);
+      console.log("auto_mode now is: " + auto_mode);
+      console.log("system_schem now is: " + system_scheme);
+    </script>
+    <!-- 
+    █████████████████████████████████████████████████████████████████████████
+
+                  ▀████▄     ▄███▀               ▀████▀ ▀███▀                
+      █████████      ████    ████                   ██   ▄█▀        █████████ 
+                     █ ██   ▄█ ██  ▄█▀██▄ ▀███▄███  ██ ▄█▀                    
+      █████████      █  ██  █▀ ██ ██   ██   ██▀ ▀▀  █████▄          █████████ 
+                     █  ██▄█▀  ██  ▄█████   ██      ██  ███                   
+      █████████      █  ▀██▀   ██ ██   ██   ██      ██   ▀██▄       █████████ 
+                  ▄███▄ ▀▀  ▄████▄████▀██▄████▄  ▄████▄   ███▄               
+
+    █████████████████████████████████████████████████████████████████████████-->
+    <h3>hello btns</h3>
+    <style>
+      .bk-btns-outer {
+        width: 100%;
+
+        background-color: #456;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .bk-DKM-btn_style-1 {
+        position: relative;
+        margin: 0 0.5rem;
+        left: 0rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        z-index: 0;
+      }
+
+      .bk-DKM-btn_style-1 span {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        overflow: hidden;
+        color: var(--link-color);
+        background-color: var(--menu-item-bg-color);
+        border-radius: 40px;
+        transition: 0.2s ease background-color, 1s ease-in-out rotate, 0.2s ease;
+        opacity: 1;
+        scale: 0.8;
+        rotate: 180deg;
+        box-shadow: 0px 0px 8px 1px #151515;
+      }
+
+      .bk-DKM-btn_style-1:active span {
+        scale: 1.01;
+        opacity: 0.5;
+        transform: translate(0, -0.1rem);
+      }
+
+      .bk-DKM-btn_style-1.bk-input-checked span {
+        opacity: 1;
+        scale: 1;
+        rotate: 0deg;
+        box-shadow: inset 0px 0px 8px -2px #000;
+      }
+
+      .bk-DKM-btn_style-2 {
+        position: relative;
+        margin: 0 0.5rem;
+        left: 0rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        z-index: 0;
+      }
+
+      .bk-DKM-btn_style-2 span {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        overflow: hidden;
+        color: var(--link-color);
+        background-color: var(--menu-item-bg-color);
+        border-radius: 40px;
+        transition: 0.2s ease background-color, 1s ease-in-out rotate, 0.2s ease;
+        opacity: 1;
+        scale: 0.8;
+        rotate: 180deg;
+        box-shadow: 0px 0px 8px 1px #151515;
+      }
+
+      .bk-DKM-btn_style-2:active span {
+        scale: 1.01;
+        opacity: 0.5;
+        transform: translate(0, -0.1rem);
+      }
+
+      .bk-DKM-btn_style-2.bk-input-checked span {
+        opacity: 1;
+        scale: 1;
+        rotate: 0deg;
+        box-shadow: inset 0px 0px 8px -2px #000;
+      }
+    </style>
+    <div class="bk-btns-outer">
+      <!--  -->
+      <div class="bk-DKM-btn_style-1" id="bk-DKM-btn-01">
+        <span>▲</span>
+      </div>
+      <div class="bk-DKM-desc">
+        <span>Style-1</span>
+      </div>
+      <div class="bk-DKM-btn_style-1" id="bk-DKM-btn-02">
+        <span>▲</span>
+      </div>
+      <!--  -->
+      <!--  -->
+      <div class="bk-DKM-btn_style-2">
+        <span>▲</span>
+      </div>
+      <div class="bk-DKM-desc">
+        <span>Style-2</span>
+      </div>
+      <div class="bk-DKM-btn_style-2">
+        <span>▲</span>
+      </div>
+      <!--  -->
+    </div>
+    <!--  █████████████████████████████████████████████████████████████████████████-->
+    <script>
+      document.getElementById("bk-DKM-btn-01").onclick = function () {
+        document
+          .getElementById("bk-DKM-btn-01")
+          .classList.toggle("bk-input-checked");
+      };
+      document.getElementById("bk-DKM-btn-02").onclick = function () {
+        document
+          .getElementById("bk-DKM-btn-02")
+          .classList.toggle("bk-input-checked");
+      };
+    </script>
+  </body>
+</html>

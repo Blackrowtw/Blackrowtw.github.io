@@ -1,0 +1,85 @@
+/* 頁腳(footer) 容器 */
+.footer-inner {
+  color: var(--text-color);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+}
+
+/* 頁腳(footer) copy right 版權資訊 */
+.footer-inner .copyright {
+  line-height: 1em;
+  width: calc(100% - 0rem);
+  padding: 0 8lvw;
+  font-size: 1.125em;
+}
+
+/* 頁腳(footer) copy right 版權資訊-年分 */
+.footer-inner .copyright span[itemprop="copyrightYear"] {
+  font-family: Kanit;
+}
+
+/* 頁腳(footer) copy right 版權資訊-作者 + 英文 */
+.footer-inner .copyright span.author::after {
+  content: "Reprinted please specify the source";
+  display: inline-block;
+  line-height: 2em;
+  padding-left: 0.5em;
+  font-size: 1.125em;
+  font-family: Kanit;
+  font-weight: 200;
+}
+
+/* 頁腳(footer) 全站字數 */
+.footer-inner .wordcount {
+  margin-right: 0.25rem;
+  line-height: 2em;
+  font-family: Kanit;
+}
+
+/* 頁腳(footer) 全站字數 圖案 */
+.footer-inner .wordcount .post-meta-item .post-meta-item-icon i::before {
+  content: "\f1c2";
+}
+
+/* 頁腳(footer) 全站字數 文字 */
+.footer-inner .wordcount .post-meta-item .post-meta-item-icon + span {
+  display: none;
+}
+
+/* 頁腳(footer) 全站訪客數 前分隔線 */
+.footer-inner .busuanzi-count #busuanzi_container_site_uv::before {
+  content: "|";
+  margin: 0 0.5em;
+}
+
+/* 頁腳(footer) 全站瀏覽數 */
+.footer-inner .busuanzi-count {
+  margin-left: 0.25rem;
+  line-height: 2em;
+  font-family: Kanit;
+}
+
+/* 頁腳(footer) Hexo Hexo-NexT資訊 */
+.footer-inner .powered-by {
+  font-family: Kanit;
+  font-size: 0.75em;
+  color: #555;
+  line-height: 1.5em;
+  width: calc(100% - 0rem);
+  & a {
+    color: var(--text-color) !important;
+    font-size: 1.375em !important;
+  }
+  & a:hover {
+    color: var(--secondary-theme-color) !important;
+  }
+}
+
+/* 頁腳(footer) Hexo Hexo-NexT資訊 */
+/* @media (max-width: 991px) {
+  .footer-inner .powered-by {
+    
+  }
+} */
