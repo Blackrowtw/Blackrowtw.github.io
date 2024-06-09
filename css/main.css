@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #b16aff;
+    background: #65c31d;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3578,7 +3578,7 @@ a:not(.btn, .bmc-btn, .post-title-link) {
 
 /* 回到最上方按鈕 默認位置*/
 .back-to-top {
-  left: calc(95lvw - 3rem);
+  left: calc(95lvw - 3.5rem);
   border-radius: 4px;
 }
 
@@ -3598,7 +3598,7 @@ a:not(.btn, .bmc-btn, .post-title-link) {
 
 /* 側邊欄開關 */
 .sidebar-toggle {
-  left: calc(95lvw - 0.625rem);
+  left: calc(95lvw - 1.125rem);
   bottom: 4rem;
   border-radius: 4px;
   rotate: 180deg;
@@ -3606,7 +3606,7 @@ a:not(.btn, .bmc-btn, .post-title-link) {
 
 /* 載入百分比位置調整 */
 .pace .pace-progress {
-  top: calc(100lvh - 5rem) !important;
+  top: calc(100svh - 5rem) !important;
 }
 
 /* 文章內文，背景透明 (blog首頁 每個文章樣式是連續堆疊的)*/
