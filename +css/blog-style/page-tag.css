@@ -3,11 +3,23 @@
   content: "";
 }
 
+/* 包含標題 最外容器 */
+.tag-cloud {
+  min-height: 75lvh;
+  display: flex;
+  flex-direction: column;
+  margin: -3rem;
+}
+
 /* 標籤頁面(page-Tags) 容器樣式 */
 .tag-cloud-tags {
+  height: 100%;
   list-style: none;
   overflow: hidden;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 1rem;
+  margin: auto 2rem;
+  font-family: Kanit;
+  letter-spacing: 1px;
 }
 
 /* 標籤頁面(page-Tags) 樣式, 底色 */
@@ -55,6 +67,8 @@
 .tag-cloud-tags a:hover {
   background-color: var(--secondary-theme-color);
   color: white !important;
+  box-shadow: 4px 8px 8px -4px #050505;
+  transform: translateY(-2px);
 }
 
 /* 標籤頁面(page-Tags) 後箭頭 懸浮色 */
@@ -64,7 +78,7 @@
   transition: 0.5s;
 }
 
-/* 標籤頁面(page-Tags) 後箭頭 懸浮色 */
+/* 標籤頁面(page-Tags) #號 懸浮色 */
 .tag-cloud-tags a:hover::before {
   color: #ddd;
 }

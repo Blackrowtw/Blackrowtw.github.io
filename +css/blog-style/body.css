@@ -232,3 +232,30 @@ a:not(.btn, .bmc-btn, .post-title-link) {
 .site-subtitle {
   font-weight: lighter;
 }
+
+/* 回到最上方按鈕 默認位置*/
+.back-to-top {
+  left: calc(100lvw - 6rem);
+  border-radius: 4px;
+}
+
+/* 回到最上方按鈕 顯示時位置*/
+.back-to-top.back-to-top-on {
+  bottom: 2rem;
+}
+
+/* 回到最上方按鈕 百分數*/
+.back-to-top > span {
+  width: 2.375rem;
+  text-align: right;
+  margin-right: 0px;
+  order: -1;
+}
+
+/* 側邊欄開關 */
+.sidebar-toggle {
+  left: calc(100lvw - 3.625rem);
+  bottom: 4rem;
+  border-radius: 4px;
+  rotate: 180deg;
+}

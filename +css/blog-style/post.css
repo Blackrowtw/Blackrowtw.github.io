@@ -109,18 +109,26 @@
 /* 文章內文，圖片與超連結調整 */
 /* ------------------------ */
 
-/* 圖片元素 延伸到文章最邊緣 */
+/* 圖片元素(MD語法) 延伸到文章最邊緣 */
 .post-body > figure:has(img) {
   margin-bottom: 20px;
   width: calc(100% + 2rem);
   height: auto;
   margin-inline: -1rem -1rem;
+  /* overflow: hidden; */
+  & img {
+    max-height: 85lvh;
+    max-width: 100%;
+    object-fit: cover;
+  }
 }
+/* 圖片元素 非群組圖片 包裹img的連結 */
 .post-body > a:not([data-fancybox="group"]):has(img) {
   display: block;
   width: calc(100% + 2rem);
   height: auto;
   margin-inline: -1rem -1rem;
+  max-height: 75lvh;
 }
 
 /* 文章內文，超連結偽元素 icon || 排除btn, fancybox, headerlink tag-cloud*/

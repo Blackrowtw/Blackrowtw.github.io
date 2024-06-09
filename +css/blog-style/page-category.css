@@ -3,6 +3,11 @@
   content: "" !important;
 }
 
+/* 總體與標題的距離 */
+.category-all-page {
+  margin: -3rem;
+}
+
 /* 分類頁面(page-Category) 計數徽章(Badge)*/
 .category-all-page .category-list-count {
   font-size: 0.75rem;
@@ -39,11 +44,24 @@
   background: transparent;
   background: linear-gradient(
     0deg,
+    rgba(0, 0, 0, 0) 10%,
     var(--blockquote-color) 10%,
-    rgba(255, 255, 255, 0) 10%
+    var(--blockquote-color) 20%,
+    rgba(0, 0, 0, 0) 20%
   );
   text-align: center;
   margin-right: 0.25em;
+  transition: all 0.4s;
+  &:hover {
+    background: transparent;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 10%,
+      var(--secondary-theme-color) 10%,
+      var(--secondary-theme-color) 20%,
+      rgba(0, 0, 0, 0) 20%
+    );
+  }
 }
 
 /* 第二層 大層樣式 */

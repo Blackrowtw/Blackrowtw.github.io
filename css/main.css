@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #e3e8ff;
+    background: #0d9ddd;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3576,6 +3576,33 @@ a:not(.btn, .bmc-btn, .post-title-link) {
   font-weight: lighter;
 }
 
+/* 回到最上方按鈕 默認位置*/
+.back-to-top {
+  left: calc(100lvw - 6rem);
+  border-radius: 4px;
+}
+
+/* 回到最上方按鈕 顯示時位置*/
+.back-to-top.back-to-top-on {
+  bottom: 2rem;
+}
+
+/* 回到最上方按鈕 百分數*/
+.back-to-top > span {
+  width: 2.375rem;
+  text-align: right;
+  margin-right: 0px;
+  order: -1;
+}
+
+/* 側邊欄開關 */
+.sidebar-toggle {
+  left: calc(100lvw - 3.625rem);
+  bottom: 4rem;
+  border-radius: 4px;
+  rotate: 180deg;
+}
+
 /* 文章內文，背景透明 (blog首頁 每個文章樣式是連續堆疊的)*/
 .main-inner .sub-menu,
 .main-inner .post-block,
@@ -3633,11 +3660,23 @@ a:not(.btn, .bmc-btn, .post-title-link) {
   content: "";
 }
 
+/* 包含標題 最外容器 */
+.tag-cloud {
+  min-height: 75lvh;
+  display: flex;
+  flex-direction: column;
+  margin: -3rem;
+}
+
 /* 標籤頁面(page-Tags) 容器樣式 */
 .tag-cloud-tags {
+  height: 100%;
   list-style: none;
   overflow: hidden;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 1rem;
+  margin: auto 2rem;
+  font-family: Kanit;
+  letter-spacing: 1px;
 }
 
 /* 標籤頁面(page-Tags) 樣式, 底色 */
@@ -3685,6 +3724,8 @@ a:not(.btn, .bmc-btn, .post-title-link) {
 .tag-cloud-tags a:hover {
   background-color: var(--secondary-theme-color);
   color: white !important;
+  box-shadow: 4px 8px 8px -4px #050505;
+  transform: translateY(-2px);
 }
 
 /* 標籤頁面(page-Tags) 後箭頭 懸浮色 */
@@ -3694,7 +3735,7 @@ a:not(.btn, .bmc-btn, .post-title-link) {
   transition: 0.5s;
 }
 
-/* 標籤頁面(page-Tags) 後箭頭 懸浮色 */
+/* 標籤頁面(page-Tags) #號 懸浮色 */
 .tag-cloud-tags a:hover::before {
   color: #ddd;
 }
@@ -3702,6 +3743,11 @@ a:not(.btn, .bmc-btn, .post-title-link) {
 /* 分類頁面(page-Category)，取消超連結 的上級偽類內容 */
 .category-list-link::after {
   content: "" !important;
+}
+
+/* 總體與標題的距離 */
+.category-all-page {
+  margin: -3rem;
 }
 
 /* 分類頁面(page-Category) 計數徽章(Badge)*/
@@ -3740,11 +3786,24 @@ a:not(.btn, .bmc-btn, .post-title-link) {
   background: transparent;
   background: linear-gradient(
     0deg,
+    rgba(0, 0, 0, 0) 10%,
     var(--blockquote-color) 10%,
-    rgba(255, 255, 255, 0) 10%
+    var(--blockquote-color) 20%,
+    rgba(0, 0, 0, 0) 20%
   );
   text-align: center;
   margin-right: 0.25em;
+  transition: all 0.4s;
+  &:hover {
+    background: transparent;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 10%,
+      var(--secondary-theme-color) 10%,
+      var(--secondary-theme-color) 20%,
+      rgba(0, 0, 0, 0) 20%
+    );
+  }
 }
 
 /* 第二層 大層樣式 */
@@ -3917,18 +3976,26 @@ a:not(.btn, .bmc-btn, .post-title-link) {
 /* 文章內文，圖片與超連結調整 */
 /* ------------------------ */
 
-/* 圖片元素 延伸到文章最邊緣 */
+/* 圖片元素(MD語法) 延伸到文章最邊緣 */
 .post-body > figure:has(img) {
   margin-bottom: 20px;
   width: calc(100% + 2rem);
   height: auto;
   margin-inline: -1rem -1rem;
+  /* overflow: hidden; */
+  & img {
+    max-height: 85lvh;
+    max-width: 100%;
+    object-fit: cover;
+  }
 }
+/* 圖片元素 非群組圖片 包裹img的連結 */
 .post-body > a:not([data-fancybox="group"]):has(img) {
   display: block;
   width: calc(100% + 2rem);
   height: auto;
   margin-inline: -1rem -1rem;
+  max-height: 75lvh;
 }
 
 /* 文章內文，超連結偽元素 icon || 排除btn, fancybox, headerlink tag-cloud*/
