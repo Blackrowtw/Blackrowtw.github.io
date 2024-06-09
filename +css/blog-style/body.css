@@ -235,7 +235,7 @@ a:not(.btn, .bmc-btn, .post-title-link) {
 
 /* 回到最上方按鈕 默認位置*/
 .back-to-top {
-  left: calc(100lvw - 6rem);
+  left: calc(95lvw - 3rem);
   border-radius: 4px;
 }
 
@@ -250,12 +250,18 @@ a:not(.btn, .bmc-btn, .post-title-link) {
   text-align: right;
   margin-right: 0px;
   order: -1;
+  direction: rtl;
 }
 
 /* 側邊欄開關 */
 .sidebar-toggle {
-  left: calc(100lvw - 3.625rem);
+  left: calc(95lvw - 0.625rem);
   bottom: 4rem;
   border-radius: 4px;
   rotate: 180deg;
+}
+
+/* 載入百分比位置調整 */
+.pace .pace-progress {
+  top: calc(100lvh - 5rem) !important;
 }

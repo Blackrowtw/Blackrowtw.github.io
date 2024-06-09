@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/+images/favicon/apple-touch-icon-180x180-BK.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/+images/favicon/favicon-32x32-BK.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/+images/favicon/favicon-16x16-BK.png">
+  <link rel="mask-icon" href="/+images/favicon/android-chrome-256x256-BK.svg" color="#222">
+  <meta name="google-site-verification" content="8FDuyR_knaLSUi7iNQmuOiM8W4mCg4KNGhW1d7RojJE">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-big-counter.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blackrowtw.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12,"on_mobile":true,"button_reverse":true},"copycode":{"enable":true,"style":"default"},"fold":{"enable":true,"height":500},"bookmark":{"enable":true,"color":"#cccccc","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="MLL sever">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Minecraft】[1.20.1] 美化模組推薦 (fabric)">
+<meta property="og:url" content="https://blackrowtw.github.io/blog/9c61/">
+<meta property="og:site_name" content="BK&#39;s Dreg Heap">
+<meta property="og:description" content="MLL sever">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/00-banner.jpg">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/01-Chat-Heads.jpg">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/02-Visuality-1.png">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/02-Visuality-2.png">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/03-Not-Enough-Animations-1.webp">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/03-Not-Enough-Animations-2.webp">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/03-Not-Enough-Animations-3.webp">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/03-Not-Enough-Animations-4.webp">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/04-Eating-Animation.webp">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/05-3d-Skin-Layers.webp">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/06-Item-Model-Fix.png">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/07-Hat-List.gif">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/08-LambDynamicLights-1.webp">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/08-LambDynamicLights-2.webp">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/09-Continuity.webp">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/10-CIT-Resewn-1.webp">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/10-CIT-Resewn-2.png">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/11-Entity-Texture-Features-1.png">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/11-Entity-Texture-Features-2.png">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/12-Entity-Model-Features.jpg">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/Fresh-Animations.jpg">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/xali">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/xali">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/xali">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/xali">
+<meta property="og:image" content="https://blackrowtw.github.io/blog/9c61/Vanilla-Tweaks.png">
+<meta property="article:published_time" content="2023-09-24T05:56:00.000Z">
+<meta property="article:modified_time" content="2024-06-08T02:03:55.502Z">
+<meta property="article:author" content="BlacKrow">
+<meta property="article:tag" content="Minecraft">
+<meta property="article:tag" content="fabric">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blackrowtw.github.io/blog/9c61/00-banner.jpg">
+
+
+<link rel="canonical" href="https://blackrowtw.github.io/blog/9c61/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-tw","comments":true,"permalink":"https://blackrowtw.github.io/blog/9c61/","path":"blog/9c61/","title":"【Minecraft】[1.20.1] 美化模組推薦 (fabric)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【Minecraft】[1.20.1] 美化模組推薦 (fabric) | BK's Dreg Heap</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JM9908N3MY"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-JM9908N3MY","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+
+<!-- 3D 鳥群背景 -->
+<!-- https://www.vantajs.com/ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+<!-- Google 自訂引入字型 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">BK's Dreg Heap</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">I've asked all over the world, but there's no answer.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-blog"><a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Blog</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa-solid fa-crow fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">29</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa-regular fa-folder fa-fw"></i>分類<span class="badge">19</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa-solid fa-arrow-down-short-wide fa-fw"></i>歸檔<span class="badge">71</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E7%B5%84%E6%8E%A8%E8%96%A6-1-20-1"><span class="nav-text">模組推薦 [1.20.1]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#01-Chat-Heads"><span class="nav-text">01. Chat Heads</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#02-Visuality"><span class="nav-text">02. Visuality</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#03-Not-Enough-Animations"><span class="nav-text">03. Not Enough Animations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#04-Eating-Animation"><span class="nav-text">04. Eating Animation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#05-3d-Skin-Layers"><span class="nav-text">05. 3d Skin Layers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#06-Item-Model-Fix"><span class="nav-text">06. Item Model Fix</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#07-Hat-List"><span class="nav-text">07. Hat List</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#08-LambDynamicLights"><span class="nav-text">08. LambDynamicLights</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#09-Continuity"><span class="nav-text">09. Continuity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-CIT-Resewn"><span class="nav-text">10. CIT Resewn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-Entity-Texture-Features"><span class="nav-text">11. Entity Texture Features</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-Entity-Model-Features"><span class="nav-text">12. Entity Model Features</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%90%E8%B3%AA%E5%8C%85%E6%8E%A8%E8%96%A6"><span class="nav-text">材質包推薦</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#01-Fresh-Animations"><span class="nav-text">01. Fresh Animations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#02-xali%E2%80%99s-Enchanted-Books"><span class="nav-text">02. xali’s Enchanted Books</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#03-xali%E2%80%99s-Potions"><span class="nav-text">03. xali’s Potions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#04-Vanilla-Tweaks"><span class="nav-text">04. Vanilla Tweaks</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="BlacKrow"
+      src="/+images/favicon/android-chrome-256x256-BK.png">
+  <p class="site-author-name" itemprop="name">BlacKrow</p>
+  <div class="site-description" itemprop="description">Think, create, express, then accept.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">71</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/Blackrow_tw" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;Blackrow_tw" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-xl fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.pixiv.net/users/2407057" title="Pixiv → https:&#x2F;&#x2F;www.pixiv.net&#x2F;users&#x2F;2407057" rel="noopener me" target="_blank"><i class="fab fa-pixiv fa-xl fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.youtube.com/@blackrowtw" title="YouTube → https:&#x2F;&#x2F;www.youtube.com&#x2F;@blackrowtw" rel="noopener me" target="_blank"><i class="fab fa-youtube fa-xl fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/Blackrowtw" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Blackrowtw" rel="noopener me" target="_blank"><i class="fab fa-github fa-xl fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:blackrow.020@gmail.com" title="E-Mail → mailto:blackrow.020@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+<!-- 黑夜模式按鈕位置 -->
+<!-- DKM 動畫按鈕 -->
+<div class="bk-DKM-btn-container">
+  <div class="bk-DKM-animed-outer">
+    <div class="bk-DKM-animed" id="bk-DKM-mode">
+      <div class="bk-DKM-animed-sun" id="bk-DKM-light-btn">
+        <span></span>
+      </div>
+      <i class="fa-regular fa-lightbulb"></i>
+      <div class="bk-DKM-animed-moon" id="bk-DKM-dark-btn">
+        <span></span>
+      </div>
+      <span class="bk-DKM-animed-circle"></span>
+    </div>
+  </div>
+</div>
+
+<!-- <script
+  type="text/javascript"
+  src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+  data-name="bmc-button"
+  data-slug="blackrow"
+  data-color="#FFDD00"
+  data-emoji="🍎"
+  data-font="Bree"
+  data-text="Buy me an Apple"
+  data-outline-color="#000000"
+  data-font-color="#000000"
+  data-coffee-color="#ffffff"
+></script>
+<style>
+  .bmc-btn-container .bmc-btn {
+    min-width: 11rem;
+    color: #000000;
+    background-color: #ffdd00 !important;
+    height: 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: Bold;
+    border: none;
+    padding: 0em 1em 0em 1em;
+    line-height: 1.2rem;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center;
+    font-family: "Bree Serif", cursive !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+  }
+  .bmc-btn-text {
+    margin-left: -0.5em;
+    font-size: 0.9rem;
+    display: inline-block;
+    line-height: 0;
+    width: 100%;
+    flex-shrink: 0;
+    font-family: [FONT] !important;
+  }
+</style> -->
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="https://blackrowtw.github.io/blog/9c61/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/+images/favicon/android-chrome-256x256-BK.png">
+      <meta itemprop="name" content="BlacKrow">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BK's Dreg Heap">
+      <meta itemprop="description" content="Think, create, express, then accept.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【Minecraft】[1.20.1] 美化模組推薦 (fabric) | BK's Dreg Heap">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【Minecraft】[1.20.1] 美化模組推薦 (fabric)<a href="https://github.com/Blackrowtw/Blackrowtw.github.io_Hexo/edit/master/source/_posts/Game/2024-05-24__%E3%80%90Minecraft%E3%80%91-1-20-1-%E7%BE%8E%E5%8C%96%E6%A8%A1%E7%B5%84%E6%8E%A8%E8%96%A6-fabric__.md" class="post-edit-link" title="編輯" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2023-09-24 13:56:00" itemprop="dateCreated datePublished" datetime="2023-09-24T13:56:00+08:00">2023-09-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-06-08 10:03:55" itemprop="dateModified" datetime="2024-06-08T10:03:55+08:00">2024-06-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Game/" itemprop="url" rel="index"><span itemprop="name">Game</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Game/minecraft/" itemprop="url" rel="index"><span itemprop="name">minecraft</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">閱讀次數：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>783</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>3 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><figure><img data-src="/blog/9c61/00-banner.jpg" alt="MLL sever" loading="lazy"><figcaption aria-hidden="true">MLL sever</figcaption></figure></p>
+<span id="more"></span>
+
+<h2 id="模組推薦-1-20-1"><a href="#模組推薦-1-20-1" class="headerlink" title="模組推薦 [1.20.1]"></a>模組推薦 [1.20.1]</h2><h3 id="01-Chat-Heads"><a href="#01-Chat-Heads" class="headerlink" title="01. Chat Heads"></a>01. <a href="https://modrinth.com/mod/chat-heads" target="_blank" rel="noopener">Chat Heads</a></h3><p>—【聊天欄玩家頭像】</p>
+<blockquote>
+<p>在訊息旁邊顯示玩家的頭像。</p>
+</blockquote>
+<p><figure><img data-src="/blog/9c61/01-Chat-Heads.jpg" alt="Chat Heads" loading="lazy"><figcaption aria-hidden="true">Chat Heads</figcaption></figure></p>
+<h3 id="02-Visuality"><a href="#02-Visuality" class="headerlink" title="02. Visuality"></a>02. <a href="https://modrinth.com/mod/visuality" target="_blank" rel="noopener">Visuality</a></h3><p>—【更多粒子效果】</p>
+<blockquote>
+<p>增加下雨水面漣漪、礦物鎧甲發光、生物受傷粒子等等的效果。</p>
+</blockquote>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/blog/9c61/02-Visuality-1.png" class="" title="Visuality"></div><div class="group-picture-column"><img data-src="/blog/9c61/02-Visuality-2.png" class="" title="Visuality"></div></div></div>
+
+<h3 id="03-Not-Enough-Animations"><a href="#03-Not-Enough-Animations" class="headerlink" title="03. Not Enough Animations"></a>03. <a href="https://modrinth.com/mod/not-enough-animations" target="_blank" rel="noopener">Not Enough Animations</a></h3><p>—【更多的玩家動作】</p>
+<blockquote>
+<p>增加手持物品、使用武器、進食、划船、騎馬、爬梯、等等人物動畫。</p>
+</blockquote>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/blog/9c61/03-Not-Enough-Animations-1.webp" class="" title="Not Enough Animations"></div><div class="group-picture-column"><img data-src="/blog/9c61/03-Not-Enough-Animations-2.webp" class="" title="Not Enough Animations"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/blog/9c61/03-Not-Enough-Animations-3.webp" class="" title="Not Enough Animations"></div><div class="group-picture-column"><img data-src="/blog/9c61/03-Not-Enough-Animations-4.webp" class="" title="Not Enough Animations"></div></div></div>
+
+<h3 id="04-Eating-Animation"><a href="#04-Eating-Animation" class="headerlink" title="04. Eating Animation"></a>04. <a href="https://modrinth.com/mod/eating-animation" target="_blank" rel="noopener">Eating Animation</a></h3><p>—【更多的進食動畫】</p>
+<blockquote>
+<p>增加進食時，食物慢慢消耗的新動畫。</p>
+</blockquote>
+<p><figure><img data-src="/blog/9c61/04-Eating-Animation.webp" alt="Eating Animation" loading="lazy"><figcaption aria-hidden="true">Eating Animation</figcaption></figure></p>
+<h3 id="05-3d-Skin-Layers"><a href="#05-3d-Skin-Layers" class="headerlink" title="05. 3d Skin Layers"></a>05. <a href="https://modrinth.com/mod/3dskinlayers" target="_blank" rel="noopener">3d Skin Layers</a></h3><p>—【3D皮膚層】</p>
+<blockquote>
+<p>讓你的第2層皮膚有立體的效果。</p>
+</blockquote>
+<p><figure><img data-src="/blog/9c61/05-3d-Skin-Layers.webp" alt="3d Skin Layers" loading="lazy"><figcaption aria-hidden="true">3d Skin Layers</figcaption></figure></p>
+<h3 id="06-Item-Model-Fix"><a href="#06-Item-Model-Fix" class="headerlink" title="06. Item Model Fix"></a>06. <a href="https://modrinth.com/mod/modelfix" target="_blank" rel="noopener">Item Model Fix</a></h3><p>—【修復物品模型隙縫】</p>
+<blockquote>
+<p>修復各種原版Mincraft物品模型的細小錯誤。</p>
+</blockquote>
+<p><figure><img data-src="/blog/9c61/06-Item-Model-Fix.png" alt="Item Model Fix" loading="lazy"><figcaption aria-hidden="true">Item Model Fix</figcaption></figure></p>
+<h3 id="07-Hat-List"><a href="#07-Hat-List" class="headerlink" title="07. Hat List"></a>07. <a href="https://modrinth.com/mod/hatlist" target="_blank" rel="noopener">Hat List</a></h3><p>—【Tab清單顯示皮膚修復】</p>
+<blockquote>
+<p>讓Tab名單中的第2層皮膚能夠正常顯示。</p>
+</blockquote>
+<p><figure><img data-src="/blog/9c61/07-Hat-List.gif" alt="Hat List" loading="lazy"><figcaption aria-hidden="true">Hat List</figcaption></figure></p>
+<h3 id="08-LambDynamicLights"><a href="#08-LambDynamicLights" class="headerlink" title="08. LambDynamicLights"></a>08. <a href="https://modrinth.com/mod/lambdynamiclights" target="_blank" rel="noopener">LambDynamicLights</a></h3><p>—【Lambda的動態光源】</p>
+<blockquote>
+<p>補充Fabric端所沒有的OptiFine功能。<br>讓你手持火把或光源時，能夠照亮周圍。<br>以及讓掉落的物品，或生物發光等等(視覺上)功能。</p>
+</blockquote>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/blog/9c61/08-LambDynamicLights-1.webp" class="" title="LambDynamicLights"></div><div class="group-picture-column"><img data-src="/blog/9c61/08-LambDynamicLights-2.webp" class="" title="LambDynamicLights"></div></div></div>
+
+<h3 id="09-Continuity"><a href="#09-Continuity" class="headerlink" title="09. Continuity"></a>09. <a href="https://modrinth.com/mod/continuity" target="_blank" rel="noopener">Continuity</a></h3><p>—【連接材質】</p>
+<blockquote>
+<p>補充Fabric端所沒有的OptiFine功能。<br>實現無縫玻璃、無縫書櫃、草皮過渡到其他方塊等等材質連接的功能。<br>模組自帶基本玻璃、書櫃、砂岩連接材質包。<br><strong>如果有裝Sodium(鈉)模組的話，還需要裝Indium(銦)才可以使用。</strong></p>
+</blockquote>
+<p><figure><img data-src="/blog/9c61/09-Continuity.webp" alt="Continuity" loading="lazy"><figcaption aria-hidden="true">Continuity</figcaption></figure></p>
+<h3 id="10-CIT-Resewn"><a href="#10-CIT-Resewn" class="headerlink" title="10. CIT Resewn"></a>10. <a href="https://modrinth.com/mod/cit-resewn" target="_blank" rel="noopener">CIT Resewn</a></h3><p>—【自定義物品材質】</p>
+<blockquote>
+<p>補充Fabric端所沒有的OptiFine功能。<br>讓更多的物品可以使用材質包改變圖案。</p>
+</blockquote>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/blog/9c61/10-CIT-Resewn-1.webp" class="" title="Entity CIT Resewn"></div><div class="group-picture-column"><img data-src="/blog/9c61/10-CIT-Resewn-2.png" class="" title="CIT Resewn"></div></div></div>
+
+<h3 id="11-Entity-Texture-Features"><a href="#11-Entity-Texture-Features" class="headerlink" title="11. Entity Texture Features"></a>11. <a href="https://modrinth.com/mod/entitytexturefeatures" target="_blank" rel="noopener">Entity Texture Features</a></h3><p>—【自定義生物材質】</p>
+<blockquote>
+<p>補充Fabric端所沒有的OptiFine功能。<br>讓材質包實現生物材質的發光、隨機等等的特殊效果。<br>玩家高級皮膚的效果。</p>
+</blockquote>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/blog/9c61/11-Entity-Texture-Features-1.png" class="" title="Entity Texture Features"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/blog/9c61/11-Entity-Texture-Features-2.png" class="" title="Entity Texture Features"></div></div></div>
+
+<h3 id="12-Entity-Model-Features"><a href="#12-Entity-Model-Features" class="headerlink" title="12. Entity Model Features"></a>12. <a href="https://modrinth.com/mod/entity-model-features" target="_blank" rel="noopener">Entity Model Features</a></h3><p>—【自定義生物模型】</p>
+<blockquote>
+<p>補充Fabric端所沒有的OptiFine功能。<br>讓材質包可以使用不同的生物模型。<br>需要與 <strong>Entity Texture Features</strong> 一起安裝。<br>非常推薦搭配 <strong>Fresh Animations</strong> 材質包使用。</p>
+</blockquote>
+<p><figure><img data-src="/blog/9c61/12-Entity-Model-Features.jpg" alt="Entity Model Features" loading="lazy"><figcaption aria-hidden="true">Entity Model Features</figcaption></figure></p>
+<h2 id="材質包推薦"><a href="#材質包推薦" class="headerlink" title="材質包推薦"></a>材質包推薦</h2><h3 id="01-Fresh-Animations"><a href="#01-Fresh-Animations" class="headerlink" title="01. Fresh Animations"></a>01. <a href="https://modrinth.com/resourcepack/fresh-animations" target="_blank" rel="noopener">Fresh Animations</a></h3><blockquote>
+<p>更生動的生物動畫<br>需求 <strong>Entity Texture Features</strong>、<strong>Entity Model Features</strong></p>
+</blockquote>
+<p><figure><img data-src="/blog/9c61/Fresh-Animations.jpg" alt="Fresh Animations" loading="lazy"><figcaption aria-hidden="true">Fresh Animations</figcaption></figure></p>
+<iframe src="https://www.youtube.com/embed/QHHdDbeaMfg" width="360" height="240" frameborder="0" loading="lazy" allowfullscreen></iframe>
+
+<h3 id="02-xali’s-Enchanted-Books"><a href="#02-xali’s-Enchanted-Books" class="headerlink" title="02. xali’s Enchanted Books"></a>02. <a href="https://modrinth.com/resourcepack/xalis-enchanted-books" target="_blank" rel="noopener">xali’s Enchanted Books</a></h3><blockquote>
+<p>附魔書材質<br>需求 <strong>CIT Resewn</strong></p>
+</blockquote>
+<p><figure><img data-src="/blog/9c61/xali's-Enchanted-Books.png" alt="xali&#39;s Enchanted Books" loading="lazy"><figcaption aria-hidden="true">xali&#39;s Enchanted Books</figcaption></figure></p>
+<h3 id="03-xali’s-Potions"><a href="#03-xali’s-Potions" class="headerlink" title="03. xali’s Potions"></a>03. <a href="https://modrinth.com/resourcepack/xalis-potion" target="_blank" rel="noopener">xali’s Potions</a></h3><blockquote>
+<p>附藥水材質<br>需求 <strong>CIT Resewn</strong></p>
+</blockquote>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/blog/9c61/xali's-Potions-1.png" class="" title="xali" alt="s Potions"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="/blog/9c61/xali's-Potions-2.png" class="" title="xali" alt="s Potions"></div><div class="group-picture-column"><img data-src="/blog/9c61/xali's-Potions-3.png" class="" title="xali" alt="s Potions"></div></div></div>
+
+<h3 id="04-Vanilla-Tweaks"><a href="#04-Vanilla-Tweaks" class="headerlink" title="04. Vanilla Tweaks"></a>04. <a href="https://vanillatweaks.net/picker/resource-packs/" target="_blank" rel="noopener">Vanilla Tweaks</a></h3><blockquote>
+<p>Vanilla Tweaks 原版(香草)調整<br>可以自己選擇需要的功能，自定義自己想要的材質包功能。<br>主要在原版的基礎上做些微的調整，沒有太強烈的風格，很適合原版生存使用。</p>
+</blockquote>
+<p><figure><img data-src="/blog/9c61/Vanilla-Tweaks.png" alt="Vanilla Tweaks" loading="lazy"><figcaption aria-hidden="true">Vanilla Tweaks</figcaption></figure></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>作者： </strong>BlacKrow
+  </li>
+  <li class="post-copyright-link">
+      <strong>文章連結：</strong>
+      <a href="https://blackrowtw.github.io/blog/9c61/" title="【Minecraft】[1.20.1] 美化模組推薦 (fabric)">https://blackrowtw.github.io/blog/9c61/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hant" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Minecraft/" rel="tag"># Minecraft</a>
+              <a href="/tags/fabric/" rel="tag"># fabric</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/blog/1614/" rel="prev" title="【Minecraft】啟動器推薦 PrismLauncher (棱镜啟動器)">
+                  <i class="fa fa-angle-left"></i> 【Minecraft】啟動器推薦 PrismLauncher (棱镜啟動器)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/blog/63f8/" rel="next" title="【Minecraft】更多頭顱掉落插件 More Mob Heads">
+                  【Minecraft】更多頭顱掉落插件 More Mob Heads <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa-solid fa-feather-pointed"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">轉載請註明出處</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>總字數：</span>
+    <span title="總字數">29k</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://blackrowtw.github.io/blog/9c61/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"Blackrowtw","repo":"Blackrowtw.github.io","client_id":"Ov23linJiq7IZxHbb8Bo","client_secret":"aeff1b08dde5d2b020451437e415332f827bf54f","admin_user":"Blackrowtw","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","labels":"Gitalk","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"142e2ec8105ada99534fd9df2ec372a5"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+<!-- 3D 鳥群背景(vanta) 邊緣暗角 -->
+<div id="vanta-js-birds-overlay"></div>
+
+<!-- 3D 鳥群背景(vanta) 生成位置 -->
+<div id="vanta-js-birds-bg"></div>
+
+<!-- 3D 鳥群背景 js 引入-->
+<!-- https://www.vantajs.com/ -->
+<script>
+  VANTA.BIRDS({
+    el: "#vanta-js-birds-bg",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.0,
+    minWidth: 200.0,
+    scale: 1.0,
+    scaleMobile: 1.0,
+    backgroundColor: 0x0,
+    color1: 0x6190e8,
+    color2: 0x0,
+    colorMode: "lerp",
+    birdSize: 2,
+    wingSpan: 40.0, // 鳥類翼展
+    separation: 20.0, // 鳥類之間的分離
+    alignment: 50.0, // 鳥類之間的對齊
+    cohesion: 100.0, // 鳥類運動的凝聚力
+    quantity: 3.0, // 鳥類數量
+  });
+</script>
+
+<!-- 引入 bk-dark-mode-buttom 模板生成 JS -->
+<script src="/+js/+__bk-dark-mode-buttom.js"></script>
+
+<!-- 引入 瀑布流 生成 JS -->
+<!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
+<!-- <script src="/+js/+__blog-index-masonry-layout.js"></script> -->
+
+<!-- 引入 hexo-infinite-scroll 無限往下滑動 JS -->
+<script src="//cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script> 
+<script>
+    infiniteScroll({
+    showNum: 5,
+    loadTime: 400,
+    style: 'line-scale',
+    color: '#025ab1'
+    })
+</script>
+
+</body>
+</html>

@@ -5,7 +5,7 @@
 
 /* 總體與標題的距離 */
 .category-all-page {
-  margin: -3rem;
+  margin: -2.5rem 0 0 0;
 }
 
 /* 分類頁面(page-Category) 計數徽章(Badge)*/
@@ -28,6 +28,7 @@
 /* 分類表單 整體樣式 */
 .category-all-page .category-all {
   width: fit-content;
+  max-width: 80%;
   margin: 3em auto;
   font-family: Kanit;
 }

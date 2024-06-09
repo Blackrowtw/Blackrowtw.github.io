@@ -221,7 +221,7 @@ body {
   background: var(--body-bg-color);
   box-sizing: border-box;
   color: var(--text-color);
-  font-family: Lato, "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Noto Sans TC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 1em;
   line-height: 2;
   min-height: 100%;
@@ -234,7 +234,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: sans-serif, Lato, "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Noto Serif TC, Noto Sans TC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 30px 0 15px;
@@ -1471,7 +1471,7 @@ pre code {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: Kanit, serif, Lato, "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Noto Serif TC, Noto Sans TC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   line-height: 1.5;
@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #0d9ddd;
+    background: #b16aff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2274,7 +2274,7 @@ pre code {
   width: 4px;
 }
 .post-body {
-  font-family: sans-serif, Lato, "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Noto Sans TC, Noto Sans TC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   overflow-wrap: break-word;
 }
 @media (min-width: 1200px) {
@@ -2476,7 +2476,7 @@ pre code {
 }
 .posts-expand .post-meta-container {
   color: #999;
-  font-family: sans-serif, Lato, "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Noto Sans TC, Noto Sans TC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 0.75em;
   margin-top: 3px;
 }
@@ -3578,7 +3578,7 @@ a:not(.btn, .bmc-btn, .post-title-link) {
 
 /* 回到最上方按鈕 默認位置*/
 .back-to-top {
-  left: calc(100lvw - 6rem);
+  left: calc(95lvw - 3rem);
   border-radius: 4px;
 }
 
@@ -3593,14 +3593,20 @@ a:not(.btn, .bmc-btn, .post-title-link) {
   text-align: right;
   margin-right: 0px;
   order: -1;
+  direction: rtl;
 }
 
 /* 側邊欄開關 */
 .sidebar-toggle {
-  left: calc(100lvw - 3.625rem);
+  left: calc(95lvw - 0.625rem);
   bottom: 4rem;
   border-radius: 4px;
   rotate: 180deg;
+}
+
+/* 載入百分比位置調整 */
+.pace .pace-progress {
+  top: calc(100lvh - 5rem) !important;
 }
 
 /* 文章內文，背景透明 (blog首頁 每個文章樣式是連續堆疊的)*/
@@ -3665,7 +3671,7 @@ a:not(.btn, .bmc-btn, .post-title-link) {
   min-height: 75lvh;
   display: flex;
   flex-direction: column;
-  margin: -3rem;
+  margin: -2.5rem 0 0 0;
 }
 
 /* 標籤頁面(page-Tags) 容器樣式 */
@@ -3747,7 +3753,7 @@ a:not(.btn, .bmc-btn, .post-title-link) {
 
 /* 總體與標題的距離 */
 .category-all-page {
-  margin: -3rem;
+  margin: -2.5rem 0 0 0;
 }
 
 /* 分類頁面(page-Category) 計數徽章(Badge)*/
@@ -3770,6 +3776,7 @@ a:not(.btn, .bmc-btn, .post-title-link) {
 /* 分類表單 整體樣式 */
 .category-all-page .category-all {
   width: fit-content;
+  max-width: 80%;
   margin: 3em auto;
   font-family: Kanit;
 }
@@ -3872,7 +3879,7 @@ a:not(.btn, .bmc-btn, .post-title-link) {
 /* 文章內文 h1 標題 */
 .post-body h1 {
   width: fit-content;
-  overflow-wrap: anywhere;
+  max-width: 90%;
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 15px;
@@ -3886,7 +3893,7 @@ a:not(.btn, .bmc-btn, .post-title-link) {
 /* 文章內文 h2標題底線顏色 */
 .post-body h2 {
   width: fit-content;
-  overflow-wrap: anywhere;
+  max-width: 90%;
   padding-left: 0.5em;
   margin-left: 0.5em;
   margin-inline-start: 0;
@@ -3989,13 +3996,19 @@ a:not(.btn, .bmc-btn, .post-title-link) {
     object-fit: cover;
   }
 }
+
 /* 圖片元素 非群組圖片 包裹img的連結 */
 .post-body > a:not([data-fancybox="group"]):has(img) {
   display: block;
   width: calc(100% + 2rem);
   height: auto;
   margin-inline: -1rem -1rem;
-  max-height: 75lvh;
+  max-height: 85lvh;
+}
+
+/* 其餘爆版狀況 強制隱藏 */
+.post-body .fancybox {
+  overflow: hidden;
 }
 
 /* 文章內文，超連結偽元素 icon || 排除btn, fancybox, headerlink tag-cloud*/
@@ -4040,6 +4053,7 @@ a:not(.btn, .bmc-btn, .post-title-link) {
 .post-body blockquote:not(.blockquote-center) {
   border-left: 3px solid var(--blockquote-color);
   width: fit-content;
+  max-width: 90%;
   border-radius: 0 4px 4px 0;
   box-shadow: 16px 0px 12px -16px inset hsla(0, 0%, 50%, 0.4),
     12px 0px 10px -16px hsla(0, 0%, 50%, 0.4),
@@ -4052,9 +4066,6 @@ a:not(.btn, .bmc-btn, .post-title-link) {
   & p {
     margin-inline-start: 0rem;
     margin-bottom: 0px;
-  }
-  & code {
-    overflow-wrap: anywhere;
   }
 }
 
