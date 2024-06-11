@@ -117,7 +117,7 @@
   margin-inline: -1rem -1rem;
   /* overflow: hidden; */
   & img {
-    max-height: 85lvh;
+    max-height: 90svh;
     max-width: 100%;
     object-fit: cover;
   }
@@ -129,11 +129,12 @@
   width: calc(100% + 2rem);
   height: auto;
   margin-inline: -1rem -1rem;
-  max-height: 85lvh;
+  max-height: 90svh;
 }
 
 /* 其餘爆版狀況 強制隱藏 */
-.post-body .fancybox {
+.post-body .fancybox,
+.post-body .video-container {
   overflow: hidden;
 }
 

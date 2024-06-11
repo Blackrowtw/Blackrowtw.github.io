@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #65c31d;
+    background: #269a78;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3609,6 +3609,11 @@ a:not(.btn, .bmc-btn, .post-title-link) {
   top: calc(100svh - 5rem) !important;
 }
 
+/* div 內文字置中 */
+.text-center {
+  text-align: center;
+}
+
 /* 文章內文，背景透明 (blog首頁 每個文章樣式是連續堆疊的)*/
 .main-inner .sub-menu,
 .main-inner .post-block,
@@ -3991,7 +3996,7 @@ a:not(.btn, .bmc-btn, .post-title-link) {
   margin-inline: -1rem -1rem;
   /* overflow: hidden; */
   & img {
-    max-height: 85lvh;
+    max-height: 90svh;
     max-width: 100%;
     object-fit: cover;
   }
@@ -4003,11 +4008,12 @@ a:not(.btn, .bmc-btn, .post-title-link) {
   width: calc(100% + 2rem);
   height: auto;
   margin-inline: -1rem -1rem;
-  max-height: 85lvh;
+  max-height: 90svh;
 }
 
 /* 其餘爆版狀況 強制隱藏 */
-.post-body .fancybox {
+.post-body .fancybox,
+.post-body .video-container {
   overflow: hidden;
 }
 

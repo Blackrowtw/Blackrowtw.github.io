@@ -265,3 +265,8 @@ a:not(.btn, .bmc-btn, .post-title-link) {
 .pace .pace-progress {
   top: calc(100svh - 5rem) !important;
 }
+
+/* div 內文字置中 */
+.text-center {
+  text-align: center;
+}
