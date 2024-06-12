@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 3D 鳥群背景 -->
+    <!-- https://www.vantajs.com/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="minecraft-demo">
+      <script
+        type="module"
+        src="https://unpkg.com/@splinetool/viewer@1.6.0/build/spline-viewer.js"
+      ></script>
+      <spline-viewer
+        loading-anim-type="spinner-big-dark"
+        url="https://prod.spline.design/QyNK099o2MRhScdj/scene.splinecode"
+      ></spline-viewer>
+    </div>
+
+    <style>
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+        background-color: transparent;
+        position: relative;
+      }
+      .minecraft-demo {
+        height: 100dvh;
+        width: 100dvw;
+      }
+    </style>
+
+    <!-- 3D 鳥群背景(vanta) 邊緣暗角 -->
+    <div id="vanta-js-birds-overlay"></div>
+
+    <!-- 3D 鳥群背景(vanta) 生成位置 -->
+    <div id="vanta-js-birds-bg"></div>
+
+    <style>
+      /* 3D 鳥群背景(vanta) 樣式 */
+      #vanta-js-birds-bg {
+        display: flex;
+        height: 100lvh;
+        width: 100lvw;
+        position: fixed;
+        inset: 0px;
+        z-index: -1;
+        opacity: 0.3;
+        mix-blend-mode: screen;
+        filter: blur(2px);
+      }
+
+      /* 3D 鳥群背景(vanta) 邊緣暗角 */
+      #vanta-js-birds-overlay {
+        display: flex;
+        height: 100lvh;
+        width: 100lvw;
+        position: fixed;
+        inset: 0px;
+        z-index: -1;
+        background: radial-gradient(#232325 5%, #151618 75%, #050505 100%);
+      }
+    </style>
+
+    <!-- 3D 鳥群背景 js 引入-->
+    <!-- https://www.vantajs.com/ -->
+    <script>
+      VANTA.BIRDS({
+        el: "#vanta-js-birds-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        backgroundColor: 0x0,
+        color1: 0x6190e8,
+        color2: 0x0,
+        colorMode: "lerp",
+        birdSize: 2,
+        wingSpan: 40.0, // 鳥類翼展
+        separation: 20.0, // 鳥類之間的分離
+        alignment: 50.0, // 鳥類之間的對齊
+        cohesion: 100.0, // 鳥類運動的凝聚力
+        quantity: 3.0, // 鳥類數量
+      });
+    </script>
+  </body>
+</html>

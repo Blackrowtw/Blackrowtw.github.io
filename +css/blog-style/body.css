@@ -270,3 +270,8 @@ a:not(.btn, .bmc-btn, .post-title-link) {
 .text-center {
   text-align: center;
 }
+
+/* 列表裡出現的段落 底部距離移除 */
+li > p {
+  margin-bottom: 0px;
+}

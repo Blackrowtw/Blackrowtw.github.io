@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- source: Play and Pause in Infinite Slider with CSS Only-->
+    <!-- https://www.youtube.com/watch?v=mF9yOwlunWk&ab_channel=LunDev -->
+    <div
+      class="infinite-slider"
+      style="--width: 100px; --height: 100px; --quantity: 10"
+    >
+      <div class="list">
+        <div class="item" style="--position: 1">
+          <img src="../+images/icon/icon-twitter_x512.png" alt="" />
+        </div>
+        <div class="item" style="--position: 2">
+          <img src="../+images/icon/icon-buymeacoffee_x512.png" alt="" />
+        </div>
+        <div class="item" style="--position: 3">
+          <img src="../+images/icon/icon-discord_x512.png" alt="" />
+        </div>
+        <div class="item" style="--position: 4">
+          <img src="../+images/icon/icon-github_x512.png" alt="" />
+        </div>
+        <div class="item" style="--position: 5">
+          <img src="../+images/icon/icon-hexo-next_x512.png" alt="" />
+        </div>
+        <div class="item" style="--position: 6">
+          <img src="../+images/icon/icon-imgur_x512.png" alt="" />
+        </div>
+        <div class="item" style="--position: 7">
+          <img src="../+images/icon/icon-pixiv_x512.png" alt="" />
+        </div>
+        <div class="item" style="--position: 8">
+          <img src="../+images/icon/icon-pixivfanbox_x512.png" alt="" />
+        </div>
+        <div class="item" style="--position: 9">
+          <img src="../+images/icon/icon-steam_x512.png" alt="" />
+        </div>
+        <div class="item" style="--position: 10">
+          <img src="../+images/icon/icon-tenor_x512.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .infinite-slider {
+        width: 100%;
+        border: 1px solid red;
+        height: var(--height);
+        overflow: hidden;
+        mask-image: linear-gradient(
+          to right,
+          transparent,
+          #000 10% 90%,
+          transparent
+        );
+      }
+
+      .infinite-slider .list {
+        display: flex;
+        width: 100%;
+        min-width: calc(var(--width) * var(--quantity));
+        position: relative;
+      }
+      .infinite-slider .list .item {
+        width: var(--width);
+        height: var(--height);
+        position: absolute;
+        left: 100%;
+        animation: autoRun 10s linear infinite;
+        animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1));
+        transition: filter 0.5s;
+      }
+      .infinite-slider .list .item img {
+        width: 100%;
+      }
+
+      @keyframes autoRun {
+        from {
+          left: 100%;
+        }
+        to {
+          left: calc(var(--width) * -1);
+        }
+      }
+
+      .infinite-slider:hover .item {
+        animation-play-state: paused !important;
+        filter: opacity(0.5);
+      }
+      .infinite-slider .item:hover {
+        filter: opacity(1);
+      }
+    </style>
+  </body>
+</html>

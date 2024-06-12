@@ -4,7 +4,7 @@ import { link_card_info } from "./+__link-card-info.js";
 // 定義生成 HTML 模板的函數
 function creatTemplate_link_card(link_data) {
   return `
-    <div class="bk-link-card-scrollor">
+    <div class="bk-link-card-scrollor item" style="--position: ${link_data.number}">
       <div class="bk-link-card">
         <div class="bk-link-card-icon">
           <img

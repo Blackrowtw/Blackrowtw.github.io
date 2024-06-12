@@ -1,7 +1,7 @@
 // 導出常數 Card資料
 export const link_card_info = [
   {
-    number: "01",
+    number: "1",
     title: "Twitter",
     subtitle: "Blackrow_tw",
     color_rgb: "#1D9BF0",
@@ -9,7 +9,7 @@ export const link_card_info = [
     img_link: "/+images/icon/icon-twitter_x512.png",
   },
   {
-    number: "02",
+    number: "2",
     title: "Pixiv",
     subtitle: "user2407057",
     color_rgb: "#0096FA",
@@ -17,7 +17,7 @@ export const link_card_info = [
     img_link: "/+images/icon/icon-pixiv_x512.png",
   },
   {
-    number: "03",
+    number: "3",
     title: "Youtube",
     subtitle: "Channel_01</br>Main",
     color_rgb: "#C4302B",
@@ -25,7 +25,7 @@ export const link_card_info = [
     img_link: "/+images/icon/icon-youtube_x512.png",
   },
   {
-    number: "04",
+    number: "4",
     title: "Github",
     subtitle: "Blackrowtw",
     color_rgb: "#24292E",
@@ -33,7 +33,7 @@ export const link_card_info = [
     img_link: "/+images/icon/icon-github_x512.png",
   },
   {
-    number: "05",
+    number: "5",
     title: "巴哈姆特",
     subtitle: "個人小屋</br>[CN]",
     color_rgb: "#0B7897",
@@ -41,7 +41,7 @@ export const link_card_info = [
     img_link: "/+images/icon/icon-bahamut_x512.png",
   },
   {
-    number: "06",
+    number: "6",
     title: "Youtube",
     subtitle: "Channel_02</br>for Stream",
     color_rgb: "#C4302B",
@@ -49,7 +49,7 @@ export const link_card_info = [
     img_link: "/+images/icon/icon-youtube_x512.png",
   },
   {
-    number: "07",
+    number: "7",
     title: "Twitch",
     subtitle: "blackrowtw",
     color_rgb: "#9146ff",
@@ -57,7 +57,7 @@ export const link_card_info = [
     img_link: "/+images/icon/icon-twitch_x512.png",
   },
   // {
-  //   number: "08",
+  //   number: "13",
   //   title: "Buy Me",
   //   subtitle: "a Coffee",
   //   color_rgb: "#FFDD00",
@@ -65,7 +65,7 @@ export const link_card_info = [
   //   img_link: "/+images/icon/icon-buymeacoffee_x512.png",
   // },
   // {
-  //   number: "09",
+  //   number: "14",
   //   title: "Fanbox",
   //   subtitle: "blackrow",
   //   color_rgb: "#FBF38A",
@@ -73,7 +73,7 @@ export const link_card_info = [
   //   img_link: "/+images/icon/icon-pixivfanbox_x512.png",
   // },
   {
-    number: "10",
+    number: "8",
     title: "Tenor",
     subtitle: "Gif 圖庫",
     color_rgb: "#ABD5E7",
@@ -81,7 +81,7 @@ export const link_card_info = [
     img_link: "/+images/icon/icon-tenor_x512.png",
   },
   {
-    number: "11",
+    number: "9",
     title: "Imgur",
     subtitle: "Self-works</br>[old]",
     color_rgb: "#89C623",
@@ -89,7 +89,7 @@ export const link_card_info = [
     img_link: "/+images/icon/icon-imgur_x512.png",
   },
   {
-    number: "12",
+    number: "10",
     title: "Imgur",
     subtitle: "Self-works</br>[2020+]",
     color_rgb: "#89C623",
@@ -97,7 +97,7 @@ export const link_card_info = [
     img_link: "/+images/icon/icon-imgur_x512.png",
   },
   {
-    number: "13",
+    number: "11",
     title: "Plurk",
     subtitle: "AFK</br>[CN]",
     color_rgb: "#FF9B76",
@@ -105,7 +105,7 @@ export const link_card_info = [
     img_link: "/+images/icon/icon-plurk_x512.png",
   },
   {
-    number: "14",
+    number: "12",
     title: "Tumblr",
     subtitle: "AFK",
     color_rgb: "#36465D",
