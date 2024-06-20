@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #b07fb3;
+    background: #2e524b;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -4861,7 +4861,7 @@ li > p {
 
 .infinite-slider .list {
   display: flex;
-  width: 100%;
+  left: calc(100% - calc(var(--width) * var(--quantity)) + 3rem);
   min-width: calc(var(--width) * var(--quantity));
   position: relative;
 }

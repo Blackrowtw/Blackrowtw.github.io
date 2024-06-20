@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Infinite Slider Demo</title>
   </head>
   <body>
     <!-- source: Play and Pause in Infinite Slider with CSS Only-->
     <!-- https://www.youtube.com/watch?v=mF9yOwlunWk&ab_channel=LunDev -->
+
     <div
       class="infinite-slider"
       style="--width: 100px; --height: 100px; --quantity: 10"
@@ -45,7 +46,6 @@
         </div>
       </div>
     </div>
-
     <style>
       .infinite-slider {
         width: 100%;
@@ -62,7 +62,7 @@
 
       .infinite-slider .list {
         display: flex;
-        width: 100%;
+        left: calc(100% - calc(var(--width) * var(--quantity)) + 3rem);
         min-width: calc(var(--width) * var(--quantity));
         position: relative;
       }
