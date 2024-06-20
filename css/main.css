@@ -1642,7 +1642,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #2e524b;
+    background: #62874e;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -4856,7 +4856,7 @@ li > p {
   width: 100%;
   height: calc(2rem + var(--height));
   overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+  /* mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent); */
 }
 
 .infinite-slider .list {

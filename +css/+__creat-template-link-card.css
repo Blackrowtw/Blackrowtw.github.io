@@ -280,7 +280,7 @@
   width: 100%;
   height: calc(2rem + var(--height));
   overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+  /* mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent); */
 }
 
 .infinite-slider .list {
